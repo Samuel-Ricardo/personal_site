@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:clean": "npm run format:fix && npm run lint && npm run build",
+    "build:clean": "npm run code:ci && npm run build",
     "start": "next start",
     "lint": "next lint",
     "lint:staged": "eslint --fix --cache **/*.{js,jsx,ts,tsx}",
@@ -15,7 +15,8 @@
     "test": "jest --passWithNoTests --color",
     "test:coverage": "jest --coverage --passWithNoTests --color",
     "test:watch": "jest --watchAll --coverage --passWithNoTests --color",
-    "test:staged": "jest --passWithNoTests --color --findRelatedTests"
+    "test:staged": "jest --passWithNoTests --color --findRelatedTests",
+    "code:ci": "npm run format:fix && npm run lint && npm run test:coverage"
   },
   "dependencies": {
     "@sanity/cli": "^3.25.0",
