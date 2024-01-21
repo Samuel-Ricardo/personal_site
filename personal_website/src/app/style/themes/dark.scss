@@ -1,0 +1,15 @@
+.dark-theme {
+  $primary-color: #000;
+  $secondary-color: #ff0000;
+  $tertiary-color: gray;
+  $quaternary-color: #e7f8fb;
+
+  --primary-color: #000;
+  --primary-color-foreground: gray;
+
+  --secondary-color: #ff0000;
+  --secondary-color-foreground: #e7f8fb;
+
+  --tertiary-color: gray;
+  --quaternary-color: #e7f8fb;
+}
