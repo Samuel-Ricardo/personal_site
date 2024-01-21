@@ -13,6 +13,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ./src/**/*.{js,jsx,ts,tsx}",
     "husky:prepare": "cd ../ && husky install",
     "test": "jest --passWithNoTests --color",
+    "test:coverage": "jest --coverage --passWithNoTests --color",
     "test:watch": "jest --watchAll --coverage --passWithNoTests --color"
   },
   "dependencies": {
