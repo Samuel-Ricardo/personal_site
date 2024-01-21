@@ -14,7 +14,8 @@
     "husky:prepare": "cd ../ && husky install",
     "test": "jest --passWithNoTests --color",
     "test:coverage": "jest --coverage --passWithNoTests --color",
-    "test:watch": "jest --watchAll --coverage --passWithNoTests --color"
+    "test:watch": "jest --watchAll --coverage --passWithNoTests --color",
+    "test:staged": "jest --passWithNoTests --color --findRelatedTests"
   },
   "dependencies": {
     "@sanity/cli": "^3.25.0",
