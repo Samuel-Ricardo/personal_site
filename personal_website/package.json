@@ -11,7 +11,8 @@
     "lint:staged": "eslint --fix --cache **/*.{js,jsx,ts,tsx}",
     "format:verify": "prettier --check --ignore-path .gitignore ./src/**/*.{js,jsx,ts,tsx}",
     "format:fix": "prettier --write --ignore-path .gitignore ./src/**/*.{js,jsx,ts,tsx}",
-    "husky:prepare": "cd ../ && husky install"
+    "husky:prepare": "cd ../ && husky install",
+    "test": "jest"
   },
   "dependencies": {
     "@sanity/cli": "^3.25.0",
