@@ -12,7 +12,8 @@
     "format:verify": "prettier --check --ignore-path .gitignore ./src/**/*.{js,jsx,ts,tsx}",
     "format:fix": "prettier --write --ignore-path .gitignore ./src/**/*.{js,jsx,ts,tsx}",
     "husky:prepare": "cd ../ && husky install",
-    "test": "jest --passWithNoTests --color"
+    "test": "jest --passWithNoTests --color",
+    "test:watch": "jest --watchAll --coverage --passWithNoTests --color"
   },
   "dependencies": {
     "@sanity/cli": "^3.25.0",
