@@ -1,0 +1,9 @@
+@import './style/variables/screen.scss';
+@import './style/themes/light.scss';
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  tertiaryColor: $tertiary-color;
+  quaternaryColor: $quaternary-color;
+}
