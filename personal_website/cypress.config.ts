@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import { env } from 'process';
 
 export default defineConfig({
   viewportWidth: 1280,
@@ -16,6 +17,11 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: env.APP_URL || 'http://localhost:3000',
+    specPattern: [
+      'cypress/E2E/**/*.{cy,spec}.{js,jsx,ts,tsx}',
+      'cypress/integration/**/*.{cy,spec}.{js,jsx,ts,tsx}',
+    ],
   },
 
   component: {
