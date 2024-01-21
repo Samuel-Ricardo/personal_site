@@ -9,6 +9,6 @@ services:
     volumes:
       - .:/home/node/app
     env_file:
-      - env.local
+      - .env.local
     external_links:
       - 'host.docker.internal'
