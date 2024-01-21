@@ -23,5 +23,6 @@ export default defineConfig({
       framework: 'next',
       bundler: 'webpack',
     },
+    specPattern: 'cypress/component/**/*.{cy,spec}.{js,jsx,ts,tsx}',
   },
 });
