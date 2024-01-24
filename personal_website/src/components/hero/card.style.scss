@@ -1,0 +1,7 @@
+@import '../../app/globals.scss';
+
+#hero .card {
+  @apply flex;
+  width: 80%;
+  height: 35vh;
+}
