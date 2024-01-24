@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { HTMLAttributes, useEffect, useRef } from 'react';
 import { ISpace } from '@/@types/space';
 import { IPosition } from '@/@types/position';
 import { usePoints } from '@/hooks/canvas/circuit/points/generator.hook';
 import { usePointRender } from '@/hooks/canvas/circuit/render/point.hook';
 import { useCircuitFramer } from '@/hooks/canvas/circuit/framer.hook';
 
-export const Circuit = () => {
+export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const { generate } = usePoints();
@@ -27,12 +27,9 @@ export const Circuit = () => {
       height: canvasRef.current?.height || 1,
     };
 
-    const points =
-      (canvasRef.current?.width || 1) < 720
-        ? generate({ space, quantity: 20 })
-        : (canvasRef.current?.width || 1) > 1100
-          ? generate({ space, quantity: 60 })
-          : generate({ space });
+    const width = canvasRef.current?.width || 1;
+
+    const points = generate({ space, quantity: (width / 100) * 5 });
 
     canvasRef.current?.addEventListener('mousemove', e => {
       mouse.x = e.clientX;
@@ -56,11 +53,5 @@ export const Circuit = () => {
     if (context) animate();
   }, [canvasRef, generate, render, updateFrame]);
 
-  return (
-    <canvas
-      id="canvas-circuit"
-      className="w-full h-full bg-black"
-      ref={canvasRef}
-    />
-  );
+  return <canvas id="canvas-circuit" className={className} ref={canvasRef} />;
 };
