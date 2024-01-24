@@ -30,7 +30,9 @@ export const Circuit = () => {
     const points =
       (canvasRef.current?.width || 1) < 720
         ? generate({ space, quantity: 20 })
-        : generate({ space });
+        : (canvasRef.current?.width || 1) > 1100
+          ? generate({ space, quantity: 60 })
+          : generate({ space });
 
     canvasRef.current?.addEventListener('mousemove', e => {
       mouse.x = e.clientX;
