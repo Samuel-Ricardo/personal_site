@@ -4,6 +4,8 @@
 @import './style/themes/dark.scss';
 @import './style/themes/coffee.scss';
 
+@import './style/frosted_glass.scss';
+
 :export {
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
