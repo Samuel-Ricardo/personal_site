@@ -12,7 +12,7 @@ export const useNetworkRender = () => {
       mouse,
       trackMouse = true,
       color = 'cyan',
-      width = 0.35,
+      width = 0.5,
     }: INetworkRender) => {
       context.beginPath();
 
