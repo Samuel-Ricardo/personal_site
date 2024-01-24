@@ -33,10 +33,11 @@ export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
 
     canvasRef.current?.addEventListener('mousemove', e => {
       mouse.x = e.clientX;
-      mouse.y = e.clientY * 2;
+      mouse.y = e.clientY * 1.545;
     });
 
     function animate() {
+      if (!context) return;
       render({
         context,
         points,
