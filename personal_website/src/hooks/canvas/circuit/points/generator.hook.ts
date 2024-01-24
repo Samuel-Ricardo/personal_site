@@ -3,7 +3,7 @@ import { IPointsProps } from '@/@types/props/circuit/points';
 import { useCallback } from 'react';
 
 export const usePoints = () => {
-  const generate = useCallback(({ space, quantity = 35 }: IPointsProps) => {
+  const generate = useCallback(({ space, quantity = 40 }: IPointsProps) => {
     const points: IPoint[] = [];
     for (let i = 0; i < quantity; i++) {
       points.push({
