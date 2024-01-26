@@ -1,0 +1,24 @@
+@import '../../../../../app/globals.scss';
+
+#hero .card .container .header {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3.7rem;
+    font-weight: 700;
+    line-height: 3.7rem;
+  }
+
+  h2 {
+    @include mobile {
+      font-size: 2rem;
+    }
+
+    line-height: 2.5rem;
+
+    font-size: 2.5rem;
+    font-weight: 400;
+    @apply ml-5;
+  }
+}
