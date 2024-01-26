@@ -13,3 +13,9 @@ $screen-mobile: 738px;
     @content;
   }
 }
+
+@mixin desktop {
+  @media (max-width: $screen-desktop) {
+    @content;
+  }
+}
