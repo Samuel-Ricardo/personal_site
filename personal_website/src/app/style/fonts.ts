@@ -19,3 +19,8 @@ export const LIBRE_BASKERVILLE = Libre_Baskerville({
   preload: true,
   weight: '400',
 });
+export const SPACE_MONO = Space_Mono({
+  subsets: ['latin'],
+  preload: true,
+  weight: '400',
+});
