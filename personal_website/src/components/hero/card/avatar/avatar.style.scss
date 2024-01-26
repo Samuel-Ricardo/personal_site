@@ -1,11 +1,13 @@
 @import '../../../../app/globals.scss';
 
 #hero .card .avatar {
-  @apply max-w-[40%];
+  @apply max-w-[37%];
   @apply max-h-[90%];
 
   img {
-    @apply rounded-md;
+    @apply rounded-xl;
+    @apply rounded-se-[4rem];
+    @apply rounded-es-[4rem];
     @apply max-w-full;
     @apply max-h-full;
   }
