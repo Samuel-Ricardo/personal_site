@@ -8,11 +8,21 @@
     font-size: 3.7rem;
     font-weight: 700;
     line-height: 3.7rem;
+
+    @include desktop {
+      font-size: 7rem;
+      line-height: 7rem;
+    }
   }
 
   h2 {
     @include mobile {
       font-size: 2rem;
+    }
+
+    @include desktop {
+      font-size: 3rem;
+      line-height: 3rem;
     }
 
     line-height: 2.5rem;
