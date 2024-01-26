@@ -7,3 +7,9 @@ $screen-mobile: 738px;
     @content;
   }
 }
+
+@mixin tablet {
+  @media (max-width: $screen-tablet) {
+    @content;
+  }
+}
