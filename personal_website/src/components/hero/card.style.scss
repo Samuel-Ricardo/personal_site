@@ -3,10 +3,25 @@
 #hero .card {
   display: flex;
   flex-direction: inline;
-  width: 80%;
-  height: 35vh;
+
+  @apply gap-10;
+  @apply rounded-lg;
+
+  @apply p-5;
+  @apply m-28;
+
+  @apply w-fit;
+  @apply h-fit;
+
+  @apply justify-start;
+  @apply items-start;
 
   @include mobile {
     flex-direction: column;
+    @apply m-5;
+  }
+
+  @include tablet {
+    @apply m-5;
   }
 }
