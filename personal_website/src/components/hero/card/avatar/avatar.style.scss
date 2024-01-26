@@ -9,4 +9,9 @@
     @apply max-w-full;
     @apply max-h-full;
   }
+
+  @include mobile {
+    @apply max-w-full;
+    @apply max-h-full;
+  }
 }
