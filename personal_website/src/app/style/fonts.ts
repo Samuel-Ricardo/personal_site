@@ -14,3 +14,8 @@ export const NEUTON = Neuton({
   preload: true,
   weight: '400',
 });
+export const LIBRE_BASKERVILLE = Libre_Baskerville({
+  subsets: ['latin'],
+  preload: true,
+  weight: '400',
+});
