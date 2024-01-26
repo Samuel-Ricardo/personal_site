@@ -24,3 +24,8 @@ export const SPACE_MONO = Space_Mono({
   preload: true,
   weight: '400',
 });
+export const XANH_MONO = Xanh_Mono({
+  subsets: ['latin'],
+  preload: true,
+  weight: '400',
+});
