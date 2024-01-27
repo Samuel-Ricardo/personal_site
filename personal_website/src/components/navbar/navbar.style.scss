@@ -5,10 +5,11 @@
   @apply frosted-glass;
   @apply w-full;
   @apply h-fit;
+  @apply grid;
+  @apply grid-cols-2;
   @apply px-3;
 
   @apply justify-between;
-  @apply items-center;
 
   top: 0;
   z-index: 50;
