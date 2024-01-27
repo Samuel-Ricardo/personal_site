@@ -1,0 +1,12 @@
+@import '../../../../app/globals.scss';
+
+#navbar .item-container {
+  @apply grid;
+  @apply grid-cols-4;
+
+  @apply items-center;
+
+  @include mobile {
+    display: none;
+  }
+}
