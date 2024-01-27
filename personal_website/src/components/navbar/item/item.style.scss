@@ -1,0 +1,18 @@
+@import '../../../app/globals.scss';
+
+#navbar .item-container li {
+  @apply cursor-pointer;
+  @apply transition-all;
+
+  .line {
+    @apply h-[2px];
+    @apply w-0;
+    @apply bg-secondary;
+
+    box-shadow:
+      0 0 10px rgba($secondary-color, 0.5),
+      0 0 10px rgba($secondary-color, 0.5),
+      0 0 10px rgba($secondary-color, 0.5),
+      0 0 10px rgba($secondary-color, 0.5);
+  }
+}
