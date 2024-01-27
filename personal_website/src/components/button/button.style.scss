@@ -1,0 +1,24 @@
+@import '../../app/globals.scss';
+
+.button {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-2;
+  @apply w-fit;
+  @apply h-fit;
+  @apply p-2;
+  @apply transition-all;
+  @apply border-[1px];
+  @apply border-black;
+  @apply rounded-sm;
+  @apply transition-all;
+
+  &:hover {
+    cursor: pointer;
+    @apply rounded-md;
+
+    @apply bg-black;
+    @apply text-white;
+  }
+}
