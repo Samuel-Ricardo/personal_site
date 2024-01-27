@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.scss';
 import { ThemeWrapper } from '@/components/wrapper/theme.wrapper';
-import { FRAUNCES } from './style/fonts';
+import { SPACE_MONO } from './style/fonts';
+import { Navbar } from '@/components/navbar/navbar.component';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${FRAUNCES.className}`}>
-        <ThemeWrapper> {children}</ThemeWrapper>
+      <body className={`${SPACE_MONO.className}`}>
+        <ThemeWrapper>
+          <Navbar />
+          {children}
+        </ThemeWrapper>
       </body>
     </html>
   );
