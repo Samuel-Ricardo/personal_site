@@ -1,4 +1,3 @@
-import './button.style.scss';
 import Link, { LinkProps } from 'next/link';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import { Button } from '../button.component';
