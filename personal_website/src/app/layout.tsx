@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.scss';
 import { ThemeWrapper } from '@/components/wrapper/theme.wrapper';
-
-const inter = Inter({ subsets: ['latin'] });
+import { FRAUNCES } from './style/fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${FRAUNCES.className}`}>
         <ThemeWrapper> {children}</ThemeWrapper>
       </body>
     </html>
