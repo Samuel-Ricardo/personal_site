@@ -1,9 +1,19 @@
 import { Logo } from '../logo/logo.component';
+import { NavbarItemContainer } from './item/container/container.component';
+import { NavbarItem } from './item/item.component';
+
+import './navbar.style.scss';
 
 export const Navbar = () => {
   return (
-    <div id="navbar" className="fixed top-0 z-50 frosted-glass w-full px-3">
+    <div id="navbar">
       <Logo />
+      <NavbarItemContainer>
+        <NavbarItem>Home</NavbarItem>
+        <NavbarItem>Portfolio</NavbarItem>
+        <NavbarItem>Articles</NavbarItem>
+        <NavbarItem>Jobs</NavbarItem>
+      </NavbarItemContainer>
     </div>
   );
 };
