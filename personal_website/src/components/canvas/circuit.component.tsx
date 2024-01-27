@@ -6,9 +6,11 @@ import { IPosition } from '@/@types/position';
 import { usePoints } from '@/hooks/canvas/circuit/points/generator.hook';
 import { usePointRender } from '@/hooks/canvas/circuit/render/point.hook';
 import { useCircuitFramer } from '@/hooks/canvas/circuit/framer.hook';
+import { useInView } from 'framer-motion';
 
 export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isInView = useInView(canvasRef);
 
   const { generate } = usePoints();
   const { render } = usePointRender();
@@ -17,6 +19,8 @@ export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
   const mouse: IPosition = { x: 0, y: 0 };
 
   useEffect(() => {
+    if (!isInView) return;
+
     if (canvasRef.current) canvasRef.current.width = window.innerWidth;
     if (canvasRef.current) canvasRef.current.height = window.innerHeight;
 
@@ -52,7 +56,7 @@ export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
     }
 
     if (context) animate();
-  }, [canvasRef, generate, render, updateFrame]);
+  }, [canvasRef, generate, render, updateFrame, isInView]);
 
   return <canvas id="canvas-circuit" className={className} ref={canvasRef} />;
 };
