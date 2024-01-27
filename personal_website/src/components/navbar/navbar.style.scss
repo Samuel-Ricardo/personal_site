@@ -1,0 +1,15 @@
+@import '../../app/globals.scss';
+
+#navbar {
+  @apply fixed;
+  @apply frosted-glass;
+  @apply w-full;
+  @apply h-fit;
+  @apply px-3;
+
+  @apply justify-between;
+  @apply items-center;
+
+  top: 0;
+  z-index: 50;
+}
