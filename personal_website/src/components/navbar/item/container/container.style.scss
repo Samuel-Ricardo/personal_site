@@ -12,4 +12,12 @@
   @include mobile {
     display: none;
   }
+
+  #menu {
+    @apply flex;
+
+    @include mobile {
+      display: none;
+    }
+  }
 }
