@@ -4,6 +4,11 @@
   @apply w-full;
   @apply my-2;
 
+  background-color: #2d313608;
+
+  @apply p-4;
+  @apply rounded-md;
+
   p {
     @apply text-justify;
   }
