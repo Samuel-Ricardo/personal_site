@@ -1,0 +1,11 @@
+@import '../../../../app/globals.scss';
+
+#menu {
+  display: none;
+  @apply justify-end;
+  @apply items-center;
+
+  @include mobile {
+    display: flex;
+  }
+}
