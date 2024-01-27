@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.scss';
 import { ThemeWrapper } from '@/components/wrapper/theme.wrapper';
-import { SPACE_MONO } from './style/fonts';
 import { Navbar } from '@/components/navbar/navbar.component';
+import { MODULES } from '@/modules/app.factory';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${SPACE_MONO.className}`}>
+      <body className={`${MODULES.FONTS.MONO.SPACE_MONO().className}`}>
         <ThemeWrapper>
           <Navbar />
           {children}
