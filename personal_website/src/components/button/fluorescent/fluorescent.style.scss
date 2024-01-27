@@ -1,0 +1,19 @@
+@import '../../../app/globals.scss';
+
+.flourescent-container {
+  @apply w-fit;
+  @apply h-fit;
+  @apply p-2;
+  @apply transition-all;
+
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  &:hover {
+    background-color: $secondary-color;
+    box-shadow:
+      0px 0px 5px $secondary-color,
+      0px 0px 25px $secondary-color,
+      0px 0px 50px $secondary-color,
+      0px 0px 200px $secondary-color;
+  }
+}
