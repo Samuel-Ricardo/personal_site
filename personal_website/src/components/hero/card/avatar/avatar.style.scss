@@ -6,8 +6,8 @@
 
   img {
     @apply rounded-xl;
-    @apply rounded-se-[4rem];
-    @apply rounded-es-[4rem];
+    @apply rounded-se-[30%];
+    @apply rounded-es-[30%];
     @apply max-w-full;
     @apply max-h-full;
   }
@@ -15,5 +15,9 @@
   @include mobile {
     @apply max-w-full;
     @apply max-h-full;
+  }
+
+  @include desktop {
+    @apply max-w-[30%];
   }
 }
