@@ -1,0 +1,5 @@
+export const ANIMATION_FRAMER_MOTION_REGISTRY = {
+  SVG: {
+    DRAW: Symbol.for('MODULES::ANIMATION:FRAMER_MOTION:SVG:DRAW'),
+  },
+};
