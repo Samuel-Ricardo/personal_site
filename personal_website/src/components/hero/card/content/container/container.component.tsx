@@ -1,18 +1,15 @@
 import { INCONSOLATA } from '@/app/style/fonts';
 import './container.style.scss';
+import { HeroCardContentContainerHeader } from '../header/header.component';
+import { HeroCardContentAbout } from '../about/about.component';
+import { HeroCardContentFooter } from '../footer/footer.component';
 
 export const HeroCardContentContainer = () => {
   return (
     <div className={`${INCONSOLATA.className} container`}>
-      <h1>Samuel Ricardo</h1>
-      <h2>Full Stack Developer</h2>
-
-      <p>
-        I am a Full Stack Developer with a passion for creating innovative and
-        user-friendly web applications.
-      </p>
-
-      <p>Socials</p>
+      <HeroCardContentContainerHeader />
+      <HeroCardContentAbout />
+      <HeroCardContentFooter />
     </div>
   );
 };
