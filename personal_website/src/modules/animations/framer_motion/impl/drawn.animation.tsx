@@ -1,6 +1,6 @@
-import { MotionProps } from 'framer-motion';
+import { Animator } from '@/@types/animations/motion/animator';
 
-export const DRAW_ANIMATION = (props?: MotionProps): MotionProps => ({
+export const DRAW_ANIMATION: Animator = props => ({
   initial: { pathLength: 0 },
   animate: { pathLength: 1 },
   variants: {
