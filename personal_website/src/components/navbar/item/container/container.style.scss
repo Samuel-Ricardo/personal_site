@@ -1,9 +1,12 @@
 @import '../../../../app/globals.scss';
 
 #navbar .item-container {
-  @apply grid;
-  @apply grid-cols-4;
+  @apply flex;
+  @apply gap-10;
 
+  @apply mr-5;
+
+  @apply justify-end;
   @apply items-center;
 
   @include mobile {
