@@ -9,10 +9,10 @@ export const Navbar = () => {
     <div id="navbar">
       <Logo />
       <NavbarItemContainer>
-        <NavbarItem>Home</NavbarItem>
-        <NavbarItem>Portfolio</NavbarItem>
-        <NavbarItem>Articles</NavbarItem>
-        <NavbarItem>Jobs</NavbarItem>
+        <NavbarItem href="/home">Home</NavbarItem>
+        <NavbarItem href="/portfolio">Portfolio</NavbarItem>
+        <NavbarItem href="/articles">Articles</NavbarItem>
+        <NavbarItem href="/jobs">Jobs</NavbarItem>
       </NavbarItemContainer>
     </div>
   );
