@@ -15,7 +15,7 @@ $screen-mobile: 738px;
 }
 
 @mixin desktop {
-  @media (max-width: $screen-desktop) {
+  @media (min-width: $screen-desktop) {
     @content;
   }
 }
