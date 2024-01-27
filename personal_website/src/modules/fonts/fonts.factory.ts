@@ -1,0 +1,28 @@
+import {
+  FRAUNCES,
+  INCONSOLATA,
+  LIBRE_BASKERVILLE,
+  NEUTON,
+  SPACE_MONO,
+} from './fonts';
+import { FONTS_MODULE } from './fonts.module';
+import { FONTS_REGISTRY } from './fonts.registry';
+
+export const FONTS_FACTORY = {
+  MONO: {
+    SPACE_MONO: () =>
+      FONTS_MODULE.get<typeof SPACE_MONO>(FONTS_REGISTRY.MONO.SPACE_MONO),
+    INCONSOLATA: () =>
+      FONTS_MODULE.get<typeof INCONSOLATA>(FONTS_REGISTRY.MONO.INCONSOLATA),
+  },
+  CLASSIC: {
+    FRAUNCES: () =>
+      FONTS_MODULE.get<typeof FRAUNCES>(FONTS_REGISTRY.CLASSIC.FRAUNCES),
+    LIBRE_BASKERVILLE: () =>
+      FONTS_MODULE.get<typeof LIBRE_BASKERVILLE>(
+        FONTS_REGISTRY.CLASSIC.LIBRE_BASKERVILLE,
+      ),
+    NEUTON: () =>
+      FONTS_MODULE.get<typeof NEUTON>(FONTS_REGISTRY.CLASSIC.NEUTON),
+  },
+};
