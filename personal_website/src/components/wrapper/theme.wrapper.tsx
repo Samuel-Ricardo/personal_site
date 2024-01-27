@@ -6,5 +6,7 @@ import { useTheme } from '@/hooks/config/ui/themes.hook';
 export const ThemeWrapper = ({ children }: IThemeWrapperProps) => {
   const { theme } = useTheme();
 
-  return <main className={`${theme}-theme`}>{children}</main>;
+  return (
+    <main className={`${theme}-theme flex flex-1 flex-col`}>{children}</main>
+  );
 };
