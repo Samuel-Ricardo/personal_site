@@ -1,0 +1,32 @@
+.card {
+  @apply p-5;
+  @apply rounded-lg;
+
+  @apply flex;
+  @apply flex-row;
+
+  @apply gap-4;
+
+  .image-container {
+    @apply rounded-lg;
+    @apply p-2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .content-container {
+    @apply flex;
+    @apply flex-col;
+
+    .line {
+      @apply w-full;
+      @apply h-[1px];
+      @apply bg-black;
+    }
+
+    h1 {
+      @apply font-bold;
+      @apply text-xl;
+      @apply text-black;
+    }
+  }
+}
