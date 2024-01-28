@@ -1,0 +1,9 @@
+#menu-icon {
+  @apply w-[2rem];
+  @apply h-[2rem];
+
+  path {
+    @apply stroke-zinc-950;
+    @apply stroke-1;
+  }
+}
