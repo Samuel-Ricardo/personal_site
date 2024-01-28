@@ -1,0 +1,9 @@
+@import '../../globals.scss';
+
+#i-work-with {
+  @apply flex;
+  @apply flex-col;
+  @apply w-screen;
+  @apply bg-blue-500;
+  height: 100%;
+}
