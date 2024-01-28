@@ -1,6 +1,6 @@
 import { Animator } from '@/@types/animations/motion/animator';
 
-export const INFINITY_SCROLL_ANIMATION: Animator = props => ({
+export const INFINITY_SLIDE_ANIMATION: Animator = props => ({
   initial: { translateX: 0 },
   animate: { translateX: '100%' },
   ...props,
