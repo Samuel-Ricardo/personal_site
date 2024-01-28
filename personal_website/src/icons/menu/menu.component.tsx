@@ -1,18 +1,37 @@
+import { IMotionSVGProps } from '@/@types/props/motion/svg';
 import { MotionPath } from '@/components/motion/path.component';
-import { MotionSVG } from '@/components/motion/svg.component';
-import { SVGMotionProps } from 'framer-motion';
 
-export const MenuIcon = (props: SVGMotionProps<SVGElement>) => {
+import './menu.style.scss';
+
+export const MenuIcon = ({ Paths }: IMotionSVGProps) => {
   return (
-    <MotionSVG
+    <svg
+      id="menu-icon"
       viewBox="0 0 24 24"
-      fill="currentColor"
-      height="1em"
-      width="1em"
-      {...props}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <MotionPath fill="none" d="M0 0h24v24H0z" />
-      <MotionPath d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
-    </MotionSVG>
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <g id="Menu / Menu_Alt_01">
+          {' '}
+          <MotionPath
+            id="Vector"
+            d="M12 17H19M5 12H19M5 7H19"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            {...Paths}
+          ></MotionPath>{' '}
+        </g>{' '}
+      </g>
+    </svg>
   );
 };
