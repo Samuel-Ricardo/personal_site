@@ -2,8 +2,8 @@
   background-color: rgba(255, 255, 255, 0.7);
 
   @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
     background-color: transparent;
   }
 
