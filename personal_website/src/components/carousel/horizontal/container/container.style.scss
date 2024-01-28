@@ -2,10 +2,15 @@
 
 .infinity-horizontal-carousel {
   @apply bg-red-700;
-  @apply w-screen;
+  @apply min-w-[200%];
   @apply h-fit;
   @apply py-2;
-  align-items: center;
+
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
 
   ul {
     @apply flex;
@@ -14,5 +19,6 @@
     justify-content: space-between;
     align-items: center;
     @apply bg-green-500;
+    @apply px-4;
   }
 }
