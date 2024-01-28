@@ -1,13 +1,14 @@
 import './item.style.scss';
 
 import { INavbarItemProps } from '@/@types/props/navbar/item';
+import { MotionLI } from '@/components/motion/li.component';
 import Link from 'next/link';
 
-export const NavbarItem = ({ children, href }: INavbarItemProps) => {
+export const NavbarItem = ({ children, href, li }: INavbarItemProps) => {
   return (
-    <li>
+    <MotionLI {...li}>
       <Link href={href}>{children}</Link>
       <div className="line" />
-    </li>
+    </MotionLI>
   );
 };
