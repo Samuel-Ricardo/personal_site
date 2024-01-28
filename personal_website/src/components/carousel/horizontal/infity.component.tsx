@@ -6,7 +6,7 @@ export const InfinityHorizontalCarousel = (
   props: ICarouselHorizontalInfinity,
 ) => {
   return (
-    <InfinityHorizontalCarouselContainer>
+    <InfinityHorizontalCarouselContainer {...props.container}>
       {props.children
         ?.concat(props.children)
         .map(child => (

@@ -2,7 +2,7 @@
 
 #navbar {
   @apply fixed;
-  @apply frosted-glass;
+  @apply frosted-glass-md;
   @apply w-full;
   @apply h-fit;
   @apply grid;
@@ -13,5 +13,5 @@
   @apply justify-between;
 
   top: 0;
-  z-index: 50;
+  z-index: 100;
 }

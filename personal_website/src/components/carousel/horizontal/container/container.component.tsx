@@ -11,7 +11,7 @@ export const InfinityHorizontalCarouselContainer = (
       {...props}
       className={`${props.className} infinity-horizontal-carousel`}
     >
-      {props.children}
+      <ul>{props.children as any}</ul>
     </MotionDiv>
   );
 };

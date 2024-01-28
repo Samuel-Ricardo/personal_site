@@ -14,7 +14,7 @@
 
   @include mobile {
     @apply max-w-full;
-    @apply max-h-full;
+    @apply max-h-fit;
   }
 
   @include desktop {
