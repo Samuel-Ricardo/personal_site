@@ -5,8 +5,14 @@
   @apply w-screen;
   @apply h-fit;
   @apply py-2;
-  @apply flex;
-  @apply flex-row;
-  justify-content: space-between;
   align-items: center;
+
+  ul {
+    @apply flex;
+    @apply flex-1;
+    @apply flex-row;
+    justify-content: space-between;
+    align-items: center;
+    @apply bg-green-500;
+  }
 }
