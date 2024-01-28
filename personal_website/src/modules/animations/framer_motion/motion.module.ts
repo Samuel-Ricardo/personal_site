@@ -3,10 +3,15 @@ import { ANIMATION_FRAMER_MOTION_REGISTRY } from './motion.registry';
 import { DRAW_ANIMATION } from './impl/svg/drawn.animation';
 import { SLIDE_IN_ANIMATION } from './impl/slideIn.animation';
 import { PROGRESS_ANIMATION } from './impl/progress.animation';
+import { INFINITY_SLIDE_ANIMATION } from './impl/slide/infinity.animation';
 
 export const ANIMATION_FRAMER_MOTION_MODULE = new Container({
   defaultScope: 'Singleton',
 });
+
+ANIMATION_FRAMER_MOTION_MODULE.bind(
+  ANIMATION_FRAMER_MOTION_REGISTRY.INFINITY.SLIDE,
+).toConstantValue(INFINITY_SLIDE_ANIMATION);
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
   ANIMATION_FRAMER_MOTION_REGISTRY.PROGRESS,
