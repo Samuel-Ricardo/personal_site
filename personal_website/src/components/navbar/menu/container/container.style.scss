@@ -2,8 +2,12 @@
 
 #menu {
   display: none;
+  @apply w-fit;
+  @apply justify-self-end;
   @apply justify-end;
   @apply items-center;
+
+  cursor: pointer;
 
   @include mobile {
     display: flex;
