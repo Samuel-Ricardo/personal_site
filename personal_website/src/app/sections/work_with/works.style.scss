@@ -1,13 +1,14 @@
 @import '../../globals.scss';
 
 #i-work-with {
-  @apply z-10;
+  z-index: 5;
   @apply bg-transparent;
   @apply flex;
   @apply flex-col;
   @apply w-screen;
-  max-height: 25vh;
-  height: 25vh;
+  @apply h-[30vh];
+  @apply min-h-44;
+  max-height: 40vh;
   @apply overflow-hidden;
 
   @apply items-center;
@@ -29,9 +30,26 @@
     @apply text-3xl;
     @apply text-black;
     @apply text-center;
+
+    @include tablet {
+      @apply text-2xl;
+    }
   }
 
   .infinity-horizontal-carousel {
+    @include mobile {
+      bottom: 0;
+      @apply h-fit;
+      position: absolute;
+      display: none;
+    }
+
+    @include tablet {
+      .title {
+        @apply text-xl;
+      }
+    }
+
     @apply h-[80%];
   }
 }
