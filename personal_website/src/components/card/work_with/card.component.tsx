@@ -8,12 +8,12 @@ export const IWorkWithCard = ({ children, image, title }: IIWorkWithProps) => {
   return (
     <FrostedGlassCard>
       <div className="image-container">
-        <Image src={image} alt="Card Image" width={100} height={100} />
+        <Image src={image} alt="Card Image" width={80} height={80} />
       </div>
       <div className="content-container">
-        <h1>{title}</h1>
+        <h1 className="card-title">{title}</h1>
         <div className="line" />
-        <div className="content">{children}</div>
+        <p className="content">{children}</p>
       </div>
     </FrostedGlassCard>
   );
