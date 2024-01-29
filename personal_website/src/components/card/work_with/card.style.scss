@@ -7,10 +7,20 @@
 
   @apply gap-4;
 
+  @applu justify-center;
+  @apply items-center;
+
   .image-container {
     @apply rounded-lg;
     @apply p-2;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply w-fit;
+    @apply h-fit;
+    @apply max-w-[80px];
+    @apply max-h-[80px];
   }
 
   .content-container {
@@ -23,7 +33,7 @@
       @apply bg-black;
     }
 
-    h1 {
+    .card-title {
       @apply font-bold;
       @apply text-xl;
       @apply text-black;
