@@ -16,9 +16,9 @@ export const InfinityHorizontalCarouselContainer = (
       className={`${props.className} infinity-horizontal-carousel`}
     >
       <div className="h-full min-w-[10%] z-20 justify-start bg-gradient-to-r from-primary to-transparent" />
+      <div className="h-full min-w-[10%] translate-x-[80vw] z-20 justify-start bg-gradient-to-l from-primary to-transparent" />
       <MotionUL {...animation()}>{props.children as any}</MotionUL>
       <MotionUL {...animation()}>{props.children as any}</MotionUL>
-      <div className="h-full -translate-x-[119.8vw] min-w-[10%] z-20 justify-end bg-gradient-to-l from-primary to-transparent" />
     </MotionDiv>
   );
 };
