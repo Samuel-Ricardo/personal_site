@@ -2,7 +2,7 @@
 
 .infinity-horizontal-carousel {
   @apply max-w-[100%];
-  @apply h-fit;
+  @apply min-h-fit;
 
   @apply flex;
   @apply flex-row;
