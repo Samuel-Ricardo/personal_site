@@ -9,6 +9,10 @@
     @apply text-6xl;
     @apply text-secondary-soft;
     color: var(--about-me-title-color);
+
+    @include mobile {
+      @apply text-4xl;
+    }
   }
 
   .image-container {
