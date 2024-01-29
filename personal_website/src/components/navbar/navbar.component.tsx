@@ -31,7 +31,7 @@ export const Navbar = () => {
           li={{ id: 'jobs', ...animation({ transition: { delay: 3 } }) }}
           href="/jobs"
         >
-          Jobs
+          Works
         </NavbarItem>
         <Menu />
       </NavbarItemContainer>
