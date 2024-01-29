@@ -1,9 +1,35 @@
 @import '../../globals.scss';
 
 #i-work-with {
+  @apply z-10;
+  @apply bg-transparent;
   @apply flex;
   @apply flex-col;
   @apply w-screen;
-  @apply bg-blue-500;
   height: 25vh;
+  @apply overflow-hidden;
+
+  @apply items-center;
+  @apply justify-center;
+
+  .title-container {
+    @apply w-fit;
+    @apply h-fit;
+    @apply p-3;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .title {
+    @apply font-bold;
+    @apply text-3xl;
+    @apply text-black;
+    @apply text-center;
+  }
+
+  .infinity-horizontal-carousel {
+    @apply h-[80%];
+  }
 }
