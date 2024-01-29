@@ -36,8 +36,8 @@ export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
     const points = generate({ space, quantity: (width / 100) * 6 });
 
     canvasRef.current?.addEventListener('mousemove', e => {
-      mouse.x = e.clientX * 1;
-      mouse.y = e.clientY * 1.34;
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
     });
 
     function animate() {
