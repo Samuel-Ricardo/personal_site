@@ -1,5 +1,6 @@
-export interface ISocialProofProps {
-  name: string;
-  impact: string;
-  image: string;
+export interface ISocialProofProps extends React.PropsWithChildren {
+  title: string;
+  numbers: string;
+  description: string;
+  image: SVGElement;
 }
