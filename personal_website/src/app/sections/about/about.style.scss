@@ -10,11 +10,13 @@
   @apply -translate-y-1;
 
   h1 {
+    color: var(--title-color);
+  }
+
+  .title {
     @apply font-bold;
     @apply text-center;
     @apply text-6xl;
-    @apply text-secondary-soft;
-    color: var(--about-me-title-color);
 
     @apply justify-self-center;
     @apply self-center;
@@ -38,6 +40,21 @@
     .text-container {
       @apply flex;
       @apply flex-col;
+
+      @apply p-10;
+
+      @apply justify-start;
+
+      .text-title {
+        @apply font-bold;
+        @apply text-start;
+        @apply text-4xl;
+        @apply mb-4;
+
+        @include mobile {
+          @apply text-3xl;
+        }
+      }
     }
 
     .image-container {
