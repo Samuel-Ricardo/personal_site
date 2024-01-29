@@ -1,0 +1,21 @@
+@import '../../globals.scss';
+
+#about-me {
+  @apply z-10;
+  @apply -translate-y-1;
+
+  h1 {
+    @apply font-bold;
+    @apply text-6xl;
+    @apply text-secondary-soft;
+    color: var(--about-me-title-color);
+  }
+
+  .image-container {
+    max-width: 50%;
+
+    img {
+      @apply rounded-xl;
+    }
+  }
+}
