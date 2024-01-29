@@ -6,6 +6,7 @@
   @apply flex;
   @apply flex-col;
   @apply w-screen;
+  max-height: 25vh;
   height: 25vh;
   @apply overflow-hidden;
 
@@ -16,6 +17,7 @@
     @apply w-fit;
     @apply h-fit;
     @apply p-3;
+    @apply m-1;
 
     @include mobile {
       display: none;
