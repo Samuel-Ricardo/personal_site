@@ -8,7 +8,7 @@
   @apply rounded-lg;
 
   @apply p-5;
-  @apply m-28;
+  @apply m-10;
 
   @apply w-fit;
   @apply h-fit;
@@ -17,8 +17,8 @@
   @apply items-start;
 
   @include mobile {
-    @apply absolute;
     @apply h-fit;
+    @apply max-w-[80%];
     flex-direction: column;
     @apply m-5;
     @apply top-12;
@@ -30,5 +30,6 @@
 
   @include desktop {
     @apply p-8;
+    @apply m-28;
   }
 }
