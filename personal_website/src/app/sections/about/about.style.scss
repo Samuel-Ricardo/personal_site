@@ -1,25 +1,61 @@
 @import '../../globals.scss';
 
 #about-me {
+  @apply flex;
+
+  @apply px-10;
+  @apply py-10;
+
   @apply z-10;
   @apply -translate-y-1;
 
   h1 {
     @apply font-bold;
+    @apply text-center;
     @apply text-6xl;
     @apply text-secondary-soft;
     color: var(--about-me-title-color);
 
+    @apply justify-self-center;
+    @apply self-center;
+
+    @apply mb-8;
+
     @include mobile {
       @apply text-4xl;
+      @apply mb-4;
+      @apply mt-2;
     }
   }
 
-  .image-container {
-    max-width: 50%;
+  .content-container {
+    @apply flex;
+    @apply flex-row;
 
-    img {
-      @apply rounded-xl;
+    @apply h-full;
+    @apply w-full;
+
+    .text-container {
+      @apply flex;
+      @apply flex-col;
+    }
+
+    .image-container {
+      max-width: 40%;
+
+      @apply flex;
+
+      @apply justify-center;
+      @apply items-center;
+
+      img {
+        @apply rounded-2xl;
+        box-shadow: 0px 0px 20px rgba($secondary-color, 0.6);
+      }
+
+      @include mobile {
+        max-width: 100%;
+      }
     }
   }
 }
