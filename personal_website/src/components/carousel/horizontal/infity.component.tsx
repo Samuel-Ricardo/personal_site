@@ -12,7 +12,7 @@ export const InfinityHorizontalCarousel = (
       {props.children?.map((child, i) => (
         <InfinityHorizontalCarouselItem
           key={child?.toString()}
-          {...animation({ transition: { delay: i * 1 } })}
+          {...animation({ transition: { delay: i * 2 } })}
         >
           {child}
         </InfinityHorizontalCarouselItem>
