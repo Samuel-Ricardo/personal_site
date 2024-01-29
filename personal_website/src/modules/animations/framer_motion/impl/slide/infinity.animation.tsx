@@ -5,7 +5,7 @@ export const INFINITY_SLIDE_ANIMATION: Animator = props => ({
   animate: { translateX: '-100%' },
   ...props,
   transition: {
-    duration: 15,
+    duration: 22,
     repeat: Infinity,
     ease: 'linear',
     ...props?.transition,
