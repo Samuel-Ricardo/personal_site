@@ -1,8 +1,17 @@
 @import '../../../../../app/globals.scss';
 
 #social-proof {
+  @apply mt-10;
   @apply block;
   @apply grid;
   @apply grid-cols-4;
-  @apply gap-4;
+  @apply gap-8;
+
+  @apply w-full;
+  @apply h-full;
+
+  @include mobile {
+    @apply mt-5;
+    @apply grid-cols-2;
+  }
 }
