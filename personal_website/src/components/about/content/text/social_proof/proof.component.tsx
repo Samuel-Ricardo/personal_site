@@ -1,3 +1,5 @@
+import './proof.style.scss';
+
 export const SocialProof = ({ children }: { children: React.ReactNode[] }) => {
   return (
     <ul id="social-proof">

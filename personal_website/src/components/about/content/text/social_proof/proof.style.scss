@@ -14,4 +14,9 @@
     @apply mt-5;
     @apply grid-cols-2;
   }
+
+  @include tablet {
+    @apply mt-5;
+    @apply grid-cols-3;
+  }
 }
