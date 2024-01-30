@@ -18,21 +18,21 @@
     @apply w-fit;
     @apply h-fit;
     @apply p-3;
-    @apply m-1;
+    @apply mt-2;
 
     @include mobile {
       display: none;
     }
-  }
 
-  .title {
-    @apply font-bold;
-    @apply text-3xl;
-    @apply text-black;
-    @apply text-center;
+    .title {
+      @apply font-bold;
+      @apply text-3xl;
+      @apply text-black;
+      @apply text-center;
 
-    @include tablet {
-      @apply text-2xl;
+      @include tablet {
+        @apply text-2xl;
+      }
     }
   }
 
