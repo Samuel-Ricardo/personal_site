@@ -13,5 +13,9 @@
     @apply text-start;
     @apply text-4xl;
     @apply mb-4;
+
+    @include mobile {
+      @apply text-3xl;
+    }
   }
 }
