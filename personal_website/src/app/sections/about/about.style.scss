@@ -6,6 +6,10 @@
   @apply px-10;
   @apply py-10;
 
+  @include mobile {
+    @apply p-5;
+  }
+
   @apply z-10;
   @apply -translate-y-1;
 
