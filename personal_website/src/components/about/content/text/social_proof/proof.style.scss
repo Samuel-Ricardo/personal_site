@@ -1,0 +1,8 @@
+@import '../../../../../app/globals.scss';
+
+#social-proof {
+  @apply block;
+  @apply grid;
+  @apply grid-cols-4;
+  @apply gap-4;
+}
