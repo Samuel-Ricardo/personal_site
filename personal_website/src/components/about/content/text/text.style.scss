@@ -8,6 +8,12 @@
 
   @apply justify-start;
 
+  @include mobile {
+    @apply mt-3;
+    @apply px-1;
+    justify-content: center;
+  }
+
   .text-title {
     @apply font-bold;
     @apply text-start;
@@ -16,6 +22,7 @@
 
     @include mobile {
       @apply text-3xl;
+      @apply text-center;
     }
   }
 }
