@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import './image.style.scss';
 
 export const AboutMeContentImage = () => {
   return (
