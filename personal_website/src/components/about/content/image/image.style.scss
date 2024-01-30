@@ -1,0 +1,15 @@
+@import '../../../../app/globals.scss';
+
+.image-container {
+  max-width: 40%;
+
+  @apply flex;
+
+  @apply justify-center;
+  @apply items-center;
+
+  img {
+    @apply rounded-2xl;
+    box-shadow: 0px 0px 25px rgba(#ff7200, 0.6);
+  }
+}
