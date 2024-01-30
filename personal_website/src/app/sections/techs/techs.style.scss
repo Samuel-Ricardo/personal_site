@@ -1,0 +1,11 @@
+@import '../../app/globals.scss';
+
+#techs-section {
+  @apply flex;
+  @apply flex-col;
+
+  @apply h-screen;
+  @apply w-screen;
+
+  @apply p-10;
+}
