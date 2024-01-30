@@ -1,0 +1,9 @@
+@import '../../../../app/globals.scss';
+
+.content-container {
+  @apply flex;
+  @apply flex-row;
+
+  @apply h-full;
+  @apply w-full;
+}
