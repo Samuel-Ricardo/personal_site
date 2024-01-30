@@ -1,6 +1,9 @@
+import { ReactNode } from 'react';
+
 export interface ISocialProofProps extends React.PropsWithChildren {
   title: string;
-  numbers: string;
-  description: string;
-  image: SVGElement;
+  numbers: number;
+  k?: boolean;
+  description?: string;
+  Icon: ReactNode;
 }
