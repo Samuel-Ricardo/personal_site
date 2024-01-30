@@ -1,0 +1,12 @@
+@import '../../../app/globals.scss';
+
+.title {
+  @apply font-bold;
+  @apply text-center;
+  @apply text-6xl;
+
+  @apply justify-self-center;
+  @apply self-center;
+
+  @apply mb-8;
+}
