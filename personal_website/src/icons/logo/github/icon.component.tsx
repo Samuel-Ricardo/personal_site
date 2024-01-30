@@ -1,9 +1,12 @@
 import { IMotionSVGProps } from '@/@types/props/motion/svg';
 import { MotionPath } from '@/components/motion/path.component';
 
+import './icon.style.scss';
+
 export const GithubLogo = ({ Paths }: IMotionSVGProps) => {
   return (
     <svg
+      id="github-logo"
       className="w-6 h-6 text-gray-800 dark:text-white"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
