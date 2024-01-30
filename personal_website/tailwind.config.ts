@@ -30,6 +30,7 @@ const config: Config = {
         secondary: {
           DEFAULT: 'var(--secondary-color)',
           foreground: 'var(--secondary-color-foreground)',
+          soft: 'var(--secondary-color-soft)',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
