@@ -1,5 +1,6 @@
 import { SocialProofCard } from '@/components/card/social_proof/card.component';
 import './text.style.scss';
+import { SocialProof } from './social_proof/proof.component';
 
 export const AbouteMeContentText = () => {
   return (
@@ -11,7 +12,7 @@ export const AbouteMeContentText = () => {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
 
-      <div className="social-proof">
+      <SocialProof>
         <SocialProofCard title="Projects +130" />
         <SocialProofCard title="Stars +120" />
         <SocialProofCard title="Commits +16K" />
@@ -20,7 +21,7 @@ export const AbouteMeContentText = () => {
         <SocialProofCard title="Impact On more than LikedIn +72k over the year" />
         <SocialProofCard title="Certificates +100" />
         <SocialProofCard title="More than 10 articles" />
-      </div>
+      </SocialProof>
     </div>
   );
 };
