@@ -1,0 +1,11 @@
+@import '../../../app/globals.scss';
+
+#techs-galaxy {
+  @apply flex;
+  @apply flex-col;
+
+  @apply h-fit;
+  @apply w-fit;
+
+  @apply p-10;
+}
