@@ -1,0 +1,10 @@
+@import '../../../../../app/globals.scss';
+
+#tech-item {
+  @apply flex;
+  @apply flex-col;
+
+  #tech-item-preview {
+    display: none;
+  }
+}

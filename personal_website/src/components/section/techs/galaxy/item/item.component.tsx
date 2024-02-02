@@ -3,6 +3,8 @@ import { TechPreview } from './preview/preview.component';
 import { FrostedGlassCard } from '@/components/card/glass.card';
 import { ITechGalaxyItemProps } from '@/@types/props/section/techs/item';
 
+import './item.style.scss';
+
 export const TechsGalaxyItem = ({ icon }: ITechGalaxyItemProps) => {
   return (
     <li id="tech-item">
