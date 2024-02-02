@@ -5,8 +5,9 @@
   @apply flex-col;
   position: relative;
 
-  @apply h-screen;
+  @apply min-h-screen;
   @apply w-screen;
+  @apply h-fit;
 
   @apply p-10;
 
@@ -35,6 +36,29 @@
 
     @include tablet {
       @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+    }
+  }
+
+  #techs-container-layer-2 {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-center;
+    @apply items-center;
+    @apply w-full;
+    @apply h-fit;
+    @apply p-10;
+
+    #tech-ilustration {
+      @apply max-w-lg;
+      @apply frosted-glass-lg;
+      @apply rounded-3xl;
+      @apply p-3;
+
+      #techs-ilustration-img {
+        @apply rounded-3xl;
+      }
     }
   }
 }
