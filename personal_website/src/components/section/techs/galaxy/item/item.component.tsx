@@ -7,10 +7,10 @@ import './item.style.scss';
 
 export const TechsGalaxyItem = ({ icon }: ITechGalaxyItemProps) => {
   return (
-    <li id="tech-item">
-      <FrostedGlassCard id="tech-item-img-container">
+    <li id="tech-item" className="frosted-glass-lg">
+      <div id="tech-item-img-container">
         <Image src={icon} alt="tech icon" width={80} height={80} />
-      </FrostedGlassCard>
+      </div>
 
       <TechPreview />
     </li>

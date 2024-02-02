@@ -4,6 +4,15 @@
   @apply flex;
   @apply flex-col;
 
+  @apply h-fit;
+  @apply w-fit;
+  @apply rounded-lg;
+
+  #tech-item-img-container {
+    @apply p-2;
+    @apply w-16;
+  }
+
   #tech-item-preview {
     display: none;
   }
