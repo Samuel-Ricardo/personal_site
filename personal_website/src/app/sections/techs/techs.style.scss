@@ -32,7 +32,7 @@
     @apply items-center;
     @apply w-full;
     @apply h-fit;
-    @apply p-10;
+    @apply p-5;
 
     @include tablet {
       @apply flex-col;
@@ -48,7 +48,7 @@
     @apply items-center;
     @apply w-full;
     @apply h-fit;
-    @apply p-10;
+    @apply p-5;
 
     #tech-ilustration {
       @apply max-w-lg;
@@ -60,5 +60,15 @@
         @apply rounded-3xl;
       }
     }
+  }
+
+  #techs-container-layer-3 {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
+    @apply items-center;
+    @apply w-full;
+    @apply h-fit;
+    @apply p-5;
   }
 }
