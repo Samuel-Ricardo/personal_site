@@ -3,6 +3,7 @@
 #techs-section {
   @apply flex;
   @apply flex-col;
+  position: relative;
 
   @apply h-screen;
   @apply w-screen;
@@ -12,6 +13,7 @@
   h1,
   h2 {
     @apply text-center;
+    z-index: 100;
   }
 
   h1 {
@@ -20,5 +22,19 @@
 
   h2 {
     @apply text-2xl;
+  }
+
+  #techs-container-layer-1 {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
+    @apply items-center;
+    @apply w-full;
+    @apply h-fit;
+    @apply p-10;
+
+    @include tablet {
+      @apply flex-col;
+    }
   }
 }
