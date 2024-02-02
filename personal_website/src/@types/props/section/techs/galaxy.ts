@@ -1,3 +1,5 @@
+import { ITechGalaxyItemProps } from './item';
+
 export interface ITechGalaxyProps {
-  children?: React.ReactNode[];
+  items?: ITechGalaxyItemProps[];
 }
