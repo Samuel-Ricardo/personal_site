@@ -15,6 +15,12 @@
     }
   }
 
+  #techs-galaxy-title {
+    @apply text-center;
+    @apply text-2xl;
+    @apply mb-2;
+  }
+
   @apply h-fit;
   @apply w-fit;
 
