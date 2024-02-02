@@ -4,8 +4,10 @@ import './galaxy.style.scss';
 
 export const TechsGalaxy = ({ children }: ITechGalaxyProps) => {
   return (
-    <ul id="techs-galaxy" className="frosted-glass-lg">
-      {children?.map(c => <li key={c?.toString()}>{c}</li>)}
-    </ul>
+    <div id="techs-galaxy" className="frosted-glass-lg">
+      <ul className="items-container">
+        {children?.map(c => <li key={c?.toString()}>{c}</li>)}
+      </ul>
+    </div>
   );
 };
