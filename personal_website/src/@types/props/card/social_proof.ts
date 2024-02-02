@@ -5,5 +5,5 @@ export interface ISocialProofProps extends React.PropsWithChildren {
   numbers: number;
   k?: boolean;
   description?: string;
-  Icon: ReactNode;
+  Icon?: ReactNode;
 }
