@@ -1,11 +1,23 @@
 @import '../../../../app/globals.scss';
 
 #techs-galaxy {
-  @apply flex;
-  @apply flex-col;
+  ul {
+    @apply grid;
+    @apply grid-cols-4;
+    @apply gap-5;
+
+    @include tablet {
+      @apply grid-cols-2;
+    }
+
+    @include mobile {
+      @apply grid-cols-1;
+    }
+  }
 
   @apply h-fit;
   @apply w-fit;
 
-  @apply p-10;
+  @apply rounded-2xl;
+  @apply p-5;
 }
