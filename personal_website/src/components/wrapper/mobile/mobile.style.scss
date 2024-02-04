@@ -1,0 +1,8 @@
+@import '../../../app/globals.scss';
+
+#mobile-wrapper {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
