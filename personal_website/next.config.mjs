@@ -15,6 +15,7 @@ const nextConfig = {
       'beecrowd.io',
       'images.ctfassets.net',
       'cdn-icons-png.flaticon.com',
+      'images.pexels.com',
     ],
   },
   sassOptions: {
