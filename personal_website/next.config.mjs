@@ -9,6 +9,7 @@ const nextConfig = {
       'vitejs.dev',
       'ik.imagekit.io',
       'areadev.com.br',
+      'refine-web.imgix.net',
     ],
   },
   sassOptions: {
