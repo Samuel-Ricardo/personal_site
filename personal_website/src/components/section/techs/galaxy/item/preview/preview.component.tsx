@@ -1,5 +1,3 @@
-'use client';
-
 import './preview.style.scss';
 
 import { IPreviewProps } from '@/@types/props/section/techs/preview';
@@ -11,7 +9,7 @@ export const TechPreview = (props: IPreviewProps) => {
     <MotionDiv
       id="tech-item-preview"
       {...props}
-      className={`frosted-glass-md top-10 ${props.preview?.left ? 'right-5' : 'left-5'}`}
+      className={`frosted-glass-lg top-10 ${props.preview?.left ? 'right-5' : 'left-5'}`}
     >
       <h4>{props.preview?.name}</h4>
       <div className="line" />
@@ -19,8 +17,9 @@ export const TechPreview = (props: IPreviewProps) => {
       <Image
         src={props.preview?.images[0]}
         alt="tech icon"
-        width={80}
-        height={80}
+        width={350}
+        height={350}
+        quality={100}
       />
     </MotionDiv>
   );

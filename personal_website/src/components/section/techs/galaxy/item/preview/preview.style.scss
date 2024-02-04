@@ -1,3 +1,5 @@
+@import '../../../../../../app/globals.scss';
+
 #tech-item-preview {
   position: absolute;
 
@@ -25,7 +27,7 @@
 
   img {
     @apply mt-4;
-    @apply w-64;
+    @apply w-full;
     @apply h-auto;
     @apply rounded-sm;
   }
