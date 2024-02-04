@@ -13,6 +13,7 @@ export const Techs = () => {
 
       <div id="techs-container-layer-1">
         <TechsGalaxy
+          title="Frontend"
           items={[
             {
               icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
@@ -39,6 +40,7 @@ export const Techs = () => {
           ]}
         />
         <TechsGalaxy
+          title="Backend"
           items={[
             {
               icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
@@ -72,6 +74,7 @@ export const Techs = () => {
       </div>
       <div id="techs-container-layer-3">
         <TechsGalaxy
+          title="Devops + Databases"
           items={[
             {
               icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
@@ -98,6 +101,7 @@ export const Techs = () => {
           ]}
         />
         <TechsGalaxy
+          title="Quality Assurance"
           items={[
             {
               icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
