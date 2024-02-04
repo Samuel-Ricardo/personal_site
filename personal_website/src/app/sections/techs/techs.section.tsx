@@ -89,6 +89,16 @@ export const Techs = () => {
                 ],
               },
             },
+            {
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg',
+              preview: {
+                name: 'HTML5',
+                description: 'The markup language for build web pages',
+                images: [
+                  'https://images.ctfassets.net/mrop88jh71hl/1GlQXrW5HeOyJwrV1VCgYo/ba5e654988b6fb5823cf72e3e189239d/html-css-coding-languages-for-kids.jpg?w=1280&h=718&fl=progressive&q=100&fm=jpg',
+                ],
+              },
+            },
           ]}
         />
         <TechsGalaxy
