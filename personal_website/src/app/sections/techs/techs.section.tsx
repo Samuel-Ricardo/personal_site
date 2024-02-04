@@ -154,6 +154,18 @@ export const Techs = () => {
                 ],
               },
             },
+            {
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg',
+              preview: {
+                name: 'GraphQL',
+                description:
+                  "The most efficient high level query language created by Facebook for API's and the runtime for fulfilling queries",
+                images: [
+                  'https://www.apollographql.com/docs/c5e2d4db4b0b5568a87ebf082ffe79e6/frontend_backend_diagram.svg',
+                ],
+                left: true,
+              },
+            },
           ]}
         />
       </div>
