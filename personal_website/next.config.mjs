@@ -10,6 +10,7 @@ const nextConfig = {
       'ik.imagekit.io',
       'areadev.com.br',
       'refine-web.imgix.net',
+      'blog.appsignal.com',
     ],
   },
   sassOptions: {
