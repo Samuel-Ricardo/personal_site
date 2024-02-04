@@ -12,6 +12,7 @@ const nextConfig = {
       'refine-web.imgix.net',
       'blog.appsignal.com',
       'intuji.com',
+      'beecrowd.io',
     ],
   },
   sassOptions: {
