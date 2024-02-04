@@ -1,18 +1,25 @@
 import { IPosition } from '@/@types/position';
-import { useCallback, useEffect, useState } from 'react';
+import { MutableRefObject, useCallback, useState } from 'react';
 
-export const useMousePosition = () => {
+export const useMousePosition = (props?: {
+  ref?: MutableRefObject<HTMLElement>;
+}) => {
   const [position, setPosition] = useState<IPosition>({ x: 0, y: 0 });
+  const { ref } = props || {};
 
   const handleMouseMove = useCallback(
-    (event: MouseEvent) => setPosition({ x: event.clientX, y: event.clientY }),
-    [],
+    (event: MouseEvent) => {
+      ref?.current
+        ? setPosition({
+            x: event.clientX - ref.current.offsetLeft,
+            y: event.clientY - ref.current.offsetTop,
+          })
+        : setPosition({ x: event.clientX, y: event.clientY });
+    },
+    [ref],
   );
 
-  useEffect(() => {
-    window?.addEventListener('mousemove', handleMouseMove);
-    return window?.removeEventListener('mousemove', handleMouseMove);
-  }, [handleMouseMove]);
+  window?.addEventListener('mousemove', handleMouseMove);
 
   return { position, handleMouseMove };
 };
