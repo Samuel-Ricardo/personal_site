@@ -6,6 +6,7 @@ const nextConfig = {
       'img.freepik.com',
       'camo.githubusercontent.com',
       'miro.medium.com',
+      'vitejs.dev',
     ],
   },
   sassOptions: {
