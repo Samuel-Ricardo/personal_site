@@ -8,6 +8,7 @@ const nextConfig = {
       'miro.medium.com',
       'vitejs.dev',
       'ik.imagekit.io',
+      'areadev.com.br',
     ],
   },
   sassOptions: {
