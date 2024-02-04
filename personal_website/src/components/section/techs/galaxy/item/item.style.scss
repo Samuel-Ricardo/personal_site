@@ -8,6 +8,11 @@
   @apply w-fit;
   @apply rounded-lg;
 
+  &:hover {
+    @apply cursor-pointer;
+    @apply z-[100];
+  }
+
   #tech-item-img-container {
     @apply p-2;
     @apply w-16;
