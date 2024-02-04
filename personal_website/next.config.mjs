@@ -14,6 +14,7 @@ const nextConfig = {
       'intuji.com',
       'beecrowd.io',
       'images.ctfassets.net',
+      'cdn-icons-png.flaticon.com',
     ],
   },
   sassOptions: {
