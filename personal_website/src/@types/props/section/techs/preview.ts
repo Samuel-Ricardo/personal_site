@@ -5,3 +5,7 @@ export interface IPreview {
   description: string;
   images: string[];
 }
+
+export interface IPreviewProps extends HTMLMotionProps<'div'> {
+  preview: IPreview;
+}
