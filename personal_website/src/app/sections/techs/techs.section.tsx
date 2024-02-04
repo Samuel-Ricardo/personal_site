@@ -38,7 +38,7 @@ export const Techs = () => {
               },
             },
             {
-              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg',
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
               preview: {
                 name: 'Tailwind CSS',
                 description: "Advanced styles technology to build modern UI's",
@@ -65,6 +65,27 @@ export const Techs = () => {
                   'Next Generation Frontend Tooling to improve pure React Projects',
                 images: [
                   'https://miro.medium.com/v2/resize:fit:720/format:webp/1*ucL7YQ2v8aaOy426soLPZA.png',
+                ],
+              },
+            },
+            {
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg',
+              preview: {
+                name: 'JavaScript',
+                description: 'The programming language of the web',
+                images: [
+                  'https://areadev.com.br/wp-content/uploads/2022/10/JAVASCRIPT.png',
+                ],
+              },
+            },
+            {
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg',
+              preview: {
+                name: 'TypeScript',
+                description:
+                  'Improve JavaScript development to build solid and robust applications',
+                images: [
+                  'https://refine-web.imgix.net/blog/2023-11-07-ts-classes/social.png?w=800',
                 ],
               },
             },
