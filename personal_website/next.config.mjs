@@ -11,6 +11,7 @@ const nextConfig = {
       'areadev.com.br',
       'refine-web.imgix.net',
       'blog.appsignal.com',
+      'intuji.com',
     ],
   },
   sassOptions: {
