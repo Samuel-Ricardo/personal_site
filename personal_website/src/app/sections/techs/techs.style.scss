@@ -34,6 +34,8 @@
     @apply h-fit;
     @apply p-5;
 
+    z-index: 3;
+
     @include tablet {
       @apply flex-col;
       @apply justify-center;
@@ -49,6 +51,8 @@
     @apply w-full;
     @apply h-fit;
     @apply p-5;
+
+    z-index: 1;
 
     #tech-ilustration {
       @apply max-w-lg;
@@ -70,5 +74,7 @@
     @apply w-full;
     @apply h-fit;
     @apply p-5;
+
+    z-index: 3;
   }
 }
