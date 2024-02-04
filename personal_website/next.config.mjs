@@ -7,6 +7,7 @@ const nextConfig = {
       'camo.githubusercontent.com',
       'miro.medium.com',
       'vitejs.dev',
+      'ik.imagekit.io',
     ],
   },
   sassOptions: {
