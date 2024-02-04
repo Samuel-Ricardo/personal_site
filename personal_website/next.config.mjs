@@ -13,6 +13,7 @@ const nextConfig = {
       'blog.appsignal.com',
       'intuji.com',
       'beecrowd.io',
+      'images.ctfassets.net',
     ],
   },
   sassOptions: {
