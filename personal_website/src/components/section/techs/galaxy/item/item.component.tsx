@@ -6,10 +6,18 @@ import './item.style.scss';
 import { MotionLI } from '@/components/motion/li.component';
 import { MODULES } from '@/modules/app.factory';
 
-export const TechsGalaxyItem = ({ icon, preview }: ITechGalaxyItemProps) => {
+export const TechsGalaxyItem = ({
+  icon,
+  preview,
+  index,
+}: ITechGalaxyItemProps) => {
   const animation = MODULES.ANIMATION.FRAMER_MOTION.HOVER.MOUNT()();
   return (
-    <MotionLI id="tech-item" className="frosted-glass-lg" {...animation.parent}>
+    <MotionLI
+      id="tech-item"
+      className={`frosted-glass-lg`}
+      {...animation.parent}
+    >
       <div id="tech-item-img-container">
         <Image src={icon} alt="tech icon" width={80} height={80} />
       </div>
