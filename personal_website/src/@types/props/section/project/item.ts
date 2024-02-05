@@ -19,6 +19,11 @@ export interface IProjectItemContentProps {
   description: string;
 }
 
+export interface IProjectItemFooterProps {
+  repo: string;
+  demo?: string;
+}
+
 export interface IProjectItemTechsProps {
-  techs: ITechGalaxyItemProps[];
+  main_techs: ITechGalaxyItemProps[];
 }
