@@ -1,0 +1,10 @@
+@import '../../../../app/globals.scss';
+
+#projects-section #projects-container .project-item {
+  @apply flex;
+  @apply flex-row;
+  @apply h-fit;
+  @apply min-h-screen;
+  @apply w-full;
+  @apply p-5;
+}
