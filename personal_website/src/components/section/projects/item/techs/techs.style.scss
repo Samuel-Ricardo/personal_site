@@ -1,0 +1,9 @@
+@import '../../../../../app/globals.scss';
+
+#projects-section #projects-container .project-item #techs-galaxy {
+  ul {
+    @apply flex;
+    @apply flex-wrap;
+    @apply gap-6;
+  }
+}
