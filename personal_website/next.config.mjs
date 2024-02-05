@@ -16,6 +16,7 @@ const nextConfig = {
       'images.ctfassets.net',
       'cdn-icons-png.flaticon.com',
       'images.pexels.com',
+      'github.com',
     ],
   },
   sassOptions: {
