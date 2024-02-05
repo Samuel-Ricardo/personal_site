@@ -5,7 +5,11 @@ export interface IProjectItemProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   repo: string;
-  production_link?: string;
+  demo?: string;
   image: string;
   main_techs: ITechGalaxyItemProps[];
+}
+
+export interface IProjectItemPreviewProps {
+  image: string;
 }
