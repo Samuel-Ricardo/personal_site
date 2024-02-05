@@ -13,3 +13,7 @@ export interface IProjectItemProps extends HTMLAttributes<HTMLDivElement> {
 export interface IProjectItemPreviewProps {
   image: string;
 }
+
+export interface IProjectItemTechsProps {
+  techs: ITechGalaxyItemProps[];
+}
