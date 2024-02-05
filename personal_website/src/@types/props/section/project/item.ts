@@ -1,15 +1,6 @@
 import { HTMLAttributes } from 'react';
 import { ITechGalaxyItemProps } from '../techs/item';
 
-export interface IProjectItemProps extends HTMLAttributes<HTMLDivElement> {
-  title: string;
-  description: string;
-  repo: string;
-  demo?: string;
-  image: string;
-  main_techs: ITechGalaxyItemProps[];
-}
-
 export interface IProjectItemPreviewProps {
   image: string;
 }
@@ -26,4 +17,13 @@ export interface IProjectItemFooterProps {
 
 export interface IProjectItemTechsProps {
   main_techs: ITechGalaxyItemProps[];
+}
+
+export interface IProjectItemProps
+  extends HTMLAttributes<HTMLDivElement>,
+    IProjectItemPreviewProps,
+    IProjectItemContentProps,
+    IProjectItemFooterProps,
+    IProjectItemTechsProps {
+  title: string;
 }
