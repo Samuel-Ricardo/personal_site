@@ -5,7 +5,9 @@ export interface IProjectItemPreviewProps {
   image: string;
 }
 
-export interface IProjectItemContentProps {
+export interface IProjectItemContentProps
+  extends IProjectItemFooterProps,
+    IProjectItemTechsProps {
   title: string;
   description: string;
 }
@@ -22,8 +24,6 @@ export interface IProjectItemTechsProps {
 export interface IProjectItemProps
   extends HTMLAttributes<HTMLDivElement>,
     IProjectItemPreviewProps,
-    IProjectItemContentProps,
-    IProjectItemFooterProps,
-    IProjectItemTechsProps {
+    IProjectItemContentProps {
   title: string;
 }
