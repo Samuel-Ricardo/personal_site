@@ -1,0 +1,10 @@
+@import '../../../../../app/globals.scss';
+
+#projects-section #projects-container .project-item .footer {
+  @apply flex;
+  @apply flex-row;
+  @apply h-fit;
+  @apply w-full;
+  @apply py-5;
+  @apply gap-16;
+}
