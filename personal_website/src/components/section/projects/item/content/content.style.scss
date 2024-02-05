@@ -1,0 +1,33 @@
+@import '../../../../../app/globals.scss';
+
+#projects-section #projects-container .project-item .content-container {
+  @apply flex;
+  @apply flex-col;
+
+  @apply relative;
+  @apply self-center;
+
+  @apply h-full;
+  @apply w-full;
+
+  @apply p-5;
+  @apply my-5;
+
+  h2 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply text-start;
+    @apply text-title-secondary;
+    @apply mb-16;
+    @apply uppercase;
+  }
+
+  p {
+    @apply text-justify;
+    @apply mb-10;
+  }
+
+  .techs-container {
+    @apply mb-5;
+  }
+}
