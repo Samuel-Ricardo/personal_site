@@ -14,6 +14,11 @@ export interface IProjectItemPreviewProps {
   image: string;
 }
 
+export interface IProjectItemContentProps {
+  title: string;
+  description: string;
+}
+
 export interface IProjectItemTechsProps {
   techs: ITechGalaxyItemProps[];
 }
