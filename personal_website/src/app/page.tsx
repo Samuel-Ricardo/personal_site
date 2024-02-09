@@ -1,5 +1,6 @@
 import { AboutMe } from './sections/about/about.section';
 import { Hero } from './sections/hero/hero.section';
+import { Projects } from './sections/projects/projects.section';
 import { Techs } from './sections/techs/techs.section';
 import { WorkWithSection } from './sections/work_with/works.section';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <WorkWithSection />
       <AboutMe />
       <Techs />
+      <Projects />
     </div>
   );
 }
