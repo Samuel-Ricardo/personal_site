@@ -1,4 +1,5 @@
 import { AboutMe } from './sections/about/about.section';
+import { Articles } from './sections/articles/articles.section';
 import { Hero } from './sections/hero/hero.section';
 import { Projects } from './sections/projects/projects.section';
 import { Techs } from './sections/techs/techs.section';
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutMe />
       <Techs />
       <Projects />
+      <Articles />
     </div>
   );
 }
