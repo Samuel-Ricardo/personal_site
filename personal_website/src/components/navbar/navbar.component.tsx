@@ -40,6 +40,12 @@ export const Navbar = () => {
           Journey
         </NavbarItem>
 
+        <NavbarItem
+          li={{ id: 'My World', ...animation({ transition: { delay: 4 } }) }}
+          href="My World"
+        >
+          My World
+        </NavbarItem>
         <Menu />
       </NavbarItemContainer>
       <Menu />
