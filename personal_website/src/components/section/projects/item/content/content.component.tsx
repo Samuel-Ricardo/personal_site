@@ -14,7 +14,7 @@ export const ProjectItemContent = ({
 }: IProjectItemContentProps) => (
   <div className="content-container">
     <h2 className={`${MODULES.FONTS.MONO.INCONSOLATA}`}>{title}</h2>
-    <p>{description}</p>
+    <p className="content">{description}</p>
 
     <ProjectItemTechs main_techs={main_techs} />
     <ProjectItemFooter repo={repo} demo={demo} />
