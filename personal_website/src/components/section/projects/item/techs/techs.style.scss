@@ -6,4 +6,20 @@
     @apply flex-wrap;
     @apply gap-6;
   }
+
+  z-index: 60;
+
+  #tech-item-preview {
+    z-index: 70;
+  }
+
+  #tech-item {
+    @apply rounded-md;
+
+    #tech-item-img-container {
+      @apply max-w-12;
+      @apply p-1.5;
+      @apply rounded-md;
+    }
+  }
 }
