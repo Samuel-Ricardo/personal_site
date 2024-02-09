@@ -5,6 +5,11 @@
   @apply flex-row;
   @apply h-fit;
   @apply min-h-screen;
-  @apply w-full;
+  @apply max-w-full;
+  @apply w-[100vw];
   @apply p-5;
+  @apply gap-10;
+
+  @apply justify-center;
+  @apply items-center;
 }
