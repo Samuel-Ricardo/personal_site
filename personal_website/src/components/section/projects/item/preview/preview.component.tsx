@@ -4,12 +4,12 @@ import Image from 'next/image';
 import './preview.style.scss';
 
 export const ProjectItemPreview = ({ image }: IProjectItemPreviewProps) => (
-  <div className="frosted-glass image-container">
+  <div className="pi-image-container">
     <Image
       src={image}
       alt="project item preview"
-      width={700}
-      height={700}
+      width={1280}
+      height={720}
       quality={100}
     />
   </div>
