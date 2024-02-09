@@ -33,6 +33,13 @@ export const Navbar = () => {
         >
           Works
         </NavbarItem>
+        <NavbarItem
+          li={{ id: 'journey', ...animation({ transition: { delay: 4 } }) }}
+          href="/journey"
+        >
+          Journey
+        </NavbarItem>
+
         <Menu />
       </NavbarItemContainer>
       <Menu />
