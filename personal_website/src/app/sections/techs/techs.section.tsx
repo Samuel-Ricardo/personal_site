@@ -17,6 +17,7 @@ export const Techs = () => {
           items={[
             {
               icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg',
+              sm: true,
               preview: {
                 name: 'Next.js',
                 description:
