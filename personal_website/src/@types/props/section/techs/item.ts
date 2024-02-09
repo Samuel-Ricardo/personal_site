@@ -5,4 +5,5 @@ export interface ITechGalaxyItemProps extends HTMLAttributes<HTMLLIElement> {
   index?: number;
   icon: string;
   preview: IPreview;
+  sm?: boolean;
 }
