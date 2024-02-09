@@ -1,0 +1,10 @@
+@import '../../global.module.scss';
+
+#articles-section {
+  @apply flex;
+  @apply relative;
+  @apply max-w-[100vw];
+  @apply max-h-screen;
+  @apply w-screen;
+  @apply h-screen;
+}
