@@ -13,8 +13,9 @@ export interface IProjectItemContentProps
 }
 
 export interface IProjectItemFooterProps {
-  repo: string;
+  repo?: string;
   demo?: string;
+  about?: string;
 }
 
 export interface IProjectItemTechsProps {
@@ -22,7 +23,7 @@ export interface IProjectItemTechsProps {
 }
 
 export interface IProjectItemProps
-  extends HTMLAttributes<HTMLDivElement>,
+  extends HTMLAttributes<HTMLLIElement>,
     IProjectItemPreviewProps,
     IProjectItemContentProps {
   title: string;
