@@ -5,6 +5,7 @@ export interface IPreview {
   description: string;
   images: string[];
   left?: boolean;
+  top?: boolean;
 }
 
 export interface IPreviewProps extends HTMLMotionProps<'div'> {
