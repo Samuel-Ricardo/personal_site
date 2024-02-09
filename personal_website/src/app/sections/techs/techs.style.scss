@@ -1,6 +1,12 @@
 @import '../../globals.scss';
 
 #techs-section {
+  @include tablet {
+    #img-techs-bg {
+      @apply object-cover;
+    }
+  }
+
   @apply flex;
   @apply flex-col;
   position: relative;
