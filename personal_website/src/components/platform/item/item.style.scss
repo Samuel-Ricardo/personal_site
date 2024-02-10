@@ -1,0 +1,30 @@
+@import '../../../app/globals.scss';
+
+.platform-card {
+  @apply flex;
+  @apply flex-row;
+  @apply flex-wrap;
+  @apply justify-start;
+  @apply items-center;
+  @apply gap-5;
+  @apply min-w-fit;
+  @apply w-56;
+  @apply h-fit;
+  @apply p-1;
+
+  @apply rounded-lg;
+
+  &:hover {
+    @apply cursor-pointer;
+    @apply transition-all;
+    @apply ease-in-out;
+    @apply duration-300;
+    @apply scale-105;
+  }
+
+  @apply frosted-glass-lg;
+
+  .platform-icon {
+    @apply w-14;
+  }
+}
