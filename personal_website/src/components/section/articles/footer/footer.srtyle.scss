@@ -1,17 +1,18 @@
 @import '../../../../app/globals.scss';
 
 #articles-section #article-section-footer {
-  @apply w-full;
-  @apply h-full;
+  @apply w-11/12;
+  @apply h-fit;
   @apply flex;
   @apply flex-col;
   @apply justify-center;
   @apply items-center;
   @apply p-5;
   @apply mt-5;
+  @apply mb-10;
 
   h2 {
-    @apply text-4xl;
+    @apply text-2xl;
     @apply text-center;
     @apply mb-8;
   }
@@ -19,5 +20,18 @@
   ul {
     @apply grid;
     @apply grid-cols-3;
+    @apply gap-28;
+
+    @include tablet {
+      @apply gap-8;
+    }
+
+    @include mobile {
+      @apply gap-4;
+      @apply grid-cols-1;
+    }
   }
+
+  @apply frosted-glass-lg;
+  @apply rounded-3xl;
 }
