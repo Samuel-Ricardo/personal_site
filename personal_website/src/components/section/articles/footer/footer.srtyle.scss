@@ -1,0 +1,23 @@
+@import '../../../../app/globals.scss';
+
+#articles-section #article-section-footer {
+  @apply w-full;
+  @apply h-full;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  @apply p-5;
+  @apply mt-5;
+
+  h2 {
+    @apply text-4xl;
+    @apply text-center;
+    @apply mb-8;
+  }
+
+  ul {
+    @apply grid;
+    @apply grid-cols-3;
+  }
+}
