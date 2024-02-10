@@ -7,4 +7,11 @@
   @apply max-h-screen;
   @apply w-screen;
   @apply h-screen;
+
+  .section-title {
+    @apply text-4xl;
+    @apply text-center;
+    @apply w-full;
+    @apply mt-16;
+  }
 }
