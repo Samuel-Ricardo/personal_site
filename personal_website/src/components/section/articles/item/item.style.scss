@@ -37,5 +37,12 @@
     }
   }
 
+  .article-cover {
+    @apply w-full;
+    @apply h-fit;
+    @apply rounded-md;
+    @apply mb-3;
+  }
+
   
 }
