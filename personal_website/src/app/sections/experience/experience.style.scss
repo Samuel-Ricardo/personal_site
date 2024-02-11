@@ -2,8 +2,17 @@
 
 #experience-section {
   @apply flex;
+  @apply flex-col;
   @apply min-h-screen;
   @apply max-w-[100vw];
   @apply w-screen;
   @apply h-fit;
+
+  h1 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply text-center;
+    @apply mt-8;
+    @apply mb-10;
+  }
 }
