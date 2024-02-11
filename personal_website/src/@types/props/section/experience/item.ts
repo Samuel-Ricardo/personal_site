@@ -6,9 +6,10 @@ export interface IExperience {
   company: ICompany;
   start: Date;
   finish?: Date;
+  left?: boolean;
 }
 
 export interface IExperienceItemProps {
+  key?: any;
   data: IExperience;
-  left?: boolean;
 }
