@@ -7,11 +7,11 @@
     @apply gap-5;
 
     @include tablet {
-      @apply grid-cols-2;
+      @apply grid-cols-3;
     }
 
     @include mobile {
-      @apply grid-cols-1;
+      @apply grid-cols-2;
     }
   }
 
