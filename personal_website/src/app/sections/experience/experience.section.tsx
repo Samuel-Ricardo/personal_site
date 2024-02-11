@@ -9,10 +9,25 @@ export const Experience = () => {
         itens={[
           {
             title: 'Open Source Dev',
-            company: { name: 'Github', icon: './' },
+            company: {
+              name: 'Github',
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+            },
             description: '123456789123456789123456789123456789123456789',
             start: new Date(),
             finish: new Date(),
+            left: true,
+          },
+          {
+            title: 'Open Source Dev',
+            company: {
+              name: 'Github',
+              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+            },
+            description: '123456789123456789123456789123456789123456789',
+            start: new Date(),
+            finish: new Date(),
+            left: false,
           },
         ]}
       />
