@@ -1,0 +1,9 @@
+@import '../../globals.scss';
+
+#experience-section {
+  @apply flex;
+  @apply min-h-screen;
+  @apply max-w-[100vw];
+  @apply w-screen;
+  @apply h-fit;
+}
