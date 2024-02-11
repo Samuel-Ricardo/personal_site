@@ -1,0 +1,54 @@
+@import '../../../../../app/globals.scss';
+
+.experience-item-card {
+  @apply flex;
+  @apply flex-col;
+  @apply h-fit;
+  @apply w-[46%];
+  @apply frosted-glass;
+  @apply p-4;
+  @apply rounded-lg;
+
+  header {
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+
+    @apply w-full;
+
+    .header-content {
+      @apply w-full;
+      .line {
+        width: 100%;
+        height: 1px;
+        background-color: black;
+      }
+    }
+
+    img {
+      @apply w-14;
+      @apply mr-4;
+    }
+  }
+
+  .description {
+    @apply mt-4;
+    @apply flex;
+    @apply flex-col;
+    @apply w-full;
+
+    p {
+      @apply mb-4;
+      @apply mx-2;
+
+      background-color: #2d313609;
+      @apply p-2;
+      @apply rounded-md;
+    }
+
+    button {
+      align-self: end;
+      @apply mr-2;
+    }
+  }
+}
