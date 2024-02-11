@@ -19,5 +19,13 @@
     @apply mb-2;
   }
 
+  .description {
+    @apply text-justify;
+    @apply text-wrap;
+    @apply break-all;
+    @apply text-sm;
+    @apply mb-3;
+  }
+
   
 }
