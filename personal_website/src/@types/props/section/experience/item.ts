@@ -7,3 +7,8 @@ export interface IExperience {
   start: Date;
   finish?: Date;
 }
+
+export interface IExperienceItemProps {
+  data: IExperience;
+  left?: boolean;
+}
