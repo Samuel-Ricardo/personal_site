@@ -4,9 +4,17 @@
   @apply flex;
   @apply relative;
   @apply max-w-[100vw];
-  @apply max-h-screen;
+  @apply min-h-screen;
   @apply w-screen;
-  @apply h-screen;
+  @apply h-fit;
+
+  .content-container {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-1;
+    @apply justify-center;
+    @apply items-center;
+  }
 
   .section-title {
     @apply text-4xl;
