@@ -27,5 +27,15 @@
     @apply mb-3;
   }
 
+  .platform-card {
+    @apply text-sm;
+    @apply w-fit;
+    @apply rounded-sm;
+    @apply pr-2;
+    .platform-icon {
+      @apply w-8;
+    }
+  }
+
   
 }
