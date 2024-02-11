@@ -14,5 +14,10 @@
   @apply h-full;
   @apply p-5;
 
+  .title {
+    @apply text-xl;
+    @apply mb-2;
+  }
+
   
 }
