@@ -17,6 +17,8 @@ const nextConfig = {
       'cdn-icons-png.flaticon.com',
       'images.pexels.com',
       'github.com',
+      'img.icons8.com',
+      'icons8.com.br',
     ],
   },
   sassOptions: {
