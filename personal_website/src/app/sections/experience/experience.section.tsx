@@ -15,7 +15,6 @@ export const Experience = () => {
             },
             description: '123456789123456789123456789123456789123456789',
             start: new Date(),
-            finish: new Date(),
             left: true,
           },
           {
@@ -27,7 +26,6 @@ export const Experience = () => {
             description: '123456789123456789123456789123456789123456789',
             start: new Date(),
             finish: new Date(),
-            left: false,
           },
         ]}
       />
