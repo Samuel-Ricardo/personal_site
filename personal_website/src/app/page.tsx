@@ -1,3 +1,4 @@
+import { AcademicRecord } from './sections/AcademicRecord/academic.section';
 import { AboutMe } from './sections/about/about.section';
 import { Articles } from './sections/articles/articles.section';
 import { Experience } from './sections/experience/experience.section';
@@ -19,6 +20,7 @@ export default function Home() {
       <Projects />
       <Articles />
       <Experience />
+      <AcademicRecord />
     </div>
   );
 }
