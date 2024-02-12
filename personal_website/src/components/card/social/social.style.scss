@@ -1,0 +1,22 @@
+@import '../../../app/globals.scss';
+
+.social-card {
+  @apply relative;
+  @apply w-[20rem];
+  @apply h-auto;
+
+  .avatar {
+    @apply w-full;
+    @apply h-auto;
+    @apply rounded-lg;
+  }
+
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
+
+  &:hover {
+    @apply cursor-pointer;
+    @apply -rotate-6;
+  }
+}
