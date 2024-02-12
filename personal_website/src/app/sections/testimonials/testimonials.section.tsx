@@ -2,6 +2,7 @@ import { TestimonialsBackground } from '@/images/background/testimonials/testimo
 import './testimonials.style.scss';
 import { StaticCarousel } from '@/components/carousel/horizontal/static/static.carousel';
 import { SocialCard } from '@/components/card/social/social.card';
+import { TestimonyCard } from '@/components/card/testimony/testimony.card';
 
 export const Testimonials = () => {
   return (
@@ -15,6 +16,8 @@ export const Testimonials = () => {
           <SocialCard />
           <SocialCard />
         </StaticCarousel>
+
+        <TestimonyCard />
       </div>
     </section>
   );
