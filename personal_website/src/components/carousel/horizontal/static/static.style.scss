@@ -1,19 +1,50 @@
 @import '../../../../app/globals.scss';
 
 .static-carousel {
-  @apply relative;
   @apply flex;
+  @apply flex-1;
   @apply flex-row;
-  @apply min-w-full;
-  @apply w-fit;
-  @apply h-fit;
-  @apply px-10;
-  @apply py-4;
+  @apply relative;
 
-  @apply justify-center;
-  @apply items-center;
+  .right-button {
+    @apply absolute;
+    @apply right-7;
+    @apply bottom-0;
+    @apply top-0;
+    @apply z-50;
 
-  li {
-    @apply mx-auto;
+    #right-arrow-icon {
+      @apply h-16;
+    }
+  }
+
+  .left-button {
+    @apply absolute;
+    @apply left-7;
+    @apply bottom-0;
+    @apply top-0;
+    @apply z-50;
+
+    #left-arrow-icon {
+      @apply h-16;
+    }
+  }
+
+  .static-carousel-container {
+    @apply relative;
+    @apply flex;
+    @apply flex-row;
+    @apply min-w-full;
+    @apply w-fit;
+    @apply h-fit;
+    @apply px-10;
+    @apply py-4;
+
+    @apply justify-center;
+    @apply items-center;
+
+    li {
+      @apply mx-auto;
+    }
   }
 }
