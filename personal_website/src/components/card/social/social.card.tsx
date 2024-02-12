@@ -5,7 +5,7 @@ import { SocialCardFooter } from './footer/footer.component';
 
 export const SocialCard = () => {
   return (
-    <div className="social-card selected">
+    <div className="social-card">
       <Image
         src="/hero_avatar.jpg"
         alt="Github"
