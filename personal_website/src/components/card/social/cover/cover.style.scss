@@ -1,0 +1,28 @@
+@import '../../../../app/globals.scss';
+
+.social-card {
+  .cover {
+    position: absolute;
+    @apply w-full;
+    @apply h-full;
+    @apply rounded-lg;
+    @apply z-20;
+    @apply frosted-glass;
+    @apply top-0;
+    @apply left-0;
+    @apply bottom-0;
+    @apply right-0;
+
+    @apply transition;
+    @apply duration-300;
+    @apply ease-in-out;
+  }
+
+  &:hover {
+    .cover {
+      @apply opacity-100;
+      @apply cursor-pointer;
+      @apply rotate-12;
+    }
+  }
+}
