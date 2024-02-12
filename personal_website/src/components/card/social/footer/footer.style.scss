@@ -1,0 +1,30 @@
+@import '../../../../app/globals.scss';
+
+.social-card footer {
+  @apply relative;
+  @apply w-full;
+  @apply h-fit;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded-b-lg;
+  @apply frosted-glass-lg;
+
+  @apply -translate-y-6;
+  @apply opacity-0;
+
+  .role {
+    @apply text-sm;
+  }
+
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
+}
+
+.selected {
+  footer {
+    @apply translate-y-0;
+    @apply cursor-pointer;
+    @apply opacity-100;
+  }
+}
