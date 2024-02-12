@@ -3,16 +3,73 @@
 .social-card {
   .cover {
     position: absolute;
-    @apply w-full;
-    @apply h-full;
+    @apply max-w-full;
+    @apply max-h-full;
     @apply rounded-lg;
     @apply z-20;
-    @apply frosted-glass;
+    @apply frosted-glass-md;
     @apply top-0;
     @apply left-0;
     @apply bottom-0;
     @apply right-0;
 
+    .cover-container {
+      @apply h-full;
+      @apply w-full;
+      @apply flex;
+      @apply flex-col;
+      @apply relative;
+
+      .data {
+        @apply text-white;
+        @apply h-full;
+        @apply w-full;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+
+        @apply uppercase;
+
+        .name {
+          @apply text-3xl;
+          @apply font-bold;
+        }
+        .role {
+          @apply text-sm;
+          @apply font-light;
+        }
+      }
+
+      footer {
+        @apply frosted-glass-xl;
+        @apply rounded-lg;
+        @apply flex;
+        @apply flex-row;
+        @apply justify-between;
+        @apply items-center;
+        @apply w-full;
+        @apply h-fit;
+        @apply p-2;
+
+        ul {
+          @apply flex;
+          @apply flex-row;
+          @apply w-full;
+          @apply h-full;
+        }
+        li {
+          @apply mx-auto;
+
+          .icon,
+          #github-logo {
+            @apply w-10;
+          }
+        }
+      }
+    }
+
+    @apply opacity-0;
     @apply transition;
     @apply duration-300;
     @apply ease-in-out;
