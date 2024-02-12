@@ -1,9 +1,19 @@
 #testimonials-section {
+  @apply relative;
   @apply flex;
   @apply flex-col;
   @apply w-screen;
   @apply min-h-screen;
   @apply h-fit;
+
+  .content {
+    @apply relative;
+    @apply flex;
+    @apply flex-col;
+    @apply h-full;
+    @apply w-full;
+    @apply z-10;
+  }
 
   h1 {
     @apply text-4xl;
