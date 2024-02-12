@@ -1,5 +1,7 @@
 import { IStaticCarouselProps } from '@/@types/props/carousel/horizontal/static/carousel';
 
+import './static.style.scss';
+
 export const StaticCarousel = ({ children }: IStaticCarouselProps) => {
   return (
     <ul className="static-carousel">
