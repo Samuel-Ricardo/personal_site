@@ -7,7 +7,7 @@ export const GithubLogo = ({ Paths }: IMotionSVGProps) => {
   return (
     <svg
       id="github-logo"
-      className="w-6 h-6 text-gray-800 dark:text-white"
+      className="w-6 h-6 text-gray-800 dark:text-white icon"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
