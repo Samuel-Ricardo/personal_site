@@ -1,6 +1,6 @@
 @import '../../../../app/globals.scss';
 
-.social-card footer {
+.social-card .card-footer {
   @apply relative;
   @apply w-full;
   @apply h-fit;
@@ -22,8 +22,8 @@
 }
 
 .selected {
-  footer {
-    @apply translate-y-0;
+  .card-footer {
+    @apply -translate-y-3;
     @apply cursor-pointer;
     @apply opacity-100;
   }
