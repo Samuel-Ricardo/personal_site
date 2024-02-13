@@ -1,0 +1,18 @@
+@import '../../../app/globals.scss';
+
+.testimony-card {
+  display: flex;
+  @apply flex-row;
+  @apply frosted-glass-md;
+  @apply p-4;
+  @apply m-4;
+  align-items: center;
+  @apply h-fit;
+  @apply flex-1;
+
+  .content-block {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-1;
+  }
+}
