@@ -15,27 +15,4 @@
   @include tablet {
     @apply p-3;
   }
-
-  .content-container {
-    @apply flex;
-    @apply flex-col;
-
-    font-size: 0.8rem;
-
-    .line {
-      @apply w-full;
-      @apply h-[1px];
-      @apply bg-black;
-    }
-
-    .card-title {
-      @apply font-bold;
-      @apply text-xl;
-      @apply text-black;
-
-      @include tablet {
-        font-size: 1rem;
-      }
-    }
-  }
 }
