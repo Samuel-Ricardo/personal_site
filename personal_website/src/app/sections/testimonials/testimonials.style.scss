@@ -2,9 +2,9 @@
   @apply relative;
   @apply flex;
   @apply flex-col;
-  @apply w-screen;
-  @apply min-h-screen;
-  @apply h-fit;
+  @apply max-w-[100vw];
+  @apply min-h-fit;
+  @apply h-screen;
 
   .content {
     @apply relative;
