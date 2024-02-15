@@ -3,6 +3,7 @@ import { FrostedGlassCard } from '../glass.card';
 
 import './card.style.scss';
 import Image from 'next/image';
+import { HorizontalLine } from '@/components/line/horizontal/horizontal.component';
 
 export const SimpleCard = ({ children, image, title }: ISimpleCardProps) => {
   return (
@@ -12,7 +13,7 @@ export const SimpleCard = ({ children, image, title }: ISimpleCardProps) => {
       </div>
       <div className="content-container">
         <h1 className="card-title">{title}</h1>
-        <div className="line" />
+        <HorizontalLine />
         <p className="content">{children}</p>
       </div>
     </FrostedGlassCard>
