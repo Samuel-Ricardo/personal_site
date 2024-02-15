@@ -8,7 +8,7 @@ import { SimpleCardImage } from './image/image.component';
 export const SimpleCard = ({ children, image, title }: ISimpleCardProps) => {
   return (
     <FrostedGlassCard>
-      <SimpleCardImage />
+      <SimpleCardImage image={image} />
 
       <div className="content-container">
         <h1 className="card-title">{title}</h1>
