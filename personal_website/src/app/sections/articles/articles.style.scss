@@ -1,12 +1,7 @@
-@import '../../global.module.scss';
+@import '../../globals.scss';
 
 #articles-section {
-  @apply flex;
-  @apply relative;
-  @apply max-w-[100vw];
-  @apply min-h-screen;
-  @apply w-screen;
-  @apply h-fit;
+  @apply section;
 
   .content-container {
     @apply flex;

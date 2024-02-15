@@ -4,7 +4,7 @@ import { AboutMeContent } from '@/components/about/content/content.component';
 
 export const AboutMe = () => {
   return (
-    <section id="about-me" className="flex flex-col w-screen h-full ">
+    <section id="about-me" className="section">
       <AboutMeTitle />
       <AboutMeContent />
     </section>
