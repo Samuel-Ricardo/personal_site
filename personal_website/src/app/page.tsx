@@ -1,13 +1,15 @@
-import { AcademicRecord } from './sections/AcademicRecord/academic.section';
-import { AboutMe } from './sections/about/about.section';
-import { Articles } from './sections/articles/articles.section';
-import { Contact } from './sections/contact/contact.section';
-import { Experience } from './sections/experience/experience.section';
-import { Hero } from './sections/hero/hero.section';
-import { Projects } from './sections/projects/projects.section';
-import { Techs } from './sections/techs/techs.section';
-import { Testimonials } from './sections/testimonials/testimonials.section';
-import { WorkWithSection } from './sections/work_with/works.section';
+import './globals.scss';
+
+import { AcademicRecord } from './sections/home/AcademicRecord/academic.section';
+import { AboutMe } from './sections/home/about/about.section';
+import { Articles } from './sections/home/articles/articles.section';
+import { Contact } from './sections/home/contact/contact.section';
+import { Experience } from './sections/home/experience/experience.section';
+import { Hero } from './sections/home/hero/hero.section';
+import { Projects } from './sections/home/projects/projects.section';
+import { Techs } from './sections/home/techs/techs.section';
+import { Testimonials } from './sections/home/testimonials/testimonials.section';
+import { WorkWithSection } from './sections/home/work_with/works.section';
 
 export default function Home() {
   return (
