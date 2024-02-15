@@ -3,7 +3,7 @@ import './academic.style.scss';
 
 export const AcademicRecord = () => {
   return (
-    <section id="academic-section">
+    <section id="academic-section" className="section">
       <h1>Experience</h1>
       <ExperienceContainer
         itens={[
