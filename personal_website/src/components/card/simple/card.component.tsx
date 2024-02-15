@@ -1,10 +1,10 @@
-import { IIWorkWithProps } from '@/@types/props/card/work_with';
+import { ISimpleCardProps } from '@/@types/props/card/simple';
 import { FrostedGlassCard } from '../glass.card';
 
 import './card.style.scss';
 import Image from 'next/image';
 
-export const SimpleCard = ({ children, image, title }: IIWorkWithProps) => {
+export const SimpleCard = ({ children, image, title }: ISimpleCardProps) => {
   return (
     <FrostedGlassCard>
       <div className="image-container">
