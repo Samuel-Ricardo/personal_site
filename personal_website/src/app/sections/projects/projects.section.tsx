@@ -4,7 +4,7 @@ import './projects.style.scss';
 
 export const Projects = () => {
   return (
-    <section id="projects-section">
+    <section id="projects-section" className="section">
       <h1>TAKE A LOOK ON MY BEST PROJECTS</h1>
       <ProjectsContainer
         items={[
