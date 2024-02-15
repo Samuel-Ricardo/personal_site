@@ -1,4 +1,5 @@
 import { HorizontalLine } from '@/components/line/horizontal/horizontal.component';
+import './conten.style.scss';
 
 export const SimpleCardContent = (props: any) => (
   <div className="content-container">
