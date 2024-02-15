@@ -6,7 +6,7 @@ import { TestimonyCard } from '@/components/card/testimony/testimony.card';
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials-section">
+    <section id="testimonials-section" className="section">
       <TestimonialsBackground />
       <div className="content">
         <h1>Testimonials</h1>
