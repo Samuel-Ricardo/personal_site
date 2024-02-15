@@ -16,24 +16,6 @@
     @apply p-3;
   }
 
-  .image-container {
-    @apply rounded-lg;
-    @apply p-2;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    @apply flex;
-    @apply justify-center;
-    @apply items-center;
-    @apply w-fit;
-    @apply h-fit;
-    @apply max-w-[80px];
-    @apply max-h-[80px];
-
-    @include tablet {
-      @apply max-w-[60px];
-      @apply max-h-[60px];
-    }
-  }
-
   .content-container {
     @apply flex;
     @apply flex-col;
