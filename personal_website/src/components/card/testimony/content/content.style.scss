@@ -1,0 +1,24 @@
+@import '../../../../app/globals.scss';
+
+.testimony-card .testimony-content {
+  @apply flex;
+  @apply flex-col;
+  @apply h-fit;
+  @apply w-full;
+
+  @apply min-w-full;
+  @apply h-fit;
+  @apply p-3;
+  @apply mx-2;
+  @apply my-4;
+  @apply text-justify;
+
+  @apply bg-[#2d313609];
+
+  @apply rounded-lg;
+
+  p {
+    @apply flex;
+    @apply flex-1;
+  }
+}
