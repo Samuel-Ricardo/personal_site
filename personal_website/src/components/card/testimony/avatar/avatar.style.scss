@@ -1,0 +1,10 @@
+@import '../../../../app/globals.scss';
+
+.testimony-avatar {
+  @apply w-[40%];
+  @apply mr-6;
+
+  img {
+    @apply rounded-lg;
+  }
+}

@@ -1,3 +1,4 @@
+import './avatar.style.scss';
 import Image from 'next/image';
 
 export const TestimonyAvatar = () => {
