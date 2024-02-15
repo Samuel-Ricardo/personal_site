@@ -4,7 +4,7 @@ import { FrostedGlassCard } from '../glass.card';
 import './card.style.scss';
 import Image from 'next/image';
 
-export const IWorkWithCard = ({ children, image, title }: IIWorkWithProps) => {
+export const SimpleCard = ({ children, image, title }: IIWorkWithProps) => {
   return (
     <FrostedGlassCard>
       <div className="image-container">
