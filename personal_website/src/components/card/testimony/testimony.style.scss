@@ -2,17 +2,21 @@
 
 .testimony-card {
   display: flex;
+  position: relative;
   @apply flex-row;
   @apply frosted-glass-md;
   @apply p-4;
   @apply m-4;
+  @apply mx-auto;
   align-items: center;
-  @apply h-fit;
-  @apply flex-1;
+  @apply h-[25rem];
+  @apply w-[95%];
+  @apply rounded-xl;
 
   .content-block {
     @apply flex;
     @apply flex-col;
-    @apply flex-1;
+    @apply w-full;
+    @apply h-full;
   }
 }
