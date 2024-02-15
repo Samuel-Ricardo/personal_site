@@ -8,6 +8,15 @@
   @apply scroll-smooth;
 }
 
+.section {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply max-w-[100vw];
+  @apply min-h-fit;
+  @apply h-screen;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
