@@ -2,15 +2,14 @@ import { ISimpleCardProps } from '@/@types/props/card/simple';
 import { FrostedGlassCard } from '../glass.card';
 
 import './card.style.scss';
-import Image from 'next/image';
 import { HorizontalLine } from '@/components/line/horizontal/horizontal.component';
+import { SimpleCardImage } from './image/image.component';
 
 export const SimpleCard = ({ children, image, title }: ISimpleCardProps) => {
   return (
     <FrostedGlassCard>
-      <div className="image-container">
-        <Image src={image} alt="Card Image" width={80} height={80} />
-      </div>
+      <SimpleCardImage />
+
       <div className="content-container">
         <h1 className="card-title">{title}</h1>
         <HorizontalLine />
