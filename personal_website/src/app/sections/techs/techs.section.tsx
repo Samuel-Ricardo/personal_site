@@ -5,7 +5,7 @@ import { TechsIlustration } from '@/images/section/tech.asset';
 
 export const Techs = () => {
   return (
-    <section id="techs-section">
+    <section id="techs-section" className="section">
       <TechsBackground />
 
       <h1 id="techs-title">A UNIVERSE OF POSSIBILITIES</h1>
