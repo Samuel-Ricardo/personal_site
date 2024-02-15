@@ -1,0 +1,29 @@
+@import '../../../../app/globals.scss';
+
+.testimony-card .testimony-footer {
+  @apply flex;
+  @apply flex-col;
+  @apply h-fit;
+  @apply w-full;
+  @apply justify-end;
+  @apply mt-auto;
+  @apply mb-0;
+
+  @apply items-center;
+
+  .wrapper {
+    @apply flex;
+    @apply flex-row;
+    @apply p-2;
+    @apply w-full;
+    @apply max-h-10;
+    @apply justify-start;
+    @apply items-center;
+    @apply gap-5;
+
+    .icon {
+      @apply w-auto;
+      @apply max-h-12;
+    }
+  }
+}
