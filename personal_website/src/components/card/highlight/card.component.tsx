@@ -2,6 +2,7 @@ import { ISocialProofProps } from '@/@types/props/card/social_proof';
 import { FrostedGlassCard } from '../glass.card';
 
 import './card.style.scss';
+import { HighlightCardImageContainer } from './image/image.container';
 
 export const HighlightCard = ({
   Icon,
@@ -13,7 +14,9 @@ export const HighlightCard = ({
 }: ISocialProofProps) => {
   return (
     <FrostedGlassCard id="sp-card">
-      {Icon ?? <div className="image-container">{Icon}</div>}
+      {Icon ?? (
+        <HighlightCardImageContainer>{Icon}</HighlightCardImageContainer>
+      )}
 
       <h1 className={`sp-title ${!Icon ?? 'mt-0'}`}>{title}</h1>
 
