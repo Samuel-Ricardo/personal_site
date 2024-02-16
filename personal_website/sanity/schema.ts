@@ -10,7 +10,7 @@ import { HightlightSchema } from './schemas/item/hightlight.schema';
 import { ImageSchema } from './schemas/image.schema';
 import { TechSchema } from './schemas/item/tech.schema';
 import { ProjectSchema } from './schemas/item/project.schema';
-import { PlatformSchema } from './schemas/platform.schema';
+import { PlatformSchema } from './schemas/item/platform.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
