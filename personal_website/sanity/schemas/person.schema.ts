@@ -7,17 +7,33 @@ export const PersonSchema: SchemaTypeDefinition = {
   fields: [
     {
       name: 'name',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      type: 'string',
     },
     {
-      name: 'role',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      name: 'title',
+      type: 'string',
     },
     {
       name: 'avatar',
       type: 'image',
+    },
+    {
+      name: 'company',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'company' }] }],
+    },
+    {
+      name: 'contacts',
+      type: 'array',
+      of: [
+        {
+          type: 'document',
+          fields: [
+            { name: 'icon', type: 'image' },
+            { name: 'link', type: 'url' },
+          ],
+        },
+      ],
     },
   ],
 };
