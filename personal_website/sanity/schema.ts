@@ -5,6 +5,7 @@ import { OccupationsSchema } from './schemas/sections/home/hero/occupations.sche
 import { TextSchema } from './schemas/typography/text.schema';
 import { PersonSchema } from './schemas/person.schema';
 import { TitleSchema } from './schemas/typography/title.schema';
+import { HeroSchema } from './schemas/sections/home/hero.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -14,5 +15,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     TextSchema,
     TitleSchema,
     PersonSchema,
+    HeroSchema,
   ],
 };
