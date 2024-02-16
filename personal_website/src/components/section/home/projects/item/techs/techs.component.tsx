@@ -1,5 +1,5 @@
 import { IProjectItemTechsProps } from '@/@types/props/section/project/item';
-import { TechsGalaxy } from '@/components/section/techs/galaxy/galaxy.component';
+import { TechsGalaxy } from '@/components/section/home/techs/galaxy/galaxy.component';
 
 import './techs.style.scss';
 

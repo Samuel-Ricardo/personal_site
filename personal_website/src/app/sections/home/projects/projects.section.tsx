@@ -1,4 +1,4 @@
-import { ProjectsContainer } from '@/components/section/projects/container/container.component';
+import { ProjectsContainer } from '@/components/section/home/projects/container/container.component';
 
 import './projects.style.scss';
 

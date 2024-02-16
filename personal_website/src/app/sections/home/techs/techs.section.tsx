@@ -1,4 +1,4 @@
-import { TechsGalaxy } from '@/components/section/techs/galaxy/galaxy.component';
+import { TechsGalaxy } from '@/components/section/home/techs/galaxy/galaxy.component';
 import './techs.style.scss';
 import { TechsBackground } from '@/images/background/techs/techs.background';
 import { TechsIlustration } from '@/images/section/tech.asset';
