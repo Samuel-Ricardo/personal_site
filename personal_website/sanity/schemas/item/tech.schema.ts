@@ -20,5 +20,10 @@ export const TechSchema = {
       type: 'reference',
       to: [{ type: 'tp_text' }],
     },
+    {
+      name: 'context',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
   ],
 };
