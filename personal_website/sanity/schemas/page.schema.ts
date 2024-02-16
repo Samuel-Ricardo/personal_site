@@ -1,6 +1,6 @@
 import { SchemaTypeDefinition } from 'sanity';
 
-export default {
+export const PageSchema = {
   name: 'page',
   title: 'App Page',
   type: 'document',
