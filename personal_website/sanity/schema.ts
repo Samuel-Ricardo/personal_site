@@ -11,6 +11,7 @@ import { ImageSchema } from './schemas/image.schema';
 import { TechSchema } from './schemas/item/tech.schema';
 import { ProjectSchema } from './schemas/item/project.schema';
 import { PlatformSchema } from './schemas/item/platform.schema';
+import { ArticleSchema } from './schemas/item/article.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -26,5 +27,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     TechSchema,
     ProjectSchema,
     PlatformSchema,
+    ArticleSchema,
   ],
 };
