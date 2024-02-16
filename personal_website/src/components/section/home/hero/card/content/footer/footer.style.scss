@@ -1,0 +1,14 @@
+@import '../../../../../../../app/globals.scss';
+
+#hero .card .container .footer {
+  @apply w-full;
+  @apply mt-2;
+
+  @apply flex;
+  @apply flex-row;
+  @apply gap-6;
+
+  .button:hover path {
+    @apply stroke-white;
+  }
+}
