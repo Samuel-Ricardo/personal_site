@@ -1,0 +1,13 @@
+.vertical-line {
+  width: 1px;
+  height: 4rem;
+  background-color: black;
+}
+
+#experience-section-container {
+  display: flex;
+  flex: 1;
+  @apply max-w-[100vw];
+  flex-direction: column;
+  align-items: center;
+}
