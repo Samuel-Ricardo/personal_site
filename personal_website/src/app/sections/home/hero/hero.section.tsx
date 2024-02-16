@@ -1,6 +1,6 @@
 import { Circuit } from '@/components/canvas/circuit.component';
-import { HeroCard } from '@/components/hero/card.component';
 import './hero.style.scss';
+import { HeroCard } from '@/components/section/home/hero/card.component';
 
 export const Hero = () => {
   return (

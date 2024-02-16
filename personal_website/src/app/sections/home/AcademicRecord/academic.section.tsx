@@ -1,4 +1,4 @@
-import { ExperienceContainer } from '@/components/section/experience/container/container.component';
+import { ExperienceContainer } from '@/components/section/home/experience/container/container.component';
 import './academic.style.scss';
 
 export const AcademicRecord = () => {
