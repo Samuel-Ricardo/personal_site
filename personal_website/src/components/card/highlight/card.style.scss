@@ -22,16 +22,6 @@
     color: var(--title-color);
   }
 
-  .image-container {
-    max-width: 4rem;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: none;
-  }
-
   .description {
     display: flex;
     align-items: center;
