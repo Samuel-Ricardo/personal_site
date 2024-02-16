@@ -18,7 +18,7 @@ export const HeroSchema: SchemaTypeDefinition = {
     {
       name: 'description',
       type: 'reference',
-      to: [{ type: 'text' }],
+      to: [{ type: 'tp_text' }],
     },
   ],
 };

@@ -1,5 +1,5 @@
 export const TextSchema = {
-  name: 'text',
+  name: 'tp_text',
   title: 'Text',
   type: 'document',
   fields: [
