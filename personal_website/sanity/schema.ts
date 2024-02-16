@@ -6,6 +6,8 @@ import { TextSchema } from './schemas/typography/text.schema';
 import { PersonSchema } from './schemas/person.schema';
 import { TitleSchema } from './schemas/typography/title.schema';
 import { HeroSchema } from './schemas/sections/home/hero.schema';
+import { HightlightSchema } from './schemas/item/hightlight.schema';
+import { ImageSchema } from './schemas/image.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -16,5 +18,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     TitleSchema,
     PersonSchema,
     HeroSchema,
+    HightlightSchema,
+    ImageSchema,
   ],
 };
