@@ -11,11 +11,12 @@ export const PageSchema = {
     },
     {
       name: 'link',
-      type: 'url',
+      type: 'string',
     },
     {
       name: 'lang',
-      type: 'string',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'lang' }] }],
     },
   ],
 } as SchemaTypeDefinition;
