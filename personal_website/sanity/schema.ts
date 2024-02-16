@@ -13,6 +13,7 @@ import { ProjectSchema } from './schemas/item/project.schema';
 import { PlatformSchema } from './schemas/item/platform.schema';
 import { ArticleSchema } from './schemas/item/article.schema';
 import { CompanySchema } from './schemas/item/company.schema';
+import { ExperienceSchema } from './schemas/item/experience.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -30,5 +31,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     PlatformSchema,
     ArticleSchema,
     CompanySchema,
+    ExperienceSchema,
   ],
 };
