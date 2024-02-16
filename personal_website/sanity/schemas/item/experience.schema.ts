@@ -25,5 +25,9 @@ export const ExperienceSchema = {
       name: 'endDate',
       type: 'date',
     },
+    {
+      name: 'context',
+      type: 'string',
+    },
   ],
 };
