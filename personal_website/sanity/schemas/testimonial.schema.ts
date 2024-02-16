@@ -13,5 +13,9 @@ export const TestimonialSchema = {
       type: 'reference',
       to: [{ type: 'tp_text' }],
     },
+    {
+      name: 'portfolio',
+      type: 'url',
+    },
   ],
 };
