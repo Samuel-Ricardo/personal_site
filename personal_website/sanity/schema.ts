@@ -9,6 +9,7 @@ import { HeroSchema } from './schemas/sections/home/hero.schema';
 import { HightlightSchema } from './schemas/item/hightlight.schema';
 import { ImageSchema } from './schemas/image.schema';
 import { TechSchema } from './schemas/item/tech.schema';
+import { ProjectSchema } from './schemas/item/project.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -22,5 +23,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     HightlightSchema,
     ImageSchema,
     TechSchema,
+    ProjectSchema,
   ],
 };
