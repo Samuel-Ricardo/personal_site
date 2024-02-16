@@ -1,4 +1,6 @@
-import { SocialProofCard } from '@/components/card/social_proof/card.component';
+'use client';
+
+import { HighlightCard } from '@/components/card/highlight/card.component';
 import './text.style.scss';
 import { SocialProof } from './social_proof/proof.component';
 import { GithubLogo } from '@/icons/logo/github/icon.component';
@@ -25,27 +27,27 @@ export const AbouteMeContentText = () => {
       </p>
 
       <SocialProof>
-        <SocialProofCard
+        <HighlightCard
           title="Projects"
           numbers={130}
           Icon={<GithubLogo Paths={drawAndFill} />}
         />
-        <SocialProofCard
+        <HighlightCard
           title="Stars"
           numbers={120}
           Icon={<StarIcon Paths={drawAndFill} />}
         />
-        <SocialProofCard title="Commits" numbers={16} k />
-        <SocialProofCard title="Coding at" numbers={5} description="Years" />
-        <SocialProofCard title="LikedIn Follows" numbers={500} />
-        <SocialProofCard
+        <HighlightCard title="Commits" numbers={16} k />
+        <HighlightCard title="Coding at" numbers={5} description="Years" />
+        <HighlightCard title="LikedIn Follows" numbers={500} />
+        <HighlightCard
           title="Impact On LikedIn"
           numbers={72}
           k
           description="over the year"
         />
-        <SocialProofCard title="Certificates" numbers={120} />
-        <SocialProofCard title="Articles" numbers={10} />
+        <HighlightCard title="Certificates" numbers={120} />
+        <HighlightCard title="Articles" numbers={10} />
       </SocialProof>
     </div>
   );
