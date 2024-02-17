@@ -1,6 +1,5 @@
 import { injectable } from 'inversify';
 import { IOccupationDTO } from '../DTO/occupation.dto';
-import { Gaegu } from 'next/font/google';
 
 @injectable()
 export class Occupation {
@@ -16,6 +15,10 @@ export class Occupation {
       description: this._description,
       image: this._image,
     };
+  }
+
+  static fromDTO(dto: IOccupationDTO): Occupation {
+    return new Occupation(dto.title, dto.description, dto.image);
   }
 
   get title(): string {
