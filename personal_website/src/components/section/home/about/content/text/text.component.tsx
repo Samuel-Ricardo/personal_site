@@ -3,9 +3,9 @@
 import { HighlightCard } from '@/components/card/highlight/card.component';
 import './text.style.scss';
 import { SocialProof } from './social_proof/proof.component';
-import { GithubLogo } from '@/icons/logo/github/icon.component';
+import { GithubLogo } from '@/assets/icons/logo/github/icon.component';
 import { MODULES } from '@/modules/app.factory';
-import { StarIcon } from '@/icons/star/icon.component';
+import { StarIcon } from '@/assets/icons/star/icon.component';
 
 export const AbouteMeContentText = () => {
   const animate = MODULES.ANIMATION.FRAMER_MOTION.SVG.DRAW();

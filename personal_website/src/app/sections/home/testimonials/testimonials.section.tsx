@@ -1,4 +1,4 @@
-import { TestimonialsBackground } from '@/images/background/testimonials/testimonials.background';
+import { TestimonialsBackground } from '@/assets/images/background/testimonials/testimonials.background';
 import './testimonials.style.scss';
 import { StaticCarousel } from '@/components/carousel/horizontal/static/static.carousel';
 import { SocialCard } from '@/components/card/social/social.card';

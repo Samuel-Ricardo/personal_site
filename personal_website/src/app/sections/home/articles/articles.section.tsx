@@ -1,4 +1,4 @@
-import { ArticlesBackground } from '@/images/background/articles/articles.background';
+import { ArticlesBackground } from '@/assets/images/background/articles/articles.background';
 import './articles.style.scss';
 import { MODULES } from '@/modules/app.factory';
 import { ArticlesContainer } from '@/components/section/home/articles/container/container.component';

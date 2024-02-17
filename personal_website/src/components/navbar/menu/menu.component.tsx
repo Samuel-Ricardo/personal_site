@@ -1,4 +1,4 @@
-import { MenuIcon } from '@/icons/menu/menu.component';
+import { MenuIcon } from '@/assets/icons/menu/menu.component';
 import { MenuContainer } from './container/container.component';
 import { MODULES } from '@/modules/app.factory';
 

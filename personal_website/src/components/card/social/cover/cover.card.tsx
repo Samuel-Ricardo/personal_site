@@ -1,4 +1,4 @@
-import { GithubLogo } from '@/icons/logo/github/icon.component';
+import { GithubLogo } from '@/assets/icons/logo/github/icon.component';
 
 import './cover.style.scss';
 

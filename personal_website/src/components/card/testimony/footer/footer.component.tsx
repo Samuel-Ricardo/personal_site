@@ -1,7 +1,7 @@
 import './footer.style.scss';
 
 import { NavigateButton } from '@/components/button/navigate/button.component';
-import { GithubLogo } from '@/icons/logo/github/icon.component';
+import { GithubLogo } from '@/assets/icons/logo/github/icon.component';
 
 export const TestimonyFooter = () => {
   return (

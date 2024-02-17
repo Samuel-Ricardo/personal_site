@@ -2,7 +2,7 @@ import './footer.style.scss';
 
 import { Button } from '@/components/button/button.component';
 import { NavigateButton } from '@/components/button/navigate/button.component';
-import { DownloadIcon } from '@/icons/download/download.icon';
+import { DownloadIcon } from '@/assets/icons/download/download.icon';
 import { MODULES } from '@/modules/app.factory';
 
 export const HeroCardContentFooter = () => {

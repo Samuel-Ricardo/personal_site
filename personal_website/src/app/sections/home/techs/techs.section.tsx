@@ -1,7 +1,7 @@
 import { TechsGalaxy } from '@/components/section/home/techs/galaxy/galaxy.component';
 import './techs.style.scss';
-import { TechsBackground } from '@/images/background/techs/techs.background';
-import { TechsIlustration } from '@/images/section/tech.asset';
+import { TechsBackground } from '@/assets/images/background/techs/techs.background';
+import { TechsIlustration } from '@/assets/images/section/tech.asset';
 
 export const Techs = () => {
   return (

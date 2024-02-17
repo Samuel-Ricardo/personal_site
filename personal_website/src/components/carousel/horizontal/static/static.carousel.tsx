@@ -1,8 +1,8 @@
 import { IStaticCarouselProps } from '@/@types/props/carousel/horizontal/static/carousel';
 
 import './static.style.scss';
-import { RightArrow } from '@/icons/arrow/right/arrow.icon';
-import { LeftArrow } from '@/icons/arrow/left/arrow.icon';
+import { RightArrow } from '@/assets/icons/arrow/right/arrow.icon';
+import { LeftArrow } from '@/assets/icons/arrow/left/arrow.icon';
 
 export const StaticCarousel = ({ children }: IStaticCarouselProps) => {
   return (
