@@ -1,6 +1,6 @@
 import { Container } from 'inversify';
-import { CRM_ENGINE_MODULE } from './CRM/crm.module';
+import { CMS_ENGINE_MODULE } from './CMS/cms.module';
 
 const MODULE = new Container({ defaultScope: 'Singleton' });
 
-export const ENGINE_MODULE = Container.merge(MODULE, CRM_ENGINE_MODULE);
+export const ENGINE_MODULE = Container.merge(MODULE, CMS_ENGINE_MODULE);

@@ -5,7 +5,7 @@ import { type SanityClient } from 'next-sanity';
 @injectable()
 export abstract class SanitySupport {
   constructor(
-    @inject(MODULE.ENGINE.CRM.SANITY)
+    @inject(MODULE.ENGINE.CMS.SANITY)
     protected readonly client: SanityClient,
   ) {}
 }

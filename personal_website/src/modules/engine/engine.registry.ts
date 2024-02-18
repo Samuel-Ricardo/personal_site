@@ -1,5 +1,5 @@
-import { CRM_ENGINE_REGISTRY as CRM } from './CRM/crm.registry';
+import { CMS_ENGINE_REGISTRY as CMS } from './CMS/cms.registry';
 
 export const ENGINE_REGISTRY = {
-  CRM,
+  CMS,
 };
