@@ -8,4 +8,8 @@ export class AssemblerController {
     @inject(MODULE.ASSEMBLER.SERVICE.MAIN)
     private readonly service: AssemblerService,
   ) {}
+
+  async assembleOccupation() {
+    return await this.service.assembleOccupation();
+  }
 }
