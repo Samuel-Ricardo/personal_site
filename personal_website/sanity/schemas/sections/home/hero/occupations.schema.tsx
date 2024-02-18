@@ -16,7 +16,12 @@ export const OccupationsSchema = {
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
+      type: 'string',
+    },
+    {
+      name: 'lang',
+      title: 'Language',
+      type: 'string',
     },
   ],
 };

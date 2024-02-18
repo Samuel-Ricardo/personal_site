@@ -7,16 +7,12 @@ export const PageSchema = {
   fields: [
     {
       name: 'name',
-      type: 'string',
+      type: 'reference',
+      to: [{ type: 'title' }],
     },
     {
       name: 'link',
       type: 'string',
-    },
-    {
-      name: 'lang',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'lang' }] }],
     },
   ],
 } as SchemaTypeDefinition;

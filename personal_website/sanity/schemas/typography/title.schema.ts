@@ -11,8 +11,7 @@ export const TitleSchema: SchemaTypeDefinition = {
     },
     {
       name: 'lang',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'lang' }] }],
+      type: 'string',
     },
     {
       name: 'content',
