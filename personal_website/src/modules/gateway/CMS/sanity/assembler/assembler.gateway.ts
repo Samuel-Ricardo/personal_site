@@ -16,5 +16,11 @@ export class SanityAssemblerGateway
     return result.content;
   }
 
-  async findText(DTO: IAssemblerFindDTO) {}
+  async findText(DTO: IAssemblerFindDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "text" && lang == ${DTO.lang || 'en'} && identifier == ${DTO.identifier} ]{content}`,
+    );
+
+    return result.content;
+  }
 }
