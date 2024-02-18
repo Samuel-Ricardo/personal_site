@@ -8,7 +8,13 @@ export class SanityAssemblerGateway
   extends SanitySupport
   implements IAssemblerGateway
 {
-  async findTitle(DTO: IAssemblerFindDTO) {}
+  async findTitle({ identifier, lang }: IAssemblerFindDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "title" && lang == ${lang || 'en'} && identifier == ${identifier} ]{content}`,
+    );
+
+    return result.content;
+  }
 
   async findText(DTO: IAssemblerFindDTO) {}
 }
