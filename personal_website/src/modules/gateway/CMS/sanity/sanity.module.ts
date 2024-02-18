@@ -1,6 +1,7 @@
 import { Container } from 'inversify';
 import { SANITY_CMS_GATEWAY_REGISTRY } from './sanity.registry';
 import { SanityOccupationGateway } from './occupation/occupation.gateway';
+import { SanityAssemblerGateway } from './assembler/assembler.gateway';
 
 export const SANITY_CMS_GATEWAY_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -8,4 +9,8 @@ export const SANITY_CMS_GATEWAY_MODULE = new Container({
 
 SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.OCCUPATION).to(
   SanityOccupationGateway,
+);
+
+SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.ASSEMBLER).to(
+  SanityAssemblerGateway,
 );
