@@ -3,6 +3,7 @@ import { Container } from 'inversify';
 import { OCCUPATION_REGISTRY } from './occupation.registry';
 import { FindAllOccupationsUseCase } from './use_case/find/all.use_case';
 import { OccupationService } from './service/occupation.service';
+import { OccupationController } from './controller/occupation.controller';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -16,3 +17,7 @@ OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.USE_CASE.FIND.ALL).to(
 );
 
 OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.SERVICE.MAIN).to(OccupationService);
+
+OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.CONTROLLER.MAIN).to(
+  OccupationController,
+);
