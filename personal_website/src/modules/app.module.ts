@@ -1,9 +1,12 @@
+import 'reflect-metadata';
+
 import { Container } from 'inversify';
 import { FONTS_MODULE } from './fonts/fonts.module';
 import { ANIMATION_MODULE } from './animations/animation.module';
 import { ENGINE_MODULE } from './engine/engine.module';
 import { GATEWAY_MODULE } from './gateway/gateway.module';
 import { OCCUPATION_MODULE } from './@core/occupations/occupation.module';
+import { ASSEMBLER_MODULE } from './@core/assembler/assembler.module';
 
 const MODULES = new Container();
 
@@ -14,4 +17,5 @@ export const APP_MODULE = Container.merge(
   ENGINE_MODULE,
   GATEWAY_MODULE,
   OCCUPATION_MODULE,
+  ASSEMBLER_MODULE,
 );
