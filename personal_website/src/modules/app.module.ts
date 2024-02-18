@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+
 import { Container } from 'inversify';
 import { FONTS_MODULE } from './fonts/fonts.module';
 import { ANIMATION_MODULE } from './animations/animation.module';

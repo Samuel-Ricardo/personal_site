@@ -10,6 +10,6 @@ export class OccupationController {
   ) {}
 
   async findAll() {
-    return this.service.findAll();
+    return await this.service.findAll();
   }
 }

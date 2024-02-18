@@ -4,6 +4,6 @@ import { OccupationGatewaySupport } from '../../gateway/gateway.support';
 @injectable()
 export class FindAllOccupationsUseCase extends OccupationGatewaySupport {
   async execute() {
-    return this.gateway.findAll();
+    return await this.gateway.findAll();
   }
 }
