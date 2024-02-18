@@ -21,6 +21,10 @@ export class Occupation {
     return new Occupation(dto.title, dto.description, dto.image);
   }
 
+  static fromDTOList(dtos: IOccupationDTO[]): Occupation[] {
+    return dtos.map(dto => Occupation.fromDTO(dto));
+  }
+
   get title(): string {
     return this._title;
   }
