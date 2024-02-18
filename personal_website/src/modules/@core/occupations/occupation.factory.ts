@@ -1,9 +1,16 @@
+import { OccupationController } from './controller/occupation.controller';
 import { OCCUPATION_MODULE } from './occupation.module';
 import { OCCUPATION_REGISTRY } from './occupation.registry';
 import { OccupationService } from './service/occupation.service';
 import { FindAllOccupationsUseCase } from './use_case/find/all.use_case';
 
 export const OCCUPATION_FACTORY = {
+  CONROLELR: {
+    MAIN: () =>
+      OCCUPATION_MODULE.get<OccupationController>(
+        OCCUPATION_REGISTRY.CONTROLLER.MAIN,
+      ),
+  },
   SERVICE: {
     MAIN: () =>
       OCCUPATION_MODULE.get<OccupationService>(
