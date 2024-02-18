@@ -1,4 +1,5 @@
 export const ASSEMBLER_REGISTRY = {
+  MAIN: Symbol.for('MODULE::CORE:ASSEMBLER'),
   CONTROLLER: {
     MAIN: Symbol.for('MODULE::CORE:ASSEMBLER:CONTROLLER:MAIN'),
   },
