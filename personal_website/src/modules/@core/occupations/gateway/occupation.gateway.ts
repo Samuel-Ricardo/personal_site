@@ -1,5 +1,5 @@
-import { IOccupationDTO } from '../DTO/occupation.dto';
+import { Occupation } from '../entity/occupation.entity';
 
 export interface IOccupationGateway {
-  findAll(): Promise<IOccupationDTO[]>;
+  findAll(): Promise<Occupation[]>;
 }
