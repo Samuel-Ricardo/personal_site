@@ -17,4 +17,8 @@ export class AssemblerController {
   async findTitle(DTO: IAssemblerFindDTO) {
     return await this.service.findTitle(DTO);
   }
+
+  async findText(DTO: IAssemblerFindDTO) {
+    return await this.service.findText(DTO);
+  }
 }
