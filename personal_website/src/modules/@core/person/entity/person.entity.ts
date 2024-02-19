@@ -19,6 +19,10 @@ export class Person {
     return new Person(dto.name, dto.title, dto.avatar);
   }
 
+  static fromDTOList(dtos: IPersonDTO[]) {
+    return dtos.map(dto => Person.fromDTO(dto));
+  }
+
   get name() {
     return this._name;
   }
