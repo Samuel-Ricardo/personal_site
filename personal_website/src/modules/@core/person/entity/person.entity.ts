@@ -15,6 +15,10 @@ export class Person {
     };
   }
 
+  static fromDTO(dto: IPersonDTO) {
+    return new Person(dto.name, dto.title, dto.avatar);
+  }
+
   get name() {
     return this._name;
   }
