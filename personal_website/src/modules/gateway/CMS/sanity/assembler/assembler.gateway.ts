@@ -23,4 +23,10 @@ export class SanityAssemblerGateway
 
     return result[0].content;
   }
+
+  async findPerson(DTO: IAssemblerFindDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "person" && lang == ${DTO.lang || 'en'} && identifier == ${DTO.identifier} ]`,
+    );
+  }
 }

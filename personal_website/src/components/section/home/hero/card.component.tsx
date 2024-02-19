@@ -4,6 +4,7 @@ import { HeroAvatar } from './card/avatar/avatar.component';
 import { HeroCardContentContainer } from './card/content/container/container.component';
 
 export const HeroCard = () => {
+  const {} = {};
   return (
     <FrostedGlassCard className="z-50">
       <HeroAvatar />

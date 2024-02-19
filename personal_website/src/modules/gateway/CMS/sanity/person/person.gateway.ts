@@ -11,7 +11,13 @@ export class SanityPersonGateway
   implements IPersonGateway
 {
   findAll(DTO: IFindAllPersonDTO): Promise<Person[]> {
-    throw new Error('Method not implemented.');
+    const result = this.client.fetch(
+      `*[_type == "person" && lang == "${DTO.lang || 'en'}"]`,
+    );
+
+    console.log({ result });
+
+    return {} as any;
   }
   findOne(DTO: IFindOnePersonDTO): Promise<Person> {
     throw new Error('Method not implemented.');
