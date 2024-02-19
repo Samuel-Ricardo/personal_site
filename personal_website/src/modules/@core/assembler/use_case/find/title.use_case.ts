@@ -5,6 +5,6 @@ import { IAssemblerFindDTO } from '../../DTO/gateway/find/index.dto';
 @injectable()
 export class FindTitleUseCase extends AssemblerGatewaySupport {
   async execute(DTO: IAssemblerFindDTO) {
-    return this.gateway.findTitle(DTO);
+    return await this.gateway.findTitle(DTO);
   }
 }
