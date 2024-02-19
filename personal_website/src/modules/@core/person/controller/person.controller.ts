@@ -9,4 +9,8 @@ export class PersonController {
     @inject(MODULE.PERSON.SERVICE.MAIN)
     protected readonly service: PersonService,
   ) {}
+
+  async findAll(DTO?: IFindAllPersonDTO) {
+    return await this.service.findAll(DTO);
+  }
 }
