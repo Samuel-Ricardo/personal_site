@@ -1,3 +1,4 @@
+import { PersonController } from './controller/person.controller';
 import { PERSON_MODULE } from './person.module';
 import { PERSON_REGISTRY } from './person.registry';
 import { PersonService } from './service/person.service';
@@ -5,6 +6,10 @@ import { FindAllPersonUseCase } from './use_case/find/all.use_case';
 import { FindOnePersonUseCase } from './use_case/find/one.use_case';
 
 export const PERSON_FACTORY = {
+  CONTROLLER: {
+    MAIN: () =>
+      PERSON_MODULE.get<PersonController>(PERSON_REGISTRY.CONTROLLER.MAIN),
+  },
   SERVICE: {
     MAIN: () => PERSON_MODULE.get<PersonService>(PERSON_REGISTRY.SERVICE.MAIN),
   },
