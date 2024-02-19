@@ -6,6 +6,7 @@ import { FindAllPersonUseCase } from './use_case/find/all.use_case';
 import { FindOnePersonUseCase } from './use_case/find/one.use_case';
 
 export const PERSON_FACTORY = {
+  MAIN: () => PERSON_MODULE.get<PersonController>(PERSON_REGISTRY.MAIN),
   CONTROLLER: {
     MAIN: () =>
       PERSON_MODULE.get<PersonController>(PERSON_REGISTRY.CONTROLLER.MAIN),

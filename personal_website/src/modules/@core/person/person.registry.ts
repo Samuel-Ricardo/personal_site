@@ -1,4 +1,5 @@
 export const PERSON_REGISTRY = {
+  MAIN: Symbol.for('MODULE::PERSON::MAIN'),
   CONTROLLER: {
     MAIN: Symbol.for('MODULE::CONTROLLER::PERSON::MAIN'),
   },
