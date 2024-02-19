@@ -6,6 +6,20 @@ export const PersonSchema: SchemaTypeDefinition = {
   type: 'document',
   fields: [
     {
+      name: 'identifier',
+      type: 'string',
+    },
+    {
+      name: 'lang',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'English', value: 'en' },
+          { title: 'Portuguese', value: 'pt-br' },
+        ],
+      },
+    },
+    {
       name: 'name',
       type: 'string',
     },
