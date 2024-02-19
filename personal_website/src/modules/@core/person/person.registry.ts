@@ -1,4 +1,7 @@
 export const PERSON_REGISTRY = {
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULE::CONTROLLER::PERSON::MAIN'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULE::SERVICE::PERSON::MAIN'),
   },
