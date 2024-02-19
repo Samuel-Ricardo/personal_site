@@ -1,4 +1,3 @@
-import { GATEWAY_MODULE } from '@/modules/gateway/gateway.module';
 import { Container } from 'inversify';
 import { OCCUPATION_MODULE } from '../occupations/occupation.module';
 import { ASSEMBLER_REGISTRY } from './assembler.registry';
@@ -12,11 +11,7 @@ const MODULE = new Container({
   autoBindInjectable: true,
 });
 
-export const ASSEMBLER_MODULE = Container.merge(
-  MODULE,
-  GATEWAY_MODULE,
-  OCCUPATION_MODULE,
-);
+export const ASSEMBLER_MODULE = Container.merge(MODULE, OCCUPATION_MODULE);
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
   FindTitleUseCase,
