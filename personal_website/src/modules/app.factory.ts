@@ -4,6 +4,7 @@ import { FONTS_FACTORY as FONTS } from './fonts/fonts.factory';
 import { GATEWAY_FACTORY as GATEWAY } from './gateway/gateway.factory';
 import { OCCUPATION_FACTORY as OCCUPATION } from './@core/occupations/occupation.factory';
 import { ASSEMBLER_FACTORY as ASSEMBLER } from './@core/assembler/assembler.factory';
+import { PERSON_FACTORY as PERSON } from './@core/person/person.factory';
 
 export const MODULES = {
   FONTS,
@@ -12,4 +13,5 @@ export const MODULES = {
   GATEWAY,
   OCCUPATION,
   ASSEMBLER,
+  PERSON,
 };
