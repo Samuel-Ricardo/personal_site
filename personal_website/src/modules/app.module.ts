@@ -7,6 +7,7 @@ import { ENGINE_MODULE } from './engine/engine.module';
 import { GATEWAY_MODULE } from './gateway/gateway.module';
 import { OCCUPATION_MODULE } from './@core/occupations/occupation.module';
 import { ASSEMBLER_MODULE } from './@core/assembler/assembler.module';
+import { PERSON_MODULE } from './@core/person/person.module';
 
 const MODULES = new Container();
 
@@ -18,4 +19,5 @@ export const APP_MODULE = Container.merge(
   GATEWAY_MODULE,
   OCCUPATION_MODULE,
   ASSEMBLER_MODULE,
+  PERSON_MODULE,
 );
