@@ -3,6 +3,7 @@ import { FindAllPersonUseCase } from '../use_case/find/all.use_case';
 import { FindOnePersonUseCase } from '../use_case/find/one.use_case';
 import { MODULE } from '@/modules/app.registry';
 import { IFindAllPersonDTO } from '../DTO/gateway/find/all.dto';
+import { IFindOnePersonDTO } from '../DTO/gateway/find/one.dto';
 
 @injectable()
 export class PersonService {
@@ -14,6 +15,10 @@ export class PersonService {
   ) {}
 
   async findAll(DTO?: IFindAllPersonDTO) {
-    return this._findAll.execute(DTO);
+    return await this._findAll.execute(DTO);
+  }
+
+  async findOne(DTO: IFindOnePersonDTO) {
+    return await this._findOne.execute(DTO);
   }
 }
