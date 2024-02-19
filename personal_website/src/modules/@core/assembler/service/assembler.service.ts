@@ -27,7 +27,7 @@ export class AssemblerService {
 
   async assembleOccupation(): Promise<IAssembleOccupationDTO> {
     return {
-      title: await this.findTitle({ identifier: 'home_hero_paragraph' }),
+      title: await this.findTitle({ identifier: 'home_occupation_title' }),
       occupations: await this.occupation.findAll(),
     };
   }
