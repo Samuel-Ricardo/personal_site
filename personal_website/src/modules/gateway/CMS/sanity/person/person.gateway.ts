@@ -10,10 +10,24 @@ export class SanityPersonGateway
   extends SanitySupport
   implements IPersonGateway
 {
-  findAll(DTO: IFindAllPersonDTO): Promise<Person[]> {
-    throw new Error('Method not implemented.');
+  async findAll(DTO: IFindAllPersonDTO): Promise<Person[]> {
+    const result = await this.client.fetch(
+      `*[_type == "person" && lang == "${DTO.lang || 'en'}"]`,
+    );
+
+    console.log({ result });
+
+    return {} as any;
   }
-  findOne(DTO: IFindOnePersonDTO): Promise<Person> {
-    throw new Error('Method not implemented.');
+  async findOne(DTO: IFindOnePersonDTO) {
+    const result = (
+      await this.client.fetch(
+        `*[_type == "person" && lang == "${DTO.lang || 'en'}" && identifier == "${DTO.identifier}"]{name,avatar,title}`,
+      )
+    )[0];
+
+    if (result) result.avatar = this.imageBuilder.image(result.avatar).url();
+
+    return result ? Person.fromDTO(result) : undefined;
   }
 }
