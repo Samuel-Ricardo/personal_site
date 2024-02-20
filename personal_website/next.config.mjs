@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      'cdn.sanity.io',
       'th.bing.com',
       'img.freepik.com',
       'camo.githubusercontent.com',
