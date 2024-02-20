@@ -13,7 +13,7 @@ export class SanityAssemblerGateway
       `*[_type == "title" && lang == "${lang || 'en'}" && identifier == "${identifier}" ]{content}`,
     );
 
-    return result[0].content;
+    return result[0]?.content;
   }
 
   async findText(DTO: IAssemblerFindDTO) {
@@ -21,6 +21,6 @@ export class SanityAssemblerGateway
       `*[_type == "tp_text" && lang == "${DTO.lang || 'en'}" && identifier == "${DTO.identifier}" ]{content}`,
     );
 
-    return result[0].content;
+    return result[0]?.content;
   }
 }
