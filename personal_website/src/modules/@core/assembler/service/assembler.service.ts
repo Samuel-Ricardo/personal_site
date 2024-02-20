@@ -5,6 +5,8 @@ import { MODULE } from '@/modules/app.registry';
 import { IAssemblerFindDTO } from '../DTO/gateway/find/index.dto';
 import { OccupationController } from '../../occupations/controller/occupation.controller';
 import { IAssembleOccupationDTO } from '../DTO/service/assemble/occupation.dto';
+import { PersonController } from '../../person/controller/person.controller';
+import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 
 @injectable()
 export class AssemblerService {
@@ -15,6 +17,8 @@ export class AssemblerService {
     private readonly _findText: FindTextUseCase,
     @inject(MODULE.OCCUPATION.MAIN)
     private readonly occupation: OccupationController,
+    @inject(MODULE.PERSON.MAIN)
+    private readonly person: PersonController,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -29,6 +33,15 @@ export class AssemblerService {
     return {
       title: await this.findTitle({ identifier: 'home_occupation_title' }),
       occupations: await this.occupation.findAll(),
+    };
+  }
+
+  async assembleHero(): Promise<IAssembledHeroDTO> {
+    return {
+      person: await this.person.findOne({ identifier: 'person_samuel' }),
+      paragraph: await this.findText({ identifier: 'home_hero_paragraph' }),
+      contact: await this.findTitle({ identifier: 'btn_contact_me' }),
+      resume: await this.findTitle({ identifier: 'btn_resume' }),
     };
   }
 }
