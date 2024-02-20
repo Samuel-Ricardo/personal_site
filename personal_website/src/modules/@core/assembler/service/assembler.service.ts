@@ -31,17 +31,21 @@ export class AssemblerService {
 
   async assembleOccupation(): Promise<IAssembleOccupationDTO> {
     return {
-      title: await this.findTitle({ identifier: 'home_occupation_title' }),
+      title:
+        (await this.findTitle({ identifier: 'home_occupation_title' })) || '',
       occupations: await this.occupation.findAll(),
     };
   }
 
   async assembleHero(): Promise<IAssembledHeroDTO> {
     return {
-      person: await this.person.findOne({ identifier: 'person_samuel' }),
-      paragraph: await this.findText({ identifier: 'home_hero_paragraph' }),
-      contact: await this.findTitle({ identifier: 'btn_contact_me' }),
-      resume: await this.findTitle({ identifier: 'btn_resume' }),
+      person:
+        (await this.person.findOne({ identifier: 'person_samuel' })) ||
+        ({} as any),
+      paragraph:
+        (await this.findText({ identifier: 'home_hero_paragraph' })) || '',
+      contact: (await this.findTitle({ identifier: 'btn_contact_me' })) || '',
+      resume: (await this.findTitle({ identifier: 'btn_resume' })) || '',
     };
   }
 }
