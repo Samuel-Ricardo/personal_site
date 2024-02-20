@@ -1,6 +1,6 @@
 import { Person } from '@/modules/@core/person/entity/person.entity';
 
-export interface IAssembleHeroDTO {
+export interface IAssembledHeroDTO {
   person: Person;
   paragraph: string;
   contact: string;
