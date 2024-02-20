@@ -11,7 +11,7 @@ export const HeroAvatar = ({ src }: IHeroAvatarProps) => {
         width={1920}
         height={1080}
         placeholder="blur"
-        blurDataURL={src}
+        blurDataURL={'/img_place_holder.gif'}
       />
     </div>
   );
