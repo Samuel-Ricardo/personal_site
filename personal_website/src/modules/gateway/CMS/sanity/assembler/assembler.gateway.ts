@@ -18,7 +18,7 @@ export class SanityAssemblerGateway
 
   async findText(DTO: IAssemblerFindDTO) {
     const result = await this.client.fetch(
-      `*[_type == "tp_text" && lang == ${DTO.lang || 'en'} && identifier == ${DTO.identifier} ]{content}`,
+      `*[_type == "tp_text" && lang == "${DTO.lang || 'en'}" && identifier == "${DTO.identifier}" ]{content}`,
     );
 
     return result[0].content;
