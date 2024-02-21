@@ -5,6 +5,7 @@ export const OCCUPATION_REGISTRY = {
   },
   SERVICE: {
     MAIN: Symbol.for('MODULE::CORE:OCCUPATION:SERVICE:MAIN'),
+    STATIC: Symbol.for('MODULE::CORE:OCCUPATION:SERVICE:STATIC'),
   },
   USE_CASE: {
     STATIC: {
