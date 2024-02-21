@@ -5,6 +5,6 @@ import { IFindAllPersonDTO } from '../../DTO/gateway/find/all.dto';
 @injectable()
 export class FindAllPersonUseCase extends PersonGatewaySupport {
   async execute(DTO?: IFindAllPersonDTO) {
-    return this.gateway.findAll(DTO);
+    return await this.gateway.findAll(DTO);
   }
 }
