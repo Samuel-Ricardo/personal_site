@@ -11,6 +11,6 @@ export class StaticOccupationService implements IOccupationService {
   ) {}
 
   async findAll() {
-    return this._findAll.execute();
+    return await this._findAll.execute();
   }
 }
