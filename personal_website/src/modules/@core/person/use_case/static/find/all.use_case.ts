@@ -1,6 +1,7 @@
 import { inject, injectable } from 'inversify';
 import { type IPersonGateway } from '../../../gateway/person.gateway';
 import { MODULE } from '@/modules/app.registry';
+import { IFindAllPersonDTO } from '../../../DTO/gateway/find/all.dto';
 
 @injectable()
 export class FindAllStaticPersonUseCase {
@@ -9,7 +10,7 @@ export class FindAllStaticPersonUseCase {
     protected readonly gateway: IPersonGateway,
   ) {}
 
-  async execute() {
-    return await this.gateway.findAll();
+  async execute(DTO?: IFindAllPersonDTO) {
+    return await this.gateway.findAll(DTO);
   }
 }
