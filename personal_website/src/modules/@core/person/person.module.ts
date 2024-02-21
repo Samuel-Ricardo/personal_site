@@ -6,6 +6,8 @@ import { PersonService } from './service/person.service';
 import { PersonController } from './controller/person.controller';
 import { FindOneStaticPersonUseCase } from './use_case/static/find/one.use_case';
 import { FindAllStaticPersonUseCase } from './use_case/static/find/all.use_case';
+import { StaticPersonService } from './service/static/person.service';
+import { StaticPersonController } from './controller/static/person.controller';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -27,5 +29,12 @@ PERSON_MODULE.bind(PERSON_REGISTRY.USE_CASE.STATIC.FIND.ALL).to(
 );
 
 PERSON_MODULE.bind(PERSON_REGISTRY.SERVICE.MAIN).to(PersonService);
+PERSON_MODULE.bind(PERSON_REGISTRY.SERVICE.STATIC).to(StaticPersonService);
+
 PERSON_MODULE.bind(PERSON_REGISTRY.CONTROLLER.MAIN).to(PersonController);
+PERSON_MODULE.bind(PERSON_REGISTRY.CONTROLLER.STATIC).to(
+  StaticPersonController,
+);
+
 PERSON_MODULE.bind(PERSON_REGISTRY.MAIN).to(PersonController);
+PERSON_MODULE.bind(PERSON_REGISTRY.STATIC).to(StaticPersonController);
