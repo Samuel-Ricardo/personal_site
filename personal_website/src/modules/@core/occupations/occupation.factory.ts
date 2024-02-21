@@ -1,4 +1,5 @@
 import { OccupationController } from './controller/occupation.controller';
+import { StaticOccupationController } from './controller/static/occupation.controller';
 import { OCCUPATION_MODULE } from './occupation.module';
 import { OCCUPATION_REGISTRY } from './occupation.registry';
 import { OccupationService } from './service/occupation.service';
@@ -9,10 +10,18 @@ import { FindAllStaticOccupationsUseCase } from './use_case/find/static/all.use_
 export const OCCUPATION_FACTORY = {
   MAIN: () =>
     OCCUPATION_MODULE.get<OccupationController>(OCCUPATION_REGISTRY.MAIN),
+  STATIC: () =>
+    OCCUPATION_MODULE.get<StaticOccupationController>(
+      OCCUPATION_REGISTRY.STATIC,
+    ),
   CONROLELR: {
     MAIN: () =>
       OCCUPATION_MODULE.get<OccupationController>(
         OCCUPATION_REGISTRY.CONTROLLER.MAIN,
+      ),
+    STATIC: () =>
+      OCCUPATION_MODULE.get<StaticOccupationController>(
+        OCCUPATION_REGISTRY.CONTROLLER.STATIC,
       ),
   },
   SERVICE: {
