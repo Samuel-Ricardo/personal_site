@@ -5,6 +5,7 @@ import { FindAllOccupationsUseCase } from './use_case/find/all.use_case';
 import { OccupationService } from './service/occupation.service';
 import { OccupationController } from './controller/occupation.controller';
 import { FindAllStaticOccupationsUseCase } from './use_case/find/static/all.use_case';
+import { StaticOccupationService } from './service/static/occupation.service';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -24,6 +25,9 @@ OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.USE_CASE.STATIC.FIND.ALL).to(
 );
 
 OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.SERVICE.MAIN).to(OccupationService);
+OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.SERVICE.STATIC).to(
+  StaticOccupationService,
+);
 
 OCCUPATION_MODULE.bind(OCCUPATION_REGISTRY.CONTROLLER.MAIN).to(
   OccupationController,
