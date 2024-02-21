@@ -10,3 +10,14 @@ export const home_hero_paragraph = [
       "👨‍💻| I'm a Programmer passionated about unlocking 🔓 the barriers between the real 🧠 and the imaginary 🌌, convert dreams into reality and of course... Coffee ☕ into solutions 💡",
   },
 ];
+
+export const TEXT: {
+  indentifier: string;
+  content: string;
+}[] = [
+  {
+    indentifier: 'home_hero_paragraph',
+    content:
+      "👨‍💻| I'm a Programmer passionated about unlocking 🔓 the barriers between the real 🧠 and the imaginary 🌌, convert dreams into reality and of course... Coffee ☕ into solutions 💡",
+  },
+];
