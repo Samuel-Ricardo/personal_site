@@ -10,7 +10,10 @@ export class StaticPersonGateway implements IPersonGateway {
   async findAll(DTO?: IFindAllPersonDTO) {
     return Person.fromDTOList(PERSONS);
   }
-  findOne(DTO: IFindOnePersonDTO): Promise<Person | undefined> {
-    throw new Error('Method not implemented.');
+  async findOne(DTO: IFindOnePersonDTO) {
+    const person = PERSONS.find(
+      async person => person.identifier === DTO.identifier,
+    );
+    return person ? Person.fromDTO(person) : undefined;
   }
 }
