@@ -4,6 +4,8 @@ import { PERSON_REGISTRY } from './person.registry';
 import { PersonService } from './service/person.service';
 import { FindAllPersonUseCase } from './use_case/find/all.use_case';
 import { FindOnePersonUseCase } from './use_case/find/one.use_case';
+import { FindAllStaticPersonUseCase } from './use_case/static/find/all.use_case';
+import { FindOneStaticPersonUseCase } from './use_case/static/find/one.use_case';
 
 export const PERSON_FACTORY = {
   MAIN: () => PERSON_MODULE.get<PersonController>(PERSON_REGISTRY.MAIN),
@@ -15,6 +17,18 @@ export const PERSON_FACTORY = {
     MAIN: () => PERSON_MODULE.get<PersonService>(PERSON_REGISTRY.SERVICE.MAIN),
   },
   USE_CASE: {
+    STATIC: {
+      FIND: {
+        ALL: () =>
+          PERSON_MODULE.get<FindAllStaticPersonUseCase>(
+            PERSON_REGISTRY.USE_CASE.STATIC.FIND.ALL,
+          ),
+        ONE: () =>
+          PERSON_MODULE.get<FindOneStaticPersonUseCase>(
+            PERSON_REGISTRY.USE_CASE.STATIC.FIND.ONE,
+          ),
+      },
+    },
     FIND: {
       ALL: () =>
         PERSON_MODULE.get<FindAllPersonUseCase>(
