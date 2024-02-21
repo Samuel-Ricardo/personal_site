@@ -5,7 +5,6 @@ import { IPersonService } from '../service.interface';
 import { MODULE } from '@/modules/app.registry';
 import { IFindAllPersonDTO } from '../../DTO/gateway/find/all.dto';
 import { IFindOnePersonDTO } from '../../DTO/gateway/find/one.dto';
-import { Person } from '../../entity/person.entity';
 
 @injectable()
 export class StaticPersonService implements IPersonService {
@@ -19,7 +18,7 @@ export class StaticPersonService implements IPersonService {
   async findAllAsync(DTO?: IFindAllPersonDTO) {
     return await this._findAll.execute(DTO);
   }
-  findOneAsync(DTO: IFindOnePersonDTO): Promise<Person | undefined> {
-    throw new Error('Method not implemented.');
+  async findOneAsync(DTO: IFindOnePersonDTO) {
+    return await this._findOne.execute(DTO);
   }
 }
