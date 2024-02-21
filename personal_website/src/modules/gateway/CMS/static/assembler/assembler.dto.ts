@@ -1,11 +1,14 @@
+import { TITLES } from '@/local/data/static/title.data';
 import { IAssemblerFindDTO } from '@/modules/@core/assembler/DTO/gateway/find/index.dto';
 import { IAssemblerGateway } from '@/modules/@core/assembler/gateway/assembler.gateway';
 
 export class StaticAssemblerGateway implements IAssemblerGateway {
-  findTitle(DTO: IAssemblerFindDTO): Promise<string | undefined> {
-    throw new Error('Method not implemented.');
+  async findTitle(DTO: IAssemblerFindDTO) {
+    return TITLES.find(async title => title.identifier === DTO.identifier)
+      ?.content;
   }
-  findText(DTO: IAssemblerFindDTO): Promise<string | undefined> {
+
+  async findText(DTO: IAssemblerFindDTO) {
     throw new Error('Method not implemented.');
   }
 }
