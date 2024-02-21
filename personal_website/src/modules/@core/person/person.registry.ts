@@ -5,6 +5,7 @@ export const PERSON_REGISTRY = {
   },
   SERVICE: {
     MAIN: Symbol.for('MODULE::SERVICE::PERSON::MAIN'),
+    STATIC: Symbol.for('MODULE::SERVICE::PERSON::STATIC'),
   },
   USE_CASE: {
     STATIC: {
