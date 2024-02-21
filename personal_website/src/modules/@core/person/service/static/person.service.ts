@@ -3,6 +3,9 @@ import { FindAllStaticPersonUseCase } from '../../use_case/static/find/all.use_c
 import { FindOneStaticPersonUseCase } from '../../use_case/static/find/one.use_case';
 import { IPersonService } from '../service.interface';
 import { MODULE } from '@/modules/app.registry';
+import { IFindAllPersonDTO } from '../../DTO/gateway/find/all.dto';
+import { IFindOnePersonDTO } from '../../DTO/gateway/find/one.dto';
+import { Person } from '../../entity/person.entity';
 
 @injectable()
 export class StaticPersonService implements IPersonService {
@@ -12,4 +15,11 @@ export class StaticPersonService implements IPersonService {
     @inject(MODULE.PERSON.USE_CASE.FIND.ONE)
     protected readonly _findOne: FindOneStaticPersonUseCase,
   ) {}
+
+  async findAllAsync(DTO?: IFindAllPersonDTO) {
+    return await this._findAll.execute(DTO);
+  }
+  findOneAsync(DTO: IFindOnePersonDTO): Promise<Person | undefined> {
+    throw new Error('Method not implemented.');
+  }
 }
