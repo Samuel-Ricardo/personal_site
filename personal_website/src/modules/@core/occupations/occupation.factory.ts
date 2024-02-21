@@ -3,6 +3,7 @@ import { OCCUPATION_MODULE } from './occupation.module';
 import { OCCUPATION_REGISTRY } from './occupation.registry';
 import { OccupationService } from './service/occupation.service';
 import { FindAllOccupationsUseCase } from './use_case/find/all.use_case';
+import { FindAllStaticOccupationsUseCase } from './use_case/find/static/all.use_case';
 
 export const OCCUPATION_FACTORY = {
   MAIN: () =>
@@ -20,6 +21,14 @@ export const OCCUPATION_FACTORY = {
       ),
   },
   USE_CASE: {
+    STATIC: {
+      FIND: {
+        ALL: () =>
+          OCCUPATION_MODULE.get<FindAllStaticOccupationsUseCase>(
+            OCCUPATION_REGISTRY.USE_CASE.STATIC.FIND.ALL,
+          ),
+      },
+    },
     FIND: {
       ALL: () =>
         OCCUPATION_MODULE.get<FindAllOccupationsUseCase>(
