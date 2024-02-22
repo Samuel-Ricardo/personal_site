@@ -1,10 +1,14 @@
+import { IHeroHeaderProps } from '@/@types/props/section/hero/header';
 import './header.style.scss';
 
-export const HeroCardContentContainerHeader = () => {
+export const HeroCardContentContainerHeader = ({
+  title,
+  subtitle,
+}: IHeroHeaderProps) => {
   return (
     <div className={`header w-full`}>
-      <h1>Samuel Ricardo</h1>
-      <h2>Full Stack Developer</h2>
+      <h1>{title}</h1>
+      <h2>{subtitle}</h2>
     </div>
   );
 };
