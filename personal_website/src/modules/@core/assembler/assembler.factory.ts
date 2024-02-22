@@ -1,6 +1,7 @@
 import { ASSEMBLER_MODULE } from './assembler.module';
 import { ASSEMBLER_REGISTRY } from './assembler.registry';
 import { AssemblerController } from './controller/assembler.controller';
+import { StaticAssemblerController } from './controller/static/assembler.controller';
 import { AssemblerService } from './service/assembler.service';
 import { FindStaticTextUseCase } from './use_case/static/find/text.use_case';
 import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
@@ -12,6 +13,10 @@ export const ASSEMBLER_FACTORY = {
     MAIN: () =>
       ASSEMBLER_MODULE.get<AssemblerController>(
         ASSEMBLER_REGISTRY.CONTROLLER.MAIN,
+      ),
+    STATIC: () =>
+      ASSEMBLER_MODULE.get<StaticAssemblerController>(
+        ASSEMBLER_REGISTRY.CONTROLLER.STATIC,
       ),
   },
   SERVICE: {
