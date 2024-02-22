@@ -10,9 +10,18 @@ export const HightlightSchema: SchemaTypeDefinition = {
       type: 'string',
     },
     {
+      name: 'Lang',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'English', value: 'en' },
+          { title: 'Portuguese', value: 'pt-br' },
+        ],
+      },
+    },
+    {
       name: 'title',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      type: 'string',
     },
     {
       name: 'numbers',
@@ -24,8 +33,7 @@ export const HightlightSchema: SchemaTypeDefinition = {
     },
     {
       name: 'description',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      type: 'string',
     },
   ],
 };
