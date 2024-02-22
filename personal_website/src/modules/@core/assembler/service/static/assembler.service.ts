@@ -4,6 +4,9 @@ import { FindStaticTextUseCase } from '../../use_case/static/find/text.use_case'
 import { IAssemblerService } from '../service.interface';
 import { StaticOccupationController } from '@/modules/@core/occupations/controller/static/occupation.controller';
 import { StaticPersonController } from '@/modules/@core/person/controller/static/person.controller';
+import { IAssemblerFindDTO } from '../../DTO/gateway/find/index.dto';
+import { IAssembledHeroDTO } from '../../DTO/service/assemble/hero.dto';
+import { IAssembleOccupationDTO } from '../../DTO/service/assemble/occupation.dto';
 
 @injectable()
 export class StaticAssemblerService implements IAssemblerService {
@@ -13,4 +16,12 @@ export class StaticAssemblerService implements IAssemblerService {
     protected readonly occupation: StaticOccupationController,
     protected readonly person: StaticPersonController,
   ) {}
+
+  async findTitle(DTO: IAssemblerFindDTO) {
+    return await this._findTitle.execute(DTO);
+  }
+
+  findText: (DTO: IAssemblerFindDTO) => Promise<string | undefined>;
+  assembleOccupation: () => Promise<IAssembleOccupationDTO>;
+  assembleHero: () => Promise<IAssembledHeroDTO>;
 }
