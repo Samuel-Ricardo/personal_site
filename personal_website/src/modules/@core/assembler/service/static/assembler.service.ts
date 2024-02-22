@@ -21,7 +21,9 @@ export class StaticAssemblerService implements IAssemblerService {
     return await this._findTitle.execute(DTO);
   }
 
-  findText: (DTO: IAssemblerFindDTO) => Promise<string | undefined>;
+  async findText(DTO: IAssemblerFindDTO) {
+    return await this._findText.execute(DTO);
+  }
   assembleOccupation: () => Promise<IAssembleOccupationDTO>;
   assembleHero: () => Promise<IAssembledHeroDTO>;
 }
