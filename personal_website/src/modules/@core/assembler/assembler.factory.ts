@@ -17,6 +17,8 @@ export const ASSEMBLER_FACTORY = {
   SERVICE: {
     MAIN: () =>
       ASSEMBLER_MODULE.get<AssemblerService>(ASSEMBLER_REGISTRY.SERVICE.MAIN),
+    STATIC: () =>
+      ASSEMBLER_MODULE.get<AssemblerService>(ASSEMBLER_REGISTRY.SERVICE.STATIC),
   },
   USE_CASE: {
     STATIC: {
