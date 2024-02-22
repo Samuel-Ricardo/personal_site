@@ -5,6 +5,7 @@ export const ASSEMBLER_REGISTRY = {
   },
   SERVICE: {
     MAIN: Symbol.for('MODULE::CORE:ASSEMBLER:SERVICE:MAIN'),
+    STATIC: Symbol.for('MODULE::CORE:ASSEMBLER:SERVICE:STATIC'),
   },
   USE_CASE: {
     STATIC: {
