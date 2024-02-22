@@ -17,4 +17,8 @@ export class StaticAssemblerController {
   async findText(DTO: IAssemblerFindDTO) {
     return await this.service.findText(DTO);
   }
+
+  async assembleOccupation() {
+    return await this.service.assembleOccupation();
+  }
 }
