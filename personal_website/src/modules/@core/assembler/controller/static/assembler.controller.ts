@@ -21,4 +21,8 @@ export class StaticAssemblerController {
   async assembleOccupation() {
     return await this.service.assembleOccupation();
   }
+
+  async assembleHero() {
+    return await this.service.assembleHero();
+  }
 }
