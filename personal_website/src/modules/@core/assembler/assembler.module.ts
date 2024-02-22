@@ -6,6 +6,8 @@ import { FindTextUseCase } from './use_case/find/text.use_case';
 import { AssemblerService } from './service/assembler.service';
 import { AssemblerController } from './controller/assembler.controller';
 import { PERSON_MODULE } from '../person/person.module';
+import { FindStaticTextUseCase } from './use_case/static/find/text.use_case';
+import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -24,6 +26,13 @@ ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TEXT).to(
   FindTextUseCase,
+);
+
+ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.STATIC.FIND.TEXT).to(
+  FindStaticTextUseCase,
+);
+ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.STATIC.FIND.TITLE).to(
+  FindStaticTitleUseCase,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.SERVICE.MAIN).to(AssemblerService);
