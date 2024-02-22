@@ -9,6 +9,7 @@ import { PERSON_MODULE } from '../person/person.module';
 import { FindStaticTextUseCase } from './use_case/static/find/text.use_case';
 import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
 import { StaticAssemblerService } from './service/static/assembler.service';
+import { StaticAssemblerController } from './controller/static/assembler.controller';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -44,5 +45,9 @@ ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.SERVICE.STATIC).to(
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.CONTROLLER.MAIN).to(
   AssemblerController,
 );
+ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.CONTROLLER.STATIC).to(
+  StaticAssemblerController,
+);
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.MAIN).to(AssemblerController);
+ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.STATIC).to(StaticAssemblerController);
