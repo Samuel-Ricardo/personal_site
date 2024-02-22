@@ -24,6 +24,18 @@ export class StaticAssemblerService implements IAssemblerService {
   async findText(DTO: IAssemblerFindDTO) {
     return await this._findText.execute(DTO);
   }
-  assembleOccupation: () => Promise<IAssembleOccupationDTO>;
-  assembleHero: () => Promise<IAssembledHeroDTO>;
+  async assembleOccupation() {
+    return {
+      title: await this.findTitle({ identifier: 'home_occupation_title' }),
+      occupations: await this.occupation.findAllAsync(),
+    } as IAssembleOccupationDTO;
+  }
+  async assembleHero() {
+    return {
+      person: await this.person.findOneAsync({ identifier: 'person_samuel' }),
+      paragraph: await this.findText({ identifier: 'home_hero_paragraph' }),
+      resume: await this.findTitle({ identifier: 'btn_resume' }),
+      contact: await this.findTitle({ identifier: 'btn_contact_me' }),
+    } as IAssembledHeroDTO;
+  }
 }
