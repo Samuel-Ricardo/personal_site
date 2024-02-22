@@ -9,6 +9,8 @@ import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
 export const ASSEMBLER_FACTORY = {
   MAIN: () =>
     ASSEMBLER_MODULE.get<AssemblerController>(ASSEMBLER_REGISTRY.MAIN),
+  STATIC: () =>
+    ASSEMBLER_MODULE.get<StaticAssemblerController>(ASSEMBLER_REGISTRY.STATIC),
   CONTROLLER: {
     MAIN: () =>
       ASSEMBLER_MODULE.get<AssemblerController>(
