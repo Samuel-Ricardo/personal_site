@@ -7,9 +7,10 @@ import { OccupationController } from '../../occupations/controller/occupation.co
 import { IAssembleOccupationDTO } from '../DTO/service/assemble/occupation.dto';
 import { PersonController } from '../../person/controller/person.controller';
 import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
+import { IAssemblerService } from './service.interface';
 
 @injectable()
-export class AssemblerService {
+export class AssemblerService implements IAssemblerService {
   constructor(
     @inject(MODULE.ASSEMBLER.USE_CASE.FIND.TITLE)
     private readonly _findTitle: FindTitleUseCase,
@@ -33,14 +34,14 @@ export class AssemblerService {
     return {
       title:
         (await this.findTitle({ identifier: 'home_occupation_title' })) || '',
-      occupations: await this.occupation.findAll(),
+      occupations: await this.occupation.findAllAsync(),
     };
   }
 
   async assembleHero(): Promise<IAssembledHeroDTO> {
     return {
       person:
-        (await this.person.findOne({ identifier: 'person_samuel' })) ||
+        (await this.person.findOneAsync({ identifier: 'person_samuel' })) ||
         ({} as any),
       paragraph:
         (await this.findText({ identifier: 'home_hero_paragraph' })) || '',
