@@ -5,13 +5,18 @@ import { FindTitleUseCase } from './use_case/find/title.use_case';
 import { FindTextUseCase } from './use_case/find/text.use_case';
 import { AssemblerService } from './service/assembler.service';
 import { AssemblerController } from './controller/assembler.controller';
+import { PERSON_MODULE } from '../person/person.module';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
   autoBindInjectable: true,
 });
 
-export const ASSEMBLER_MODULE = Container.merge(MODULE, OCCUPATION_MODULE);
+export const ASSEMBLER_MODULE = Container.merge(
+  MODULE,
+  OCCUPATION_MODULE,
+  PERSON_MODULE,
+);
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
   FindTitleUseCase,
