@@ -3,11 +3,35 @@ import { injectable } from 'inversify';
 @injectable()
 export class Highlight {
   constructor(
-    protected readonly identifier: string,
-    protected readonly title: string,
-    protected readonly numbers: number,
-    protected readonly k: number,
-    protected readonly position?: number,
-    protected readonly description?: string,
+    protected readonly _identifier: string,
+    protected readonly _title: string,
+    protected readonly _numbers: number,
+    protected readonly _k: number,
+    protected readonly _position?: number,
+    protected readonly _description?: string,
   ) {}
+
+  get identifier() {
+    return this._identifier;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  get numbers() {
+    return this._numbers;
+  }
+
+  get k() {
+    return this._k;
+  }
+
+  get position() {
+    return this._position;
+  }
+
+  get description() {
+    return this._description;
+  }
 }
