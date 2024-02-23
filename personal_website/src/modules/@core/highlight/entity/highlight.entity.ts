@@ -1,4 +1,5 @@
 import { injectable } from 'inversify';
+import { IHighlightDTO } from '../DTO/highlight.dto';
 
 @injectable()
 export class Highlight {
@@ -6,10 +7,21 @@ export class Highlight {
     protected readonly _identifier: string,
     protected readonly _title: string,
     protected readonly _numbers: number,
-    protected readonly _k: number,
+    protected readonly _k: boolean,
     protected readonly _position?: number,
     protected readonly _description?: string,
   ) {}
+
+  toDTO(): IHighlightDTO {
+    return {
+      identifier: this._identifier,
+      title: this._title,
+      numbers: this._numbers,
+      k: this._k,
+      position: this._position,
+      description: this._description,
+    };
+  }
 
   get identifier() {
     return this._identifier;
