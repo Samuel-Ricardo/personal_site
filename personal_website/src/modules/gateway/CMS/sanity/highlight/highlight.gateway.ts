@@ -9,6 +9,8 @@ export class SanityHighlightGateway
   implements IHighlightGateway
 {
   findAll(): Promise<IHighlightDTO[]> {
-    throw new Error('Method not implemented.');
+    return this.client.fetch(
+      `*[_type == "hightlight" && lang == 'en' ]{identifier, positon, title, numbers, k, description} | order(positon asc)`,
+    );
   }
 }
