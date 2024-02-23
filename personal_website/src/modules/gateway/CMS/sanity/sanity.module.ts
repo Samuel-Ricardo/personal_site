@@ -3,6 +3,7 @@ import { SANITY_CMS_GATEWAY_REGISTRY } from './sanity.registry';
 import { SanityOccupationGateway } from './occupation/occupation.gateway';
 import { SanityAssemblerGateway } from './assembler/assembler.gateway';
 import { SanityPersonGateway } from './person/person.gateway';
+import { SanityHighlightGateway } from './highlight/highlight.gateway';
 
 export const SANITY_CMS_GATEWAY_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -18,4 +19,7 @@ SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.ASSEMBLER).to(
 
 SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.PERSON).to(
   SanityPersonGateway,
+);
+SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.HIGHLIGHT).to(
+  SanityHighlightGateway,
 );
