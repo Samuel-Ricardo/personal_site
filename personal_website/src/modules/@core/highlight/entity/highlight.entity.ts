@@ -23,6 +23,17 @@ export class Highlight {
     };
   }
 
+  static fromDTO(dto: IHighlightDTO) {
+    return new Highlight(
+      dto.identifier,
+      dto.title,
+      dto.numbers,
+      dto.k,
+      dto.position,
+      dto.description,
+    );
+  }
+
   get identifier() {
     return this._identifier;
   }
