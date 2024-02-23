@@ -8,6 +8,7 @@ import { GATEWAY_MODULE } from './gateway/gateway.module';
 import { OCCUPATION_MODULE } from './@core/occupations/occupation.module';
 import { ASSEMBLER_MODULE } from './@core/assembler/assembler.module';
 import { PERSON_MODULE } from './@core/person/person.module';
+import { HIGHLIGHT_MODULE } from './@core/highlight/highlight.module';
 
 const MODULES = new Container();
 
@@ -20,4 +21,5 @@ export const APP_MODULE = Container.merge(
   OCCUPATION_MODULE,
   ASSEMBLER_MODULE,
   PERSON_MODULE,
+  HIGHLIGHT_MODULE,
 );
