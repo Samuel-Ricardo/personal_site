@@ -34,6 +34,10 @@ export class Highlight {
     );
   }
 
+  static fromDTOList(dtos: IHighlightDTO[]) {
+    return dtos.map(Highlight.fromDTO);
+  }
+
   get identifier() {
     return this._identifier;
   }
