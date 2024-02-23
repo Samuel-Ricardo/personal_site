@@ -5,6 +5,7 @@ import { GATEWAY_REGISTRY as GATEWAY } from './gateway/gateway.registry';
 import { OCCUPATION_REGISTRY as OCCUPATION } from './@core/occupations/occupation.registry';
 import { ASSEMBLER_REGISTRY as ASSEMBLER } from './@core/assembler/assembler.registry';
 import { PERSON_REGISTRY as PERSON } from './@core/person/person.registry';
+import { HIGHLIGHT_REGISTRY as HIGHLIGHT } from './@core/highlight/highlight.registry';
 
 export const MODULE = {
   FONTS,
@@ -14,4 +15,5 @@ export const MODULE = {
   OCCUPATION,
   ASSEMBLER,
   PERSON,
+  HIGHLIGHT,
 };
