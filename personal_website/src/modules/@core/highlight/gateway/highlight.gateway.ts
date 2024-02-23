@@ -1,4 +1,4 @@
-import { IHighlightDTO } from './DTO/highlight.dto';
+import { IHighlightDTO } from '../DTO/highlight.dto';
 
 export interface IHighlightGateway {
   findAll(): Promise<IHighlightDTO[]>;
