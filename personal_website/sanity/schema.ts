@@ -1,4 +1,5 @@
 import { type SchemaTypeDefinition } from 'sanity';
+import { LangSchema } from './schemas/lang.schema';
 import { OccupationsSchema } from './schemas/sections/home/hero/occupations.schema';
 import { TextSchema } from './schemas/typography/text.schema';
 import { PersonSchema } from './schemas/person.schema';
@@ -13,9 +14,11 @@ import { ArticleSchema } from './schemas/item/article.schema';
 import { CompanySchema } from './schemas/item/company.schema';
 import { ExperienceSchema } from './schemas/item/experience.schema';
 import { TestimonialSchema } from './schemas/testimonial.schema';
+import { NavbarSchema } from './schemas/navbar.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
+    LangSchema,
     OccupationsSchema,
     TextSchema,
     TitleSchema,
@@ -30,5 +33,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     CompanySchema,
     ExperienceSchema,
     TestimonialSchema,
+    NavbarSchema,
   ],
 };
