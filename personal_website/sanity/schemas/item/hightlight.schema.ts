@@ -10,7 +10,11 @@ export const HightlightSchema: SchemaTypeDefinition = {
       type: 'string',
     },
     {
-      name: 'Lang',
+      name: 'positon',
+      type: 'number',
+    },
+    {
+      name: 'lang',
       type: 'string',
       options: {
         list: [
