@@ -14,6 +14,7 @@ export const ASSEMBLER_REGISTRY = {
       FIND: {
         TITLE: Symbol.for('MODULE::CORE:ASSEMBLER:USE_CASE:STATIC:FIND:TITLE'),
         TEXT: Symbol.for('MODULE::CORE:ASSEMBLER:USE_CASE:STATIC:FIND:TEXT'),
+        IMAGE: Symbol.for('MODULE::CORE:ASSEMBLER:USE_CASE:STATIC:FIND:IMAGE'),
       },
     },
     FIND: {

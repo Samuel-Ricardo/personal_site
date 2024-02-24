@@ -10,6 +10,7 @@ import { FindStaticTextUseCase } from './use_case/static/find/text.use_case';
 import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
 import { StaticAssemblerService } from './service/static/assembler.service';
 import { StaticAssemblerController } from './controller/static/assembler.controller';
+import { FindImageUseCase } from './use_case/find/image.use_case';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -28,6 +29,10 @@ ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TEXT).to(
   FindTextUseCase,
+);
+
+ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.STATIC.FIND.IMAGE).to(
+  FindImageUseCase,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.STATIC.FIND.TEXT).to(
