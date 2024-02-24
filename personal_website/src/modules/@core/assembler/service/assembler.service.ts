@@ -9,6 +9,7 @@ import { PersonController } from '../../person/controller/person.controller';
 import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 import { IAssemblerService } from './service.interface';
 import { IAssembleAboutDTO } from '../DTO/service/assemble/about.dto';
+import { HighlightController } from '../../highlight/controller/highlight.controller';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -17,10 +18,14 @@ export class AssemblerService implements IAssemblerService {
     private readonly _findTitle: FindTitleUseCase,
     @inject(MODULE.ASSEMBLER.USE_CASE.FIND.TEXT)
     private readonly _findText: FindTextUseCase,
+    @inject(MODULE.ASSEMBLER.USE_CASE.FIND.IMAGE)
+    private readonly _findImage: FindImageUseCase,
     @inject(MODULE.OCCUPATION.MAIN)
     private readonly occupation: OccupationController,
     @inject(MODULE.PERSON.MAIN)
     private readonly person: PersonController,
+    @inject(MODULE.HIGHLIGHT.MAIN)
+    private readonly highlight: HighlightController,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -29,6 +34,10 @@ export class AssemblerService implements IAssemblerService {
 
   async findText(DTO: IAssemblerFindDTO) {
     return await this._findText.execute(DTO);
+  }
+
+  async findImage(DTO: IAssemblerFindDTO) {
+    return await this._findImage.execute(DTO);
   }
 
   async assembleOccupation(): Promise<IAssembleOccupationDTO> {
