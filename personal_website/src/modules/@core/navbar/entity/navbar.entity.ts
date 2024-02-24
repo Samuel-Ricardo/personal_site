@@ -1,3 +1,5 @@
+import { INavbarDTO } from '../DTO/navbar.dto';
+
 export class Navbar {
   constructor(
     protected readonly _identifier: string,
@@ -5,6 +7,15 @@ export class Navbar {
     protected readonly _link: string,
     protected readonly _position: number,
   ) {}
+
+  toDTO(): INavbarDTO {
+    return {
+      identifier: this._identifier,
+      title: this._title,
+      link: this._link,
+      position: this._position,
+    };
+  }
 
   get identifier(): string {
     return this._identifier;
