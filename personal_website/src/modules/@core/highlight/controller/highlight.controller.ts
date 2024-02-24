@@ -8,4 +8,8 @@ export class HighlightController {
     @inject(MODULE.HIGHLIGHT.SERVICE.MAIN)
     protected readonly service: IHighlightService,
   ) {}
+
+  async findAll() {
+    return await this.service.findAll();
+  }
 }
