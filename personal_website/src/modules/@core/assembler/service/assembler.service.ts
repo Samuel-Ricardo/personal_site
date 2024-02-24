@@ -66,7 +66,7 @@ export class AssemblerService implements IAssemblerService {
       subtitle: await this.findTitle({ identifier: 'home_about_subtitle' }),
       paragraph: await this.findText({ identifier: 'home_about_paragraph' }),
       image: await this.findImage({ identifier: 'home_about_image' }),
-      //      highlights: await this.occupation.findAllAsync(),
+      highlights: await this.highlight.findAll(),
     };
   }
 }
