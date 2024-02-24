@@ -21,6 +21,10 @@ export class Navbar {
     return new Navbar(dto.identifier, dto.title, dto.link, dto.position);
   }
 
+  static fromDTOList(dtos: INavbarDTO[]): Navbar[] {
+    return dtos.map(dto => Navbar.fromDTO(dto));
+  }
+
   get identifier(): string {
     return this._identifier;
   }
