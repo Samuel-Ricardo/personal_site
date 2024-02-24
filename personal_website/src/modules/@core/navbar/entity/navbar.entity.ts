@@ -17,6 +17,10 @@ export class Navbar {
     };
   }
 
+  static fromDTO(dto: INavbarDTO): Navbar {
+    return new Navbar(dto.identifier, dto.title, dto.link, dto.position);
+  }
+
   get identifier(): string {
     return this._identifier;
   }
