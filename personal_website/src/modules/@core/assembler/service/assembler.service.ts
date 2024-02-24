@@ -8,6 +8,7 @@ import { IAssembleOccupationDTO } from '../DTO/service/assemble/occupation.dto';
 import { PersonController } from '../../person/controller/person.controller';
 import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 import { IAssemblerService } from './service.interface';
+import { IAssembleAboutDTO } from '../DTO/service/assemble/about.dto';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -47,6 +48,16 @@ export class AssemblerService implements IAssemblerService {
         (await this.findText({ identifier: 'home_hero_paragraph' })) || '',
       contact: (await this.findTitle({ identifier: 'btn_contact_me' })) || '',
       resume: (await this.findTitle({ identifier: 'btn_resume' })) || '',
+    };
+  }
+
+  async assembleAbout(): Promise<IAssembleAboutDTO> {
+    return {
+      title: await this.findTitle({ identifier: 'home_about_title' }),
+      subtitle: await this.findTitle({ identifier: 'home_about_subtitle' }),
+      paragraph: await this.findText({ identifier: 'home_about_paragraph' }),
+      image: await this.findImage({ identifier: 'home_about_image' }),
+      //      highlights: await this.occupation.findAllAsync(),
     };
   }
 }

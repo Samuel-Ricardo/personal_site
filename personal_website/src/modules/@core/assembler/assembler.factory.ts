@@ -3,6 +3,9 @@ import { ASSEMBLER_REGISTRY } from './assembler.registry';
 import { AssemblerController } from './controller/assembler.controller';
 import { StaticAssemblerController } from './controller/static/assembler.controller';
 import { AssemblerService } from './service/assembler.service';
+import { FindImageUseCase } from './use_case/find/image.use_case';
+import { FindTextUseCase } from './use_case/find/text.use_case';
+import { FindTitleUseCase } from './use_case/find/title.use_case';
 import { FindStaticTextUseCase } from './use_case/static/find/text.use_case';
 import { FindStaticTitleUseCase } from './use_case/static/find/title.use_case';
 
@@ -41,11 +44,14 @@ export const ASSEMBLER_FACTORY = {
       },
     },
     FIND: {
-      TITLE: ASSEMBLER_MODULE.get<AssemblerService>(
+      TITLE: ASSEMBLER_MODULE.get<FindTitleUseCase>(
         ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE,
       ),
-      TEXT: ASSEMBLER_MODULE.get<AssemblerService>(
+      TEXT: ASSEMBLER_MODULE.get<FindTextUseCase>(
         ASSEMBLER_REGISTRY.USE_CASE.FIND.TEXT,
+      ),
+      IMAGE: ASSEMBLER_MODULE.get<FindImageUseCase>(
+        ASSEMBLER_REGISTRY.USE_CASE.FIND.IMAGE,
       ),
     },
   },

@@ -1,4 +1,5 @@
 import { IAssemblerFindDTO } from '../DTO/gateway/find/index.dto';
+import { IAssembleAboutDTO } from '../DTO/service/assemble/about.dto';
 import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 import { IAssembleOccupationDTO } from '../DTO/service/assemble/occupation.dto';
 
@@ -7,4 +8,5 @@ export interface IAssemblerService {
   findText: (DTO: IAssemblerFindDTO) => Promise<string | undefined>;
   assembleOccupation: () => Promise<IAssembleOccupationDTO>;
   assembleHero: () => Promise<IAssembledHeroDTO>;
+  assembleAbout: () => Promise<IAssembleAboutDTO>;
 }
