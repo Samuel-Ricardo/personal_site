@@ -1,4 +1,5 @@
 export const HIGHLIGHT_REGISTRY = {
+  MAIN: Symbol.for('MODULE::HIGHLIGHT::MAIN'),
   CONTROLLER: {
     MAIN: Symbol.for('MODULE::HIGHLIGHT::CONTROLLER::MAIN'),
   },
