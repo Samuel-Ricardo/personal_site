@@ -23,4 +23,14 @@ export class SanityAssemblerGateway
 
     return result[0]?.content;
   }
+
+  async findImage(DTO: IAssemblerFindDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "image" && identifier == "${DTO.identifier}" ]{image}`,
+    );
+
+    return result[0]
+      ? this.imageBuilder.image(result[0].image).url()
+      : undefined;
+  }
 }
