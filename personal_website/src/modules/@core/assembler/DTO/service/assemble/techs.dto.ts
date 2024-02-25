@@ -1,8 +1,13 @@
 import { Tech } from '@/modules/@core/tech/entity/tech.entity';
 
 export interface IAssembleTechHomeSectionDTO {
-  title: Promise<string>;
-  subtitle: Promise<string>;
-  techs: Promise<Tech[]>;
-  image: Promise<string>;
+  title: Promise<string | undefined>;
+  subtitle: Promise<string | undefined>;
+  techs: {
+    frontend: Promise<Tech[]>;
+    backend: Promise<Tech[]>;
+    devops: Promise<Tech[]>;
+    QA: Promise<Tech[]>;
+  };
+  image: Promise<string | undefined>;
 }
