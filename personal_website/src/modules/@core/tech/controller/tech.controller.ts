@@ -11,10 +11,10 @@ export class TechController implements ITechModule {
   ) {}
 
   async findAll() {
-    return this.service.findAll();
+    return await this.service.findAll();
   }
 
   async findByContext(context: string) {
-    return this.service.findByContext(context);
+    return await this.service.findByContext(context);
   }
 }
