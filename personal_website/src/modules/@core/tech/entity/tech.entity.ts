@@ -1,13 +1,14 @@
 import { ITechDTO } from '../DTO/tech.dto';
+import { ITechViewDTO } from '../DTO/view.dto';
 
 export class Tech {
   constructor(
-    private readonly _identifier: string,
     private readonly _name: string,
     private readonly _icon: string,
     private readonly _preview: string,
     private readonly _description: string,
-    private readonly _context: string[],
+    private readonly _identifier?: string,
+    private readonly _context?: string[],
   ) {}
 
   toDTO(): ITechDTO {
@@ -34,6 +35,17 @@ export class Tech {
 
   static fromDTOs(dto: ITechDTO[]) {
     return dto.map(Tech.fromDTO);
+  }
+
+  toView(): ITechViewDTO {
+    return {
+      icon: this.icon,
+      preview: {
+        name: this.name,
+        description: this.description,
+        images: [this.preview],
+      },
+    };
   }
 
   get identifier() {
