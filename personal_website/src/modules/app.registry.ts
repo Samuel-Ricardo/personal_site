@@ -6,6 +6,7 @@ import { OCCUPATION_REGISTRY as OCCUPATION } from './@core/occupations/occupatio
 import { ASSEMBLER_REGISTRY as ASSEMBLER } from './@core/assembler/assembler.registry';
 import { PERSON_REGISTRY as PERSON } from './@core/person/person.registry';
 import { HIGHLIGHT_REGISTRY as HIGHLIGHT } from './@core/highlight/highlight.registry';
+import { TECH_REGISTRY as TECH } from './@core/tech/tech.registry';
 
 export const MODULE = {
   FONTS,
@@ -16,4 +17,5 @@ export const MODULE = {
   ASSEMBLER,
   PERSON,
   HIGHLIGHT,
+  TECH,
 };
