@@ -1,4 +1,8 @@
 export const TECH_REGISTRY = {
+  MAIN: Symbol.for('MODULE::TECH::MAIN'),
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULE::TECH::CONTROLLER::MAIN'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULE::TECH::SERVICE::MAIN'),
   },
