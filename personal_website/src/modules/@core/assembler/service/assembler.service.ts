@@ -10,6 +10,9 @@ import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 import { IAssemblerService } from './service.interface';
 import { IAssembleAboutDTO } from '../DTO/service/assemble/about.dto';
 import { HighlightController } from '../../highlight/controller/highlight.controller';
+import { FindImageUseCase } from '../use_case/find/image.use_case';
+import { IAssembleTechHomeSectionDTO } from '../DTO/service/assemble/techs.dto';
+import { type ITechModule } from '../../tech/tech.interface';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -26,6 +29,8 @@ export class AssemblerService implements IAssemblerService {
     private readonly person: PersonController,
     @inject(MODULE.HIGHLIGHT.MAIN)
     private readonly highlight: HighlightController,
+    @inject(MODULE.TECH.MAIN)
+    private readonly techs: ITechModule,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -62,11 +67,20 @@ export class AssemblerService implements IAssemblerService {
 
   async assembleAbout(): Promise<IAssembleAboutDTO> {
     return {
-      title: await this.findTitle({ identifier: 'home_about_title' }),
-      subtitle: await this.findTitle({ identifier: 'home_about_subtitle' }),
-      paragraph: await this.findText({ identifier: 'home_about_paragraph' }),
-      image: await this.findImage({ identifier: 'home_about_image' }),
-      highlights: await this.highlight.findAll(),
+      title: this.findTitle({ identifier: 'home_about_title' }),
+      subtitle: this.findTitle({ identifier: 'home_about_subtitle' }),
+      paragraph: this.findText({ identifier: 'home_about_paragraph' }),
+      image: this.findImage({ identifier: 'home_about' }),
+      highlights: this.highlight.findAll(),
+    };
+  }
+
+  async assembleTechs(): Promise<IAssembleTechHomeSectionDTO> {
+    return {
+      title: this.findTitle({ identifier: 'home_techs_title' }),
+      subtitle: this.findTitle({ identifier: 'home_techs_subtitle' }),
+      techs: this.techs.findAll(),
+      image: this.findImage({ identifier: 'home_techs' }),
     };
   }
 }

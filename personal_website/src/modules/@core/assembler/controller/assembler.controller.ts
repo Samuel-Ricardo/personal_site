@@ -2,7 +2,6 @@ import { inject, injectable } from 'inversify';
 import { AssemblerService } from '../service/assembler.service';
 import { MODULE } from '@/modules/app.registry';
 import { IAssemblerFindDTO } from '../DTO/gateway/find/index.dto';
-import { Gaegu } from 'next/font/google';
 
 @injectable()
 export class AssemblerController {
@@ -17,6 +16,10 @@ export class AssemblerController {
 
   async assembleHero() {
     return await this.service.assembleHero();
+  }
+
+  async assembleAbout() {
+    return this.service.assembleAbout();
   }
 
   async findTitle(DTO: IAssemblerFindDTO) {
