@@ -2,4 +2,5 @@ import { Tech } from '../entity/tech.entity';
 
 export interface ITechService {
   findAll(): Promise<Tech[]>;
+  findByContext(context: string): Promise<Tech[]>;
 }
