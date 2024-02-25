@@ -22,6 +22,10 @@ export class AssemblerController {
     return this.service.assembleAbout();
   }
 
+  async assembleTechHomeSection() {
+    return this.service.assembleTechs();
+  }
+
   async findTitle(DTO: IAssemblerFindDTO) {
     return await this.service.findTitle(DTO);
   }
