@@ -6,6 +6,7 @@ import { OCCUPATION_FACTORY as OCCUPATION } from './@core/occupations/occupation
 import { ASSEMBLER_FACTORY as ASSEMBLER } from './@core/assembler/assembler.factory';
 import { PERSON_FACTORY as PERSON } from './@core/person/person.factory';
 import { HIGHLIGHT_FACTORY as HIGHLIGHT } from './@core/highlight/highlight.factory';
+import { TECH_FACTORY as TECH } from './@core/tech/tech.factory';
 
 export const MODULES = {
   FONTS,
@@ -16,4 +17,5 @@ export const MODULES = {
   ASSEMBLER,
   PERSON,
   HIGHLIGHT,
+  TECH,
 };
