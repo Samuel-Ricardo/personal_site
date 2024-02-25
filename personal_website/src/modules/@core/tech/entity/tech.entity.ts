@@ -35,4 +35,28 @@ export class Tech {
   static fromDTOs(dto: ITechDTO[]) {
     return dto.map(Tech.fromDTO);
   }
+
+  get identifier() {
+    return this._identifier;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get icon() {
+    return this._icon;
+  }
+
+  get preview() {
+    return this._preview;
+  }
+
+  get description() {
+    return this._description;
+  }
+
+  get context() {
+    return this._context;
+  }
 }
