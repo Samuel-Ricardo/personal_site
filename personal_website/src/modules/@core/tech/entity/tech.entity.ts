@@ -9,4 +9,15 @@ export class Tech {
     private readonly _description: string,
     private readonly _context: string[],
   ) {}
+
+  toDTO(): ITechDTO {
+    return {
+      identifier: this.identifier,
+      name: this.name,
+      icon: this.icon,
+      preview: this.preview,
+      description: this.description,
+      context: this.context,
+    };
+  }
 }
