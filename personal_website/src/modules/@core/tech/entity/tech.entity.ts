@@ -20,4 +20,15 @@ export class Tech {
       context: this.context,
     };
   }
+
+  static fromDTO(dto: ITechDTO) {
+    return new Tech(
+      dto.identifier,
+      dto.name,
+      dto.icon,
+      dto.preview,
+      dto.description,
+      dto.context,
+    );
+  }
 }
