@@ -31,4 +31,8 @@ export class Tech {
       dto.context,
     );
   }
+
+  static fromDTOs(dto: ITechDTO[]) {
+    return dto.map(Tech.fromDTO);
+  }
 }
