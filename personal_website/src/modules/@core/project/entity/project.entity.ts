@@ -41,6 +41,10 @@ export class Project {
     );
   }
 
+  static fromDTOs(dtos: IProjectDTO[]): Project[] {
+    return dtos.map(Project.fromDTO);
+  }
+
   get title() {
     return this._title;
   }
