@@ -1,4 +1,8 @@
 export const PROJECT_REGISTRY = {
+  MAIN: Symbol.for('MODULE::MAIN'),
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULE::CONTROLLER::MAIN'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULE::SERVICE::MAIN'),
   },
