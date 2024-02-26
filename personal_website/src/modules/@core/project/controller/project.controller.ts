@@ -9,4 +9,8 @@ export class ProjectController implements IProjectModule {
     @inject(MODULE.PROJECT.SERVICE.MAIN)
     protected readonly service: IProjectService,
   ) {}
+
+  async findAll() {
+    return await this.service.findAll();
+  }
 }
