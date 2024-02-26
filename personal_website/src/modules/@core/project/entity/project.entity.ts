@@ -15,6 +15,19 @@ export class Project {
     private _main?: boolean,
   ) {}
 
+  toDTO(): IProjectDTO {
+    return {
+      title: this._title,
+      preview: this._preview,
+      description: this._description,
+      repository: this._repository,
+      demo: this._demo,
+      link: this._link,
+      techs: this._techs,
+      main: this._main,
+    };
+  }
+
   get title() {
     return this._title;
   }
