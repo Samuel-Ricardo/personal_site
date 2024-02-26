@@ -13,6 +13,7 @@ import { StaticAssemblerController } from './controller/static/assembler.control
 import { FindImageUseCase } from './use_case/find/image.use_case';
 import { HIGHLIGHT_MODULE } from '../highlight/highlight.module';
 import { TECH_MODULE } from '../tech/tech.module';
+import { PROJECT_MODULE } from '../project/project.module';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -25,6 +26,7 @@ export const ASSEMBLER_MODULE = Container.merge(
   PERSON_MODULE,
   HIGHLIGHT_MODULE,
   TECH_MODULE,
+  PROJECT_MODULE,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
