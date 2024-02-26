@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify';
 import { FindAllProjectsUseCase } from '../use_case/find/all.use_case';
 import { FindMainProjectsUseCase } from '../use_case/find/main.use_case';
 import { MODULE } from '@/modules/app.registry';
+import { IProjectService } from './service.interface';
 
 @injectable()
 export class ProjectService implements IProjectService {
@@ -12,8 +13,8 @@ export class ProjectService implements IProjectService {
     protected readonly findMainProjectsUseCase: FindMainProjectsUseCase,
   ) {}
 
-  findAll(): Promise<Project[]> {
-    throw new Error('Method not implemented.');
+  async findAll() {
+    return await this.findAllProjectsUseCase.execute();
   }
   findMainProjects(): Promise<Project[]> {
     throw new Error('Method not implemented.');
