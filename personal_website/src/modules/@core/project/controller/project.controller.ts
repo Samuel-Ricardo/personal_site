@@ -13,4 +13,8 @@ export class ProjectController implements IProjectModule {
   async findAll() {
     return await this.service.findAll();
   }
+
+  async findMainProjects() {
+    return await this.service.findMainProjects();
+  }
 }
