@@ -4,6 +4,7 @@ import { SANITY_CMS_GATEWAY_REGISTRY } from './sanity.registry';
 import { IAssemblerGateway } from '@/modules/@core/assembler/gateway/assembler.gateway';
 import { IPersonGateway } from '@/modules/@core/person/gateway/person.gateway';
 import { IHighlightGateway } from '@/modules/@core/highlight/gateway/highlight.gateway';
+import { SanityTechGateway } from './tech/tech.gateway';
 
 export const SANITY_CMS_GATEWAY_FACTORY = {
   PERSON: () =>
@@ -21,5 +22,9 @@ export const SANITY_CMS_GATEWAY_FACTORY = {
   HIGHLIGHT: () =>
     SANITY_CMS_GATEWAY_MODULE.get<IHighlightGateway>(
       SANITY_CMS_GATEWAY_REGISTRY.HIGHLIGHT,
+    ),
+  TECH: () =>
+    SANITY_CMS_GATEWAY_MODULE.get<SanityTechGateway>(
+      SANITY_CMS_GATEWAY_REGISTRY.TECH,
     ),
 };
