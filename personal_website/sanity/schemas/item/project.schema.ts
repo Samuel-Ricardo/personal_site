@@ -1,8 +1,14 @@
-export const ProjectSchema = {
+import { SchemaTypeDefinition } from 'sanity';
+
+export const ProjectSchema: SchemaTypeDefinition = {
   name: 'project',
   title: 'Project',
   type: 'document',
   fields: [
+    {
+      name: 'main',
+      type: 'boolean',
+    },
     {
       name: 'title',
       type: 'string',
@@ -13,13 +19,20 @@ export const ProjectSchema = {
     },
     {
       name: 'description',
-      type: 'reference',
-      to: [{ type: 'tp_text' }],
+      type: 'string',
     },
     {
       name: 'techs',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'tech' }] }],
+      of: [
+        {
+          type: 'document',
+          fields: [
+            { name: 'identifier', type: 'string' },
+            { name: 'star', type: 'boolean' },
+          ],
+        },
+      ],
     },
     {
       name: 'repository',
