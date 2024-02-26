@@ -10,6 +10,7 @@ import { ASSEMBLER_MODULE } from './@core/assembler/assembler.module';
 import { PERSON_MODULE } from './@core/person/person.module';
 import { HIGHLIGHT_MODULE } from './@core/highlight/highlight.module';
 import { TECH_MODULE } from './@core/tech/tech.module';
+import { PROJECT_MODULE } from './@core/project/project.module';
 
 const MODULES = new Container();
 
@@ -24,4 +25,5 @@ export const APP_MODULE = Container.merge(
   PERSON_MODULE,
   HIGHLIGHT_MODULE,
   TECH_MODULE,
+  PROJECT_MODULE,
 );
