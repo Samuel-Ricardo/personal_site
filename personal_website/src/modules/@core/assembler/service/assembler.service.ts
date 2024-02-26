@@ -79,7 +79,13 @@ export class AssemblerService implements IAssemblerService {
     return {
       title: this.findTitle({ identifier: 'home_techs_title' }),
       subtitle: this.findTitle({ identifier: 'home_techs_subtitle' }),
-      techs: this.techs.findAll(),
+      techs: {
+        frontend: this.techs.findByContext({ context: 'frontend' }),
+        backend: this.techs.findByContext({ context: 'backend' }),
+        devops: this.techs.findByContext({ context: 'devops' }),
+        database: this.techs.findByContext({ context: 'database' }),
+        QA: this.techs.findByContext({ context: 'quality_assurance' }),
+      },
       image: this.findImage({ identifier: 'home_techs' }),
     };
   }

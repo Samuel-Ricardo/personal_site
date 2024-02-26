@@ -8,6 +8,8 @@ import { IAssemblerFindDTO } from '../../DTO/gateway/find/index.dto';
 import { IAssembledHeroDTO } from '../../DTO/service/assemble/hero.dto';
 import { IAssembleOccupationDTO } from '../../DTO/service/assemble/occupation.dto';
 import { MODULE } from '@/modules/app.registry';
+import { IAssembleAboutDTO } from '../../DTO/service/assemble/about.dto';
+import { IAssembleTechHomeSectionDTO } from '../../DTO/service/assemble/techs.dto';
 
 @injectable()
 export class StaticAssemblerService implements IAssemblerService {
@@ -21,6 +23,8 @@ export class StaticAssemblerService implements IAssemblerService {
     @inject(MODULE.PERSON.STATIC)
     protected readonly person: StaticPersonController,
   ) {}
+  assembleAbout: () => Promise<IAssembleAboutDTO>;
+  assembleTechs: () => Promise<IAssembleTechHomeSectionDTO>;
 
   async findTitle(DTO: IAssemblerFindDTO) {
     return await this._findTitle.execute(DTO);
