@@ -12,6 +12,7 @@ import { StaticAssemblerService } from './service/static/assembler.service';
 import { StaticAssemblerController } from './controller/static/assembler.controller';
 import { FindImageUseCase } from './use_case/find/image.use_case';
 import { HIGHLIGHT_MODULE } from '../highlight/highlight.module';
+import { TECH_MODULE } from '../tech/tech.module';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -23,6 +24,7 @@ export const ASSEMBLER_MODULE = Container.merge(
   OCCUPATION_MODULE,
   PERSON_MODULE,
   HIGHLIGHT_MODULE,
+  TECH_MODULE,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
