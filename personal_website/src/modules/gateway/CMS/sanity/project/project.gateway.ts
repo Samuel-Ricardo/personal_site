@@ -26,4 +26,22 @@ export class SanityProjectGateway
 
     return Project.fromDTOs(result);
   }
+
+  async findMainProjects() {
+    const result = await this.client.fetch(`
+      *[_type == "project" && main == true] {
+        
+        main,
+        title,
+        preview,
+        description,
+        repository,
+        demo,
+        link, 
+        'techs': techs[]{identifier, star}
+      }
+    `);
+
+    return Project.fromDTOs(result);
+  }
 }
