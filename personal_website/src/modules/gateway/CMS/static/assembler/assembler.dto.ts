@@ -2,7 +2,9 @@ import { TEXT } from '@/local/data/static/text.data';
 import { TITLES } from '@/local/data/static/title.data';
 import { IAssemblerFindDTO } from '@/modules/@core/assembler/DTO/gateway/find/index.dto';
 import { IAssemblerGateway } from '@/modules/@core/assembler/gateway/assembler.gateway';
+import { injectable } from 'inversify';
 
+@injectable()
 export class StaticAssemblerGateway implements IAssemblerGateway {
   async findTitle(DTO: IAssemblerFindDTO) {
     return TITLES.find(async title => title.identifier === DTO.identifier)

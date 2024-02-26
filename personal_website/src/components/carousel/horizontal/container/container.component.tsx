@@ -5,7 +5,7 @@ import './container.style.scss';
 import { MODULES } from '@/modules/app.factory';
 import { MotionUL } from '@/components/motion/ul.component';
 
-export const InfinityHorizontalCarouselContainer = (
+export const InfinityHorizontalCarouselContainer = async (
   props: IInfinityHorizontalCarouselContainer,
 ) => {
   const animation = MODULES.ANIMATION.FRAMER_MOTION.INFINITY.SLIDE();

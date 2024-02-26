@@ -24,11 +24,11 @@ export class Tech {
 
   static fromDTO(dto: ITechDTO) {
     return new Tech(
-      dto.identifier,
       dto.name,
       dto.icon,
       dto.preview,
       dto.description,
+      dto.identifier,
       dto.context,
     );
   }
