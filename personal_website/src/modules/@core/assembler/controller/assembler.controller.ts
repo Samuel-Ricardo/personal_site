@@ -33,4 +33,7 @@ export class AssemblerController {
   async findText(DTO: IAssemblerFindDTO) {
     return await this.service.findText(DTO);
   }
+  async findImage(DTO: IAssemblerFindDTO) {
+    return await this.service.findImage(DTO);
+  }
 }
