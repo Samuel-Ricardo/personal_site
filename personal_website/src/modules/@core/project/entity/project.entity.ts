@@ -28,6 +28,19 @@ export class Project {
     };
   }
 
+  static fromDTO(dto: IProjectDTO): Project {
+    return new Project(
+      dto.title,
+      dto.preview,
+      dto.description,
+      dto.repository,
+      dto.techs,
+      dto.demo,
+      dto.link,
+      dto.main,
+    );
+  }
+
   get title() {
     return this._title;
   }
