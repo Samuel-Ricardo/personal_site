@@ -13,6 +13,8 @@ import { HighlightController } from '../../highlight/controller/highlight.contro
 import { FindImageUseCase } from '../use_case/find/image.use_case';
 import { IAssembleTechHomeSectionDTO } from '../DTO/service/assemble/techs.dto';
 import { type ITechModule } from '../../tech/tech.interface';
+import { IAssembleProjectsDTO } from '../DTO/service/assemble/projects.dto';
+import { type IProjectModule } from '../../project/project.interface';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -31,6 +33,8 @@ export class AssemblerService implements IAssemblerService {
     private readonly highlight: HighlightController,
     @inject(MODULE.TECH.MAIN)
     private readonly techs: ITechModule,
+    @inject(MODULE.PROJECT.MAIN)
+    private readonly projects: IProjectModule,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -88,5 +92,12 @@ export class AssemblerService implements IAssemblerService {
       },
       image: this.findImage({ identifier: 'home_techs' }),
     };
+  }
+
+  async assembleProjects() {
+    return {
+      title: this.findTitle({ identifier: 'home_projects_title' }),
+      projects: this.projects.findMainProjects(),
+    } as IAssembleProjectsDTO;
   }
 }
