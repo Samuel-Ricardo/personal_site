@@ -15,6 +15,7 @@ import { IAssembleTechHomeSectionDTO } from '../DTO/service/assemble/techs.dto';
 import { type ITechModule } from '../../tech/tech.interface';
 import { IAssembleProjectsDTO } from '../DTO/service/assemble/projects.dto';
 import { type IProjectModule } from '../../project/project.interface';
+import { Project } from '../../project/entity/project.entity';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -95,9 +96,18 @@ export class AssemblerService implements IAssemblerService {
   }
 
   async assembleProjects() {
+    const fetchDesc = async (projects: Project[]) => {
+      projects.forEach(async p => {
+        p.description =
+          (await this.findText({ identifier: p.description })) || '';
+      });
+
+      return projects;
+    };
+
     return {
       title: this.findTitle({ identifier: 'home_projects_title' }),
-      projects: this.projects.findMainProjects(),
+      projects: this.projects.findMainProjects().then(fetchDesc),
     } as IAssembleProjectsDTO;
   }
 }
