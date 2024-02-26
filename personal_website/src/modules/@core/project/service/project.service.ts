@@ -16,7 +16,7 @@ export class ProjectService implements IProjectService {
   async findAll() {
     return await this.findAllProjectsUseCase.execute();
   }
-  findMainProjects(): Promise<Project[]> {
-    throw new Error('Method not implemented.');
+  async findMainProjects() {
+    return await this.findMainProjectsUseCase.execute();
   }
 }
