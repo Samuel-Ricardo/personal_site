@@ -27,4 +27,12 @@ export class SanityArticleGateway
       }),
     }));
   }
+
+  async findAll() {
+    const result = await this.client.fetch<ICMSArticleDTO[]>(
+      `*[_type == "article"]{main, title, cover, description, content, plarforms}`,
+    );
+
+    return Article.fromDTOs(await Promise.all(this.build(result)));
+  }
 }
