@@ -5,6 +5,8 @@ import { IAssemblerGateway } from '@/modules/@core/assembler/gateway/assembler.g
 import { IPersonGateway } from '@/modules/@core/person/gateway/person.gateway';
 import { IHighlightGateway } from '@/modules/@core/highlight/gateway/highlight.gateway';
 import { SanityTechGateway } from './tech/tech.gateway';
+import { IPlatformGateway } from '@/modules/@core/platforms/gateway/platform.gateway';
+import { IArticleGateway } from '@/modules/@core/articles/gateway/article.gateway';
 
 export const SANITY_CMS_GATEWAY_FACTORY = {
   PERSON: () =>
@@ -28,7 +30,11 @@ export const SANITY_CMS_GATEWAY_FACTORY = {
       SANITY_CMS_GATEWAY_REGISTRY.TECH,
     ),
   PLATFORM: () =>
-    SANITY_CMS_GATEWAY_MODULE.get<IPersonGateway>(
+    SANITY_CMS_GATEWAY_MODULE.get<IPlatformGateway>(
       SANITY_CMS_GATEWAY_REGISTRY.PLATFORM,
+    ),
+  ARTICLE: () =>
+    SANITY_CMS_GATEWAY_MODULE.get<IArticleGateway>(
+      SANITY_CMS_GATEWAY_REGISTRY.ARTICLE,
     ),
 };
