@@ -7,13 +7,11 @@ export const ArticleSchema = {
   fields: [
     {
       name: 'title',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      type: 'string',
     },
     {
       name: 'description',
-      type: 'reference',
-      to: [{ type: 'title' }],
+      type: 'string',
     },
     {
       name: 'cover',
@@ -21,8 +19,7 @@ export const ArticleSchema = {
     },
     {
       name: 'content',
-      type: 'reference',
-      to: [{ type: 'tp_text' }],
+      type: 'string',
     },
     {
       name: 'platforms',
@@ -32,13 +29,13 @@ export const ArticleSchema = {
           type: 'document',
           fields: [
             {
+              title: 'Article URL',
               name: 'url',
               type: 'url',
             },
             {
               name: 'platform',
-              type: 'reference',
-              to: [{ type: 'platform' }],
+              type: 'string',
             },
           ],
         },
