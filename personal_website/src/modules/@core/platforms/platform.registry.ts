@@ -1,4 +1,8 @@
 export const PLATFORM_REGISTRY = {
+  MAIN: Symbol.for('MODULE::PLATFORM::MAIN'),
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULE::CONTROLLER:PLATFORM'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULE::SERVICE:PLATFORM'),
   },
