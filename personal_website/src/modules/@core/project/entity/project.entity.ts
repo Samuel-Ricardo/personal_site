@@ -1,4 +1,6 @@
+import { ITechViewDTO } from '../../tech/DTO/view.dto';
 import { IProjectDTO } from '../DTO/project.dto';
+import { IProjectViewDTO } from '../DTO/view.dto';
 
 export class Project {
   constructor(
@@ -9,11 +11,22 @@ export class Project {
     private _techs: {
       identifier: string;
       star: boolean;
-    }[],
+    },
     private _demo?: string,
     private _link?: string,
     private _main?: boolean,
   ) {}
+
+  toView(): IProjectViewDTO {
+    return {
+      title: this._title,
+      description: this._description,
+      repo: this._repository,
+      demo: this._demo,
+      link: this._link,
+      main_techs: this._main,
+    };
+  }
 
   toDTO(): IProjectDTO {
     return {
@@ -43,6 +56,10 @@ export class Project {
 
   static fromDTOs(dtos: IProjectDTO[]): Project[] {
     return dtos.map(Project.fromDTO);
+  }
+
+  static async fromAsyncDTO(dto: Promise<IProjectDTO>): Promise<Project> {
+    return dto.then(Project.fromDTO);
   }
 
   get title() {
