@@ -9,6 +9,7 @@ import { HIGHLIGHT_REGISTRY as HIGHLIGHT } from './@core/highlight/highlight.reg
 import { TECH_REGISTRY as TECH } from './@core/tech/tech.registry';
 import { PROJECT_REGISTRY as PROJECT } from './@core/project/project.registry';
 import { PLATFORM_REGISTRY as PLATFORM } from './@core/platforms/platform.registry';
+import { ARTICLE_REGISTRY as ARTICLE } from './@core/articles/article.registry';
 
 export const MODULE = {
   FONTS,
@@ -22,4 +23,5 @@ export const MODULE = {
   TECH,
   PROJECT,
   PLATFORM,
+  ARTICLE,
 };
