@@ -16,4 +16,8 @@ export class ArticleService implements IArticleService {
   async findAll() {
     return await this._findAll.execute();
   }
+
+  async findMainArticles() {
+    return await this._findMain.execute();
+  }
 }
