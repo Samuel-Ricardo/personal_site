@@ -62,6 +62,10 @@ export class Project {
     return dto.then(Project.fromDTO);
   }
 
+  static fromAsyncDTOs(dtos: Promise<IProjectDTO>[]): Promise<Project>[] {
+    return dtos.map(Project.fromAsyncDTO);
+  }
+
   get title() {
     return this._title;
   }
