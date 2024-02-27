@@ -6,7 +6,7 @@ export class Project {
   constructor(
     private _title: string,
     private _preview: string,
-    private _description: string,
+    private _description: string | Promise<string>,
     private _repository: string,
     private _techs: Promise<Tech>[],
     private _demo?: string,
@@ -18,7 +18,7 @@ export class Project {
     return {
       title: this._title,
       image: this._preview,
-      description: this._description,
+      description: await this._description,
       repo: this._repository,
       demo: this._demo,
       link: this._link,
@@ -30,7 +30,7 @@ export class Project {
     return {
       title: this._title,
       preview: this._preview,
-      description: this._description,
+      description: this._description as string,
       repository: this._repository,
       demo: this._demo,
       link: this._link,
