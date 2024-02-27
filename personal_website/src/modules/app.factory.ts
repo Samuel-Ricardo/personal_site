@@ -9,6 +9,7 @@ import { HIGHLIGHT_FACTORY as HIGHLIGHT } from './@core/highlight/highlight.fact
 import { TECH_FACTORY as TECH } from './@core/tech/tech.factory';
 import { PROJECT_FACTORY as PROJECT } from './@core/project/project.factory';
 import { PLATFORM_FACTORY as PLATFORM } from './@core/platforms/platform.factory';
+import { ARTICLE_FACTORY as ARTICLE } from './@core/articles/article.factory';
 
 export const MODULES = {
   FONTS,
@@ -22,4 +23,5 @@ export const MODULES = {
   TECH,
   PROJECT,
   PLATFORM,
+  ARTICLE,
 };
