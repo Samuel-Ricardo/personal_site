@@ -33,6 +33,10 @@ export class Article {
     );
   }
 
+  static fromDTOs(dtos: IArticlesDTO[]): Article[] {
+    return dtos.map(Article.fromDTO);
+  }
+
   get main() {
     return this._main;
   }
