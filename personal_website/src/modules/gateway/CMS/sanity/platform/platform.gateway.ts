@@ -6,10 +6,12 @@ import { injectable } from 'inversify';
 
 @injectable()
 export class PlatformGateway extends SanitySupport implements IPlatformGateway {
-  findAll(): Promise<Platform> {
-    throw new Error('Method not implemented.');
+  async findAll() {
+    const result = await this.client.fetch(
+      `*[_type == "platform" ]{name,link,icon}`,
+    );
+
+    return Platform.fromDTOs(result);
   }
-  findOne(DTO: IFindOnePlatformDTO): Promise<Platform> {
-    throw new Error('Method not implemented.');
-  }
+  findOne({ id }: IFindOnePlatformDTO): Promise<Platform> {}
 }
