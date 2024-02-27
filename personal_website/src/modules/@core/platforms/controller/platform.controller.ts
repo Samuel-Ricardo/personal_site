@@ -9,4 +9,8 @@ export class PlatformController implements IPlatformModule {
     @inject(MODULE.PLATFORM.SERVICE.MAIN)
     private readonly service: IPlatformService,
   ) {}
+
+  async findAll() {
+    return this.service.findAll();
+  }
 }
