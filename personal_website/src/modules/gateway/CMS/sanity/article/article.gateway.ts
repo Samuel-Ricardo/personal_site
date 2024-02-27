@@ -9,4 +9,22 @@ import { Article } from '@/modules/@core/articles/entity/article.entity';
 @injectable()
 export class SanityArticleGateway
   extends SanitySupport
-  implements IArticleGateway {}
+  implements IArticleGateway
+{
+  private build(result: ICMSArticleDTO[]): Promise<IArticlesDTO>[] {
+    return result.map(async article => ({
+      ...article,
+      platforms: article.platforms.map(async (p): Promise<IPlatform> => {
+        const platform = await this.client.fetch(
+          `*[_type == "platform" && _id == "${p.platform._ref}"]{link, name, icon}[0]`,
+        );
+
+        return {
+          url: p.link,
+          name: platform.name,
+          icon: platform.icon,
+        };
+      }),
+    }));
+  }
+}
