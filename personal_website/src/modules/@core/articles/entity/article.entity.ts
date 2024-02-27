@@ -1,4 +1,5 @@
 import { IPlatform } from '@/@types/platform';
+import { IArticlesDTO } from '../DTO/articles.dto';
 
 export class Article {
   constructor(
@@ -6,9 +7,20 @@ export class Article {
     private readonly _title: Promise<string>,
     private readonly _description: Promise<string>,
     private readonly _cover: string,
-    private readonly _platforms: IPlatform[],
+    private readonly _platforms: Promise<IPlatform>[],
     private readonly _content?: Promise<string>,
   ) {}
+
+  toDTO(): IArticlesDTO {
+    return {
+      main: this._main,
+      title: this._title,
+      description: this._description,
+      cover: this._cover,
+      platforms: this._platforms,
+      content: this._content,
+    };
+  }
 
   get main() {
     return this._main;
