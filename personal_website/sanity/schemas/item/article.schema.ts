@@ -6,6 +6,10 @@ export const ArticleSchema = {
   type: 'document',
   fields: [
     {
+      name: 'main',
+      type: 'boolean',
+    },
+    {
       name: 'title',
       type: 'string',
     },
