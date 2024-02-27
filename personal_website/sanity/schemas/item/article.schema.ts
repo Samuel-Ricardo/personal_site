@@ -35,7 +35,8 @@ export const ArticleSchema = {
             },
             {
               name: 'platform',
-              type: 'string',
+              type: 'reference',
+              to: [{ type: 'platform' }],
             },
           ],
         },
