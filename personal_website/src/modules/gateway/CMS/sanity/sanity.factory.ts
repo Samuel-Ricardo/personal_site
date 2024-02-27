@@ -27,4 +27,8 @@ export const SANITY_CMS_GATEWAY_FACTORY = {
     SANITY_CMS_GATEWAY_MODULE.get<SanityTechGateway>(
       SANITY_CMS_GATEWAY_REGISTRY.TECH,
     ),
+  PLATFORM: () =>
+    SANITY_CMS_GATEWAY_MODULE.get<IPersonGateway>(
+      SANITY_CMS_GATEWAY_REGISTRY.PLATFORM,
+    ),
 };
