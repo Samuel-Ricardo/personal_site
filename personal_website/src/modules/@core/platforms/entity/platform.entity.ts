@@ -15,6 +15,10 @@ export class Platform {
     };
   }
 
+  static fromDTO(dto: IPlatformDTO): Platform {
+    return new Platform(dto.name, dto.icon, dto.link);
+  }
+
   get name() {
     return this._name;
   }
