@@ -1,4 +1,4 @@
-import { ITechViewDTO } from '../../tech/DTO/view.dto';
+import { Tech } from '../../tech/entity/tech.entity';
 import { IProjectDTO } from '../DTO/project.dto';
 import { IProjectViewDTO } from '../DTO/view.dto';
 
@@ -8,23 +8,21 @@ export class Project {
     private _preview: string,
     private _description: string,
     private _repository: string,
-    private _techs: {
-      identifier: string;
-      star: boolean;
-    },
+    private _techs: Promise<Tech>[],
     private _demo?: string,
     private _link?: string,
     private _main?: boolean,
   ) {}
 
-  toView(): IProjectViewDTO {
+  async toView(): Promise<IProjectViewDTO> {
     return {
       title: this._title,
+      image: this._preview,
       description: this._description,
       repo: this._repository,
       demo: this._demo,
       link: this._link,
-      main_techs: this._main,
+      main_techs: (await Promise.all(this._techs)).map(tech => tech.toView()),
     };
   }
 
