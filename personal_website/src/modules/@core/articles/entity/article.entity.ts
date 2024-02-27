@@ -3,11 +3,11 @@ import { IArticlesDTO } from '../DTO/articles.dto';
 
 export class Article {
   constructor(
-    private readonly _main: boolean,
     private readonly _title: Promise<string>,
     private readonly _description: Promise<string>,
     private readonly _cover: string,
     private readonly _platforms: Promise<IPlatform>[],
+    private readonly _main?: boolean,
     private readonly _content?: Promise<string>,
   ) {}
 
@@ -20,6 +20,17 @@ export class Article {
       platforms: this._platforms,
       content: this._content,
     };
+  }
+
+  static fromDTO(dto: IArticlesDTO): Article {
+    return new Article(
+      dto.title,
+      dto.description,
+      dto.cover,
+      dto.platforms,
+      dto.main,
+      dto.content,
+    );
   }
 
   get main() {
