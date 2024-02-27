@@ -12,6 +12,7 @@ import { HIGHLIGHT_MODULE } from './@core/highlight/highlight.module';
 import { TECH_MODULE } from './@core/tech/tech.module';
 import { PROJECT_MODULE } from './@core/project/project.module';
 import { PLATFORM_MODULE } from './@core/platforms/platform.module';
+import { ARTICLE_MODULE } from './@core/articles/article.module';
 
 const MODULES = new Container();
 
@@ -28,4 +29,5 @@ export const APP_MODULE = Container.merge(
   TECH_MODULE,
   PROJECT_MODULE,
   PLATFORM_MODULE,
+  ARTICLE_MODULE,
 );
