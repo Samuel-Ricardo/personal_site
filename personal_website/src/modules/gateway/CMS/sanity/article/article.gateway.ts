@@ -35,4 +35,12 @@ export class SanityArticleGateway
 
     return Article.fromDTOs(await Promise.all(this.build(result)));
   }
+
+  async findMainArticles() {
+    const result = await this.client.fetch<ICMSArticleDTO[]>(
+      `*[_type == "article" && main == true]{title, cover, description, plarforms}`,
+    );
+
+    return Article.fromDTOs(await Promise.all(this.build(result)));
+  }
 }
