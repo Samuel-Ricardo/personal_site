@@ -1,4 +1,8 @@
 export const ARTICLE_REGISTRY = {
+  MAIN: Symbol.for('MODULE::ARTICLE:MAIN'),
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULE::ARTICLE:CONTROLLER:MAIN'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULE::ARTICLE:SERVICE:MAIN'),
   },
