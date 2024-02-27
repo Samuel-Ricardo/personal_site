@@ -8,6 +8,7 @@ import { PERSON_FACTORY as PERSON } from './@core/person/person.factory';
 import { HIGHLIGHT_FACTORY as HIGHLIGHT } from './@core/highlight/highlight.factory';
 import { TECH_FACTORY as TECH } from './@core/tech/tech.factory';
 import { PROJECT_FACTORY as PROJECT } from './@core/project/project.factory';
+import { PLATFORM_FACTORY as PLATFORM } from './@core/platforms/platform.factory';
 
 export const MODULES = {
   FONTS,
@@ -20,4 +21,5 @@ export const MODULES = {
   HIGHLIGHT,
   TECH,
   PROJECT,
+  PLATFORM,
 };
