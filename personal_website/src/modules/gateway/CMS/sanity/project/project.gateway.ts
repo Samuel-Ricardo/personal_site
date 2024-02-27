@@ -2,6 +2,7 @@ import { IProjectGateway } from '@/modules/@core/project/gateway/project.gateway
 import { SanitySupport } from '../sanity.gateway';
 import { injectable } from 'inversify';
 import { Project } from '@/modules/@core/project/entity/project.entity';
+import { Tech } from '@/modules/@core/tech/entity/tech.entity';
 
 @injectable()
 export class SanityProjectGateway
@@ -42,6 +43,22 @@ export class SanityProjectGateway
       }
     `);
 
-    return Project.fromDTOs(result);
+    let projects = await result.map(async project => {
+      project.description = this.client
+        .fetch(
+          `*[_type == "title" && identifier == "${project.title}"] {content}`,
+        )
+        .then(data => data[0].content);
+      project.techs = project.techs.map(async tech =>
+        this.client
+          .fetch(
+            `*[_type == "tech" && identifier == "${tech.identifier}"]{name, icon, description, preview, identifier, context}`,
+          )
+          .then(Tech.fromDTOs),
+      );
+      return project;
+    });
+
+    return Project.fromAsyncDTOs(projects);
   }
 }
