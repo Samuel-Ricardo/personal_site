@@ -19,6 +19,10 @@ export class Platform {
     return new Platform(dto.name, dto.icon, dto.link);
   }
 
+  static fromDTOs(dtos: IPlatformDTO[]): Platform[] {
+    return dtos.map(Platform.fromDTO);
+  }
+
   get name() {
     return this._name;
   }
