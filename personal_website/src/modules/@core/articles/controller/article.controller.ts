@@ -9,4 +9,10 @@ export class ArticleController implements IArticleModule {
     @inject(MODULE.ARTICLE.SERVICE.MAIN)
     protected service: IArticleService,
   ) {}
+  async findAll() {
+    return this.service.findAll();
+  }
+  async findMainArticles() {
+    return this.service.findMainArticles();
+  }
 }
