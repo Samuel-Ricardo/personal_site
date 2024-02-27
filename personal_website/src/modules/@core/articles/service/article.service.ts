@@ -12,4 +12,8 @@ export class ArticleService implements IArticleService {
     @inject(MODULE.ARTICLE.USE_CASE.FIND.MAIN)
     protected readonly _findMain: FindMainArticleUseCase,
   ) {}
+
+  async findAll() {
+    return await this._findAll.execute();
+  }
 }
