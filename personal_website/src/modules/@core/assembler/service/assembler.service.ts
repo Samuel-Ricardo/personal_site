@@ -15,7 +15,9 @@ import { IAssembleTechHomeSectionDTO } from '../DTO/service/assemble/techs.dto';
 import { type ITechModule } from '../../tech/tech.interface';
 import { IAssembleProjectsDTO } from '../DTO/service/assemble/projects.dto';
 import { type IProjectModule } from '../../project/project.interface';
-import { Project } from '../../project/entity/project.entity';
+import { IAssembleArticleDTO } from '../DTO/service/assemble/articles.dto';
+import { type IArticleModule } from '../../articles/articles.interface';
+import { type IPlatformModule } from '../../platforms/platform.interace';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -36,6 +38,10 @@ export class AssemblerService implements IAssemblerService {
     private readonly techs: ITechModule,
     @inject(MODULE.PROJECT.MAIN)
     private readonly projects: IProjectModule,
+    @inject(MODULE.ARTICLE.MAIN)
+    private readonly article: IArticleModule,
+    @inject(MODULE.PLATFORM.MAIN)
+    private readonly platforms: IPlatformModule,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -95,19 +101,21 @@ export class AssemblerService implements IAssemblerService {
     };
   }
 
-  async assembleProjects() {
-    const fetchDesc = async (projects: Project[]) => {
-      projects.forEach(async p => {
-        p.description =
-          (await this.findText({ identifier: p.description })) || '';
-      });
-
-      return projects;
-    };
-
+  async assembleProjects(): Promise<IAssembleProjectsDTO> {
     return {
-      title: this.findTitle({ identifier: 'home_projects_title' }),
-      projects: this.projects.findMainProjects().then(fetchDesc),
-    } as IAssembleProjectsDTO;
+      title: this.findTitle({ identifier: 'home_project_title' }),
+      projects: this.projects.findMainProjects(),
+    };
+  }
+
+  async assembleArticles(): Promise<IAssembleArticleDTO> {
+    return {
+      title: this.findTitle({ identifier: 'home_article_title' }),
+      platforms_title: this.findTitle({
+        identifier: 'home_article_platforms_title',
+      }),
+      articles: this.article.findMainArticles(),
+      platforms: this.platforms.findAll(),
+    };
   }
 }
