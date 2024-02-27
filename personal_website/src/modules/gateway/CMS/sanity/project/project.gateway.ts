@@ -25,7 +25,23 @@ export class SanityProjectGateway
       }
     `);
 
-    return Project.fromDTOs(result);
+    let projects = await result.map(async project => {
+      project.description = this.client
+        .fetch(
+          `*[_type == "title" && identifier == "${project.title}"] {content}`,
+        )
+        .then(data => data[0].content);
+      project.techs = project.techs.map(async tech =>
+        this.client
+          .fetch(
+            `*[_type == "tech" && identifier == "${tech.identifier}"]{name, icon, description, preview, identifier, context}`,
+          )
+          .then(Tech.fromDTOs),
+      );
+      return project;
+    });
+
+    return Project.fromAsyncDTOs(projects);
   }
 
   async findMainProjects() {
