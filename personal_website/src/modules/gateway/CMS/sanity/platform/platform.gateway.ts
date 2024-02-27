@@ -13,5 +13,12 @@ export class PlatformGateway extends SanitySupport implements IPlatformGateway {
 
     return Platform.fromDTOs(result);
   }
-  findOne({ id }: IFindOnePlatformDTO): Promise<Platform> {}
+
+  async findOne({ id }: IFindOnePlatformDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "platform" && _id == "${id}" ]{name,link,icon}[0]`,
+    );
+
+    return Platform.fromDTO(result);
+  }
 }
