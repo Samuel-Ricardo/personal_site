@@ -6,6 +6,7 @@ import { SanityPersonGateway } from './person/person.gateway';
 import { SanityHighlightGateway } from './highlight/highlight.gateway';
 import { SanityTechGateway } from './tech/tech.gateway';
 import { SanityProjectGateway } from './project/project.gateway';
+import { SanityPlatformGateway } from './platform/platform.gateway';
 
 export const SANITY_CMS_GATEWAY_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -30,4 +31,7 @@ SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.TECH).to(
 );
 SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.PROJECT).to(
   SanityProjectGateway,
+);
+SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.PLATFORM).to(
+  SanityPlatformGateway,
 );
