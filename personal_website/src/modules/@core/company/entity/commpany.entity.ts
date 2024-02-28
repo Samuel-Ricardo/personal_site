@@ -1,9 +1,19 @@
+import { ICompanyDTO } from '../DTO/company.dto';
+
 export class Company {
   constructor(
     private readonly _name: string,
     private readonly _logo: string,
     private readonly _link: string,
   ) {}
+
+  toDTO(): ICompanyDTO {
+    return {
+      name: this._name,
+      logo: this._logo,
+      link: this._link,
+    };
+  }
 
   get name() {
     return this._name;
