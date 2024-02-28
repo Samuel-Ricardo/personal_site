@@ -12,25 +12,42 @@ export class SanityArticleGateway
   implements IArticleGateway
 {
   private build(result: ICMSArticleDTO[]): Promise<IArticlesDTO>[] {
-    return result.map(async article => ({
-      ...article,
-      platforms: article.platforms.map(async (p): Promise<IPlatform> => {
-        const platform = await this.client.fetch(
-          `*[_type == "platform" && _id == "${p.platform._ref}"]{link, name, icon}[0]`,
-        );
+    return result.map(
+      async article =>
+        ({
+          ...article,
+          cover: this.imageBuilder.image(article.cover).url(),
+          title: this.client
+            .fetch(
+              `*[_type == "title" && identifier == "${article.title}"]{content}[0]`,
+            )
+            .then(title => title?.content),
+          description: this.client
+            .fetch(
+              `
+        *[_type == "tp_text" && identifier == "${article.description}"]{content}[0]
+      `,
+            )
+            .then(text => text?.content),
 
-        return {
-          url: p.link,
-          name: platform.name,
-          icon: platform.icon,
-        };
-      }),
-    }));
+          platforms: article.platforms.map(async (p): Promise<IPlatform> => {
+            const platform = await this.client.fetch(
+              `*[_type == "platform" && _id == "${p.platform._ref}"]{link, name, icon}[0]`,
+            );
+
+            return {
+              link: platform.link,
+              name: platform.name,
+              icon: platform.icon,
+            };
+          }),
+        }) as IArticlesDTO,
+    );
   }
 
   async findAll() {
     const result = await this.client.fetch<ICMSArticleDTO[]>(
-      `*[_type == "article"]{main, title, cover, description, content, plarforms}`,
+      `*[_type == "article"]{main, title, cover, description, content, platforms}`,
     );
 
     return Article.fromDTOs(await Promise.all(this.build(result)));
