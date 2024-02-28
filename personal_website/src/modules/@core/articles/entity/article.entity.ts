@@ -1,5 +1,6 @@
 import { IPlatform } from '@/@types/platform';
 import { IArticlesDTO } from '../DTO/articles.dto';
+import { IArticlesViewDTO } from '../DTO/view.dto';
 
 export class Article {
   constructor(
@@ -11,30 +12,40 @@ export class Article {
     private readonly _content?: Promise<string>,
   ) {}
 
-  toDTO(): IArticlesDTO {
+  async toDTO(): Promise<IArticlesDTO> {
     return {
       main: this._main,
-      title: this._title,
-      description: this._description,
+      title: await this._title,
+      description: await this._description,
       cover: this._cover,
       platforms: this._platforms,
-      content: this._content,
+      content: await this._content,
     };
   }
 
   static fromDTO(dto: IArticlesDTO): Article {
     return new Article(
-      dto.title,
-      dto.description,
+      Promise.any(dto.title),
+      Promise.any(dto.description),
       dto.cover,
       dto.platforms,
       dto.main,
-      dto.content,
+      Promise.any(dto.content as any),
     );
   }
 
   static fromDTOs(dtos: IArticlesDTO[]): Article[] {
     return dtos.map(Article.fromDTO);
+  }
+
+  async toView(): Promise<IArticlesViewDTO> {
+    return {
+      title: await this.title,
+      description: await this.description,
+      platforms: await Promise.all(this.platforms),
+      image: this.cover,
+      scientific: false,
+    };
   }
 
   get main() {
