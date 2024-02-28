@@ -19,6 +19,10 @@ export class Company {
     return new Company(companyDTO.name, companyDTO.logo, companyDTO.link);
   }
 
+  static fromDTOs(companyDTOs: ICompanyDTO[]): Company[] {
+    return companyDTOs.map(Company.fromDTO);
+  }
+
   get name() {
     return this._name;
   }
