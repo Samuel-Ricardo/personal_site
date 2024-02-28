@@ -7,8 +7,14 @@ import { IHighlightGateway } from '@/modules/@core/highlight/gateway/highlight.g
 import { SanityTechGateway } from './tech/tech.gateway';
 import { IPlatformGateway } from '@/modules/@core/platforms/gateway/platform.gateway';
 import { IArticleGateway } from '@/modules/@core/articles/gateway/article.gateway';
+import { ICompanyGateway } from '@/modules/@core/company/gateway/company.gateway';
 
 export const SANITY_CMS_GATEWAY_FACTORY = {
+  COMPANY: () =>
+    SANITY_CMS_GATEWAY_MODULE.get<ICompanyGateway>(
+      SANITY_CMS_GATEWAY_REGISTRY.COMPANY,
+    ),
+
   PERSON: () =>
     SANITY_CMS_GATEWAY_MODULE.get<IPersonGateway>(
       SANITY_CMS_GATEWAY_REGISTRY.PERSON,
