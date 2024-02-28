@@ -15,22 +15,22 @@ export class Article {
   async toDTO(): Promise<IArticlesDTO> {
     return {
       main: this._main,
-      title: await this._title,
-      description: await this._description,
+      title: this._title,
+      description: this._description,
       cover: this._cover,
       platforms: this._platforms,
-      content: await this._content,
+      content: this._content,
     };
   }
 
   static fromDTO(dto: IArticlesDTO): Article {
     return new Article(
-      Promise.any(dto.title),
-      Promise.any(dto.description),
+      dto.title,
+      dto.description,
       dto.cover,
       dto.platforms,
       dto.main,
-      Promise.any(dto.content as any),
+      dto.content,
     );
   }
 
