@@ -48,6 +48,10 @@ export class Article {
     };
   }
 
+  static async toViewList(articles: Article[]): Promise<IArticlesViewDTO[]> {
+    return await Promise.all(articles.map(async article => article.toView()));
+  }
+
   get main() {
     return this._main;
   }
