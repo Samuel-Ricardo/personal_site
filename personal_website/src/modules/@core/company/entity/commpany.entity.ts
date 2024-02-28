@@ -15,6 +15,10 @@ export class Company {
     };
   }
 
+  static fromDTO(companyDTO: ICompanyDTO): Company {
+    return new Company(companyDTO.name, companyDTO.logo, companyDTO.link);
+  }
+
   get name() {
     return this._name;
   }
