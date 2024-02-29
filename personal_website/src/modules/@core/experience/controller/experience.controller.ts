@@ -9,4 +9,8 @@ export class ControllerExperience implements IExperienceModule {
     @inject(MODULE.EXPERIENCE.SERVICE.MAIN)
     protected readonly service: IExperienceService,
   ) {}
+
+  findAll() {
+    return this.service.findAll();
+  }
 }
