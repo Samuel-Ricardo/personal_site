@@ -7,6 +7,7 @@ export interface IAssembleTechHomeSectionDTO {
     frontend: Promise<Tech[]>;
     backend: Promise<Tech[]>;
     devops: Promise<Tech[]>;
+    database: Promise<Tech[]>;
     QA: Promise<Tech[]>;
   };
   image: Promise<string | undefined>;

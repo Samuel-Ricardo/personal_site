@@ -1,9 +1,9 @@
 import { Highlight } from '@/modules/@core/highlight/entity/highlight.entity';
 
 export interface IAssembleAboutDTO {
-  title: string | undefined;
-  subtitle: string | undefined;
-  image: string | undefined;
-  paragraph: string | undefined;
-  highlights: Highlight[] | undefined;
+  title: Promise<string | undefined>;
+  subtitle: Promise<string | undefined>;
+  image: Promise<string | undefined>;
+  paragraph: Promise<string | undefined>;
+  highlights: Promise<Highlight[] | undefined>;
 }
