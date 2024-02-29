@@ -6,7 +6,7 @@ import { IFindOneComapanyDTO } from '../DTO/find/one.dto';
 import { MODULE } from '@/modules/app.registry';
 
 @injectable()
-export class ComapnyService implements ICompanyService {
+export class CompanyService implements ICompanyService {
   constructor(
     @inject(MODULE.COMPANY.USE_CASE.FIND.ALL)
     private readonly findAllCompanyUseCase: FindAllCompanyUseCase,
