@@ -1,3 +1,4 @@
+import { IFindExperienceByContextDTO } from '../../experience/DTO/find/by/context.dto';
 import { IAssemblerFindDTO } from '../DTO/gateway/find/index.dto';
 import { IAssembleAboutDTO } from '../DTO/service/assemble/about.dto';
 import { IAssembleArticleDTO } from '../DTO/service/assemble/articles.dto';
@@ -16,5 +17,7 @@ export interface IAssemblerService {
   assembleTechs: () => Promise<IAssembleTechHomeSectionDTO>;
   assembleProjects: () => Promise<IAssembleProjectsDTO>;
   assembleArticles: () => Promise<IAssembleArticleDTO>;
-  assembleExperience: () => Promise<IAssembleExperienceDTO>;
+  assembleExperience: (
+    DTO: IFindExperienceByContextDTO,
+  ) => Promise<IAssembleExperienceDTO>;
 }
