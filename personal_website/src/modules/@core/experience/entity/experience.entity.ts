@@ -33,6 +33,10 @@ export class Experience {
     );
   }
 
+  static fromDTOs(DTO: IExperienceDTO[]): Experience[] {
+    return DTO.map(Experience.fromDTO);
+  }
+
   get title() {
     return this._title;
   }
