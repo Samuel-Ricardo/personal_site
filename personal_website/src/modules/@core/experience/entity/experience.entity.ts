@@ -22,6 +22,17 @@ export class Experience {
     };
   }
 
+  static fromDTO(dto: IExperienceDTO): Experience {
+    return new Experience(
+      dto.title,
+      dto.description,
+      dto.startDate,
+      dto.endDate,
+      dto.context,
+      dto.company,
+    );
+  }
+
   get title() {
     return this._title;
   }
