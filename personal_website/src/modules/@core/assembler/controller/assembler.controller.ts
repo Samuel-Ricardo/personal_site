@@ -38,6 +38,10 @@ export class AssemblerController {
     return this.service.assembleWorkExperience();
   }
 
+  async assembleAcademicExperience() {
+    return this.service.assembleAcademicExperience();
+  }
+
   async findTitle(DTO: IAssemblerFindDTO) {
     return await this.service.findTitle(DTO);
   }
