@@ -1,6 +1,6 @@
 import { Experience } from '@/modules/@core/experience/entity/experience.entity';
 
-export interface IAssembleWorkExperienceDTO {
+export interface IAssembleExperienceDTO {
   title: Promise<string | undefined>;
   experience: Promise<Experience[]>;
 }
