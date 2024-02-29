@@ -3,6 +3,7 @@ import { FindAllExperiencesUseCase } from './use_case/find/all.use_case';
 import { EXPERIENCE_REGISTRY } from './experience.registry';
 import { FindExperienceByContextUseCase } from './use_case/find/by/context.use_case';
 import { ExperienceService } from './service/experience.service';
+import { ExperienceController } from './controller/experience.controller';
 
 export const EXPERIENCE_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -18,4 +19,12 @@ EXPERIENCE_MODULE.bind(EXPERIENCE_REGISTRY.USE_CASE.FIND.BY.CONTEXT).to(
 
 EXPERIENCE_MODULE.bind(EXPERIENCE_REGISTRY.SERVICE.MAIN).toConstantValue(
   ExperienceService,
+);
+
+EXPERIENCE_MODULE.bind(EXPERIENCE_REGISTRY.CONTROLLER.MAIN).toConstantValue(
+  ExperienceController,
+);
+
+EXPERIENCE_MODULE.bind(EXPERIENCE_REGISTRY.MAIN).toConstantValue(
+  ExperienceController,
 );
