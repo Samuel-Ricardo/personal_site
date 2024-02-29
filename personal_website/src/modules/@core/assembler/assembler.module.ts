@@ -16,6 +16,7 @@ import { TECH_MODULE } from '../tech/tech.module';
 import { PROJECT_MODULE } from '../project/project.module';
 import { PLATFORM_MODULE } from '../platforms/platform.module';
 import { ARTICLE_MODULE } from '../articles/article.module';
+import { COMPANY_MODULE } from '../company/company.module';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -31,6 +32,7 @@ export const ASSEMBLER_MODULE = Container.merge(
   PROJECT_MODULE,
   PLATFORM_MODULE,
   ARTICLE_MODULE,
+  COMPANY_MODULE,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
