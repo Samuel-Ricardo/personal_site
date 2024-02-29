@@ -1,4 +1,5 @@
 import { Company } from '../../company/entity/commpany.entity';
+import { IExperienceDTO } from '../DTO/experience.dto';
 
 export class Experience {
   constructor(
@@ -9,6 +10,17 @@ export class Experience {
     private readonly _context: 'work' | 'academic',
     private readonly _company: Promise<Company>,
   ) {}
+
+  toDTO(): IExperienceDTO {
+    return {
+      title: this._title,
+      description: this._description,
+      startDate: this._startDate,
+      endDate: this._endDate,
+      context: this._context,
+      company: this._company,
+    };
+  }
 
   get title() {
     return this._title;
