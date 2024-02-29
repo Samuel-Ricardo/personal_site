@@ -3,6 +3,8 @@ import { IExperienceService } from './service.interface';
 import { FindAllExperiencesUseCase } from '../use_case/find/all.use_case';
 import { FindExperienceByContextUseCase } from '../use_case/find/by/context.use_case';
 import { MODULE } from '@/modules/app.registry';
+import { IFindExperienceByContextDTO } from '../DTO/find/by/context.dto';
+import { Experience } from '../entity/experience.entity';
 
 @injectable()
 export class ExperienceService implements IExperienceService {
@@ -12,4 +14,11 @@ export class ExperienceService implements IExperienceService {
     @inject(MODULE.EXPERIENCE.USE_CASE.FIND.BY.CONTEXT)
     protected readonly _findByContext: FindExperienceByContextUseCase,
   ) {}
+
+  async findAll() {
+    return await this._findAll.execute();
+  }
+  findByContext(DTO: IFindExperienceByContextDTO): Promise<Experience[]> {
+    throw new Error('Method not implemented.');
+  }
 }
