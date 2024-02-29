@@ -1,4 +1,7 @@
 export const COMPANY_REGISTRY = {
+  SERVIC: {
+    MAIN: Symbol.for('MODULES::COMPANY::SERVICE::MAIN'),
+  },
   USE_CASE: {
     FIND: {
       ALL: Symbol.for('MODULES::COMPANY::USE_CASE::FIND::ALL'),
