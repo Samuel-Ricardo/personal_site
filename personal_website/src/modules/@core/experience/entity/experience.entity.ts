@@ -23,7 +23,7 @@ export class Experience {
     };
   }
 
-  async toViewDTO(): Promise<IExperienceViewDTO> {
+  toViewDTO(): IExperienceViewDTO {
     return {
       title: this._title,
       company: {
@@ -34,6 +34,10 @@ export class Experience {
       start: this._startDate,
       end: this._endDate,
     };
+  }
+
+  static toViewList(items: Experience[]): Promise<IExperienceViewDTO>[] {
+    return items.map(async item => item.toViewDTO());
   }
 
   static fromDTO(dto: IExperienceDTO): Experience {
