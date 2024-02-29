@@ -13,4 +13,8 @@ export class ControllerExperience implements IExperienceModule {
   findAll() {
     return this.service.findAll();
   }
+
+  findWorkExperience() {
+    return this.service.findByContext({ context: 'work' });
+  }
 }
