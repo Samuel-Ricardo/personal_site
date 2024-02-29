@@ -8,6 +8,7 @@ import { SanityTechGateway } from './tech/tech.gateway';
 import { IPlatformGateway } from '@/modules/@core/platforms/gateway/platform.gateway';
 import { IArticleGateway } from '@/modules/@core/articles/gateway/article.gateway';
 import { ICompanyGateway } from '@/modules/@core/company/gateway/company.gateway';
+import { IExperienceGateway } from '@/modules/@core/experience/gateway/experience.gateway';
 
 export const SANITY_CMS_GATEWAY_FACTORY = {
   COMPANY: () =>
@@ -42,5 +43,9 @@ export const SANITY_CMS_GATEWAY_FACTORY = {
   ARTICLE: () =>
     SANITY_CMS_GATEWAY_MODULE.get<IArticleGateway>(
       SANITY_CMS_GATEWAY_REGISTRY.ARTICLE,
+    ),
+  EXPERIENCE: () =>
+    SANITY_CMS_GATEWAY_MODULE.get<IExperienceGateway>(
+      SANITY_CMS_GATEWAY_REGISTRY.EXPERIENCE,
     ),
 };
