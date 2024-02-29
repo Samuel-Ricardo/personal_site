@@ -1,20 +1,21 @@
 import { Company } from '../../company/entity/commpany.entity';
 import { IExperienceDTO } from '../DTO/experience.dto';
+import { IExperienceViewDTO } from '../DTO/view.dto';
 
 export class Experience {
   constructor(
     private readonly _title: string,
-    private readonly _description: Promise<string>,
+    private readonly _description: string,
     private readonly _startDate: Date,
     private readonly _endDate: Date,
     private readonly _context: 'work' | 'academic',
-    private readonly _company: Promise<Company>,
+    private readonly _company: Company,
   ) {}
 
   toDTO(): IExperienceDTO {
     return {
       title: this._title,
-      description: this._description,
+      description: { content: this._description },
       startDate: this._startDate,
       endDate: this._endDate,
       context: this._context,
@@ -22,10 +23,23 @@ export class Experience {
     };
   }
 
+  async toViewDTO(): Promise<IExperienceViewDTO> {
+    return {
+      title: this._title,
+      company: {
+        name: this._company.name,
+        icon: this._company.logo,
+      },
+      description: this._description,
+      start: this._startDate,
+      end: this._endDate,
+    };
+  }
+
   static fromDTO(dto: IExperienceDTO): Experience {
     return new Experience(
       dto.title,
-      dto.description,
+      dto.description.content,
       dto.startDate,
       dto.endDate,
       dto.context,
