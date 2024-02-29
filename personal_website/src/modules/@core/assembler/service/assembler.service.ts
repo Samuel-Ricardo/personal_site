@@ -129,4 +129,11 @@ export class AssemblerService implements IAssemblerService {
       experience: this.experience.findWorkExperience(),
     };
   }
+
+  async assembleAcademicExperience(): Promise<IAssembleExperienceDTO> {
+    return {
+      title: this.findTitle({ identifier: 'home_experience_title' }),
+      experience: this.experience.findAcademicExperience(),
+    };
+  }
 }
