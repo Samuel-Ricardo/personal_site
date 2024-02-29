@@ -4,7 +4,7 @@ import { type IExperienceService } from '../service/service.interface';
 import { MODULE } from '@/modules/app.registry';
 
 @injectable()
-export class ControllerExperience implements IExperienceModule {
+export class ExperienceController implements IExperienceModule {
   constructor(
     @inject(MODULE.EXPERIENCE.SERVICE.MAIN)
     protected readonly service: IExperienceService,
