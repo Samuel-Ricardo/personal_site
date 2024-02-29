@@ -17,7 +17,6 @@ export interface IAssemblerService {
   assembleTechs: () => Promise<IAssembleTechHomeSectionDTO>;
   assembleProjects: () => Promise<IAssembleProjectsDTO>;
   assembleArticles: () => Promise<IAssembleArticleDTO>;
-  assembleExperience: (
-    DTO: IFindExperienceByContextDTO,
-  ) => Promise<IAssembleExperienceDTO>;
+  assembleWorkExperience: () => Promise<IAssembleExperienceDTO>;
+  assembleAcademicExperience: () => Promise<IAssembleExperienceDTO>;
 }
