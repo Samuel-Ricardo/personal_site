@@ -1,5 +1,5 @@
 export const COMPANY_REGISTRY = {
-  SERVIC: {
+  SERVICE: {
     MAIN: Symbol.for('MODULES::COMPANY::SERVICE::MAIN'),
   },
   USE_CASE: {
