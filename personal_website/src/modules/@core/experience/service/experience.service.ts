@@ -18,7 +18,8 @@ export class ExperienceService implements IExperienceService {
   async findAll() {
     return await this._findAll.execute();
   }
-  findByContext(DTO: IFindExperienceByContextDTO): Promise<Experience[]> {
-    throw new Error('Method not implemented.');
+
+  async findByContext(DTO: IFindExperienceByContextDTO) {
+    return await this._findByContext.execute(DTO);
   }
 }
