@@ -14,6 +14,7 @@ import { PROJECT_MODULE } from './@core/project/project.module';
 import { PLATFORM_MODULE } from './@core/platforms/platform.module';
 import { ARTICLE_MODULE } from './@core/articles/article.module';
 import { COMPANY_MODULE } from './@core/company/company.module';
+import { EXPERIENCE_MODULE } from './@core/experience/experience.module';
 
 const MODULES = new Container();
 
@@ -32,4 +33,5 @@ export const APP_MODULE = Container.merge(
   PLATFORM_MODULE,
   ARTICLE_MODULE,
   COMPANY_MODULE,
+  EXPERIENCE_MODULE,
 );
