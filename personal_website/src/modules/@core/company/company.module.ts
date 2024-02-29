@@ -3,6 +3,7 @@ import { COMPANY_REGISTRY } from './company.registry';
 import { FindAllCompanyUseCase } from './use_case/find/all.use_case';
 import { FindOneCompanyUseCase } from './use_case/find/one.use_case';
 import { CompanyService } from './service/company.service';
+import { CompanyController } from './controller/company.controller';
 
 const MODULE = new Container({
   autoBindInjectable: true,
@@ -19,3 +20,7 @@ COMPANY_MODULE.bind(COMPANY_REGISTRY.USE_CASE.FIND.ONE).to(
 );
 
 COMPANY_MODULE.bind(COMPANY_REGISTRY.SERVICE.MAIN).to(CompanyService);
+
+COMPANY_MODULE.bind(COMPANY_REGISTRY.CONTROLLER.MAIN).to(CompanyController);
+
+COMPANY_MODULE.bind(COMPANY_REGISTRY.MAIN).to(CompanyController);
