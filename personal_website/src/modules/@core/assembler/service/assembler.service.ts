@@ -18,6 +18,8 @@ import { type IProjectModule } from '../../project/project.interface';
 import { IAssembleArticleDTO } from '../DTO/service/assemble/articles.dto';
 import { type IArticleModule } from '../../articles/articles.interface';
 import { type IPlatformModule } from '../../platforms/platform.interace';
+import { type IExperienceModule } from '../../experience/experience.interface';
+import { IAssembleExperienceDTO } from '../DTO/service/assemble/experience.dto';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -42,6 +44,8 @@ export class AssemblerService implements IAssemblerService {
     private readonly article: IArticleModule,
     @inject(MODULE.PLATFORM.MAIN)
     private readonly platforms: IPlatformModule,
+    @inject(MODULE.EXPERIENCE.MAIN)
+    private readonly experience: IExperienceModule,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -110,12 +114,19 @@ export class AssemblerService implements IAssemblerService {
 
   async assembleArticles(): Promise<IAssembleArticleDTO> {
     return {
-      title: this.findTitle({ identifier: 'home_article_title' }),
+      title: this.findTitle({ identifier: 'home_articles_title' }),
       platforms_title: this.findTitle({
-        identifier: 'home_article_platforms_title',
+        identifier: 'home_articles_platforms_title',
       }),
       articles: this.article.findMainArticles(),
       platforms: this.platforms.findAll(),
+    };
+  }
+
+  async assembleWorkExperience(): Promise<IAssembleExperienceDTO> {
+    return {
+      title: this.findTitle({ identifier: 'home_experience_title' }),
+      experience: this.experience.findWorkExperience(),
     };
   }
 }
