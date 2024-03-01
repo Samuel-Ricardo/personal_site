@@ -6,4 +6,16 @@ export class Testimonial {
     private readonly _content: string,
     private readonly _portfolio: string,
   ) {}
+
+  get person() {
+    return this._person;
+  }
+
+  get content() {
+    return this._content;
+  }
+
+  get portfolio() {
+    return this._portfolio;
+  }
 }
