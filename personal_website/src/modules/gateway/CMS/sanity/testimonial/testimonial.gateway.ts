@@ -9,10 +9,15 @@ export class SanityTestimonialGateway
   implements ITestimonialGateway
 {
   async findAll(): Promise<Testimonial[]> {
-    return Testimonial.fromDTOs(
-      await this.client.fetch(
-        `*[_type == "testimonial" ]{content,portfolio,person ->{ title, name, avatar, contacts, company }}`,
-      ),
+    const result = await this.client.fetch<any[]>(
+      `*[_type == "testimonial" ]{content,portfolio,person ->{ title, name, avatar, contacts, company }}`,
     );
+
+    result.forEach(
+      async r =>
+        (r.person.avatar = this.imageBuilder.image(r.person.avatar).url()),
+    );
+
+    return Testimonial.fromDTOs(result);
   }
 }
