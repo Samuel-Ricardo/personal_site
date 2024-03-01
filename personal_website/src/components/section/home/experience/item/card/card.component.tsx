@@ -15,7 +15,9 @@ export const ExperienceItemCard = ({
   className,
 }: IExperience & HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={`experience-item-card ${left ? 'mr-[49%]' : 'ml-[49%]'}`}>
+    <div
+      className={`experience-item-card ${left ? 'mr-[48.65%]' : 'ml-[48.65%]'}`}
+    >
       <header>
         <Image
           src={company.icon}
@@ -29,7 +31,10 @@ export const ExperienceItemCard = ({
           </h3>
           <div className="line" />
           <h4>
-            {start.getFullYear()} - {finish?.getFullYear() || 'Actual'}
+            {start.getFullYear()} • {start.getMonth()} -{' '}
+            {finish
+              ? finish?.getFullYear() + ' • ' + finish?.getMonth
+              : 'Actual'}
           </h4>
         </div>
       </header>
