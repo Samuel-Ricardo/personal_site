@@ -1,6 +1,8 @@
 @import '../../../globals.scss';
 
 #academic-section {
+  @apply mt-64;
+
   h1 {
     @apply text-4xl;
     @apply font-bold;
