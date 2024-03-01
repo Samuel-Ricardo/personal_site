@@ -16,6 +16,18 @@ export class Testimonial {
     };
   }
 
+  static fromDTO(DTO: ITestimonialDTO): Testimonial {
+    return new Testimonial(
+      Person.fromDTO(DTO.person),
+      DTO.content,
+      DTO.portfolio,
+    );
+  }
+
+  static fromDTOs(DTO: ITestimonialDTO[]): Testimonial[] {
+    return DTO.map(Testimonial.fromDTO);
+  }
+
   get person() {
     return this._person;
   }
