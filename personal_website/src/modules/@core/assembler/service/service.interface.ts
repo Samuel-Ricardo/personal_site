@@ -7,6 +7,7 @@ import { IAssembledHeroDTO } from '../DTO/service/assemble/hero.dto';
 import { IAssembleOccupationDTO } from '../DTO/service/assemble/occupation.dto';
 import { IAssembleProjectsDTO } from '../DTO/service/assemble/projects.dto';
 import { IAssembleTechHomeSectionDTO } from '../DTO/service/assemble/techs.dto';
+import { IAssembleTestimonials } from '../DTO/service/assemble/testimonials.dto';
 
 export interface IAssemblerService {
   findTitle: (DTO: IAssemblerFindDTO) => Promise<string | undefined>;
@@ -19,4 +20,5 @@ export interface IAssemblerService {
   assembleArticles: () => Promise<IAssembleArticleDTO>;
   assembleWorkExperience: () => Promise<IAssembleExperienceDTO>;
   assembleAcademicExperience: () => Promise<IAssembleExperienceDTO>;
+  assembleTestimonials: () => Promise<IAssembleTestimonials>;
 }
