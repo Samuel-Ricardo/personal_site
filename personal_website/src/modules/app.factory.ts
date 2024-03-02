@@ -12,6 +12,7 @@ import { PLATFORM_FACTORY as PLATFORM } from './@core/platforms/platform.factory
 import { ARTICLE_FACTORY as ARTICLE } from './@core/articles/article.factory';
 import { COMPANY_FACTORY as COMPANY } from './@core/company/company.factory';
 import { EXPERIENCE_FACTORY as EXPERIENCE } from './@core/experience/experience.factory';
+import { TESTIMONIAL_FACTORY as TESTIMONIAL } from './@core/testimonial/testimonial.factory';
 
 export const MODULES = {
   FONTS,
@@ -28,4 +29,5 @@ export const MODULES = {
   ARTICLE,
   COMPANY,
   EXPERIENCE,
+  TESTIMONIAL,
 };
