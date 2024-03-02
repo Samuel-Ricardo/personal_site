@@ -20,6 +20,8 @@ import { type IArticleModule } from '../../articles/articles.interface';
 import { type IPlatformModule } from '../../platforms/platform.interace';
 import { type IExperienceModule } from '../../experience/experience.interface';
 import { IAssembleExperienceDTO } from '../DTO/service/assemble/experience.dto';
+import { IAssembleTestimonials } from '../DTO/service/assemble/testimonials.dto';
+import { type ITestimonialModule } from '../../testimonial/testimonial.interface';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -46,6 +48,8 @@ export class AssemblerService implements IAssemblerService {
     private readonly platforms: IPlatformModule,
     @inject(MODULE.EXPERIENCE.MAIN)
     private readonly experience: IExperienceModule,
+    @inject(MODULE.TESTIMONIAL.MAIN)
+    private readonly testimonials: ITestimonialModule,
   ) {}
 
   async findTitle(DTO: IAssemblerFindDTO) {
@@ -134,6 +138,13 @@ export class AssemblerService implements IAssemblerService {
     return {
       title: this.findTitle({ identifier: 'home__academic_experience__title' }),
       experience: this.experience.findAcademicExperience(),
+    };
+  }
+
+  async assembleTestimonials(): Promise<IAssembleTestimonials> {
+    return {
+      title: this.findTitle({ identifier: 'home_testimonials_title' }),
+      testimonials: this.testimonials.findAll(),
     };
   }
 }
