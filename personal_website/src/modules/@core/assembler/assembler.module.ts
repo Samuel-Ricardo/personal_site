@@ -18,6 +18,7 @@ import { PLATFORM_MODULE } from '../platforms/platform.module';
 import { ARTICLE_MODULE } from '../articles/article.module';
 import { COMPANY_MODULE } from '../company/company.module';
 import { EXPERIENCE_MODULE } from '../experience/experience.module';
+import { TESTIMONIAL_MODULE } from '../testimonial/testimonial.module';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -35,6 +36,7 @@ export const ASSEMBLER_MODULE = Container.merge(
   ARTICLE_MODULE,
   COMPANY_MODULE,
   EXPERIENCE_MODULE,
+  TESTIMONIAL_MODULE,
 );
 
 ASSEMBLER_MODULE.bind(ASSEMBLER_REGISTRY.USE_CASE.FIND.TITLE).to(
