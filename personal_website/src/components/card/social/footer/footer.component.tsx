@@ -1,10 +1,17 @@
+import { ISocialCardFooterProps } from '@/@types/props/card/social';
 import './footer.style.scss';
 
-export const SocialCardFooter = () => {
+export const SocialCardFooter = ({
+  title,
+  name,
+  company,
+}: ISocialCardFooterProps) => {
   return (
     <footer className="card-footer">
-      <p className="name"> SAMUEL RICARDO</p>
-      <p className="role">| Full Stack • Github</p>
+      <p className="name">{name}</p>
+      <p className="role">
+        | {title} • {company}
+      </p>
     </footer>
   );
 };
