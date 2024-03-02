@@ -1,7 +1,7 @@
 import { ISocialCardFooterProps } from '@/@types/props/card/social';
 import './footer.style.scss';
 
-export const SocialCardFooter = ({
+export const SocialCardFooter = async ({
   title,
   name,
   company,

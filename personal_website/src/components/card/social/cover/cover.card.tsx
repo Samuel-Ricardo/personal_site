@@ -3,7 +3,7 @@ import { ISocialCardCoverProps } from '@/@types/props/card/social';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const SocialCardCover = ({
+export const SocialCardCover = async ({
   data: { title, name, contacts, company },
 }: ISocialCardCoverProps) => {
   return (
