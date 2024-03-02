@@ -12,17 +12,15 @@ export class SanityPersonGateway
 {
   async findAll(DTO: IFindAllPersonDTO): Promise<Person[]> {
     const result = await this.client.fetch(
-      `*[_type == "person" && lang == "${DTO.lang || 'en'}"]`,
+      `*[_type == "person" && lang == "${DTO.lang || 'en'}"]{name,avatar,title,contacts,company->{name,logo,link}}`,
     );
-
-    console.log({ result });
 
     return {} as any;
   }
   async findOne(DTO: IFindOnePersonDTO) {
     const result = (
       await this.client.fetch(
-        `*[_type == "person" && lang == "${DTO.lang || 'en'}" && identifier == "${DTO.identifier}"]{name,avatar,title}`,
+        `*[_type == "person" && lang == "${DTO.lang || 'en'}" && identifier == "${DTO.identifier}"]{name,avatar,title,contacts,company->{name,logo,link}}`,
       )
     )[0];
 
