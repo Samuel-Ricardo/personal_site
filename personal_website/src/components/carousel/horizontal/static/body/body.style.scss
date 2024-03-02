@@ -1,0 +1,20 @@
+.static-carousel-container {
+  @apply relative;
+  @apply flex;
+  @apply flex-row;
+  @apply w-screen;
+  @apply h-fit;
+  @apply px-24;
+  @apply py-4;
+
+  @apply overflow-x-scroll;
+  @apply scroll-smooth;
+
+  scrollbar-width: 2px;
+
+  @apply gap-24;
+
+  li {
+    @apply mx-auto;
+  }
+}
