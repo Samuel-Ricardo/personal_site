@@ -9,4 +9,8 @@ export class TestimonialService implements ITestimonialService {
     @inject(MODULE.TESTIMONIAL.USE_CASE.FIND.ALL)
     protected readonly _findAll: FindAllTestimonialUseCase,
   ) {}
+
+  async findAll() {
+    return this._findAll.execute();
+  }
 }
