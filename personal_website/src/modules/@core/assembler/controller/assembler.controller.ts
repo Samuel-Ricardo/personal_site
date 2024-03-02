@@ -10,6 +10,10 @@ export class AssemblerController {
     private readonly service: AssemblerService,
   ) {}
 
+  async assembbleTestimonials() {
+    return await this.service.assembleTestimonials();
+  }
+
   async assembleArticles() {
     return await this.service.assembleArticles();
   }
