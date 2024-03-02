@@ -4,7 +4,7 @@ import { SocialCardCover } from './cover/cover.card';
 import { SocialCardFooter } from './footer/footer.component';
 import { ISocialCardProps } from '@/@types/props/card/social';
 
-export const SocialCard = ({ data }: ISocialCardProps) => {
+export const SocialCard = async ({ data }: ISocialCardProps) => {
   return (
     <div className="social-card">
       <Image
