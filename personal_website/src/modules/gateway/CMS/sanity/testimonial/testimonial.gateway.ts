@@ -13,9 +13,15 @@ export class SanityTestimonialGateway
       `*[_type == "testimonial" ]{content,portfolio,person ->{ title, name, avatar, contacts, company->{name,logo,link} }}`,
     );
 
-    result.forEach(
-      async r =>
-        (r.person.avatar = this.imageBuilder.image(r.person.avatar).url()),
+    await Promise.all(
+      result.map(async r => {
+        r.person.avatar = this.imageBuilder.image(r.person.avatar).url();
+        r.content = (
+          await this.client.fetch(
+            `*[_type == "tp_text" && identifier == "${r.content}"]{content}[0]`,
+          )
+        ).content;
+      }),
     );
 
     return Testimonial.fromDTOs(result);
