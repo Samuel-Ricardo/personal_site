@@ -1,9 +1,10 @@
+import { PropsWithChildren } from 'react';
 import './content.style.scss';
 
-export const TestimonyContent = () => {
+export const TestimonyContent = async ({ children }: PropsWithChildren) => {
   return (
     <div className="testimony-content">
-      <p>Content</p>
+      <p>{children}</p>
     </div>
   );
 };
