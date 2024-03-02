@@ -14,8 +14,12 @@ export const SocialCard = ({ data }: ISocialCardProps) => {
         height={800}
         className="avatar"
       />
-      <SocialCardCover />
-      <SocialCardFooter />
+      <SocialCardCover data={data.person} />
+      <SocialCardFooter
+        name={data.person.name}
+        title={data.person.title}
+        company={data.person.company.name}
+      />
     </div>
   );
 };
