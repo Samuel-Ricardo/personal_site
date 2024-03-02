@@ -1,5 +1,5 @@
 import { Testimonial } from './entity/testimonial.entity';
 
-export interface ITestimonalModule {
+export interface ITestimonialModule {
   findAll(): Promise<Testimonial[]>;
 }
