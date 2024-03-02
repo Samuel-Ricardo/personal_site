@@ -29,22 +29,4 @@
       @apply h-16;
     }
   }
-
-  .static-carousel-container {
-    @apply relative;
-    @apply flex;
-    @apply flex-row;
-    @apply min-w-full;
-    @apply w-fit;
-    @apply h-fit;
-    @apply px-10;
-    @apply py-4;
-
-    @apply justify-center;
-    @apply items-center;
-
-    li {
-      @apply mx-auto;
-    }
-  }
 }

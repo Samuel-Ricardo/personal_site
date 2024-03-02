@@ -1,3 +1,5 @@
+import './body.style.scss';
+
 export const SliderBody = ({ children }: { children: any[] }) => {
   return (
     <ul className="static-carousel-container">
