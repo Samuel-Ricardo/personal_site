@@ -10,7 +10,7 @@ export interface ITestimonyCardHeaderProps {
   data: IPersonDTO;
 }
 
-export interface ITestimoyCardFooterProps {
+export interface ITestimonyCardFooterProps {
   portfolio: string;
   contacts: IContactDTO[];
 }
