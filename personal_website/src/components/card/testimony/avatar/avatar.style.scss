@@ -1,10 +1,14 @@
 @import '../../../../app/globals.scss';
 
 .testimony-avatar {
-  @apply w-[40%];
+  @apply min-w-fit;
+  @apply h-full;
   @apply mr-6;
+  @apply my-auto;
 
   img {
     @apply rounded-lg;
+    @apply w-auto;
+    @apply h-full;
   }
 }
