@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export const TestimonialsBackground = () => {
+export const TestimonialsBackground = async () => {
   return (
     <Image
       id="bg-testimonials"
