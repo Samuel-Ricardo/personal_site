@@ -10,6 +10,7 @@ import { SanityPlatformGateway } from './platform/platform.gateway';
 import { SanityArticleGateway } from './article/article.gateway';
 import { SanityCompanyGateway } from './company/company.gateway';
 import { SanityExperienceGateway } from './experience/experience.gateway';
+import { SanityTestimonialGateway } from './testimonial/testimonial.gateway';
 
 export const SANITY_CMS_GATEWAY_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -46,4 +47,7 @@ SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.COMPANY).to(
 );
 SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.EXPERIENCE).to(
   SanityExperienceGateway,
+);
+SANITY_CMS_GATEWAY_MODULE.bind(SANITY_CMS_GATEWAY_REGISTRY.TESTIMONIAL).to(
+  SanityTestimonialGateway,
 );

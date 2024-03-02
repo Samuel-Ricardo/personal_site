@@ -4,7 +4,7 @@ import Image from 'next/image';
 import './item.style.scss';
 import { ExperienceItemCard } from './card/card.component';
 
-export const ExperienceItem = ({ data, key }: IExperienceItemProps) => {
+export const ExperienceItem = async ({ data, key }: IExperienceItemProps) => {
   return (
     <li key={key ?? data.company.name} className={`experience-item `}>
       <div className="experience-date">

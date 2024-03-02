@@ -4,7 +4,7 @@ import './static.style.scss';
 import { RightArrow } from '@/assets/icons/arrow/right/arrow.icon';
 import { LeftArrow } from '@/assets/icons/arrow/left/arrow.icon';
 
-export const StaticCarousel = ({ children }: IStaticCarouselProps) => {
+export const StaticCarousel = async ({ children }: IStaticCarouselProps) => {
   return (
     <div className="static-carousel">
       <button className="left-button">

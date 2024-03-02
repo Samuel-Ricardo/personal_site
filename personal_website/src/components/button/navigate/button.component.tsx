@@ -1,10 +1,13 @@
-import Link, { LinkProps } from 'next/link';
+import Link from 'next/link';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import { Button } from '../button.component';
 
 export const NavigateButton = (
   props: PropsWithChildren<{
-    link?: LinkProps;
+    link?: HTMLAttributes<HTMLAnchorElement> & {
+      href?: string;
+      target?: string;
+    };
     container?: HTMLAttributes<HTMLButtonElement>;
   }>,
 ) => {

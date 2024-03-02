@@ -10,16 +10,26 @@ export const NavbarSchema: SchemaTypeDefinition = {
       type: 'string',
     },
     {
+      name: 'lang',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'English', value: 'en' },
+          { title: 'Portuguese', value: 'pt-br' },
+        ],
+      },
+    },
+    {
+      name: 'position',
+      type: 'number',
+    },
+    {
       name: 'title',
       type: 'string',
     },
     {
       name: 'link',
       type: 'string',
-    },
-    {
-      name: 'order',
-      type: 'number',
     },
   ],
 };

@@ -3,10 +3,10 @@ import { HTMLAttributes } from 'react';
 export interface IPlatform {
   icon?: string;
   name: string;
-  url: string;
+  link: string;
 }
 
 export interface IPlatformProps {
   platform: IPlatform;
-  html?: HTMLAttributes<HTMLDivElement>;
+  html?: HTMLAttributes<HTMLAnchorElement>;
 }

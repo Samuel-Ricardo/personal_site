@@ -20,7 +20,7 @@ export const Testimonials = async () => {
           ))}
         </StaticCarousel>
 
-        <TestimonyCard />
+        <TestimonyCard data={(await testimonials)[0].toDTO()} />
       </div>
     </section>
   );

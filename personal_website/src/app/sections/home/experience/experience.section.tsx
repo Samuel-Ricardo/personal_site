@@ -1,33 +1,19 @@
 import { ExperienceContainer } from '@/components/section/home/experience/container/container.component';
 import './experience.style.scss';
+import { MODULES } from '@/modules/app.factory';
 
-export const Experience = () => {
+export const Experience = async () => {
+  const { experience, title } =
+    await MODULES.ASSEMBLER.MAIN().assembleWorkExperience();
+
   return (
     <section id="experience-section" className="section">
-      <h1>Experience</h1>
+      <h1>{await title}</h1>
       <ExperienceContainer
-        itens={[
-          {
-            title: 'Open Source Dev',
-            company: {
-              name: 'Github',
-              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-            },
-            description: '123456789123456789123456789123456789123456789',
-            start: new Date(),
-            left: true,
-          },
-          {
-            title: 'Open Source Dev',
-            company: {
-              name: 'Github',
-              icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-            },
-            description: '123456789123456789123456789123456789123456789',
-            start: new Date(),
-            finish: new Date(),
-          },
-        ]}
+        itens={(await experience).map(async (e, i) => ({
+          ...e.toViewDTO(),
+          left: i % 2 === 0,
+        }))}
       />
     </section>
   );

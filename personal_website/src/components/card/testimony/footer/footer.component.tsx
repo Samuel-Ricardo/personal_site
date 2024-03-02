@@ -1,7 +1,6 @@
 import './footer.style.scss';
 
 import { NavigateButton } from '@/components/button/navigate/button.component';
-import { GithubLogo } from '@/assets/icons/logo/github/icon.component';
 import { ITestimonyCardFooterProps } from '@/@types/props/card/testimony';
 import Image from 'next/image';
 import Link from 'next/link';

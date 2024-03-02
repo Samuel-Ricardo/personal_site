@@ -1,3 +1,5 @@
+import { Tech } from '../../tech/entity/tech.entity';
+
 export interface IProjectDTO {
   main?: boolean;
   title: string;
@@ -6,8 +8,5 @@ export interface IProjectDTO {
   repository: string;
   demo?: string;
   link?: string;
-  techs: {
-    identifier: string;
-    star: boolean;
-  }[];
+  techs: Promise<Tech>[];
 }
