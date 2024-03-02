@@ -1,3 +1,4 @@
+import { IContactDTO } from '@/modules/@core/person/DTO/contact.dto';
 import { IPersonDTO } from '@/modules/@core/person/DTO/person.dto';
 import { ITestimonialDTO } from '@/modules/@core/testimonial/DTO/testimonial.dto';
 
@@ -7,4 +8,9 @@ export interface ITestimonyCardProps {
 
 export interface ITestimonyCardHeaderProps {
   data: IPersonDTO;
+}
+
+export interface ITestimoyCardFooterProps {
+  portfolio: string;
+  contacts: IContactDTO[];
 }
