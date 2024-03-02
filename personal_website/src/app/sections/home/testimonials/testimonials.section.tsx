@@ -15,9 +15,9 @@ export const Testimonials = async () => {
         <h1>{await title}</h1>
 
         <StaticCarousel>
-          <SocialCard />
-          <SocialCard />
-          <SocialCard />
+          {(await testimonials).map(t => (
+            <SocialCard key={t.portfolio} data={t.toDTO()} />
+          ))}
         </StaticCarousel>
 
         <TestimonyCard />
