@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from 'react';
 
-export interface IStaticCarouselProps extends HTMLAttributes<HTMLDivElement> {
+export interface ISliderProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode[];
 }

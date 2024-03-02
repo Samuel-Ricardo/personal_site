@@ -1,10 +1,10 @@
-import { IStaticCarouselProps } from '@/@types/props/carousel/horizontal/static/carousel';
+import { ISliderProps } from '@/@types/props/carousel/horizontal/static/carousel';
 
 import './static.style.scss';
 import { RightArrow } from '@/assets/icons/arrow/right/arrow.icon';
 import { LeftArrow } from '@/assets/icons/arrow/left/arrow.icon';
 
-export const StaticCarousel = async ({ children }: IStaticCarouselProps) => {
+export const Slider = async ({ children }: ISliderProps) => {
   return (
     <div className="static-carousel">
       <button className="left-button">
