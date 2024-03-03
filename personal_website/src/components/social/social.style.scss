@@ -1,22 +1,13 @@
 @import '../../app/globals.scss';
 
 #social-floating-button {
-  @apply frosted-glass;
-
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 3rem;
+  right: 4rem;
   z-index: 100;
 
-  @apply w-20;
-  @apply h-20;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  box-shadow:
-    0 25px 15px rgba(0, 0, 0, 0.25),
-    0 25px 20px rgba(0, 0, 0, 0.1);
+  @apply w-16;
+  @apply h-16;
 
   display: flex;
   justify-content: center;
@@ -32,6 +23,16 @@
     @apply flex;
     @apply justify-center;
     @apply items-center;
+
+    @apply frosted-glass;
+    z-index: 50;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    box-shadow:
+      0 25px 15px rgba(0, 0, 0, 0.25),
+      0 25px 20px rgba(0, 0, 0, 0.1);
   }
 
   #close-icon,
@@ -39,5 +40,24 @@
     position: absolute;
     width: 80%;
     height: auto;
+  }
+
+  .social-item-1 {
+    @apply text-black;
+
+    @apply absolute;
+    left: -60%;
+    @apply w-16;
+    z-index: 40;
+
+    @apply frosted-glass;
+    @apply rounded-full;
+    @apply p-2;
+
+    @apply transition-all;
+
+    &:hover {
+      z-index: 100;
+    }
   }
 }
