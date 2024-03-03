@@ -1,0 +1,27 @@
+@import '../../app/globals.scss';
+
+#social-floating-button {
+  @apply frosted-glass;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+
+  @apply w-24;
+  @apply h-24;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  box-shadow:
+    0 25px 15px rgba(0, 0, 0, 0.25),
+    0 25px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3em;
+  color: white;
+}
