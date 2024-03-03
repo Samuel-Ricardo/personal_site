@@ -24,20 +24,4 @@
   cursor: pointer;
   font-size: 2em;
   color: white;
-
-  .social-icon {
-    @apply w-full;
-    @apply h-full;
-    @apply relative;
-    @apply flex;
-    @apply justify-center;
-    @apply items-center;
-  }
-
-  #close-icon,
-  #share-icon {
-    position: absolute;
-    width: 80%;
-    height: auto;
-  }
 }
