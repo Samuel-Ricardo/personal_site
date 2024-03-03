@@ -3,6 +3,7 @@ import './globals.scss';
 import { ThemeWrapper } from '@/components/wrapper/theme.wrapper';
 import { Navbar } from '@/components/navbar/navbar.component';
 import { MODULES } from '@/modules/app.factory';
+import { Social } from '@/components/social/social.component';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={`${MODULES.FONTS.MONO.SPACE_MONO().className}`}>
         <ThemeWrapper>
           <Navbar />
+          <Social />
           {children}
         </ThemeWrapper>
       </body>
