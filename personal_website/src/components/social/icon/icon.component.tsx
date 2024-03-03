@@ -1,5 +1,6 @@
 'use client';
 
+import './icon.style.scss';
 import { useCallback, useState } from 'react';
 
 export const SocialFloattingButtonIcon = ({
