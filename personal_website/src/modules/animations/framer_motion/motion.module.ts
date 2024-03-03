@@ -7,6 +7,7 @@ import { INFINITY_SLIDE_ANIMATION } from './impl/slide/infinity.animation';
 import { MOUNT_ON_HOVER } from './impl/hover/mount.animation';
 import { EMERGE_UP_ANIMATION } from './impl/emerge/up.animation';
 import { EMERGE_LEFT_ANIMATION } from './impl/emerge/left.animation';
+import { EMERGE_DOWN_ANIMATION } from './impl/emerge/down.animation';
 
 export const ANIMATION_FRAMER_MOTION_MODULE = new Container({
   defaultScope: 'Singleton',
@@ -35,6 +36,10 @@ ANIMATION_FRAMER_MOTION_MODULE.bind(
 ANIMATION_FRAMER_MOTION_MODULE.bind(
   ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.UP,
 ).toConstantValue(EMERGE_UP_ANIMATION);
+
+ANIMATION_FRAMER_MOTION_MODULE.bind(
+  ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.DOWN,
+).toConstantValue(EMERGE_DOWN_ANIMATION);
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
   ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.LEFT,
