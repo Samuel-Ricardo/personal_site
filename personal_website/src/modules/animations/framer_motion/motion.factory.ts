@@ -4,6 +4,13 @@ import { ANIMATION_FRAMER_MOTION_REGISTRY } from './motion.registry';
 import { Animator } from '@/@types/animations/motion/animator';
 
 export const ANIMATION_FRAMER_MOTION_FACTORY = {
+  EMERGE: {
+    UP: () =>
+      ANIMATION_FRAMER_MOTION_MODULE.get<Animator>(
+        ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.UP,
+      ),
+  },
+
   HOVER: {
     MOUNT: () =>
       ANIMATION_FRAMER_MOTION_MODULE.get<HierarchicalAnimator>(
