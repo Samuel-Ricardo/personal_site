@@ -1,12 +1,20 @@
 import { Animator } from '@/@types/animations/motion/animator';
 
 export const EMERGE_UP_ANIMATION: Animator = props => ({
-  initial: { opacity: 0, translateY: 0 },
-  animate: { opacity: 1, translateY: '100%' },
   ...props,
+  initial: 'inactive',
   transition: {
-    duration: 3,
-    ease: 'linear',
+    ease: 'easeInOut',
     ...props?.transition,
+  },
+  variants: {
+    inactive: {
+      translateY: '50%',
+      opacity: 0,
+    },
+    active: {
+      translateY: 0,
+      opacity: 1,
+    },
   },
 });
