@@ -8,8 +8,8 @@
   right: 20px;
   z-index: 100;
 
-  @apply w-24;
-  @apply h-24;
+  @apply w-20;
+  @apply h-20;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -22,6 +22,22 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
+
+  .social-icon {
+    @apply w-full;
+    @apply h-full;
+    @apply relative;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+  }
+
+  #close-icon,
+  #share-icon {
+    position: absolute;
+    width: 80%;
+    height: auto;
+  }
 }
