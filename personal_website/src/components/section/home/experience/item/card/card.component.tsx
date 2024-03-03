@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import './card.style.scss';
 import { HTMLAttributes } from 'react';
+import { formatDateToYearMonth } from '@/utils/date.utils';
+import { finished } from 'stream';
 
 export const ExperienceItemCard = ({
   company,
@@ -31,10 +33,8 @@ export const ExperienceItemCard = ({
           </h3>
           <div className="line" />
           <h4>
-            {start.getFullYear()} • {start.getMonth()} -{' '}
-            {finish
-              ? finish?.getFullYear() + ' • ' + finish?.getMonth
-              : 'Actual'}
+            {formatDateToYearMonth(start)} {' • '}
+            {finish ? formatDateToYearMonth(finish) : 'Actual'}
           </h4>
         </div>
       </header>

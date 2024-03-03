@@ -1,5 +1,6 @@
 export interface IHighlightDTO {
-  identifier?: string;
+  identifier: string;
+  position?: number;
   lang?: 'en' | 'pt-br';
   title: string;
   numbers: number;

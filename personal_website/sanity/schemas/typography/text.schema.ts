@@ -1,3 +1,5 @@
+import { SchemaTypeDefinition } from 'sanity';
+
 export const TextSchema = {
   name: 'tp_text',
   title: 'Text',
@@ -9,12 +11,17 @@ export const TextSchema = {
     },
     {
       name: 'lang',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'lang' }] }],
+      type: 'string',
+      options: {
+        list: [
+          { title: 'English', value: 'en' },
+          { title: 'Português', value: 'pt-br' },
+        ],
+      },
     },
     {
       name: 'content',
       type: 'text',
     },
   ],
-};
+} as SchemaTypeDefinition;

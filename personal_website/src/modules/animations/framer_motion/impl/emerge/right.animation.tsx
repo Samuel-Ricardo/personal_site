@@ -1,6 +1,6 @@
 import { Animator } from '@/@types/animations/motion/animator';
 
-export const EMERGE_LEFT_ANIMATION: Animator = props => ({
+export const EMERGE_RIGHT_ANIMATION: Animator = props => ({
   ...props,
   initial: 'inactive',
   transition: {

@@ -1,3 +1,5 @@
+import { SchemaTypeDefinition } from 'sanity';
+
 export const ExperienceSchema = {
   name: 'experience',
   title: 'Experience',
@@ -14,8 +16,7 @@ export const ExperienceSchema = {
     },
     {
       name: 'description',
-      type: 'reference',
-      to: [{ type: 'tp_text' }],
+      type: 'string',
     },
     {
       name: 'startDate',
@@ -28,6 +29,12 @@ export const ExperienceSchema = {
     {
       name: 'context',
       type: 'string',
+      options: {
+        list: [
+          { title: 'Work', value: 'work' },
+          { title: 'Academic', value: 'academic' },
+        ],
+      },
     },
   ],
-};
+} as SchemaTypeDefinition;

@@ -42,11 +42,8 @@
     height: auto;
   }
 
-  .social-item-1 {
-    @apply text-black;
-
+  .social-item {
     @apply absolute;
-    left: -60%;
     @apply w-16;
     z-index: 40;
 
@@ -54,10 +51,18 @@
     @apply rounded-full;
     @apply p-2;
 
-    @apply transition-all;
-
     &:hover {
       z-index: 100;
     }
+  }
+
+  .si-left {
+    left: -60%;
+    @apply text-black;
+  }
+
+  .si-left,
+  .active {
+    @apply opacity-100;
   }
 }

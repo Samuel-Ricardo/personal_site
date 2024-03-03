@@ -14,7 +14,7 @@ export const SelectTestimonialWrapper = ({
   const { setSelected } = useSelectedTestimonial();
 
   useEffect(() => {
-    if (ref.current) ref.current.onclick = event => setSelected(data);
+    if (ref.current) ref.current.onclick = event => setSelected({ data, ref });
   }, [ref, data, setSelected]);
 
   return (

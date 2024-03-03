@@ -16,14 +16,16 @@ export const AbouteMeContentText = async ({
       <p className="text">{await paragraph} </p>
 
       <SocialProof>
-        {(await highlights)?.map(highlight => (
-          <HighlightCard
-            key={highlight.title}
-            title={highlight.title}
-            numbers={highlight.numbers}
-            description={highlight.description}
-          />
-        ))}
+        {
+          (await highlights)?.map(highlight => (
+            <HighlightCard
+              key={highlight.title}
+              title={highlight.title}
+              numbers={highlight.numbers}
+              description={highlight.description}
+            />
+          )) as any[]
+        }
       </SocialProof>
     </div>
   );

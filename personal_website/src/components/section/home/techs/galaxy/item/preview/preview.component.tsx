@@ -4,7 +4,7 @@ import { IPreviewProps } from '@/@types/props/section/techs/preview';
 import { MotionDiv } from '@/components/motion/div.component';
 import Image from 'next/image';
 
-export const TechPreview = (props: IPreviewProps) => {
+export const TechPreview = async (props: IPreviewProps) => {
   return (
     <MotionDiv
       id="tech-item-preview"
