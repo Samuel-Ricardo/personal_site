@@ -69,6 +69,14 @@
 
   .si-right {
     right: -60%;
-    @apply text-blue-800;
+    @apply text-blue-500;
+  }
+
+  .si-top {
+    top: -60%;
+  }
+
+  .si-bottom {
+    bottom: -60%;
   }
 }
