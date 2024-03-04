@@ -15,6 +15,8 @@ import { CompanySchema } from './schemas/item/company.schema';
 import { ExperienceSchema } from './schemas/item/experience.schema';
 import { TestimonialSchema } from './schemas/testimonial.schema';
 import { NavbarSchema } from './schemas/navbar.schema';
+import { ContactSchema } from './schemas/contact.schema';
+import { FileSchema } from './schemas/file.schema';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -34,5 +36,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ExperienceSchema,
     TestimonialSchema,
     NavbarSchema,
+    ContactSchema,
+    FileSchema,
   ],
 };
