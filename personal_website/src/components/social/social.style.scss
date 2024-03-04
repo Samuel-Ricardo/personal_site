@@ -45,11 +45,17 @@
   .social-item {
     @apply absolute;
     @apply w-16;
+    @apply h-16;
     z-index: -10;
 
     @apply frosted-glass;
     @apply rounded-full;
     @apply p-2;
+
+    @apply cursor-pointer;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
 
     &:hover {
       z-index: 100;
@@ -59,5 +65,10 @@
   .si-left {
     left: -60%;
     @apply text-black;
+  }
+
+  .si-right {
+    right: -60%;
+    @apply text-blue-800;
   }
 }
