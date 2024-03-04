@@ -1,0 +1,19 @@
+@import '../../../app/globals.scss';
+
+#nav-menu {
+  @apply fixed;
+  @apply frosted-glass-lg;
+
+  @apply w-fit;
+  @apply h-fit;
+
+  @apply px-10;
+  @apply py-3;
+
+  @apply gap-6;
+
+  @apply rounded-lg;
+
+  top: 3em;
+  right: 1em;
+}
