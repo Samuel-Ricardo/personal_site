@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { MotionDiv } from '../motion/div.component';
 import { MODULES } from '@/modules/app.factory';
 import Link from 'next/link';
+import { LinkedInIcon } from '@/assets/icons/logo/linkedin/icon.component';
 
 export const Social = () => {
   const [active, setActive] = useState(false);
@@ -18,13 +19,20 @@ export const Social = () => {
 
   const ANIMATION = {
     LEFT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.LEFT()({ animate }),
+    RIGHT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.RIGHT()({ animate }),
   };
 
   return (
     <MotionDiv id="social-floating-button">
       <MotionDiv className={` social-item si-left`} {...ANIMATION.LEFT}>
-        <Link href="https://github.com/Samuel-Ricardo">
+        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
           <GithubIcon />
+        </Link>
+      </MotionDiv>
+
+      <MotionDiv className={` social-item si-right`} {...ANIMATION.RIGHT}>
+        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
+          <LinkedInIcon />
         </Link>
       </MotionDiv>
 
