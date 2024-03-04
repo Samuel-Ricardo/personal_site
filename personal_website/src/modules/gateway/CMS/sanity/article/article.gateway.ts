@@ -36,7 +36,7 @@ export class SanityArticleGateway
             );
 
             return {
-              link: platform.link,
+              link: p.url,
               name: platform.name,
               icon: platform.icon,
             };

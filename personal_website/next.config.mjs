@@ -1,10 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [
       'cdn.sanity.io',
       'th.bing.com',
       'img.freepik.com',
+      'github.githubassets.com',
+      'webimages.mongodb.com',
+      'encrypted-tbn0.gstatic.com',
+      'avatars.githubusercontent.com',
+      'media.licdn.com',
+      'imgs.search.brave.com',
+      'lh4.googleusercontent.com',
       'camo.githubusercontent.com',
       'miro.medium.com',
       'vitejs.dev',

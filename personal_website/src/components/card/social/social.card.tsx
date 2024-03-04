@@ -3,10 +3,11 @@ import './social.style.scss';
 import { SocialCardCover } from './cover/cover.card';
 import { SocialCardFooter } from './footer/footer.component';
 import { ISocialCardProps } from '@/@types/props/card/social';
+import { SelectTestimonialWrapper } from '@/components/wrapper/testimonial/select.wrapper';
 
 export const SocialCard = async ({ data }: ISocialCardProps) => {
   return (
-    <div className="social-card">
+    <SelectTestimonialWrapper data={data} className="social-card">
       <Image
         src={data.person.avatar}
         alt="testimony avatar"
@@ -20,6 +21,6 @@ export const SocialCard = async ({ data }: ISocialCardProps) => {
         title={data.person.title}
         company={data.person.company.name}
       />
-    </div>
+    </SelectTestimonialWrapper>
   );
 };

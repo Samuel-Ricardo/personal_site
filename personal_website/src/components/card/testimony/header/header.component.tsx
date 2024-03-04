@@ -1,7 +1,7 @@
 import { ITestimonyCardHeaderProps } from '@/@types/props/card/testimony';
 import './header.style.scss';
 
-export const TestimonyHeader = async ({ data }: ITestimonyCardHeaderProps) => {
+export const TestimonyHeader = ({ data }: ITestimonyCardHeaderProps) => {
   return (
     <header className="testimony-header">
       <h4>{data.name}</h4>

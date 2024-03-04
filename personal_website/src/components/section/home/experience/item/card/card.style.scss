@@ -44,6 +44,8 @@
       background-color: #2d313609;
       @apply p-2;
       @apply rounded-md;
+      @apply text-justify;
+      @apply text-sm;
     }
 
     button {

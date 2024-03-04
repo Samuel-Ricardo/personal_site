@@ -6,7 +6,7 @@ import './item.style.scss';
 import { MotionLI } from '@/components/motion/li.component';
 import { MODULES } from '@/modules/app.factory';
 
-export const TechsGalaxyItem = ({
+export const TechsGalaxyItem = async ({
   icon,
   preview,
   index,

@@ -3,7 +3,9 @@ import { ArticleItem } from '../item/item.component';
 
 import './container.style.scss';
 
-export const ArticlesContainer = ({ articles }: IArticlesContainerProps) => {
+export const ArticlesContainer = async ({
+  articles,
+}: IArticlesContainerProps) => {
   return (
     <ul id="articles-container">
       {articles.map(a => (

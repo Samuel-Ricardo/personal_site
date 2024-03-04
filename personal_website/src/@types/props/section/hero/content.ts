@@ -1,7 +1,8 @@
-export interface IHeroContentProps {
-  title: string;
-  subtitle: string;
-  paragraph: string;
-  contact: string;
-  resume: string;
-}
+import { PropsWithChildren } from 'react';
+import { IHeroFooterProps } from './about';
+import { IHeroHeaderProps } from './header';
+
+export interface IHeroContentProps
+  extends IHeroHeaderProps,
+    IHeroFooterProps,
+    PropsWithChildren {}

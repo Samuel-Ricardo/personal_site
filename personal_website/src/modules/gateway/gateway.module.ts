@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 
 import { Container } from 'inversify';
+import lazy from 'inversify-inject-decorators';
 import { CMS_GATEWAY_MODULE } from './CMS/cms.module';
 import { ENGINE_MODULE } from '../engine/engine.module';
 
@@ -14,3 +15,5 @@ export const GATEWAY_MODULE = Container.merge(
   CMS_GATEWAY_MODULE,
   ENGINE_MODULE,
 );
+
+export const { lazyInject: injectGateway } = lazy(GATEWAY_MODULE);

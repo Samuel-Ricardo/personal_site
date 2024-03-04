@@ -8,7 +8,14 @@
   @apply flex-row;
   @apply gap-6;
 
-  .button:hover path {
+  .btn-resume {
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply gap-2;
+  }
+
+  .btn-resume:hover path {
     @apply stroke-white;
   }
 }
