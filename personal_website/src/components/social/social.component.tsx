@@ -10,20 +10,34 @@ import { MotionDiv } from '../motion/div.component';
 import { MODULES } from '@/modules/app.factory';
 import Link from 'next/link';
 import { LinkedInIcon } from '@/assets/icons/logo/linkedin/icon.component';
+import { FreelancerIcon } from '@/assets/icons/logo/freelancer/icon.component';
+import { HackerRankIcon } from '@/assets/icons/logo/hackerrank/icon.component';
+import { MotionProps } from 'framer-motion';
 
 export const Social = () => {
   const [active, setActive] = useState(false);
   const handleClick = e => setActive(!active);
 
-  const { animate } = { animate: `${active ? 'active' : 'inacive'}` };
+  const config = {
+    animate: `${active ? 'active' : 'inacive'}`,
+    whileHover: {
+      scale: 1.2,
+    },
+  } as MotionProps;
 
   const ANIMATION = {
-    LEFT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.LEFT()({ animate }),
-    RIGHT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.RIGHT()({ animate }),
+    LEFT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.LEFT()(config),
+    RIGHT: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.RIGHT()(config),
+    TOP: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.UP()(config),
+    BOTTOM: MODULES.ANIMATION.FRAMER_MOTION.EMERGE.DOWN()(config),
   };
 
   return (
     <MotionDiv id="social-floating-button">
+      <button className="social-icon" onClick={handleClick}>
+        {active ? <CloseIcon /> : <ShareIcon />}
+      </button>
+
       <MotionDiv className={` social-item si-left`} {...ANIMATION.LEFT}>
         <Link href="https://github.com/Samuel-Ricardo" target="_blank">
           <GithubIcon />
@@ -36,9 +50,20 @@ export const Social = () => {
         </Link>
       </MotionDiv>
 
-      <button className="social-icon" onClick={handleClick}>
-        {active ? <CloseIcon /> : <ShareIcon />}
-      </button>
+      <MotionDiv className={` social-item si-top`} {...ANIMATION.TOP}>
+        <Link
+          href="https://www.freelancer.com/u/SamuelRiccardo"
+          target="_blank"
+        >
+          <FreelancerIcon />
+        </Link>
+      </MotionDiv>
+
+      <MotionDiv className={` social-item si-bottom`} {...ANIMATION.BOTTOM}>
+        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
+          <HackerRankIcon />
+        </Link>
+      </MotionDiv>
     </MotionDiv>
   );
 };
