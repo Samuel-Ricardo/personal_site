@@ -10,13 +10,13 @@
   @apply w-full;
   @apply h-full;
 
-  @include mobile {
-    @apply mt-5;
-    @apply grid-cols-2;
-  }
-
   @include tablet {
     @apply mt-5;
     @apply grid-cols-3;
+  }
+
+  @include mobile {
+    @apply mt-5;
+    @apply grid-cols-2;
   }
 }
