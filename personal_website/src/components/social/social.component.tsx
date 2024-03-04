@@ -45,7 +45,10 @@ export const Social = () => {
       </MotionDiv>
 
       <MotionDiv className={` social-item si-right`} {...ANIMATION.RIGHT}>
-        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
+        <Link
+          href="https://www.linkedin.com/in/samuel-ricardo/"
+          target="_blank"
+        >
           <LinkedInIcon />
         </Link>
       </MotionDiv>
@@ -60,7 +63,10 @@ export const Social = () => {
       </MotionDiv>
 
       <MotionDiv className={` social-item si-bottom`} {...ANIMATION.BOTTOM}>
-        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
+        <Link
+          href="https://www.hackerrank.com/profile/samuelricardoof1"
+          target="_blank"
+        >
           <HackerRankIcon />
         </Link>
       </MotionDiv>
