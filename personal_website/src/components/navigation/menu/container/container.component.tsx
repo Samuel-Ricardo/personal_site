@@ -12,7 +12,7 @@ export const NavMenuContainer = ({ children }: React.PropsWithChildren) => {
 
   return (
     <MotionNav id="nav-menu" {...animation} animate={active}>
-      {children}
+      <ul>{children}</ul>
     </MotionNav>
   );
 };
