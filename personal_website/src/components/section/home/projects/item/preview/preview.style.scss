@@ -13,4 +13,9 @@
     @apply w-full;
     @apply rounded-md;
   }
+
+  @include mobile {
+    @apply w-[120%];
+    box-shadow: 0 0 15px 1px $quaternary-color;
+  }
 }
