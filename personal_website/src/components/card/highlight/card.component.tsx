@@ -1,19 +1,30 @@
 import { ISocialProofProps } from '@/@types/props/card/social_proof';
-import { FrostedGlassCard } from '../glass.card';
 
 import './card.style.scss';
 import { HighlightCardImageContainer } from './image/image.container';
+import { MODULES } from '@/modules/app.factory';
+import { MotionDiv } from '@/components/motion/div.component';
 
 export const HighlightCard = ({
   Icon,
   title,
   numbers,
   k = false,
-  children,
+  index = 0,
+
   description,
 }: ISocialProofProps) => {
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP();
   return (
-    <FrostedGlassCard id="sp-card">
+    <MotionDiv
+      id="sp-card"
+      key={title}
+      {...animation({
+        transition: { delay: 0.2 * index, duration: 1.5 },
+        whileInView: 'active',
+        animate: 'inactive',
+      })}
+    >
       {Icon ?? (
         <HighlightCardImageContainer>{Icon}</HighlightCardImageContainer>
       )}
@@ -26,6 +37,6 @@ export const HighlightCard = ({
       </p>
 
       <p className="description">{description}</p>
-    </FrostedGlassCard>
+    </MotionDiv>
   );
 };
