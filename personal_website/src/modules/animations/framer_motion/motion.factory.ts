@@ -50,6 +50,10 @@ export const ANIMATION_FRAMER_MOTION_FACTORY = {
       ANIMATION_FRAMER_MOTION_MODULE.get<Animator>(
         ANIMATION_FRAMER_MOTION_REGISTRY.SLIDE.IN,
       ),
+    OUT: () =>
+      ANIMATION_FRAMER_MOTION_MODULE.get<Animator>(
+        ANIMATION_FRAMER_MOTION_REGISTRY.SLIDE.OUT,
+      ),
   },
   SVG: {
     DRAW: () =>
