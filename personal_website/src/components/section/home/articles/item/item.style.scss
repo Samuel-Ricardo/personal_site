@@ -4,19 +4,29 @@
   @apply relative;
   @apply flex;
   @apply flex-col;
-  @apply justify-between;
   @apply items-center;
-
   @apply frosted-glass-lg;
   @apply rounded-lg;
 
   @apply w-full;
-  @apply h-full;
+  @apply h-[60vh];
   @apply p-5;
+
+  li {
+    @apply gap-4;
+  }
+
+  @include mobile {
+    @apply h-auto;
+
+    li {
+      @apply mt-2;
+    }
+  }
 
   .title {
     @apply text-xl;
-    @apply mb-2;
+    @apply mb-4;
   }
 
   .description {
@@ -24,7 +34,7 @@
     @apply text-wrap;
     @apply break-all;
     @apply text-sm;
-    @apply mb-3;
+    @apply mb-auto;
   }
 
   .platform-card {
@@ -38,10 +48,11 @@
   }
 
   .article-cover {
-    @apply w-full;
-    @apply h-fit;
+    @apply w-auto;
+    @apply h-[60%];
+    @apply max-h-fit;
     @apply rounded-md;
-    @apply mb-3;
+    @apply mb-4;
   }
 
   &:hover {
