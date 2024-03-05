@@ -6,17 +6,22 @@ import './item.style.scss';
 import { MotionLI } from '@/components/motion/li.component';
 import { MODULES } from '@/modules/app.factory';
 
-export const TechsGalaxyItem = ({
+export const TechsGalaxyItem = async ({
   icon,
   preview,
   index,
 }: ITechGalaxyItemProps) => {
   const animation = MODULES.ANIMATION.FRAMER_MOTION.HOVER.MOUNT()();
+  const slide = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN()({
+    animate: 'inactive',
+    transition: { delay: (index || 0) * 0.25 },
+  });
   return (
     <MotionLI
       id="tech-item"
       className={`frosted-glass-lg`}
       {...animation.parent}
+      {...slide}
     >
       <div id="tech-item-img-container">
         <Image src={icon} alt="tech icon" width={80} height={80} />
