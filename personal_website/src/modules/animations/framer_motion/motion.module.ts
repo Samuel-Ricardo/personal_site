@@ -11,18 +11,20 @@ import { EMERGE_DOWN_ANIMATION } from './impl/emerge/down.animation';
 import { EMERGE_RIGHT_ANIMATION } from './impl/emerge/right.animation';
 import { GROWTH_DOWN_ANIMATION } from './impl/growth/down.animation';
 import { SLIDE_OUT_ANIMATION } from './impl/slide/out.animation';
+import { SLIDE_UP_ANIMATION } from './impl/slide/up.animation';
+import { SLIDE_DOWN_ANIMATION } from './impl/slide/down.animation';
 
 export const ANIMATION_FRAMER_MOTION_MODULE = new Container({
   defaultScope: 'Singleton',
 });
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
-  ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.UP,
-).toConstantValue(EMERGE_UP_ANIMATION);
+  ANIMATION_FRAMER_MOTION_REGISTRY.SLIDE.UP,
+).toConstantValue(SLIDE_UP_ANIMATION);
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
-  ANIMATION_FRAMER_MOTION_REGISTRY.EMERGE.DOWN,
-).toConstantValue(EMERGE_DOWN_ANIMATION);
+  ANIMATION_FRAMER_MOTION_REGISTRY.SLIDE.DOWN,
+).toConstantValue(SLIDE_DOWN_ANIMATION);
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
   ANIMATION_FRAMER_MOTION_REGISTRY.SLIDE.OUT,
