@@ -1,8 +1,8 @@
-import { FrostedGlassCard } from '@/components/card/glass.card';
 import './card.style.scss';
 import { HeroAvatar } from './card/avatar/avatar.component';
 import { HeroCardContentContainer } from './card/content/container/container.component';
 import { MODULES } from '@/modules/app.factory';
+import { MotionDiv } from '@/components/motion/div.component';
 
 export const HeroCard = async () => {
   const {
@@ -12,8 +12,13 @@ export const HeroCard = async () => {
     contact,
   } = await MODULES.ASSEMBLER.SERVICE.MAIN().assembleHero();
 
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.DOWN()({
+    animate: 'inactive',
+    whileInView: 'active',
+  });
+
   return (
-    <FrostedGlassCard className="z-50">
+    <MotionDiv className="card frosted-glass" {...animation}>
       <HeroAvatar src={avatar} />
       <HeroCardContentContainer
         title={name}
@@ -23,6 +28,6 @@ export const HeroCard = async () => {
       >
         {paragraph}
       </HeroCardContentContainer>
-    </FrostedGlassCard>
+    </MotionDiv>
   );
 };
