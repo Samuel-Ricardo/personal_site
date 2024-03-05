@@ -11,4 +11,17 @@
     @apply w-auto;
     @apply h-full;
   }
+
+  @include mobile {
+    @apply h-fit;
+    @apply w-full;
+
+    @apply mx-auto;
+    @apply mb-4;
+
+    img {
+      @apply h-auto;
+      @apply w-full;
+    }
+  }
 }
