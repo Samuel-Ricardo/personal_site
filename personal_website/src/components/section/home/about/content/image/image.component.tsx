@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import './image.style.scss';
+import { MotionDiv } from '@/components/motion/div.component';
+import { MODULES } from '@/modules/app.factory';
 
 export const AboutMeContentImage = async ({ src }: { src?: any }) => {
   const data = await src;
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN()();
 
   return (
-    <div className="image-container">
+    <MotionDiv
+      className="image-container"
+      {...animation}
+      whileInView="active"
+      animate="inactive"
+    >
       <Image
         className="abm-image"
         src={data}
@@ -15,6 +23,6 @@ export const AboutMeContentImage = async ({ src }: { src?: any }) => {
         placeholder="blur"
         blurDataURL="/image-2.png"
       />
-    </div>
+    </MotionDiv>
   );
 };
