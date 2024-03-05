@@ -9,7 +9,6 @@ export const AbouteMeContentText = async ({
   paragraph,
   highlights,
 }: IAboutContentText) => {
-  const animate = MODULES.ANIMATION.FRAMER_MOTION.SVG.DRAW();
   return (
     <div className="text-container">
       <h2 className="text-title">{await title}</h2>
@@ -17,12 +16,14 @@ export const AbouteMeContentText = async ({
 
       <SocialProof>
         {
-          (await highlights)?.map(highlight => (
+          (await highlights)?.map((highlight, i) => (
             <HighlightCard
+              index={i}
               key={highlight.title}
               title={highlight.title}
               numbers={highlight.numbers}
               description={highlight.description}
+              k={highlight.k}
             />
           )) as any[]
         }
