@@ -5,17 +5,28 @@ import { TechsIlustration } from '@/assets/images/section/tech.asset';
 import { MODULES } from '@/modules/app.factory';
 
 import { AND_MORE } from '@/local/data/static/techs.data';
+import { MotionH1 } from '@/components/motion/h1.component';
+import { MotionH2 } from '@/components/motion/h2.component';
 
 export const Techs = async () => {
   const { title, subtitle, techs, image } =
     await MODULES.ASSEMBLER.MAIN().assembleTechHomeSection();
 
+  const titleAnimation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN()({
+    animate: 'inactive',
+  });
+  const subtitleAnimation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()();
+
   return (
     <section id="techs-section" className="section">
       <TechsBackground />
 
-      <h1 id="techs-title">{await title}</h1>
-      <h2 id="techs-subtitle">{await subtitle}</h2>
+      <MotionH1 {...titleAnimation} id="techs-title">
+        {await title}
+      </MotionH1>
+      <MotionH2 {...subtitleAnimation} id="techs-subtitle">
+        {await subtitle}
+      </MotionH2>
 
       <div id="techs-container-layer-1">
         <TechsGalaxy
