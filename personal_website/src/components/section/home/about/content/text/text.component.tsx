@@ -1,18 +1,31 @@
 import { HighlightCard } from '@/components/card/highlight/card.component';
 import './text.style.scss';
 import { SocialProof } from './social_proof/proof.component';
-import { MODULES } from '@/modules/app.factory';
 import { IAboutContentText } from '@/@types/props/section/about/content';
+import { MODULES } from '@/modules/app.factory';
+import { MotionH2 } from '@/components/motion/h2.component';
+import { MotionP } from '@/components/motion/p.component';
 
 export const AbouteMeContentText = async ({
   title,
   paragraph,
   highlights,
 }: IAboutContentText) => {
+  const config = {
+    animate: 'inactive',
+    whileInView: 'active',
+  };
+  const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()(config);
+  const UP = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP()(config);
+
   return (
     <div className="text-container">
-      <h2 className="text-title">{await title}</h2>
-      <p className="text">{await paragraph} </p>
+      <MotionH2 className="text-title" {...OUT}>
+        {await title}
+      </MotionH2>
+      <MotionP className="text" {...UP}>
+        {await paragraph}{' '}
+      </MotionP>
 
       <SocialProof>
         {
