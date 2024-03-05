@@ -13,6 +13,12 @@
   @apply w-[95%];
   @apply rounded-xl;
 
+  @include mobile {
+    @apply flex-col;
+
+    @apply h-auto;
+  }
+
   .content-block {
     @apply flex;
     @apply flex-col;
