@@ -9,10 +9,15 @@ import { EMERGE_UP_ANIMATION } from './impl/emerge/up.animation';
 import { EMERGE_LEFT_ANIMATION } from './impl/emerge/left.animation';
 import { EMERGE_DOWN_ANIMATION } from './impl/emerge/down.animation';
 import { EMERGE_RIGHT_ANIMATION } from './impl/emerge/right.animation';
+import { GROWTH_DOWN_ANIMATION } from './impl/growth/down.animation';
 
 export const ANIMATION_FRAMER_MOTION_MODULE = new Container({
   defaultScope: 'Singleton',
 });
+
+ANIMATION_FRAMER_MOTION_MODULE.bind(
+  ANIMATION_FRAMER_MOTION_REGISTRY.GROWTH.DOWN,
+).toConstantValue(GROWTH_DOWN_ANIMATION);
 
 ANIMATION_FRAMER_MOTION_MODULE.bind(
   ANIMATION_FRAMER_MOTION_REGISTRY.HOVER.MOUNT,
