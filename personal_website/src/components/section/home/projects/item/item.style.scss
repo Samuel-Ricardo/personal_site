@@ -12,4 +12,9 @@
 
   @apply justify-center;
   @apply items-center;
+
+  @include mobile {
+    @apply flex-col;
+    @apply mt-14;
+  }
 }
