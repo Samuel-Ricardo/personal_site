@@ -38,6 +38,7 @@
       @apply flex-col;
       @apply justify-center;
       @apply items-center;
+      @apply gap-6;
     }
   }
 
@@ -74,5 +75,12 @@
     @apply p-5;
 
     z-index: 3;
+
+    @include tablet {
+      @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+      @apply gap-6;
+    }
   }
 }
