@@ -5,10 +5,16 @@
   @apply h-full;
   @apply flex;
   @apply flex-col;
-  @apply items-center;
 
   @apply my-8;
   @apply mx-2;
+  @apply p-10;
+
+  @include mobile {
+    @apply w-full;
+    @apply h-fit;
+    @apply p-2;
+  }
 
   .img-container {
     @apply w-[80%];
@@ -17,8 +23,28 @@
     @apply rounded-lg;
     @apply p-4;
 
+    @apply mx-auto;
+
     img {
       @apply rounded-lg;
     }
+  }
+
+  p {
+    @apply text-justify;
+    @apply my-4;
+    background-color: var(--paragraph-bg-color);
+    @apply p-2;
+    @apply rounded-md;
+  }
+
+  ul {
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply w-full;
+    @apply h-fit;
+    @apply p-2;
+    @apply mt-2;
   }
 }
