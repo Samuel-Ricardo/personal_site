@@ -16,4 +16,11 @@
     @apply text-center;
     @apply mx-auto;
   }
+
+  .content-container {
+    @apply w-full;
+    @apply h-full;
+    @apply flex;
+    @apply flex-row;
+  }
 }

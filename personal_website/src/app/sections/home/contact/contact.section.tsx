@@ -18,6 +18,7 @@ export const Contact = async () => {
       <ContactBackground />
       <MotionH1 {...LEFT}>{await title}</MotionH1>
       <MotionH2 {...RIGHT}>{await subtitle}</MotionH2>
+      <div className="content-container"></div>
     </section>
   );
 };
