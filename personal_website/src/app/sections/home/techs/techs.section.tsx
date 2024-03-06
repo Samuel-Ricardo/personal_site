@@ -7,6 +7,7 @@ import { MODULES } from '@/modules/app.factory';
 import { AND_MORE } from '@/local/data/static/techs.data';
 import { MotionH1 } from '@/components/motion/h1.component';
 import { MotionH2 } from '@/components/motion/h2.component';
+import { MotionDiv } from '@/components/motion/div.component';
 
 export const Techs = async () => {
   const { title, subtitle, techs, image } =
@@ -16,6 +17,11 @@ export const Techs = async () => {
     animate: 'inactive',
   });
   const subtitleAnimation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()();
+
+  const imageAnimation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP()({
+    animate: 'inactive',
+    whileInView: 'active',
+  });
 
   return (
     <section id="techs-section" className="section">
@@ -46,9 +52,9 @@ export const Techs = async () => {
         />
       </div>
       <div id="techs-container-layer-2">
-        <div id="tech-ilustration">
+        <MotionDiv id="tech-ilustration" {...imageAnimation}>
           <TechsIlustration />
-        </div>
+        </MotionDiv>
       </div>
       <div id="techs-container-layer-3">
         <TechsGalaxy
