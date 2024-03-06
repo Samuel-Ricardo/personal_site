@@ -19,9 +19,9 @@
   .img-container {
     @apply w-[80%];
     @apply h-auto;
-    @apply frosted-glass-xl;
+    @apply frosted-glass-lg;
     @apply rounded-lg;
-    @apply p-4;
+    @apply p-3;
 
     @apply mx-auto;
 
@@ -46,5 +46,15 @@
     @apply h-fit;
     @apply p-2;
     @apply mt-2;
+
+    @apply gap-8;
+
+    li {
+      @apply w-fit;
+      @apply h-fit;
+      @apply p-2;
+      @apply rounded-lg;
+      @apply frosted-glass;
+    }
   }
 }
