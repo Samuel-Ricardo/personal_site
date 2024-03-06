@@ -4,19 +4,30 @@ import { ProjectItemFooter } from '../footer/footer.component';
 
 import './content.style.scss';
 import { MODULES } from '@/modules/app.factory';
+import { MotionH2 } from '@/components/motion/h2.component';
+import { MotionP } from '@/components/motion/p.component';
 
-export const ProjectItemContent = ({
+export const ProjectItemContent = async ({
   title,
   description,
   demo,
   repo,
   main_techs,
-}: IProjectItemContentProps) => (
-  <div className="content-container">
-    <h2 className={`${MODULES.FONTS.MONO.INCONSOLATA}`}>{title}</h2>
-    <p className="content">{description}</p>
+}: IProjectItemContentProps) => {
+  const DOWN = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.DOWN()();
+  const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()();
 
-    <ProjectItemTechs main_techs={main_techs} />
-    <ProjectItemFooter repo={repo} demo={demo} />
-  </div>
-);
+  return (
+    <div className="content-container">
+      <MotionH2 {...DOWN} className={`${MODULES.FONTS.MONO.INCONSOLATA}`}>
+        {title}
+      </MotionH2>
+      <MotionP {...OUT} className="content">
+        {description}
+      </MotionP>
+
+      <ProjectItemTechs main_techs={main_techs} />
+      <ProjectItemFooter repo={repo} demo={demo} />
+    </div>
+  );
+};
