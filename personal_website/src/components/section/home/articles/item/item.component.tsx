@@ -1,16 +1,19 @@
-'use client';
-
 import { IArticleItemProps } from '@/@types/props/section/articles/item';
 
 import './item.style.scss';
 import Image from 'next/image';
 import { Platform } from '@/components/platform/item/item.component';
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+//import { useEffect, useMemo, useRef } from 'react';
 
-export const ArticleItem = ({ key, html, article }: IArticleItemProps) => {
-  const card = useRef<HTMLLIElement>(null);
+export const ArticleItem = async ({
+  key,
+  html,
+  article,
+}: IArticleItemProps) => {
+  //  const card = useRef<HTMLLIElement>(null);
+  //  const a = useMemo(() => article, [article]);
 
+  /*
   useEffect(() => {
     if (card.current)
       card.current.onmousemove = e => {
@@ -20,14 +23,15 @@ export const ArticleItem = ({ key, html, article }: IArticleItemProps) => {
         card.current?.style.setProperty('--y', `${y}px`);
       };
   }, [card]);
+  */
 
   return (
-    <li {...html} key={key} className="article-section-item" ref={card}>
+    <li {...html} key={key} className="article-section-item">
       <h1 className="title">{article.title}</h1>
 
       {article.image && (
         <Image
-          src={article.image}
+          src={article.image || ''}
           alt="articles image"
           width={800}
           height={800}
@@ -39,9 +43,7 @@ export const ArticleItem = ({ key, html, article }: IArticleItemProps) => {
       <ul className="flex h-fit w-full flex-wrap">
         {article.platforms.map(p => (
           <li key={p.name} className="w-fit h-fit">
-            <Link href={p.url} className="w-fit h-fit">
-              <Platform platform={p} />
-            </Link>
+            <Platform platform={p} />
           </li>
         ))}
       </ul>
