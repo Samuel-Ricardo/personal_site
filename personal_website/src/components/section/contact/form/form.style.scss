@@ -1,0 +1,19 @@
+@import '../../../../app/globals.scss';
+
+#contact-section .content-container .contact-form-container {
+  @apply w-[50vw];
+  @apply flex;
+
+  @apply my-20;
+  @apply mx-10;
+
+  form {
+    @apply w-full;
+    @apply h-fit;
+    @apply mx-auto;
+    @apply my-auto;
+    @apply frosted-glass;
+    @apply rounded-lg;
+    @apply p-6;
+  }
+}
