@@ -3,7 +3,7 @@ import { NavigateButton } from '@/components/button/navigate/button.component';
 
 import './footer.style.scss';
 
-export const ProjectItemFooter = ({
+export const ProjectItemFooter = async ({
   repo,
   demo,
   about,
