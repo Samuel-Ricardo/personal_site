@@ -4,8 +4,11 @@ import Image from 'next/image';
 
 import './card.style.scss';
 import { HTMLAttributes } from 'react';
+import { formatDateToYearMonth } from '@/utils/date.utils';
+import { MODULES } from '@/modules/app.factory';
+import { MotionDiv } from '@/components/motion/div.component';
 
-export const ExperienceItemCard = ({
+export const ExperienceItemCard = async ({
   company,
   start,
   title,
@@ -14,9 +17,15 @@ export const ExperienceItemCard = ({
   left,
   className,
 }: IExperience & HTMLAttributes<HTMLDivElement>) => {
+  const IN = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN();
+  const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT();
+
+  const animation = left ? IN({ animate: 'inactive' }) : OUT();
+
   return (
-    <div
-      className={`experience-item-card ${left ? 'mr-[48.65%]' : 'ml-[48.65%]'}`}
+    <MotionDiv
+      className={`experience-item-card  ${left ? 'left' : 'right'}`}
+      {...animation}
     >
       <header>
         <Image
@@ -31,10 +40,8 @@ export const ExperienceItemCard = ({
           </h3>
           <div className="line" />
           <h4>
-            {start.getFullYear()} • {start.getMonth()} -{' '}
-            {finish
-              ? finish?.getFullYear() + ' • ' + finish?.getMonth
-              : 'Actual'}
+            {formatDateToYearMonth(start)} {' • '}
+            {finish ? formatDateToYearMonth(finish) : 'Actual'}
           </h4>
         </div>
       </header>
@@ -42,6 +49,6 @@ export const ExperienceItemCard = ({
         <p>{description}</p>
         <NavigateButton>More</NavigateButton>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
