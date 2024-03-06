@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 import '../../app/style/frosted_glass.scss';
 
-export const FrostedGlassCard = ({
+export const FrostedGlassCard = async ({
   className,
   children,
   id,

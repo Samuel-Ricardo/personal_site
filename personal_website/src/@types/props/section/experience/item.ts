@@ -10,6 +10,7 @@ export interface IExperience {
 }
 
 export interface IExperienceItemProps {
+  index?: number;
   key?: any;
   data: IExperience;
 }

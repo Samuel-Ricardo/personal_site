@@ -5,7 +5,10 @@ import { Platform } from '@/modules/@core/platforms/entity/platform.entity';
 import { injectable } from 'inversify';
 
 @injectable()
-export class PlatformGateway extends SanitySupport implements IPlatformGateway {
+export class SanityPlatformGateway
+  extends SanitySupport
+  implements IPlatformGateway
+{
   async findAll() {
     const result = await this.client.fetch(
       `*[_type == "platform" ]{name,link,icon}`,

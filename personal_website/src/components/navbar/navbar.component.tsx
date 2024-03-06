@@ -12,7 +12,7 @@ export const Navbar = () => {
     <div id="navbar">
       <Logo />
       <NavbarItemContainer>
-        <NavbarItem li={{ id: 'home', ...animation() }} href="/home">
+        <NavbarItem li={{ id: 'home', ...animation() }} href="/">
           Home
         </NavbarItem>
         <NavbarItem
@@ -41,8 +41,8 @@ export const Navbar = () => {
         </NavbarItem>
 
         <NavbarItem
-          li={{ id: 'My World', ...animation({ transition: { delay: 4 } }) }}
-          href="My World"
+          li={{ id: 'My World', ...animation({ transition: { delay: 5 } }) }}
+          href="/my/world"
         >
           My World
         </NavbarItem>

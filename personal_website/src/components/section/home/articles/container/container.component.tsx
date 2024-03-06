@@ -8,8 +8,8 @@ export const ArticlesContainer = async ({
 }: IArticlesContainerProps) => {
   return (
     <ul id="articles-container">
-      {articles.map(a => (
-        <ArticleItem key={a.title} article={a} />
+      {articles.map((a, i) => (
+        <ArticleItem index={i} key={a.title} article={a} />
       ))}
     </ul>
   );

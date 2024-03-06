@@ -10,6 +10,10 @@ export const ProjectSchema: SchemaTypeDefinition = {
       type: 'boolean',
     },
     {
+      name: 'position',
+      type: 'number',
+    },
+    {
       name: 'title',
       type: 'string',
     },

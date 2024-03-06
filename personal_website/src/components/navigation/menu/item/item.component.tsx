@@ -20,7 +20,11 @@ export const NavMenuItem = (props: INavMenuItemProps) => {
       {...props}
       li={{
         ...props.li,
-        ...animation({ transition: { delay }, whileInView: active }),
+        ...animation({
+          animate: 'inactive',
+          transition: { delay },
+          whileInView: active,
+        }),
       }}
     >
       {children}

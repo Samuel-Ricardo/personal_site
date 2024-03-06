@@ -33,8 +33,8 @@ export const PersonSchema: SchemaTypeDefinition = {
     },
     {
       name: 'company',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'company' }] }],
+      type: 'reference',
+      to: [{ type: 'company' }],
     },
     {
       name: 'contacts',
@@ -43,7 +43,7 @@ export const PersonSchema: SchemaTypeDefinition = {
         {
           type: 'document',
           fields: [
-            { name: 'icon', type: 'image' },
+            { name: 'icon', type: 'string' },
             { name: 'link', type: 'url' },
           ],
         },

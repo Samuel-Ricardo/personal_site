@@ -3,9 +3,11 @@ import './contact.style.scss';
 import { MotionH1 } from '@/components/motion/h1.component';
 import { MotionH2 } from '@/components/motion/h2.component';
 import { MODULES } from '@/modules/app.factory';
+import { ContactContent } from '@/components/section/contact/content/content.component';
 
 export const Contact = async () => {
-  const { title, subtitle } = await MODULES.ASSEMBLER.MAIN().assembleContact();
+  const { title, subtitle, contacts, paragraph, image, form } =
+    await MODULES.ASSEMBLER.MAIN().assembleContact();
 
   const LEFT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN()({
     animate: 'inactive',
@@ -18,7 +20,13 @@ export const Contact = async () => {
       <ContactBackground />
       <MotionH1 {...LEFT}>{await title}</MotionH1>
       <MotionH2 {...RIGHT}>{await subtitle}</MotionH2>
-      <div className="content-container"></div>
+      <div className="content-container">
+        <ContactContent
+          image={image}
+          paragraph={paragraph}
+          contacts={contacts}
+        />
+      </div>
     </section>
   );
 };

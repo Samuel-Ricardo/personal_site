@@ -1,7 +1,13 @@
+@import '../../../../../app/globals.scss';
+
 .vertical-line {
   width: 1px;
-  height: 4rem;
+  height: 6rem;
   background-color: black;
+
+  @include mobile {
+    height: 16rem;
+  }
 }
 
 #experience-section-container {
