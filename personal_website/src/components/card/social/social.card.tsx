@@ -3,10 +3,19 @@ import './social.style.scss';
 import { SocialCardCover } from './cover/cover.card';
 import { SocialCardFooter } from './footer/footer.component';
 import { ISocialCardProps } from '@/@types/props/card/social';
+import { SelectTestimonialWrapper } from '@/components/wrapper/testimonial/select.wrapper';
+import { MODULES } from '@/modules/app.factory';
 
-export const SocialCard = async ({ data }: ISocialCardProps) => {
+export const SocialCard = async ({ data, index }: ISocialCardProps) => {
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()({
+    transition: { delay: (index || 0) * 0.25 },
+  });
   return (
-    <div className="social-card">
+    <SelectTestimonialWrapper
+      animation={animation}
+      data={data}
+      className="social-card"
+    >
       <Image
         src={data.person.avatar}
         alt="testimony avatar"
@@ -20,6 +29,6 @@ export const SocialCard = async ({ data }: ISocialCardProps) => {
         title={data.person.title}
         company={data.person.company.name}
       />
-    </div>
+    </SelectTestimonialWrapper>
   );
 };
