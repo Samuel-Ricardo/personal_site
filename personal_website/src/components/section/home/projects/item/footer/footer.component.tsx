@@ -2,26 +2,50 @@ import { IProjectItemFooterProps } from '@/@types/props/section/project/item';
 import { NavigateButton } from '@/components/button/navigate/button.component';
 
 import './footer.style.scss';
+import { MotionDiv } from '@/components/motion/div.component';
+import { MODULES } from '@/modules/app.factory';
 
 export const ProjectItemFooter = async ({
   repo,
   demo,
   about,
 }: IProjectItemFooterProps) => {
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN();
   return (
     <div className="footer">
       {repo && (
-        <NavigateButton link={{ href: repo, target: '_blank' }}>
-          Code
-        </NavigateButton>
+        <MotionDiv
+          {...animation({
+            animate: 'inactive',
+            transition: { delay: 0.3 * 1 },
+          })}
+        >
+          <NavigateButton link={{ href: repo, target: '_blank' }}>
+            Code
+          </NavigateButton>
+        </MotionDiv>
       )}
       {demo && (
-        <NavigateButton link={{ href: demo, target: '_blank' }}>
-          Demo
-        </NavigateButton>
+        <MotionDiv
+          {...animation({
+            animate: 'inactive',
+            transition: { delay: 0.3 * 2 },
+          })}
+        >
+          <NavigateButton link={{ href: demo, target: '_blank' }}>
+            Demo
+          </NavigateButton>
+        </MotionDiv>
       )}
       {about && (
-        <NavigateButton link={{ href: 'linkedin' }}>About</NavigateButton>
+        <MotionDiv
+          {...animation({
+            animate: 'inactive',
+            transition: { delay: 0.3 * 3 },
+          })}
+        >
+          <NavigateButton link={{ href: about }}>About</NavigateButton>
+        </MotionDiv>
       )}
     </div>
   );
