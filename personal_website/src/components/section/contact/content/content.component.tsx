@@ -1,8 +1,10 @@
 import { IContactContentProps } from '@/@types/props/section/contact/content';
 import { MotionDiv } from '@/components/motion/div.component';
+import { MotionLI } from '@/components/motion/li.component';
 import { MotionP } from '@/components/motion/p.component';
 import { MODULES } from '@/modules/app.factory';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const ContactContent = async ({
   image,
@@ -27,6 +29,24 @@ export const ContactContent = async ({
       <MotionP {...animation({ transition: { delay: 0.5 } })}>
         {await paragraph}
       </MotionP>
+
+      <ul>
+        {(await contacts)?.map((contact, i) => (
+          <MotionLI
+            key={contact.link}
+            {...animation({ transition: { delay: i * 0.5 } })}
+          >
+            <Link href={contact.link}>
+              <Image
+                src={contact.icon}
+                alt={'Contact Icon'}
+                width={24}
+                height={24}
+              />
+            </Link>
+          </MotionLI>
+        ))}
+      </ul>
     </div>
   );
 };
