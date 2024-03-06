@@ -3,9 +3,12 @@ import { IArticleItemProps } from '@/@types/props/section/articles/item';
 import './item.style.scss';
 import Image from 'next/image';
 import { Platform } from '@/components/platform/item/item.component';
+import { MODULES } from '@/modules/app.factory';
+import { MotionLI } from '@/components/motion/li.component';
 //import { useEffect, useMemo, useRef } from 'react';
 
 export const ArticleItem = async ({
+  index,
   key,
   html,
   article,
@@ -25,8 +28,18 @@ export const ArticleItem = async ({
   }, [card]);
   */
 
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP()({
+    animate: 'inactive',
+    transition: { delay: (index || 0) * 0.35 },
+  });
+
   return (
-    <li {...html} key={key} className="article-section-item">
+    <MotionLI
+      {...(html as any)}
+      {...animation}
+      key={key}
+      className="article-section-item"
+    >
       <h1 className="title">{article.title}</h1>
 
       {article.image && (
@@ -47,6 +60,6 @@ export const ArticleItem = async ({
           </li>
         ))}
       </ul>
-    </li>
+    </MotionLI>
   );
 };
