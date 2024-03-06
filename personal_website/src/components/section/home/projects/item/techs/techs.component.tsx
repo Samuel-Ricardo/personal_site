@@ -3,7 +3,9 @@ import { TechsGalaxy } from '@/components/section/home/techs/galaxy/galaxy.compo
 
 import './techs.style.scss';
 
-export const ProjectItemTechs = ({ main_techs }: IProjectItemTechsProps) => {
+export const ProjectItemTechs = async ({
+  main_techs,
+}: IProjectItemTechsProps) => {
   return (
     <TechsGalaxy
       items={main_techs}
