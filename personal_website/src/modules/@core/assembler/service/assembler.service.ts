@@ -22,6 +22,7 @@ import { type IExperienceModule } from '../../experience/experience.interface';
 import { IAssembleExperienceDTO } from '../DTO/service/assemble/experience.dto';
 import { IAssembleTestimonials } from '../DTO/service/assemble/testimonials.dto';
 import { type ITestimonialModule } from '../../testimonial/testimonial.interface';
+import { IAssembleContactDTO } from '../DTO/service/assemble/contact.dto';
 
 @injectable()
 export class AssemblerService implements IAssemblerService {
@@ -145,6 +146,21 @@ export class AssemblerService implements IAssemblerService {
     return {
       title: this.findTitle({ identifier: 'home_testimonials_title' }),
       testimonials: this.testimonials.findAll(),
+    };
+  }
+
+  async assembleContact(): Promise<IAssembleContactDTO> {
+    return {
+      title: this.findTitle({ identifier: 'home_contact_title' }),
+      subtitle: this.findTitle({ identifier: 'home_contact_subtitle' }),
+      paragraph: this.findText({ identifier: 'home_contact_paragraph' }),
+      image: this.findImage({ identifier: 'home_contact' }),
+      contacts: this.person
+        .findOneAsync({ identifier: 'person_samuel' })
+        .then(p => p?.toDTO().contacts),
+      form: {
+        title: this.findTitle({ identifier: 'home_contact_form_title' }),
+      },
     };
   }
 }
