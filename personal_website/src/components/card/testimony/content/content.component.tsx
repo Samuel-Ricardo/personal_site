@@ -1,10 +1,13 @@
 import { PropsWithChildren } from 'react';
 import './content.style.scss';
+import { MotionDiv } from '@/components/motion/div.component';
+import { MODULES } from '@/modules/app.factory';
 
-export const TestimonyContent = async ({ children }: PropsWithChildren) => {
+export const TestimonyContent = ({ children }: PropsWithChildren) => {
+  const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP()();
   return (
-    <div className="testimony-content">
+    <MotionDiv {...animation} className="testimony-content">
       <p>{children}</p>
-    </div>
+    </MotionDiv>
   );
 };
