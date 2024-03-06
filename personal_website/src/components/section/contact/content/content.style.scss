@@ -1,0 +1,12 @@
+@import '../../../../app/globals.scss';
+
+#contact-section .content-container .content {
+  @apply w-[50vw];
+  @apply h-full;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+
+  @apply my-8;
+  @apply mx-2;
+}
