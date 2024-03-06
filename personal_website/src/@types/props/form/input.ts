@@ -1,10 +1,14 @@
 import { MotionProps } from 'framer-motion';
 
 export interface IInputProps {
-  id: string;
+  id?: string;
+  required?: boolean;
   label: string;
   placeholder: string;
   type: string;
   hook?: any;
-  animation?: MotionProps;
+}
+
+export interface IAnimatedInputProps extends IInputProps {
+  animation: MotionProps;
 }
