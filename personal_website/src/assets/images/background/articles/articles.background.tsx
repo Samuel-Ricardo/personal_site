@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export const ArticlesBackground = () => {
+export const ArticlesBackground = async () => {
   return (
     <Image
       id="bg-articles"
