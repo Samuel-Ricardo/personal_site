@@ -1,3 +1,5 @@
+import './content.style.scss';
+
 import { IContactContentProps } from '@/@types/props/section/contact/content';
 import { MotionDiv } from '@/components/motion/div.component';
 import { MotionLI } from '@/components/motion/li.component';
@@ -12,9 +14,10 @@ export const ContactContent = async ({
   contacts,
 }: IContactContentProps) => {
   const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP();
+  const IN = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN();
   return (
-    <div>
-      <MotionDiv {...animation()}>
+    <div className="content">
+      <MotionDiv {...animation()} className="img-container">
         <Image
           src={(await image) || '/img_place_holder.gif'}
           alt="contact image"
@@ -34,14 +37,14 @@ export const ContactContent = async ({
         {(await contacts)?.map((contact, i) => (
           <MotionLI
             key={contact.link}
-            {...animation({ transition: { delay: i * 0.5 } })}
+            {...IN({ transition: { delay: i * 0.5 } })}
           >
             <Link href={contact.link}>
               <Image
                 src={contact.icon}
                 alt={'Contact Icon'}
-                width={24}
-                height={24}
+                width={64}
+                height={64}
               />
             </Link>
           </MotionLI>
