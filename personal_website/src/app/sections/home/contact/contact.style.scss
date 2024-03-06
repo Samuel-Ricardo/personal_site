@@ -22,5 +22,9 @@
     @apply h-full;
     @apply flex;
     @apply flex-row;
+
+    @include mobile {
+      @apply flex-col;
+    }
   }
 }
