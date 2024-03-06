@@ -9,4 +9,16 @@
 
   @apply my-8;
   @apply mx-2;
+
+  .img-container {
+    @apply w-[80%];
+    @apply h-auto;
+    @apply frosted-glass-xl;
+    @apply rounded-lg;
+    @apply p-4;
+
+    img {
+      @apply rounded-lg;
+    }
+  }
 }
