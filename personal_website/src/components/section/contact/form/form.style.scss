@@ -15,5 +15,11 @@
     @apply frosted-glass;
     @apply rounded-lg;
     @apply p-6;
+
+    h3 {
+      @apply text-2xl;
+      @apply text-center;
+      @apply mb-4;
+    }
   }
 }
