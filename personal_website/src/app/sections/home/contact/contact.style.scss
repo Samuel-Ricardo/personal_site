@@ -2,4 +2,18 @@
 
 #contact-section {
   @apply section;
+
+  h1 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply text-center;
+    @apply mb-4;
+    @apply mx-auto;
+  }
+
+  h2 {
+    @apply text-2xl;
+    @apply text-center;
+    @apply mx-auto;
+  }
 }
