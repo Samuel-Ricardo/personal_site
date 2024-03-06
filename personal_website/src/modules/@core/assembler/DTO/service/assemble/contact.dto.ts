@@ -1,12 +1,12 @@
 import { IContactDTO } from '@/modules/@core/person/DTO/contact.dto';
 
 export interface IAssembleContactDTO {
-  title: Promise<string>;
-  subtitle: Promise<string>;
-  paragraph: Promise<string>;
-  image: Promise<string>;
+  title: Promise<string | undefined>;
+  subtitle: Promise<string | undefined>;
+  paragraph: Promise<string | undefined>;
+  image: Promise<string | undefined>;
   form: {
-    title: Promise<string>;
+    title: Promise<string | undefined>;
   };
-  contacts: Promise<IContactDTO>[];
+  contacts: Promise<IContactDTO[]>;
 }
