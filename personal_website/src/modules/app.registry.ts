@@ -15,6 +15,7 @@ import { EXPERIENCE_REGISTRY as EXPERIENCE } from './@core/experience/experience
 import { TESTIMONIAL_REGISTRY as TESTIMONIAL } from './@core/testimonial/testimonial.registry';
 import { CONFIG_REGISTRY as CONFIG } from './@config/config.registry';
 import { EMAIL_REGISTRY as EMAIL } from './@core/email/email.registry';
+import { VALIDATION_REGISTRY as VALIDATION } from './validation/validation.registry';
 
 export const MODULE = {
   FONTS,
@@ -34,4 +35,5 @@ export const MODULE = {
   TESTIMONIAL,
   CONFIG,
   EMAIL,
+  VALIDATION,
 };
