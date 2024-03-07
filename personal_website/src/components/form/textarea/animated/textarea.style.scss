@@ -1,0 +1,21 @@
+.animated-textarea {
+  @apply flex;
+  @apply flex-col;
+
+  @apply mb-4;
+
+  textarea {
+    @apply mt-3;
+    @apply mx-4;
+    @apply bg-transparent;
+    @apply text-black;
+    @apply focus:outline-none;
+  }
+
+  .underline {
+    @apply h-px;
+    @apply bg-black;
+    @apply mt-1;
+    @apply mb-2;
+  }
+}
