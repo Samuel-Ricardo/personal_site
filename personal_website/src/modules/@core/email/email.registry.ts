@@ -1,4 +1,8 @@
 export const EMAIL_REGISTRY = {
+  MAIN: Symbol.for('MODULES::EMAIL::MAIN'),
+  CONTROLLER: {
+    MAIN: Symbol.for('MODULES::EMAIL::CONTROLLER::MAIN'),
+  },
   SERVICE: {
     MAIN: Symbol.for('MODULES::EMAIL::SERVICE::MAIN'),
   },
