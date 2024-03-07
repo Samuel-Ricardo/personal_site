@@ -1,7 +1,7 @@
-import { CONFIG } from './configs/global.config';
+import { CONFIG } from './configs/all.config';
 
 export const CONFIG_REGISTRY = {
   ...CONFIG,
-  GLOBAL: Symbol.for('MODULES::CONFIG::GLOBAL'),
+  ALL: Symbol.for('MODULES::CONFIG::ALL'),
   ENV: Symbol.for('MODULES::CONFIG::ENV'),
 };
