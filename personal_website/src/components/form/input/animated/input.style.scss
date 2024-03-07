@@ -1,4 +1,21 @@
 .animated-input {
   @apply flex;
   @apply flex-col;
+
+  @apply mb-4;
+
+  input {
+    @apply mt-3;
+    @apply mx-4;
+    @apply bg-transparent;
+    @apply text-black;
+    @apply focus:outline-none;
+  }
+
+  .underline {
+    @apply h-px;
+    @apply bg-black;
+    @apply mt-1;
+    @apply mb-2;
+  }
 }
