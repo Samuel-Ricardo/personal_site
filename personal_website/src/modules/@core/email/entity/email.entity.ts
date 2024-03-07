@@ -11,6 +11,10 @@ export class Email {
     };
   }
 
+  static fromDTO(dto: Email) {
+    return new Email(dto.text, dto.status);
+  }
+
   get text() {
     return this._text;
   }
