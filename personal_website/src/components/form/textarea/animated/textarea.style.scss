@@ -2,6 +2,7 @@
   @apply flex;
   @apply flex-col;
 
+  scrollbar-width: none;
   @apply mb-4;
 
   textarea {
@@ -17,5 +18,10 @@
     @apply bg-black;
     @apply mt-1;
     @apply mb-2;
+  }
+
+  .error {
+    @apply text-red-500;
+    @apply text-sm;
   }
 }
