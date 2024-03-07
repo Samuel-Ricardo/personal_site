@@ -7,5 +7,5 @@ export const CONFIG_MODULE = new Container({
   defaultScope: 'Singleton',
 });
 
-CONFIG_MODULE.bind(CONFIG_REGISTRY.ALL).toConstantValue(CONFIG);
+CONFIG_MODULE.bind(CONFIG_REGISTRY.GLOBAL).toConstantValue(CONFIG);
 CONFIG_MODULE.bind(CONFIG_REGISTRY.ENV).toConstantValue(CONFIG.ENV);
