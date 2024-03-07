@@ -10,13 +10,15 @@ import { ContactFormData } from '@/modules/validation/zod/form/contact.validatio
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
+import { useEmail } from '@/hooks/email/email.hook';
 
 export const ContactFormFields = ({ children }: { children: any }) => {
   const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT();
   const UP = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP();
 
   const VALIDATION = useMemo(() => MODULES.VALIDATION.ZOD.FORM.CONTACT(), []);
+  const { sendEmail } = useEmail();
 
   const {
     register,
@@ -26,6 +28,19 @@ export const ContactFormFields = ({ children }: { children: any }) => {
   } = useForm<ContactFormData>({
     resolver: zodResolver(VALIDATION),
   });
+
+  const onSubmit = useCallback(
+    () =>
+      handleSubmit(
+        async data =>
+          await sendEmail({
+            to: 'Samuel Ricardo',
+            from: data.name,
+            message: `${data.message} \n\n ${data.email}`,
+          }),
+      ),
+    [sendEmail, handleSubmit],
+  );
 
   return (
     <MotionForm {...OUT()}>

@@ -10,18 +10,18 @@ export const AnimatedInput = ({
   error,
   input,
 }: IAnimatedInputProps) => {
-  console.log({ error });
   return (
     <MotionDiv {...animation} className="animated-input">
       {label && <label className="label">{label}</label>}
       <input {...input} {...hook()} />
       <MotionDiv
         className="underline"
+        initial={{ width: 0 }}
         animate={{ width: 0 }}
         whileInView={{ width: '100%' }}
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 2.5, delay: 0.5 }}
       />
-      {error && <label className="error">error</label>}
+      {error && <label className="error">{error}</label>}
     </MotionDiv>
   );
 };
