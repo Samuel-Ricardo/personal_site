@@ -18,6 +18,7 @@ import { EXPERIENCE_MODULE } from './@core/experience/experience.module';
 import { TESTIMONIAL_MODULE } from './@core/testimonial/testimonial.module';
 import { CONFIG_MODULE } from './@config/config.module';
 import { EMAIL_MODULE } from './@core/email/email.module';
+import { VALIDATION_MODULE } from './validation/validation.module';
 
 const MODULES = new Container();
 
@@ -40,4 +41,5 @@ export const APP_MODULE = Container.merge(
   EXPERIENCE_MODULE,
   TESTIMONIAL_MODULE,
   EMAIL_MODULE,
+  VALIDATION_MODULE,
 );
