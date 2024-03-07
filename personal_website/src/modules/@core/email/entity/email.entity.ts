@@ -15,6 +15,10 @@ export class Email {
     };
   }
 
+  static fromDTO(DTO: IEmailDTO): Email {
+    return new Email(DTO.to, DTO.from, DTO.message);
+  }
+
   get to(): string {
     return this._to;
   }
