@@ -1,0 +1,3 @@
+export const ENGINE_MAILER_REGISTRY = {
+  EMAILJS: Symbol.for('MODULE::ENGINE::MAILER::EMAILJS'),
+};
