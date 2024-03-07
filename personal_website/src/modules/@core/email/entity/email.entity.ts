@@ -1,33 +1,21 @@
-import { IEmailDTO } from '../DTO/email.dto';
-
 export class Email {
   constructor(
-    protected readonly _to: string,
-    protected readonly _from: string,
-    protected readonly _message: string,
+    protected readonly _text: string,
+    protected readonly _status: number,
   ) {}
 
-  toDTO(): IEmailDTO {
+  toDTO() {
     return {
-      to: this._to,
-      from: this._from,
-      message: this._message,
+      text: this._text,
+      status: this._status,
     };
   }
 
-  static fromDTO(DTO: IEmailDTO): Email {
-    return new Email(DTO.to, DTO.from, DTO.message);
+  get text() {
+    return this._text;
   }
 
-  get to(): string {
-    return this._to;
-  }
-
-  get from(): string {
-    return this._from;
-  }
-
-  get message(): string {
-    return this._message;
+  get status() {
+    return this._status;
   }
 }
