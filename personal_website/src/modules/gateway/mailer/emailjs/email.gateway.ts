@@ -5,4 +5,14 @@ import { Email } from '@/modules/@core/email/entity/email.entity';
 import { ISendEmailDTO } from '@/modules/@core/email/DTO/send/email.dto';
 
 @injectable()
-export class EmailJSGateway extends EmailJSSupport implements IEmailGateway {}
+export class EmailJSGateway extends EmailJSSupport implements IEmailGateway {
+  async sendEmail(email: ISendEmailDTO) {
+    return Email.fromDTO(
+      await this.client.send(
+        this.ENV.MAILER.SERVICE.ID,
+        this.ENV.MAILER.TEMPLATE.ID,
+        { ...email },
+      ),
+    );
+  }
+}
