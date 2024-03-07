@@ -1,0 +1,5 @@
+export const VALIDATION_ZOD_REGISTRY = {
+  FORM: {
+    CONTACT: Symbol.for('MODULES::VALIDATION::ZOD::FORM:CONTACT'),
+  },
+};
