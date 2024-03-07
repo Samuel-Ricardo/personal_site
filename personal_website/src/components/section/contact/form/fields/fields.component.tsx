@@ -6,31 +6,50 @@ import { AnimatedTextArea } from '@/components/form/textarea/animated/textarea.c
 import { MotionForm } from '@/components/motion/form.component';
 import { MotionH3 } from '@/components/motion/h3.component';
 import { MODULES } from '@/modules/app.factory';
+import { ContactFormData } from '@/modules/validation/zod/form/contact.validation';
+
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useMemo } from 'react';
 
 export const ContactFormFields = ({ children }: { children: any }) => {
-  const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()();
+  const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT();
   const UP = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP();
 
+  const VALIDATION = useMemo(() => MODULES.VALIDATION.ZOD.FORM.CONTACT(), []);
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(VALIDATION),
+  });
+
   return (
-    <MotionForm {...OUT}>
+    <MotionForm {...OUT()}>
       <MotionH3 {...UP()}>{children}</MotionH3>
 
       <AnimatedInput
         label="Name"
-        hook={() => 'a' as any}
+        error={errors.name?.message}
+        hook={() => register('name')}
         animation={UP({ transition: { delay: 0.25 } })}
         input={{ type: 'text', required: true, placeholder: 'Name' }}
       />
       <AnimatedInput
         label="Email"
-        hook={() => 'a' as any}
+        error={errors.name?.message}
+        hook={() => register('email')}
         animation={UP({ transition: { delay: 0.5 } })}
         input={{ type: 'email', required: true, placeholder: 'Email' }}
       />
 
       <AnimatedTextArea
         label="Message"
-        hook={() => 'a' as any}
+        error={errors.name?.message}
+        hook={() => register('message')}
         animation={UP({ transition: { delay: 0.75 } })}
         input={{
           rows: 10,
@@ -40,7 +59,7 @@ export const ContactFormFields = ({ children }: { children: any }) => {
       />
 
       <Submit
-        animation={UP({ transition: { delay: 1 } })}
+        animation={OUT({ transition: { delay: 1 } })}
         input={{ value: 'Send' }}
       />
     </MotionForm>
