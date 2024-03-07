@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedInput } from '@/components/form/input/animated/input.component';
+import { Submit } from '@/components/form/submit/submit.component';
 import { AnimatedTextArea } from '@/components/form/textarea/animated/textarea.component';
 import { MotionForm } from '@/components/motion/form.component';
 import { MotionH3 } from '@/components/motion/h3.component';
@@ -36,6 +37,11 @@ export const ContactFormFields = ({ children }: { children: any }) => {
           required: true,
           placeholder: '🖋️ | Type a message...',
         }}
+      />
+
+      <Submit
+        animation={UP({ transition: { delay: 1 } })}
+        input={{ value: 'Send' }}
       />
     </MotionForm>
   );
