@@ -5,4 +5,4 @@ const MODULE = new Container({
   autoBindInjectable: true,
 });
 
-export const EMAIL_MODULE = MODULE;
+export const GATEWAY_EMAIL_MODULE = MODULE;

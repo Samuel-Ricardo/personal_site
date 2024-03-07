@@ -1,3 +1,3 @@
-export const EMAIL_REGISTRY = {
+export const GATEWAY_EMAIL_REGISTRY = {
   EMAILJS: Symbol.for('MODULE::ENGINE::MAILER::EMAILJS'),
 };
