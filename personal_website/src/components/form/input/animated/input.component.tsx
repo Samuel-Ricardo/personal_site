@@ -1,20 +1,27 @@
-import { IAnimatedInputProps, IInputProps } from '@/@types/props/form/input';
+import './input.style.scss';
+
+import { IAnimatedInputProps } from '@/@types/props/form/input';
 import { MotionDiv } from '@/components/motion/div.component';
 
-export const AnimatedInput = async ({
+export const AnimatedInput = ({
   label,
-  id,
-  type,
   hook,
-  required,
-  placeholder,
   animation,
+  error,
+  input,
 }: IAnimatedInputProps) => {
+  console.log({ error });
   return (
-    <MotionDiv {...animation}>
-      <label></label>
-      <input required={required} />
-      <label></label>
+    <MotionDiv {...animation} className="animated-input">
+      {label && <label className="label">{label}</label>}
+      <input {...input} {...hook()} />
+      <MotionDiv
+        className="underline"
+        animate={{ width: 0 }}
+        whileInView={{ width: '100%' }}
+        transition={{ duration: 2.5 }}
+      />
+      {error && <label className="error">error</label>}
     </MotionDiv>
   );
 };
