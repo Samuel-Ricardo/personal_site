@@ -12,6 +12,7 @@ import { PLATFORM_REGISTRY as PLATFORM } from './@core/platforms/platform.regist
 import { ARTICLE_REGISTRY as ARTICLE } from './@core/articles/article.registry';
 import { COMPANY_REGISTRY as COMPANY } from './@core/company/company.registry';
 import { EXPERIENCE_REGISTRY as EXPERIENCE } from './@core/experience/experience.registry';
+import { TESTIMONIAL_REGISTRY as TESTIMONIAL } from './@core/testimonial/testimonial.registry';
 
 export const MODULE = {
   FONTS,
@@ -28,4 +29,5 @@ export const MODULE = {
   ARTICLE,
   COMPANY,
   EXPERIENCE,
+  TESTIMONIAL,
 };
