@@ -16,11 +16,13 @@ import { ARTICLE_MODULE } from './@core/articles/article.module';
 import { COMPANY_MODULE } from './@core/company/company.module';
 import { EXPERIENCE_MODULE } from './@core/experience/experience.module';
 import { TESTIMONIAL_MODULE } from './@core/testimonial/testimonial.module';
+import { CONFIG_MODULE } from './@config/config.module';
 
 const MODULES = new Container();
 
 export const APP_MODULE = Container.merge(
   MODULES,
+  CONFIG_MODULE,
   FONTS_MODULE,
   ANIMATION_MODULE,
   ENGINE_MODULE,
