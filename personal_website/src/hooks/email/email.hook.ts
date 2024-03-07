@@ -3,7 +3,7 @@ import { MODULES } from '@/modules/app.factory';
 import { useCallback, useMemo } from 'react';
 import toast from 'react-hot-toast';
 
-export const useHook = () => {
+export const useEmail = () => {
   const mailer = useMemo(() => MODULES.EMAIL.MAIN(), []);
 
   const sendEmail = useCallback(
