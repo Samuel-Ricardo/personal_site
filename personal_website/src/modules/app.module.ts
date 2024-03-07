@@ -17,6 +17,7 @@ import { COMPANY_MODULE } from './@core/company/company.module';
 import { EXPERIENCE_MODULE } from './@core/experience/experience.module';
 import { TESTIMONIAL_MODULE } from './@core/testimonial/testimonial.module';
 import { CONFIG_MODULE } from './@config/config.module';
+import { EMAIL_MODULE } from './@core/email/email.module';
 
 const MODULES = new Container();
 
@@ -38,4 +39,5 @@ export const APP_MODULE = Container.merge(
   COMPANY_MODULE,
   EXPERIENCE_MODULE,
   TESTIMONIAL_MODULE,
+  EMAIL_MODULE,
 );
