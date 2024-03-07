@@ -14,6 +14,7 @@ import { COMPANY_FACTORY as COMPANY } from './@core/company/company.factory';
 import { EXPERIENCE_FACTORY as EXPERIENCE } from './@core/experience/experience.factory';
 import { TESTIMONIAL_FACTORY as TESTIMONIAL } from './@core/testimonial/testimonial.factory';
 import { CONFIG_FACTORY as CONFIG } from './@config/config.factory';
+import { EMAIL_FACTORY as EMAIL } from './@core/email/email.factory';
 
 export const MODULES = {
   CONFIG,
@@ -32,4 +33,5 @@ export const MODULES = {
   COMPANY,
   EXPERIENCE,
   TESTIMONIAL,
+  EMAIL,
 };
