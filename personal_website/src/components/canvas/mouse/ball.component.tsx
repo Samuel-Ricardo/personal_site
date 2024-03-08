@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react';
 
 export const MouseBall = () => {
-  const card = useRef(
-    document.getElementsByClassName(
-      `article-section-item`,
-    ) as HTMLCollectionOf<HTMLLIElement>,
-  );
+  const card = useRef<HTMLCollectionOf<HTMLLIElement>>();
 
   useEffect(() => {
+    card.current = document?.getElementsByClassName(
+      `article-section-item`,
+    ) as HTMLCollectionOf<HTMLLIElement>;
+
     if (card.current)
       for (let i = 0; i < card.current.length; i++) {
         const item = card.current.item(i)!;
