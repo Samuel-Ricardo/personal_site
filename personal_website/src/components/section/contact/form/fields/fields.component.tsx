@@ -13,6 +13,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useCallback, useMemo } from 'react';
 import { useEmail } from '@/hooks/email/email.hook';
 
+import toast from 'react-hot-toast';
+
 export const ContactFormFields = ({ children }: { children: any }) => {
   const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT();
   const UP = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP();
@@ -23,13 +25,12 @@ export const ContactFormFields = ({ children }: { children: any }) => {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(VALIDATION),
   });
 
-  const onSubmit = useCallback(
+  const submit = useCallback(
     () =>
       handleSubmit(
         async data =>
@@ -43,7 +44,7 @@ export const ContactFormFields = ({ children }: { children: any }) => {
   );
 
   return (
-    <MotionForm {...OUT()}>
+    <MotionForm {...OUT()} onSubmit={submit()}>
       <MotionH3 {...UP()}>{children}</MotionH3>
 
       <AnimatedInput
@@ -55,7 +56,7 @@ export const ContactFormFields = ({ children }: { children: any }) => {
       />
       <AnimatedInput
         label="Email"
-        error={errors.name?.message}
+        error={errors.email?.message}
         hook={() => register('email')}
         animation={UP({ transition: { delay: 0.5 } })}
         input={{ type: 'email', required: true, placeholder: 'Email' }}
@@ -63,7 +64,7 @@ export const ContactFormFields = ({ children }: { children: any }) => {
 
       <AnimatedTextArea
         label="Message"
-        error={errors.name?.message}
+        error={errors.message?.message}
         hook={() => register('message')}
         animation={UP({ transition: { delay: 0.75 } })}
         input={{
