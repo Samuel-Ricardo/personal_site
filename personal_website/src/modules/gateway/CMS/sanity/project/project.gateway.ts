@@ -60,9 +60,11 @@ export class SanityProjectGateway
     `);
 
     let projects = await result.map(async project => {
+      project.preview = this.imageBuilder.image(project.preview).url();
+
       project.description = this.client
         .fetch(
-          `*[_type == "title" && identifier == "${project.title}"] {content}`,
+          `*[_type == "tp_text" && identifier == "${project.description}"] {content}`,
         )
         .then(data => data[0].content);
       project.techs = project.techs.map(async tech =>
@@ -70,7 +72,7 @@ export class SanityProjectGateway
           .fetch(
             `*[_type == "tech" && identifier == "${tech.identifier}"]{name, icon, description, preview, identifier, context}`,
           )
-          .then(Tech.fromDTOs),
+          .then(DTO => Tech.fromDTO(DTO[0])),
       );
       return project;
     });
