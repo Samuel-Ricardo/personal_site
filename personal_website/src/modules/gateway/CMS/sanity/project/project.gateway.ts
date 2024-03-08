@@ -47,7 +47,7 @@ export class SanityProjectGateway
   async findMainProjects() {
     const result = await this.client.fetch(`
       *[_type == "project" && main == true] {
-        
+        position,  
         main,
         title,
         preview,
@@ -56,8 +56,8 @@ export class SanityProjectGateway
         demo,
         link, 
         'techs': techs[]{identifier, star}
-      }
-    `);
+      } | order(position asc)
+`);
 
     let projects = await result.map(async project => {
       project.preview = this.imageBuilder.image(project.preview).url();
