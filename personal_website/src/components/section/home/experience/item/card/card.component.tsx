@@ -47,7 +47,14 @@ export const ExperienceItemCard = async ({
       </header>
       <div className="description">
         <p>{description}</p>
-        <NavigateButton>More</NavigateButton>
+        <NavigateButton
+          link={{
+            href: 'https://www.linkedin.com/in/samuel-ricardo/',
+            target: '_blank',
+          }}
+        >
+          More
+        </NavigateButton>
       </div>
     </MotionDiv>
   );
