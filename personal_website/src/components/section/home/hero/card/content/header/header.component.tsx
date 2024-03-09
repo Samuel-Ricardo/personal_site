@@ -1,7 +1,7 @@
 import { IHeroHeaderProps } from '@/@types/props/section/hero/header';
 import './header.style.scss';
 
-export const HeroCardContentContainerHeader = ({
+export const HeroCardContentContainerHeader = async ({
   title,
   subtitle,
 }: IHeroHeaderProps) => {
