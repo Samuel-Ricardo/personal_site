@@ -1,3 +1,3 @@
 export interface IFindTechByContextDTO {
-  context: 'frontend' | 'backend' | 'devops' | 'QA';
+  context: 'frontend' | 'backend' | 'devops' | 'database' | 'quality_assurance';
 }
