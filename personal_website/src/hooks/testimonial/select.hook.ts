@@ -3,7 +3,13 @@ import { create } from 'zustand';
 
 export const useSelectedTestimonial = create<ISelectedTestimonialState>(set => {
   return {
-    selected: 0,
-    setSelected: (selected: number) => set({ selected }),
+    selected: undefined,
+    setSelected: selected => {
+      selected.ref.current?.scrollIntoView({
+        behavior: 'smooth',
+      });
+
+      set({ selected });
+    },
   };
 });
