@@ -30,11 +30,11 @@
   }
 
   .description {
+    @apply mb-4;
     @apply text-justify;
     @apply text-wrap;
     @apply break-all;
     @apply text-sm;
-    @apply mb-auto;
   }
 
   .platform-card {
