@@ -2,7 +2,7 @@
 
 #social-floating-button {
   position: fixed;
-  bottom: 3rem;
+  bottom: 4rem;
   right: 4rem;
   z-index: 100;
 
@@ -40,6 +40,7 @@
     position: absolute;
     width: 80%;
     height: auto;
+    @apply text-white;
   }
 
   .social-item {
@@ -56,27 +57,25 @@
     @apply flex;
     @apply justify-center;
     @apply items-center;
-
-    &:hover {
-      z-index: 100;
-    }
   }
 
   .si-left {
-    left: -60%;
+    left: -70%;
     @apply text-black;
   }
 
   .si-right {
-    right: -60%;
+    right: -70%;
     @apply text-blue-500;
   }
 
   .si-top {
-    top: -60%;
+    top: -70%;
+    @apply text-white;
   }
 
   .si-bottom {
-    bottom: -60%;
+    bottom: -70%;
+    @apply text-black;
   }
 }
