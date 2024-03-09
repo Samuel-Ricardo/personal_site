@@ -15,19 +15,23 @@
   .wrapper {
     @apply flex;
     @apply flex-row;
+    @apply flex-wrap;
     @apply p-2;
     @apply w-full;
-    @apply h-[4.5rem];
+    @apply h-fit;
     @apply justify-start;
     @apply items-center;
     @apply gap-5;
 
     .testimony-icon {
-      @apply h-full;
+      @apply h-fit;
       img {
         @apply w-auto;
-        @apply h-full;
+        @apply h-16;
         @apply rounded-lg;
+        @include mobile {
+          @apply h-12;
+        }
       }
     }
   }
