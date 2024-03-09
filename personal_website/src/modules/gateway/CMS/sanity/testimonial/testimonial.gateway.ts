@@ -10,7 +10,7 @@ export class SanityTestimonialGateway
 {
   async findAll(): Promise<Testimonial[]> {
     const result = await this.client.fetch<any[]>(
-      `*[_type == "testimonial" ]{content,portfolio,person ->{ title, name, avatar, contacts, company->{name,logo,link} }}`,
+      `*[_type == "testimonial" ]{ position, content, portfolio, person ->{ title, name, avatar, contacts, company->{name,logo,link} }} | order(position asc)`,
     );
 
     await Promise.all(

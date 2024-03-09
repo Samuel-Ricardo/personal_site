@@ -1,3 +1,5 @@
+@import '../../../../../app/globals.scss';
+
 .static-carousel-container {
   @apply relative;
   @apply flex;
@@ -15,7 +17,11 @@
   @apply scrollbar-track-transparent;
   @apply scrollbar-thumb-secondary-soft;
 
-  @apply gap-24;
+  @apply gap-64;
+
+  @include mobile {
+    @apply gap-24;
+  }
 
   li {
     @apply mx-auto;

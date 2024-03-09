@@ -2,16 +2,19 @@
 
 .social-card {
   @apply relative;
-  @apply w-fit;
+  @apply w-auto;
+  @apply min-w-96;
   @apply h-auto;
+
+  @apply justify-center;
+  @apply items-center;
 
   .avatar {
     @apply w-auto;
-    @include mobile {
-      @apply min-w-[70vw];
-    }
+    @apply min-w-fit;
     @apply h-96;
     @apply rounded-lg;
+    @apply mx-auto;
   }
 
   @apply transition;
