@@ -57,9 +57,12 @@
     li {
       @apply w-fit;
       @apply h-fit;
-      @apply p-2;
       @apply rounded-lg;
-      @apply frosted-glass;
+
+      img {
+        @apply rounded-lg;
+        @apply w-14;
+      }
     }
   }
 }
