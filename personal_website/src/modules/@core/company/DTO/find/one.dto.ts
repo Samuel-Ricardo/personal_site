@@ -1,3 +1,3 @@
 export interface IFindOneComapanyDTO {
-  identifier: string;
+  id: string;
 }
