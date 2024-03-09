@@ -3,7 +3,7 @@ import { InfinityHorizontalCarouselContainer } from './container/container.compo
 import { InfinityHorizontalCarouselItem } from './item/item.component';
 import { MODULES } from '@/modules/app.factory';
 
-export const InfinityHorizontalCarousel = (
+export const InfinityHorizontalCarousel = async (
   props: ICarouselHorizontalInfinity,
 ) => {
   const animation = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.IN();
