@@ -4,7 +4,7 @@
   @apply w-full;
   @apply mt-2;
 
-  background-color: #2d313609;
+  background-color: var(--paragraph-bg-color);
 
   @apply p-4;
   @apply rounded-md;
