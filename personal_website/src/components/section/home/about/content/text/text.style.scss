@@ -4,6 +4,8 @@
   @apply flex;
   @apply flex-col;
 
+  @apply w-full;
+
   @apply p-10;
 
   @apply justify-start;
@@ -24,5 +26,11 @@
       @apply text-3xl;
       @apply text-center;
     }
+  }
+
+  .text {
+    background-color: var(--paragraph-bg-color);
+    @apply p-2;
+    @apply rounded-md;
   }
 }
