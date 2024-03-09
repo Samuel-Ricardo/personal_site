@@ -3,23 +3,7 @@
 #navbar .item-container li {
   @apply cursor-pointer;
 
-  .line {
-    @apply transition-all;
-    @apply duration-700;
-    @apply ease-in-out;
-
-    @apply h-[2px];
-    @apply w-0;
-    @apply bg-secondary;
-
-    box-shadow:
-      0 0 10px rgba($secondary-color, 0.5),
-      0 0 10px rgba($secondary-color, 0.5),
-      0 0 10px rgba($secondary-color, 0.5),
-      0 0 10px rgba($secondary-color, 0.5);
-  }
-
-  &:hover .line {
+  &:hover .neon-line {
     @apply w-full;
   }
 }
