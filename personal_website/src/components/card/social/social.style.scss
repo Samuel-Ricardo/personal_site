@@ -7,6 +7,9 @@
 
   .avatar {
     @apply w-auto;
+    @include mobile {
+      @apply min-w-[70vw];
+    }
     @apply h-96;
     @apply rounded-lg;
   }
