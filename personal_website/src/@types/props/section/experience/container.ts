@@ -1,5 +1,5 @@
-import { IExperience } from './item';
+import { IExperienceViewDTO } from '@/modules/@core/experience/DTO/view.dto';
 
 export interface IExperienceContainerProps {
-  itens: IExperience[];
+  itens: Promise<IExperienceViewDTO>[];
 }
