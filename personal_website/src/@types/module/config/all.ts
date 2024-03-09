@@ -1,3 +1,3 @@
-import { CONFIG } from '@/modules/@config/configs/global.config';
+import { CONFIG } from '@/modules/@config/configs/all.config';
 
 export type Config = typeof CONFIG;
