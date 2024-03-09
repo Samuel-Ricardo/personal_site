@@ -22,7 +22,7 @@ export const NavMenu = async () => {
           Journey
         </NavMenuItem>
 
-        <NavMenuItem li={{ id: 'My World' }} href="/my-world" index={5}>
+        <NavMenuItem li={{ id: 'My World' }} href="/my/world" index={5}>
           My World
         </NavMenuItem>
       </ul>
@@ -40,7 +40,7 @@ export const NavMenu = async () => {
         <NavMenuItem index={3} li={{ id: 'projects' }} href="#projects-section">
           Projects
         </NavMenuItem>
-        <NavMenuItem index={4} li={{ id: 'articles' }} href="#articles-section">
+        <NavMenuItem index={4} li={{ id: 'articles' }} href="#articles-section">
           articles
         </NavMenuItem>
         <NavMenuItem
@@ -68,6 +68,8 @@ export const NavMenu = async () => {
           Contact
         </NavMenuItem>
       </ul>
+
+      <div className="line" />
     </NavMenuContainer>
   );
 };
