@@ -1,12 +1,11 @@
 import { MotionProps } from 'framer-motion';
+import { InputHTMLAttributes } from 'react';
 
 export interface IInputProps {
-  id?: string;
-  required?: boolean;
-  label: string;
-  placeholder: string;
-  type: string;
-  hook?: any;
+  label?: string;
+  hook: () => any;
+  error?: string;
+  input: InputHTMLAttributes<HTMLInputElement>;
 }
 
 export interface IAnimatedInputProps extends IInputProps {
