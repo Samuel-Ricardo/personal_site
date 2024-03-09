@@ -3,8 +3,8 @@
 .social-card {
   .cover {
     position: absolute;
-    @apply max-w-full;
-    @apply max-h-full;
+    @apply w-full;
+    @apply h-full;
     @apply rounded-lg;
     @apply z-20;
     @apply frosted-glass-md;
@@ -38,6 +38,7 @@
         .role {
           @apply text-sm;
           @apply font-light;
+          @apply mx-2;
         }
       }
 
@@ -62,8 +63,12 @@
           @apply mx-auto;
 
           .icon,
+          .testimony-icon,
+          img,
           #github-logo {
-            @apply w-10;
+            @apply h-12;
+            @apply w-auto;
+            @apply rounded-lg;
           }
         }
       }
