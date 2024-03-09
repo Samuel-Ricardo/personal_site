@@ -2,12 +2,12 @@
 
 .social-card {
   @apply relative;
-  @apply w-[20rem];
+  @apply w-fit;
   @apply h-auto;
 
   .avatar {
-    @apply w-full;
-    @apply h-auto;
+    @apply w-auto;
+    @apply h-96;
     @apply rounded-lg;
   }
 
