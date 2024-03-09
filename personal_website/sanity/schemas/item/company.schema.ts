@@ -11,7 +11,7 @@ export const CompanySchema = {
     },
     {
       name: 'logo',
-      type: 'image',
+      type: 'string',
     },
     {
       name: 'link',
