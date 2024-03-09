@@ -8,5 +8,5 @@ export interface IAssembleContactDTO {
   form: {
     title: Promise<string | undefined>;
   };
-  contacts: Promise<IContactDTO[]>;
+  contacts: Promise<IContactDTO[] | undefined>;
 }
