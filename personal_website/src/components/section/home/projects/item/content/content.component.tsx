@@ -13,6 +13,7 @@ export const ProjectItemContent = async ({
   demo,
   repo,
   main_techs,
+  about,
 }: IProjectItemContentProps) => {
   const DOWN = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.DOWN()();
   const OUT = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.OUT()();
@@ -27,7 +28,7 @@ export const ProjectItemContent = async ({
       </MotionP>
 
       <ProjectItemTechs main_techs={main_techs} />
-      <ProjectItemFooter repo={repo} demo={demo} />
+      <ProjectItemFooter repo={repo} demo={demo} about={about} />
     </div>
   );
 };
