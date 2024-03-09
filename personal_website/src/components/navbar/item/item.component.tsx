@@ -8,7 +8,7 @@ export const NavbarItem = ({ children, href, li }: INavbarItemProps) => {
   return (
     <MotionLI {...li}>
       <Link href={href}>{children}</Link>
-      <div className="line" />
+      <div className="neon-line" />
     </MotionLI>
   );
 };
