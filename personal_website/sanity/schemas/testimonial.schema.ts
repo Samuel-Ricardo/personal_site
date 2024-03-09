@@ -10,8 +10,7 @@ export const TestimonialSchema = {
     },
     {
       name: 'content',
-      type: 'reference',
-      to: [{ type: 'tp_text' }],
+      type: 'string',
     },
     {
       name: 'portfolio',
