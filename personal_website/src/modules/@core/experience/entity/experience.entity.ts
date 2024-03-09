@@ -6,18 +6,18 @@ export class Experience {
   constructor(
     private readonly _title: string,
     private readonly _description: string,
-    private readonly _startDate: Date,
-    private readonly _endDate: Date,
     private readonly _context: 'work' | 'academic',
     private readonly _company: Company,
+    private readonly _startDate: Date,
+    private readonly _endDate?: Date,
   ) {}
 
   toDTO(): IExperienceDTO {
     return {
       title: this._title,
       description: { content: this._description },
-      startDate: this._startDate,
-      endDate: this._endDate,
+      startDate: this._startDate.toISOString(),
+      endDate: this._endDate?.toISOString(),
       context: this._context,
       company: this._company,
     };
@@ -32,7 +32,7 @@ export class Experience {
       },
       description: this._description,
       start: this._startDate,
-      end: this._endDate,
+      finish: this._endDate,
     };
   }
 
@@ -41,13 +41,16 @@ export class Experience {
   }
 
   static fromDTO(dto: IExperienceDTO): Experience {
+    const start = dto.startDate.split('-').map(Number);
+    const end = dto.endDate?.split('-').map(Number);
+
     return new Experience(
       dto.title,
       dto.description.content,
-      dto.startDate,
-      dto.endDate,
       dto.context,
       dto.company,
+      new Date(start[0], start[1], start[2]),
+      end && new Date(end[0], end[1], end[2]),
     );
   }
 
