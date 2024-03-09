@@ -8,7 +8,7 @@ export const ExperienceContainer = async ({
   return (
     <ul id="experience-section-container">
       {await Promise.all(
-        (await Promise.all(itens)).map(async item => (
+        (await Promise.all(itens)).map(async (item, i) => (
           <ExperienceItem data={item} key={item.company.name} />
         )),
       )}
