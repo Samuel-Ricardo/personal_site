@@ -1,9 +1,9 @@
-import { IPlatformDTO } from '../../platforms/DTO/platform.dto';
+import { IPlatform } from '@/@types/platform';
 
 export interface IArticlesViewDTO {
   title: string;
   scientific?: boolean;
   description: string;
-  platforms: IPlatformDTO[];
+  platforms: IPlatform[];
   image?: string;
 }
