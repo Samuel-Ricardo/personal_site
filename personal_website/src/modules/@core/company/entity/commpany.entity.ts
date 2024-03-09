@@ -19,8 +19,8 @@ export class Company {
     return new Company(companyDTO.name, companyDTO.logo, companyDTO.link);
   }
 
-  static fromDTOs(companyDTOs: ICompanyDTO[]): Company[] {
-    return companyDTOs.map(Company.fromDTO);
+  static fromDTOs(companyDTOs: ICompanyDTO[]): Promise<Company>[] {
+    return companyDTOs.map(async DTO => Company.fromDTO(DTO));
   }
 
   get name() {
