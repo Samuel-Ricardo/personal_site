@@ -11,7 +11,7 @@ export const PlatformSchema: SchemaTypeDefinition = {
     },
     {
       name: 'icon',
-      type: 'image',
+      type: 'string',
     },
     {
       name: 'link',
