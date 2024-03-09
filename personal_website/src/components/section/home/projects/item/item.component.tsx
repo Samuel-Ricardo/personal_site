@@ -4,7 +4,7 @@ import { ProjectItemContent } from './content/content.component';
 
 import './item.style.scss';
 
-export const ProjectItem = (props: IProjectItemProps) => {
+export const ProjectItem = async (props: IProjectItemProps) => {
   return (
     <li {...props} className="project-item">
       <ProjectItemPreview image={props.image} />
