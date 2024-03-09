@@ -1,6 +1,9 @@
 @import '../../../app/globals.scss';
 
 #sp-card {
+  @apply frosted-glass;
+  @apply rounded-lg;
+
   width: 100%;
   height: 100%;
   display: flex;
