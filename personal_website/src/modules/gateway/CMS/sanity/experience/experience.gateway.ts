@@ -12,7 +12,7 @@ export class SanityExperienceGateway
   async findAll(): Promise<Experience[]> {
     return Experience.fromDTOs(
       await this.client.fetch(
-        `*[_type == "experience"]{ context, title, description, startDate, endDate, company -> {link,name,logo} }`,
+        `*[_type == "experience" ]{ context, title, "description": *[_type == "tp_text" && identifier == ^.description]{content}[0], startDate, endDate, company -> {link,name,logo} } | order(startDate desc)`,
       ),
     );
   }
@@ -22,7 +22,7 @@ export class SanityExperienceGateway
   }: IFindExperienceByContextDTO): Promise<Experience[]> {
     return Experience.fromDTOs(
       await this.client.fetch(
-        `*[_type == "experience" && context == "${context}" ]{ context, title, description, startDate, endDate, company -> {link,name,logo} }`,
+        `*[_type == "experience" && context == "${context}" ]{ context, title, "description": *[_type == "tp_text" && identifier == ^.description]{content}[0], startDate, endDate, company -> {link,name,logo} } | order(startDate desc)`,
       ),
     );
   }
