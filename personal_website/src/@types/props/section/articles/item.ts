@@ -10,6 +10,7 @@ export interface IArticle {
 }
 
 export interface IArticleItemProps {
+  index?: number;
   html?: HTMLAttributes<HTMLLIElement>;
   key?: string;
   article: IArticle;
