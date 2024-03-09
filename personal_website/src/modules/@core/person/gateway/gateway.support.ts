@@ -1,4 +1,4 @@
-import { inject, injectable } from 'inversify';
+import { injectable } from 'inversify';
 import { type IPersonGateway } from './person.gateway';
 import { MODULE } from '@/modules/app.registry';
 import { injectGateway } from '@/modules/gateway/gateway.module';
