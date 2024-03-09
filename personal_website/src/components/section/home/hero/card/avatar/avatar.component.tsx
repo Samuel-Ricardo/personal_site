@@ -2,7 +2,7 @@ import Image from 'next/image';
 import './avatar.style.scss';
 import { IHeroAvatarProps } from '@/@types/props/section/hero/avatar';
 
-export const HeroAvatar = ({ src }: IHeroAvatarProps) => {
+export const HeroAvatar = async ({ src }: IHeroAvatarProps) => {
   return (
     <div className="avatar">
       <Image
