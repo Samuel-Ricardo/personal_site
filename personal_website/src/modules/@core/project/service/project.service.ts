@@ -16,6 +16,7 @@ export class ProjectService implements IProjectService {
   async findAll() {
     return await this.findAllProjectsUseCase.execute();
   }
+
   async findMainProjects() {
     return await this.findMainProjectsUseCase.execute();
   }

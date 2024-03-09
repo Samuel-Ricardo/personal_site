@@ -1,5 +1,13 @@
 @import '../../../../../../app/globals.scss';
 
+.left {
+  @apply mr-[48.65%];
+}
+
+.right {
+  @apply ml-[48.65%];
+}
+
 .experience-item-card {
   @apply flex;
   @apply flex-col;
@@ -8,6 +16,12 @@
   @apply frosted-glass;
   @apply p-4;
   @apply rounded-lg;
+
+  @include mobile {
+    @apply w-full;
+    @apply mr-0;
+    @apply ml-0;
+  }
 
   header {
     @apply flex;
@@ -44,6 +58,8 @@
       background-color: #2d313609;
       @apply p-2;
       @apply rounded-md;
+      @apply text-justify;
+      @apply text-sm;
     }
 
     button {

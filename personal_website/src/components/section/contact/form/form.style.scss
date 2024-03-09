@@ -7,6 +7,13 @@
   @apply my-20;
   @apply mx-10;
 
+  @include mobile {
+    @apply w-auto;
+    @apply mx-auto;
+    @apply my-5;
+    @apply flex-1;
+  }
+
   form {
     @apply w-full;
     @apply h-fit;

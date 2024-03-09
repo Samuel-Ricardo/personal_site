@@ -37,9 +37,9 @@ export const ContactContent = async ({
         {(await contacts)?.map((contact, i) => (
           <MotionLI
             key={contact.link}
-            {...IN({ transition: { delay: i * 0.5 } })}
+            {...IN({ transition: { delay: i * 0.5 }, animate: 'inactive' })}
           >
-            <Link href={contact.link}>
+            <Link href={contact.link} target="_blank">
               <Image
                 src={contact.icon}
                 alt={'Contact Icon'}

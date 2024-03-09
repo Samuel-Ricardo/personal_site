@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+
 import { type Environment } from '@/@types/module/config/env';
 import { type EmailJS } from '@/@types/module/engine/mailer/emailjs';
 import { MODULE } from '@/modules/app.registry';

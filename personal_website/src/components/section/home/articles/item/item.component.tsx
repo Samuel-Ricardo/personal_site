@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { Platform } from '@/components/platform/item/item.component';
 import { MODULES } from '@/modules/app.factory';
 import { MotionLI } from '@/components/motion/li.component';
-//import { useEffect, useMemo, useRef } from 'react';
+import { MouseBall } from '@/components/canvas/mouse/ball.component';
+import React from 'react';
 
 export const ArticleItem = async ({
   index,
@@ -40,6 +41,7 @@ export const ArticleItem = async ({
       key={key}
       className="article-section-item"
     >
+      <MouseBall />
       <h1 className="title">{article.title}</h1>
 
       {article.image && (

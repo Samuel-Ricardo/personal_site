@@ -1,16 +1,10 @@
 import { IInputProps } from '@/@types/props/form/input';
 
-export const Input = async ({
-  label,
-  id,
-  type,
-  hook,
-  required,
-}: IInputProps) => {
+export const Input = async ({}: IInputProps) => {
   return (
     <div>
       <label></label>
-      <input required={required} />
+      <input />
       <label></label>
     </div>
   );

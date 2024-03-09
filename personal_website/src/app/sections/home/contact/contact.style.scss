@@ -2,19 +2,28 @@
 
 #contact-section {
   @apply section;
-
   h1 {
+    @apply mt-8;
     @apply text-4xl;
     @apply font-bold;
     @apply text-center;
     @apply mb-4;
     @apply mx-auto;
+
+    @include mobile {
+      @apply text-3xl;
+      @apply mx-1;
+    }
   }
 
   h2 {
     @apply text-2xl;
     @apply text-center;
     @apply mx-auto;
+    @include mobile {
+      @apply text-xl;
+      @apply mx-1;
+    }
   }
 
   .content-container {

@@ -2,10 +2,16 @@ import { IPlatformProps } from '@/@types/platform';
 
 import './item.style.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
-export const Platform = ({ html, platform }: IPlatformProps) => {
+export const Platform = async ({ html, platform }: IPlatformProps) => {
   return (
-    <div {...html} className="platform-card">
+    <Link
+      {...html}
+      className="platform-card"
+      href={platform.link}
+      target="_blank"
+    >
       {platform.icon && (
         <Image
           src={platform.icon}
@@ -18,6 +24,6 @@ export const Platform = ({ html, platform }: IPlatformProps) => {
       )}
 
       <p>{platform.name}</p>
-    </div>
+    </Link>
   );
 };

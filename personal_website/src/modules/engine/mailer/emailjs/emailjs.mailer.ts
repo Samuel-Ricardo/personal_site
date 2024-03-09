@@ -9,5 +9,5 @@ export const SETUP_EMAILJS = ({ container }: interfaces.Context) => {
 
   EMAILJS.init(CONFIG.ENV.MAILER.KEY.PUBLIC);
 
-  return { EMAILJS };
+  return EMAILJS;
 };

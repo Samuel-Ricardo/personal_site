@@ -5,7 +5,7 @@ import { HeroCardContentAbout } from '../about/about.component';
 import { HeroCardContentFooter } from '../footer/footer.component';
 import { IHeroContentProps } from '@/@types/props/section/hero/content';
 
-export const HeroCardContentContainer = ({
+export const HeroCardContentContainer = async ({
   children,
   subtitle,
   title,
