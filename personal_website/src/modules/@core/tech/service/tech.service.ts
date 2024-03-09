@@ -10,6 +10,7 @@ export class TechService implements ITechService {
   constructor(
     @inject(MODULE.TECH.USE_CASE.FIND.ALL)
     protected readonly _findAll: FindAllTechsUseCase,
+    @inject(MODULE.TECH.USE_CASE.FIND.BY.CONTEXT)
     protected readonly _findByContext: FindTechByContextUseCase,
   ) {}
 
