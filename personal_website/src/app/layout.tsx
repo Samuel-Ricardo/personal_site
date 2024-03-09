@@ -4,6 +4,7 @@ import { ThemeWrapper } from '@/components/wrapper/theme.wrapper';
 import { Navbar } from '@/components/navbar/navbar.component';
 import { MODULES } from '@/modules/app.factory';
 import { Social } from '@/components/social/social.component';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,6 +23,7 @@ export default function RootLayout({
           <Navbar />
           <Social />
           {children}
+          <Toaster />
         </ThemeWrapper>
       </body>
     </html>
