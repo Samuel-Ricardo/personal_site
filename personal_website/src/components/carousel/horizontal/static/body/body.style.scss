@@ -2,15 +2,18 @@
   @apply relative;
   @apply flex;
   @apply flex-row;
+  @apply mb-8;
   @apply w-screen;
   @apply h-fit;
-  @apply px-24;
-  @apply py-4;
+  @apply px-14;
+  @apply py-8;
 
   @apply overflow-x-scroll;
   @apply scroll-smooth;
 
-  scrollbar-width: 2px;
+  @apply scrollbar-thin;
+  @apply scrollbar-track-transparent;
+  @apply scrollbar-thumb-secondary-soft;
 
   @apply gap-24;
 
