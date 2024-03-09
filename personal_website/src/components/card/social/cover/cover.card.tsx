@@ -23,9 +23,10 @@ export const SocialCardCover = async ({
                   <Image
                     src={contact.icon}
                     alt={'Testimony Contact'}
-                    width={24}
-                    height={24}
-                    className="testmony-icon"
+                    width={400}
+                    height={400}
+                    quality={100}
+                    className="testimony-icon"
                   />
                 </Link>
               </li>

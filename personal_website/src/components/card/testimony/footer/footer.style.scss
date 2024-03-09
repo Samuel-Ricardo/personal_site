@@ -17,14 +17,18 @@
     @apply flex-row;
     @apply p-2;
     @apply w-full;
-    @apply max-h-10;
+    @apply h-[4.5rem];
     @apply justify-start;
     @apply items-center;
     @apply gap-5;
 
-    .icon {
-      @apply w-auto;
-      @apply max-h-12;
+    .testimony-icon {
+      @apply h-full;
+      img {
+        @apply w-auto;
+        @apply h-full;
+        @apply rounded-lg;
+      }
     }
   }
 }

@@ -2,10 +2,13 @@
 
 .social-card .card-footer {
   @apply relative;
+  @apply flex;
+  @apply flex-wrap;
   @apply w-full;
   @apply h-fit;
   @apply py-2;
   @apply px-4;
+  @apply mt-2;
   @apply rounded-b-lg;
   @apply frosted-glass-lg;
 

@@ -27,14 +27,15 @@ export const TestimonyFooter = ({
               transition: { delay: (i + 1) * 0.35 },
             })}
             key={contact.link}
-            className=""
+            className="testimony-icon"
           >
             <Link href={contact.link}>
               <Image
                 src={contact.icon}
                 alt={'Testimony Contact'}
-                width={24}
-                height={24}
+                width={150}
+                height={150}
+                quality={100}
               />
             </Link>
           </MotionDiv>
