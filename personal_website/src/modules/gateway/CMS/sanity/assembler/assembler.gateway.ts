@@ -26,7 +26,7 @@ export class SanityAssemblerGateway
 
   async findImage(DTO: IAssemblerFindDTO) {
     const result = await this.client.fetch(
-      `*[_type == "image" && identifier == "${DTO.identifier}" ]{image}`,
+      `*[_type == "app_image" && identifier == "${DTO.identifier}" ]{image}`,
     );
 
     return result[0]
