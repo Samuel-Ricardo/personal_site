@@ -6,6 +6,6 @@ export interface IExperienceViewDTO {
   };
   description: string;
   start: Date;
-  end?: Date;
+  finish?: Date;
   left?: boolean;
 }
