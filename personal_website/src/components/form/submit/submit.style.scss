@@ -1,0 +1,30 @@
+.submit-button {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-center;
+  @apply text-center;
+  @apply gap-2;
+  @apply w-fit;
+  @apply h-fit;
+  @apply p-2;
+  @apply transition-all;
+  @apply border-[1px];
+  @apply border-black;
+  @apply rounded-sm;
+  @apply transition-all;
+
+  @apply cursor-pointer;
+
+  input {
+    @apply cursor-pointer;
+  }
+
+  &:hover {
+    cursor: pointer;
+    @apply rounded-md;
+
+    @apply bg-black;
+    @apply text-white;
+  }
+}
