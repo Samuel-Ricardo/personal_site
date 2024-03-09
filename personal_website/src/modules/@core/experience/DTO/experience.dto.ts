@@ -2,9 +2,9 @@ import { Company } from '../../company/entity/commpany.entity';
 
 export interface IExperienceDTO {
   title: string;
-  description: Promise<string>;
-  startDate: Date;
-  endDate: Date;
+  description: { content: string };
+  startDate: string;
+  endDate?: string;
   context: 'work' | 'academic';
-  company: Promise<Company>;
+  company: Company;
 }

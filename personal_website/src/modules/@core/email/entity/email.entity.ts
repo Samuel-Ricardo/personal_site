@@ -1,3 +1,5 @@
+import { IEmailDTO } from '../DTO/email.dto';
+
 export class Email {
   constructor(
     protected readonly _text: string,
@@ -11,7 +13,7 @@ export class Email {
     };
   }
 
-  static fromDTO(dto: Email) {
+  static fromDTO(dto: IEmailDTO) {
     return new Email(dto.text, dto.status);
   }
 
