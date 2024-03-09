@@ -4,6 +4,10 @@ export const TestimonialSchema = {
   type: 'document',
   fields: [
     {
+      name: 'position',
+      type: 'number',
+    },
+    {
       name: 'person',
       type: 'reference',
       to: [{ type: 'person' }],
