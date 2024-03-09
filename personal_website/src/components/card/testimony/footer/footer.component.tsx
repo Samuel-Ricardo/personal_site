@@ -26,7 +26,7 @@ export const TestimonyFooter = ({
               animate: 'inactive',
               transition: { delay: (i + 1) * 0.35 },
             })}
-            key={contact.link}
+            key={contact.icon + contact.link}
             className="testimony-icon"
           >
             <Link href={contact.link}>
