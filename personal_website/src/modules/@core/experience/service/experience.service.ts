@@ -4,7 +4,6 @@ import { FindAllExperiencesUseCase } from '../use_case/find/all.use_case';
 import { FindExperienceByContextUseCase } from '../use_case/find/by/context.use_case';
 import { MODULE } from '@/modules/app.registry';
 import { IFindExperienceByContextDTO } from '../DTO/find/by/context.dto';
-import { Experience } from '../entity/experience.entity';
 
 @injectable()
 export class ExperienceService implements IExperienceService {
