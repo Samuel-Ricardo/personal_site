@@ -11,7 +11,7 @@ import { Techs } from './sections/home/techs/techs.section';
 import { Testimonials } from './sections/home/testimonials/testimonials.section';
 import { WorkWithSection } from './sections/home/work_with/works.section';
 
-export default function Home() {
+export default async function Home() {
   return (
     <div
       id="home-page"
