@@ -2,18 +2,46 @@
 
 #nav-menu {
   @apply fixed;
-  @apply frosted-glass-lg;
+  @apply flex;
+  @apply flex-col;
+
+  @apply frosted-glass;
+
+  background-color: rgba($tertiary-color, 0.95);
+
+  @apply p-2;
 
   @apply w-fit;
   @apply h-fit;
-
-  @apply px-10;
-  @apply py-3;
-
-  @apply gap-6;
 
   @apply rounded-lg;
 
   top: 3em;
   right: 1em;
+
+  ul {
+    @apply px-5;
+
+    @apply w-fit;
+    @apply h-fit;
+
+    li {
+      @apply my-1;
+    }
+  }
+
+  .mobile {
+    @apply hidden;
+    @include mobile {
+      @apply flex;
+      @apply flex-col;
+    }
+  }
+
+  .line {
+    @apply my-2;
+    @apply w-full;
+    @apply h-px;
+    @apply bg-black;
+  }
 }
