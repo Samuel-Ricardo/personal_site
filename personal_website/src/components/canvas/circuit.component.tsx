@@ -33,7 +33,7 @@ export const Circuit = ({ className }: HTMLAttributes<HTMLDivElement>) => {
 
     const width = canvasRef.current?.width || 1;
 
-    const points = generate({ space, quantity: (width / 100) * 6 });
+    const points = generate({ space, quantity: (width / 100) * 5 });
 
     canvasRef.current?.addEventListener('mousemove', e => {
       mouse.x = e.clientX;
