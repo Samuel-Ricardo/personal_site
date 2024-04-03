@@ -46,7 +46,9 @@ export const Navbar = () => {
         >
           My World
         </NavbarItem>
-        <Menu />
+        <li>
+          <Menu />
+        </li>
       </NavbarItemContainer>
       <Menu />
     </div>
