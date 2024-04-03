@@ -18,8 +18,7 @@ export const TechsGalaxyItem = async ({
   });
   return (
     <MotionLI
-      id="tech-item"
-      className={`frosted-glass-lg`}
+      className={`frosted-glass-lg  tech-item`}
       {...animation.parent}
       {...slide}
     >
