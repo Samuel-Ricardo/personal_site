@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const NavbarItem = ({ children, href, li }: INavbarItemProps) => {
   return (
-    <MotionLI {...li}>
+    <MotionLI {...li} className="item">
       <Link href={href}>{children}</Link>
       <div className="neon-line" />
     </MotionLI>

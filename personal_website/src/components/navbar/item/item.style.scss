@@ -1,6 +1,6 @@
 @import '../../../app/globals.scss';
 
-#navbar .item-container li {
+#navbar .item-container .item {
   @apply cursor-pointer;
 
   &:hover .neon-line {
