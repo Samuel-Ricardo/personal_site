@@ -34,7 +34,11 @@ export const Social = () => {
 
   return (
     <MotionDiv id="social-floating-button">
-      <button className="social-icon" onClick={handleClick}>
+      <button
+        className="social-icon"
+        onClick={handleClick}
+        aria-label="contact button"
+      >
         {active ? <CloseIcon /> : <ShareIcon />}
       </button>
 
