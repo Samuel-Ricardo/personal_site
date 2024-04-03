@@ -7,10 +7,10 @@ export const ProjectsContainer = async (props: IProjectsContainerProps) => {
   const { items } = props;
 
   return (
-    <div id="projects-container">
+    <ul id="projects-container">
       {items.map(item => (
         <ProjectItem key={item.title} {...item} />
       ))}
-    </div>
+    </ul>
   );
 };
