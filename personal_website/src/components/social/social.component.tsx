@@ -34,12 +34,20 @@ export const Social = () => {
 
   return (
     <MotionDiv id="social-floating-button">
-      <button className="social-icon" onClick={handleClick}>
+      <button
+        className="social-icon"
+        onClick={handleClick}
+        aria-label="floating contact button"
+      >
         {active ? <CloseIcon /> : <ShareIcon />}
       </button>
 
       <MotionDiv className={` social-item si-left`} {...ANIMATION.LEFT}>
-        <Link href="https://github.com/Samuel-Ricardo" target="_blank">
+        <Link
+          href="https://github.com/Samuel-Ricardo"
+          target="_blank"
+          aria-label="go to my github profile"
+        >
           <GithubIcon />
         </Link>
       </MotionDiv>
@@ -48,6 +56,7 @@ export const Social = () => {
         <Link
           href="https://www.linkedin.com/in/samuel-ricardo/"
           target="_blank"
+          aria-label="go to my linkedin profile"
         >
           <LinkedInIcon />
         </Link>
@@ -57,6 +66,7 @@ export const Social = () => {
         <Link
           href="https://www.freelancer.com/u/SamuelRiccardo"
           target="_blank"
+          aria-label="go to my freelancer profile"
         >
           <FreelancerIcon />
         </Link>
@@ -66,6 +76,7 @@ export const Social = () => {
         <Link
           href="https://www.hackerrank.com/profile/samuelricardoof1"
           target="_blank"
+          aria-label="go to my hackerrank profile"
         >
           <HackerRankIcon />
         </Link>
