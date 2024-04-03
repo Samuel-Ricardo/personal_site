@@ -12,7 +12,10 @@ export const NavigateButton = (
   }>,
 ) => {
   return (
-    <Button {...props.container}>
+    <Button
+      {...props.container}
+      aria-label={props.container?.['aria-label'] || 'Navigation Button'}
+    >
       <Link href="" {...props.link}>
         {props.children}
       </Link>

@@ -2,5 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 #git pull origin && cd ./personal_website && npm run build:clean
-
 cd ./personal_website && npm run build:clean

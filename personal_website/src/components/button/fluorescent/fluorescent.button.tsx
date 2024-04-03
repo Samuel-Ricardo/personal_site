@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 export const FluorescentButton = ({ children }: PropsWithChildren) => {
   return (
     <div className="flourescent-container">
-      <button>{children}</button>
+      <button aria-label="fluorescent design button">{children}</button>
     </div>
   );
 };
