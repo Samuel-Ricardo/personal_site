@@ -18,6 +18,18 @@
   @apply h-fit;
 }
 
+.page-container {
+  @apply flex;
+  @apply flex-col;
+  @apply w-screen;
+  @apply min-h-screen;
+  @apply h-fit;
+  @apply overflow-x-hidden;
+  @apply bg-primary-foreground;
+  @apply px-5;
+  @apply py-16;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
