@@ -1,0 +1,11 @@
+@import '../../../app/globals.scss';
+
+.swiper-slide {
+  //  @apply bg-white;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-center;
+  @apply w-full;
+  @apply h-fit;
+}
