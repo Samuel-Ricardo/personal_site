@@ -1,0 +1,41 @@
+@import '../../app/globals.scss';
+
+.swiper {
+  //  @apply bg-teal-300;
+  @apply w-full;
+  @apply min-h-36;
+  @apply h-fit;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-4;
+  @apply overflow-hidden;
+}
+
+.swiper-slide {
+  //  @apply bg-white;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-center;
+  @apply w-full;
+  @apply h-fit;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply opacity-0;
+}
+
+:root {
+  --swiper-pagination-color: #00eaff;
+  --swiper-pagination-bullet-inactive-color: #e7e7e7;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  //  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
+.swiper-pagination-bullet-active {
+  box-shadow: 0px 0px 8px #00eaff;
+}
