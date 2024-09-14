@@ -1,5 +1,6 @@
 import { Tech } from '../../tech/entity/tech.entity';
 import { IProjectDTO } from '../DTO/project.dto';
+import { IProjectSyncDTO } from '../DTO/sync.dto';
 import { IProjectViewDTO } from '../DTO/view.dto';
 
 export class Project {
@@ -13,6 +14,22 @@ export class Project {
     private _link?: string,
     private _main?: boolean,
   ) {}
+
+  async sync(): Promise<IProjectSyncDTO> {
+    return {
+      title: this._title,
+      preview: this._preview,
+      description: await this._description,
+      repository: this._repository,
+      demo: this._demo,
+      link: this._link,
+      techs: await Promise.all(this._techs),
+      image: this._preview,
+      main_techs: (await Promise.all(this._techs)).map(tech => tech.toView()),
+      main: this._main,
+      repos: this._repository,
+    };
+  }
 
   async toView(): Promise<IProjectViewDTO> {
     return {
