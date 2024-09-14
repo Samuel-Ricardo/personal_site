@@ -16,7 +16,6 @@ import {
   EffectFade,
 } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { SliderItem } from './item/item.component';
 
 export const Slider = ({ children }: any) => {
   return (
@@ -40,7 +39,7 @@ export const Slider = ({ children }: any) => {
       fadeEffect={{ crossFade: true }}
     >
       {children.map((child: any) => (
-        <SliderItem key={child?.toString()}>{child}</SliderItem>
+        <SwiperSlide key={child?.toString()}>{child}</SwiperSlide>
       ))}
     </Swiper>
   );

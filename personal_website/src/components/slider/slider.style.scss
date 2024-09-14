@@ -21,6 +21,11 @@
   @apply justify-center;
   @apply w-full;
   @apply h-fit;
+
+  @apply p-16;
+  @include mobile {
+    @apply p-8;
+  }
 }
 
 .swiper-button-prev,
