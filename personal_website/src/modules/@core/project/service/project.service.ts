@@ -20,4 +20,12 @@ export class ProjectService implements IProjectService {
   async findMainProjects() {
     return await this.findMainProjectsUseCase.execute();
   }
+
+  async findAllSync() {
+    const result = await Promise.all(
+      await this.findAllProjectsUseCase.execute(),
+    );
+
+    return await Promise.all(result.map(r => r.sync()));
+  }
 }
