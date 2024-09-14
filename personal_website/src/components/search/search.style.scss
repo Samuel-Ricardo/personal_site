@@ -1,0 +1,60 @@
+@import '../../app/globals.scss';
+@import '../button/button.style.scss';
+
+.search-container {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply w-full;
+  @apply h-fit;
+  @apply mt-10;
+  @apply px-4;
+  @apply p-2;
+
+  form {
+    @apply flex;
+    @apply flex-row;
+    @apply w-full;
+
+    @apply gap-5;
+    @aaply p-4;
+
+    .input-container {
+      @apply flex;
+      @apply flex-col;
+      @apply items-center;
+      @apply justify-center;
+      @apply w-full;
+
+      &:focus-within {
+        .neon-line {
+          @apply w-[98%];
+        }
+      }
+
+      input {
+        @apply w-full;
+        @apply rounded-xl;
+        @apply p-2;
+        @apply mx-4;
+        @apply text-black;
+        @apply text-center;
+        @apply bg-transparent;
+
+        @apply frosted-glass-md;
+
+        @apply transition;
+        @apply duration-300;
+        @apply ease-in-out;
+
+        &:focus {
+          @apply outline-none;
+        }
+      }
+    }
+
+    button {
+      @apply button;
+    }
+  }
+}
