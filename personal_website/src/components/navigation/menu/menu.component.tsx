@@ -31,40 +31,48 @@ export const NavMenu = async () => {
         <NavMenuItem index={0} li={{ id: 'home' }} href="/">
           Hero
         </NavMenuItem>
-        <NavMenuItem index={1} li={{ id: 'about' }} href="#about-me">
+        <NavMenuItem index={1} li={{ id: 'about' }} href="/#about-me">
           About
         </NavMenuItem>
-        <NavMenuItem index={2} li={{ id: 'techs' }} href="#techs-section">
+        <NavMenuItem index={2} li={{ id: 'techs' }} href="/#techs-section">
           Techs
         </NavMenuItem>
-        <NavMenuItem index={3} li={{ id: 'projects' }} href="#projects-section">
+        <NavMenuItem
+          index={3}
+          li={{ id: 'projects' }}
+          href="/#projects-section"
+        >
           Projects
         </NavMenuItem>
-        <NavMenuItem index={4} li={{ id: 'articles' }} href="#articles-section">
+        <NavMenuItem
+          index={4}
+          li={{ id: 'articles' }}
+          href="/#articles-section"
+        >
           articles
         </NavMenuItem>
         <NavMenuItem
           index={5}
           li={{ id: 'experience' }}
-          href="#experience-section"
+          href="/#experience-section"
         >
           Experience
         </NavMenuItem>
         <NavMenuItem
           index={6}
           li={{ id: 'academic-record' }}
-          href="#academic-section"
+          href="/#academic-section"
         >
           Academic Record
         </NavMenuItem>
         <NavMenuItem
           index={7}
           li={{ id: 'testimonials' }}
-          href="#testimonials-section"
+          href="/#testimonials-section"
         >
           Testimonials
         </NavMenuItem>
-        <NavMenuItem index={8} li={{ id: 'contact' }} href="#contact-section">
+        <NavMenuItem index={8} li={{ id: 'contact' }} href="/#contact-section">
           Contact
         </NavMenuItem>
       </ul>
