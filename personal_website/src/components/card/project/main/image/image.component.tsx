@@ -2,7 +2,9 @@ import Image from 'next/image';
 import './image.style.scss';
 import { IMainProjectCardImageProps } from '@/@types/props/card/project/main/image.props';
 
-export const MainProjectCardImage = ({ url }: IMainProjectCardImageProps) => {
+export const MainProjectCardImage = async ({
+  url,
+}: IMainProjectCardImageProps) => {
   return (
     <div className="main-project-card-image">
       <Image

@@ -1,0 +1,32 @@
+@import '../../../../../app/globals.scss';
+
+.main-project-card-footer {
+  @apply flex;
+  @apply items-end;
+  @apply justify-between;
+  @apply w-full;
+  @apply h-fit;
+  @apply mt-5;
+
+  @include mobile {
+    @apply mt-2;
+    @apply justify-center;
+  }
+
+  #techs-galaxy {
+    ul {
+      @apply grid;
+      @apply grid-cols-6;
+      @apply gap-5;
+
+      @include mobile {
+        @apply grid-cols-3;
+        @apply gap-4;
+      }
+
+      #tech-item-img-container {
+        @apply w-12;
+      }
+    }
+  }
+}

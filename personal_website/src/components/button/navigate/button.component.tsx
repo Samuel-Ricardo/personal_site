@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import { Button } from '../button.component';
 
-export const NavigateButton = (
+export const NavigateButton = async (
   props: PropsWithChildren<{
     link?: HTMLAttributes<HTMLAnchorElement> & {
       href?: string;
