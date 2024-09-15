@@ -1,0 +1,57 @@
+@import '../../../../app/globals.scss';
+@import '../../../line/horizontal/horizontal.style.scss';
+
+.project-card {
+  @apply flex;
+  @apply flex-col;
+  @apply w-72;
+  @apply h-fit;
+  @apply frosted-glass-md;
+  @apply rounded-lg;
+  @apply p-4;
+
+  .main-project-card-image {
+    @apply p-0;
+    @apply w-full;
+    @apply h-fit;
+    @apply pb-2;
+  }
+
+  .content-container {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-2;
+    @apply p-2;
+    @apply max-h-56;
+
+    h1 {
+      @apply text-xl;
+    }
+
+    p {
+      @apply text-ellipsis;
+      @apply overflow-hidden;
+      @apply h-full;
+    }
+  }
+
+  .footer-container {
+    @apply flex;
+    @apply h-full;
+    @apply items-end;
+    @apply justify-center;
+
+    #techs-galaxy {
+      ul {
+        @apply flex;
+        @apply flex-wrap;
+        @apply gap-2;
+      }
+
+      @apply p-2;
+    }
+    #tech-item-img-container {
+      @apply w-10;
+    }
+  }
+}
