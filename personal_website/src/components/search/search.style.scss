@@ -32,6 +32,10 @@
         }
       }
 
+      .neon-line {
+        @apply z-50;
+      }
+
       input {
         @apply w-full;
         @apply rounded-xl;
@@ -41,7 +45,7 @@
         @apply text-center;
         @apply bg-transparent;
 
-        @apply frosted-glass-md;
+        @apply frosted-glass-lg;
 
         @apply transition;
         @apply duration-300;
@@ -55,6 +59,7 @@
 
     button {
       @apply button;
+      @apply z-50;
     }
   }
 }
