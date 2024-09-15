@@ -6,52 +6,85 @@
   @apply flex-col;
   @apply w-72;
   @apply h-fit;
-  @apply frosted-glass-md;
-  @apply rounded-lg;
-  @apply p-4;
+  @apply justify-center;
+  @apply items-center;
 
-  .main-project-card-image {
-    @apply p-0;
-    @apply w-full;
-    @apply h-fit;
-    @apply pb-2;
+  @apply transition;
+  @apply duration-500;
+  @apply ease-in-out;
+
+  &:hover {
+    @apply cursor-pointer;
+
+    .link-container {
+      @apply transition;
+      @apply duration-500;
+      @apply ease-in-out;
+
+      @apply -translate-y-4;
+      @apply scale-x-110;
+
+      @apply shadow-2xl;
+      @apply shadow-slate-500;
+    }
+
+    .neon-line {
+      @apply mt-4;
+      @apply w-full;
+    }
   }
-
-  .content-container {
+  .link-container {
     @apply flex;
     @apply flex-col;
-    @apply gap-2;
-    @apply p-2;
-    @apply max-h-56;
+    @apply w-72;
+    @apply h-fit;
+    @apply frosted-glass-md;
+    @apply rounded-lg;
+    @apply p-4;
 
-    h1 {
-      @apply text-xl;
+    .main-project-card-image {
+      @apply p-0;
+      @apply w-full;
+      @apply h-fit;
+      @apply pb-2;
     }
 
-    p {
-      @apply text-ellipsis;
-      @apply overflow-hidden;
-      @apply h-full;
-    }
-  }
+    .content-container {
+      @apply flex;
+      @apply flex-col;
+      @apply gap-2;
+      @apply p-2;
+      @apply max-h-56;
 
-  .footer-container {
-    @apply flex;
-    @apply h-full;
-    @apply items-end;
-    @apply justify-center;
-
-    #techs-galaxy {
-      ul {
-        @apply flex;
-        @apply flex-wrap;
-        @apply gap-2;
+      h1 {
+        @apply text-xl;
       }
 
-      @apply p-2;
+      p {
+        @apply text-ellipsis;
+        @apply overflow-hidden;
+        @apply h-full;
+      }
     }
-    #tech-item-img-container {
-      @apply w-10;
+
+    .footer-container {
+      @apply flex;
+      @apply h-full;
+      @apply items-end;
+      @apply justify-center;
+
+      #techs-galaxy {
+        ul {
+          @apply flex;
+          @apply flex-wrap;
+          @apply gap-2;
+        }
+
+        @apply p-2;
+      }
+      #tech-item-img-container {
+        @apply w-10;
+      }
     }
   }
 }
