@@ -2,4 +2,12 @@
 
 .projects-page-container {
   @apply -mt-8;
+
+  .search-result-container {
+    @apply min-h-screen;
+
+    @include mobile {
+      @apply min-h-fit;
+    }
+  }
 }

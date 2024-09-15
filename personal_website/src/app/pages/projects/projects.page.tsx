@@ -5,6 +5,7 @@ import { MainProjectCard } from '@/components/card/project/main/card.component';
 import SearchBar from '@/components/search/search.component';
 import { Slider } from '@/components/slider/slider.component';
 import { MODULES } from '@/modules/app.factory';
+import { ProjectsBackground } from '@/assets/images/background/project/projects.background';
 
 export const ProjectsPage = async ({ search }: { search: string }) => {
   const projects = await MODULES.PROJECT.CONTROLLER.MAIN().findAllSync();
@@ -24,6 +25,7 @@ export const ProjectsPage = async ({ search }: { search: string }) => {
 
   return (
     <div className="projects-page-container">
+      <ProjectsBackground />
       <Slider>
         {main.map(async project => (
           <MainProjectCard key={project.title} data={project} />
