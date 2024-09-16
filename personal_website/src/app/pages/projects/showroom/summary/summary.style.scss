@@ -1,0 +1,33 @@
+@import '../../../../../app/globals.scss';
+
+.project-summary-container {
+  @apply flex;
+  @apply flex-1;
+  @apply justify-between;
+  @apply h-full;
+  @apply w-[50vw];
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+
+  @apply pr-8;
+  @apply py-8;
+
+  @include mobile {
+    @apply w-full;
+    @apply min-h-fit;
+    @apply p-2;
+  }
+
+  .project-summary {
+    @apply text-justify;
+    @apply text-slate-800;
+    @apply p-2;
+    @apply frosted-glass-lg;
+    @apply rounded-lg;
+
+    @include mobile {
+      @apply text-sm;
+    }
+  }
+}
