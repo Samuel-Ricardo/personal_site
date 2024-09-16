@@ -2,6 +2,7 @@
 
 .projects-page-container {
   @apply -mt-8;
+  @apply max-w-[100vw];
 
   .search-result-container {
     @apply min-h-screen;
