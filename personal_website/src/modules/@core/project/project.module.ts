@@ -4,6 +4,7 @@ import { FindAllProjectsUseCase } from './use_case/find/all.use_case';
 import { FindMainProjectsUseCase } from './use_case/find/main.use_case';
 import { ProjectService } from './service/project.service';
 import { ProjectController } from './controller/project.controller';
+import { FindOneProjectByTitleUseCase } from './use_case/find/by/title.use_case';
 
 const MODULE = new Container({
   defaultScope: 'Singleton',
@@ -17,6 +18,10 @@ PROJECT_MODULE.bind(PROJECT_REGISTRY.USE_CASE.FIND.ALL).to(
 );
 PROJECT_MODULE.bind(PROJECT_REGISTRY.USE_CASE.FIND.MAIN).to(
   FindMainProjectsUseCase,
+);
+
+PROJECT_MODULE.bind(PROJECT_REGISTRY.USE_CASE.FIND.BY.TITLE).to(
+  FindOneProjectByTitleUseCase,
 );
 
 PROJECT_MODULE.bind(PROJECT_REGISTRY.SERVICE.MAIN).to(ProjectService);

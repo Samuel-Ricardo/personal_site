@@ -3,6 +3,7 @@ import { SanitySupport } from '../sanity.gateway';
 import { injectable } from 'inversify';
 import { Project } from '@/modules/@core/project/entity/project.entity';
 import { Tech } from '@/modules/@core/tech/entity/tech.entity';
+import { IFindProjectByTitleDTO } from '@/modules/@core/project/DTO/find/by/title.dto';
 
 @injectable()
 export class SanityProjectGateway
@@ -80,5 +81,46 @@ export class SanityProjectGateway
     });
 
     return Project.fromAsyncDTOs(projects);
+  }
+
+  async findOneByTitle({ title }: IFindProjectByTitleDTO) {
+    const result = await this.client.fetch(
+      `*[_type == "project" && title == $title] {
+      main,
+      title,
+      preview,
+      description,
+      repository,
+      demo,
+      link, 
+      'techs': techs[]{identifier, star}
+    }[0]`,
+      { title },
+    );
+
+    if (!result) {
+      return null;
+    }
+
+    result.preview = this.imageBuilder.image(result.preview).url();
+
+    result.description = await this.client
+      .fetch(
+        `*[_type == "tp_text" && identifier == "${result.description}"] {content}`,
+      )
+      .then(data => data[0]?.content || '');
+
+    result.techs = await Promise.all(
+      result.techs.map(async tech => {
+        const techDTO = await this.client.fetch(
+          `*[_type == "tech" && identifier == "${tech.identifier}"]{
+          name, icon, description, preview, identifier, context
+        }`,
+        );
+        return Tech.fromDTO(techDTO[0]);
+      }),
+    );
+
+    return Project.fromDTO(result);
   }
 }

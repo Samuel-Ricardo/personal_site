@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify';
 import { type IProjectService } from '../service/service.interface';
 import { IProjectModule } from '../project.interface';
 import { MODULE } from '@/modules/app.registry';
+import { IFindProjectByTitleDTO } from '../DTO/find/by/title.dto';
 
 @injectable()
 export class ProjectController implements IProjectModule {
@@ -20,5 +21,9 @@ export class ProjectController implements IProjectModule {
 
   async findMainProjects() {
     return await this.service.findMainProjects();
+  }
+
+  async findOneProjectByTitle(DTO: IFindProjectByTitleDTO) {
+    return await this.service.findOneByTitle(DTO);
   }
 }
