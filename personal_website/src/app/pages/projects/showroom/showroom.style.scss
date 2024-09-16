@@ -2,13 +2,16 @@
 
 .project-showroom-container {
   @apply min-h-screen;
+  @apply max-w-[100vw];
+  @apply pr-8;
   @apply flex;
   @apply flex-col;
-  @apply items-center;
 
   h1 {
+    @apply w-full;
+    @apply text-center;
     @apply mt-6;
-    @apply text-2xl;
+    @apply text-3xl;
     @apply font-bold;
 
     @include mobile {
@@ -22,10 +25,14 @@
     @apply flex-row;
     @apply justify-between;
 
-    @apply w-full;
-    @apply h-fit;
+    @apply w-screen;
+    @apply h-[60vh];
 
     @apply mt-4;
-    @apply px-4;
+    //    @apply px-4;
+
+    @include mobile {
+      @apply flex-col;
+    }
   }
 }
