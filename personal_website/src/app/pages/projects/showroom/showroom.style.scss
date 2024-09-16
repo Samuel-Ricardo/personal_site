@@ -1,0 +1,31 @@
+@import '../../../../app/globals.scss';
+
+.project-showroom-container {
+  @apply min-h-screen;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+
+  h1 {
+    @apply mt-6;
+    @apply text-2xl;
+    @apply font-bold;
+
+    @include mobile {
+      @apply text-xl;
+      @apply mt-2;
+    }
+  }
+
+  .project-showroom-header-container {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
+
+    @apply w-full;
+    @apply h-fit;
+
+    @apply mt-4;
+    @apply px-4;
+  }
+}
