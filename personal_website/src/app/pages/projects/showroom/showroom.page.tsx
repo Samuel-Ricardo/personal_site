@@ -1,9 +1,9 @@
 import './showroom.style.scss';
 
 import { MODULES } from '@/modules/app.factory';
-import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { ProjectShowRoomImage } from './imgae/image.component';
+import { ProjectShowroomSummary } from './summary/summary.component';
 
 export const ProjectShowRoom = async ({ id }: { id: string }) => {
   const project = await (
@@ -18,6 +18,12 @@ export const ProjectShowRoom = async ({ id }: { id: string }) => {
 
       <div className="project-showroom-header-container">
         <ProjectShowRoomImage image={project.image} alt={project.title} />
+        <ProjectShowroomSummary
+          summary={project.description}
+          link={project.link}
+          demo={project.demo}
+          repository={project.repo}
+        />
       </div>
     </div>
   );
