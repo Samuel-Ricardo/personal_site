@@ -1,0 +1,31 @@
+@import '../../../../../app/globals.scss';
+
+.project-showroom-image-container {
+  @include mobile {
+    @apply w-full;
+  }
+
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply w-[50vw];
+  @apply p-5;
+
+  .project-showroom-image {
+    @apply w-full;
+    @apply p-5;
+    @apply frosted-glass-lg;
+    @apply rounded-lg;
+
+    @apply shadow-2xl;
+    @apply shadow-slate-900;
+
+    img {
+      @apply w-full;
+      @apply h-fit;
+      @apply rounded-lg;
+      @apply shadow-slate-900;
+      @apply shadow-2xl;
+    }
+  }
+}
