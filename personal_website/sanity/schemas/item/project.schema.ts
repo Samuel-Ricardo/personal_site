@@ -6,6 +6,10 @@ export const ProjectSchema: SchemaTypeDefinition = {
   type: 'document',
   fields: [
     {
+      name: 'body',
+      type: 'text',
+    },
+    {
       name: 'main',
       type: 'boolean',
     },

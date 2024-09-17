@@ -3,6 +3,7 @@ import { Tech } from '../../tech/entity/tech.entity';
 
 export interface IProjectSyncDTO {
   main?: boolean;
+  body?: string;
   title: string;
   description: string;
   preview: string;
