@@ -42,6 +42,8 @@
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^14.0.5",
     "reflect-metadata": "^0.2.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sanity": "^3.25.0",
     "sass": "^1.70.0",
     "styled-components": "^6.1.8",
