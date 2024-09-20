@@ -7,6 +7,38 @@
   @apply flex;
   @apply flex-col;
 
+  .project-showroom-body-container {
+    @apply flex;
+    @apply flex-row;
+    @apply items-start;
+    @apply justify-between;
+    @apply w-full;
+    @apply h-full;
+    @apply p-4;
+    @apply mt-2;
+
+    @apply gap-4;
+
+    @apply z-50;
+
+    @include tablet {
+      @apply w-screen;
+      @apply flex-col;
+      @apply items-center;
+      @apply text-sm;
+    }
+  }
+
+  #techs-galaxy {
+    ul {
+      @apply grid-cols-1;
+
+      @include mobile {
+        @apply grid-cols-3;
+      }
+    }
+  }
+
   h1 {
     @apply w-full;
     @apply text-center;
