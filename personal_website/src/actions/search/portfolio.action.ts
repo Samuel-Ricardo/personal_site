@@ -1,11 +1,6 @@
 'use server';
 
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
+import { handleSearch } from './search.action';
 
-export const handlePortfolioSearch = async (formData: FormData) => {
-  const searchTerm = formData.get('searchTerm')?.toString() || '';
-
-  revalidatePath(`/portfolio?searchTerm=${searchTerm}`);
-  redirect(`/portfolio?searchTerm=${searchTerm}`);
-};
+export const handlePortfolioSearch = async (data: FormData) =>
+  await handleSearch({ context: 'portfolio', data });
