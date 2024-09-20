@@ -6,6 +6,7 @@ import SearchBar from '@/components/search/search.component';
 import { Slider } from '@/components/slider/slider.component';
 import { MODULES } from '@/modules/app.factory';
 import { ProjectsBackground } from '@/assets/images/background/project/projects.background';
+import { handleSearch } from '@/actions/search/handle.action';
 
 export const ProjectsPage = async ({ search }: { search: string }) => {
   const projects = await MODULES.PROJECT.CONTROLLER.MAIN().findAllSync();
@@ -32,7 +33,7 @@ export const ProjectsPage = async ({ search }: { search: string }) => {
         ))}
       </Slider>
       <div className="projects-page-search-container">
-        <SearchBar />
+        <SearchBar action={handleSearch} />
         <SearchProjectResult items={list} />
       </div>
     </div>
