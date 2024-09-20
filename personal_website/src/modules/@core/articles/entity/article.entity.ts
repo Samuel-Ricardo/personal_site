@@ -1,6 +1,7 @@
 import { IPlatform } from '@/@types/platform';
 import { IArticlesDTO } from '../DTO/articles.dto';
 import { IArticlesViewDTO } from '../DTO/view.dto';
+import { IArticlesSyncDTO } from '../DTO/sync.dto';
 
 export class Article {
   constructor(
@@ -11,6 +12,19 @@ export class Article {
     private readonly _main?: boolean,
     private readonly _content?: Promise<string>,
   ) {}
+
+  async sync(): Promise<IArticlesSyncDTO> {
+    return {
+      title: await this._title,
+      description: await this._description,
+      cover: this._cover,
+      platforms: await Promise.all(this._platforms),
+      main: this._main,
+      content: await this._content,
+      image: this._cover,
+      scientific: false,
+    };
+  }
 
   async toDTO(): Promise<IArticlesDTO> {
     return {
