@@ -10,6 +10,9 @@ export const ARTICLE_REGISTRY = {
     FIND: {
       ALL: Symbol.for('MODULE::ARTICLE:USE_CASE:FIND:ALL'),
       MAIN: Symbol.for('MODULE::ARTICLE:USE_CASE:FIND:MAIN'),
+      BY: {
+        TITLE: Symbol.for('MODULE::ARTICLE:USE_CASE:FIND:BY:TITLE'),
+      },
     },
   },
 };
