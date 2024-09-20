@@ -3,7 +3,7 @@
 .project-summary-container {
   @apply flex;
   @apply flex-1;
-  @apply justify-between;
+  @apply justify-center;
   @apply h-full;
   @apply w-[50vw];
   @apply flex;
@@ -11,7 +11,7 @@
   @apply items-center;
 
   @apply pr-8;
-  @apply py-8;
+  @apply gap-8;
 
   @include mobile {
     @apply w-full;
