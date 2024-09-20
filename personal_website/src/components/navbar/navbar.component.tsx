@@ -23,7 +23,7 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem
           li={{ id: 'articles', ...animation({ transition: { delay: 2 } }) }}
-          href="/articles"
+          href="/articles?searchTerm="
         >
           Articles
         </NavbarItem>
