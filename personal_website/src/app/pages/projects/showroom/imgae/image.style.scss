@@ -10,10 +10,12 @@
   @apply items-center;
   @apply w-[50vw];
   @apply p-5;
+  @apply ml-2;
 
   .project-showroom-image {
     @apply w-full;
     @apply p-5;
+    @apply ml-0;
     @apply frosted-glass-lg;
     @apply rounded-lg;
 
