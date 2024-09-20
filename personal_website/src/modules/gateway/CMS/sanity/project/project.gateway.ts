@@ -13,7 +13,7 @@ export class SanityProjectGateway
   async findAll() {
     const result = await this.client.fetch(`
       *[_type == "project"] {
-        
+        body,  
         main,
         title,
         preview,
@@ -50,6 +50,7 @@ export class SanityProjectGateway
   async findMainProjects() {
     const result = await this.client.fetch(`
       *[_type == "project" && main == true] {
+        body,
         position,  
         main,
         title,
@@ -86,6 +87,7 @@ export class SanityProjectGateway
   async findOneByTitle({ title }: IFindProjectByTitleDTO) {
     const result = await this.client.fetch(
       `*[_type == "project" && title == $title] {
+      body,
       main,
       title,
       preview,

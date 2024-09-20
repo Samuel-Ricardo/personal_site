@@ -13,10 +13,12 @@ export class Project {
     private _demo?: string,
     private _link?: string,
     private _main?: boolean,
+    private _body?: string,
   ) {}
 
   async sync(): Promise<IProjectSyncDTO> {
     return {
+      body: this._body,
       title: this._title,
       preview: this._preview,
       description: await this._description,
@@ -33,6 +35,7 @@ export class Project {
 
   async toView(): Promise<IProjectViewDTO> {
     return {
+      body: this._body,
       title: this._title,
       image: this._preview,
       description: await this._description,
@@ -45,6 +48,7 @@ export class Project {
 
   toDTO(): IProjectDTO {
     return {
+      body: this._body,
       title: this._title,
       preview: this._preview,
       description: this._description as string,
@@ -66,6 +70,7 @@ export class Project {
       dto.demo,
       dto.link,
       dto.main,
+      dto.body,
     );
   }
 
@@ -79,6 +84,10 @@ export class Project {
 
   static fromAsyncDTOs(dtos: Promise<IProjectDTO>[]): Promise<Project>[] {
     return dtos.map(Project.fromAsyncDTO);
+  }
+
+  get body() {
+    return this._body;
   }
 
   get title() {
