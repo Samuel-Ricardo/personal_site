@@ -1,6 +1,6 @@
 import { IPlatform } from '@/@types/platform';
 
-export interface IArticlesDTO {
+export interface IArticlesSyncDTO {
   title: string;
   main?: boolean;
   cover: string;
