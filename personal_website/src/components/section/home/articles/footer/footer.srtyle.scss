@@ -19,7 +19,7 @@
 
   ul {
     @apply grid;
-    @apply grid-cols-4;
+    @apply grid-cols-3;
     @apply gap-28;
 
     @include tablet {

@@ -1,0 +1,14 @@
+@import '../../../../app/globals.scss';
+
+.search-result-container {
+  @apply flex;
+  @apply flex-wrap;
+  @apply flex-1;
+
+  @apply p-5;
+  @apply gap-8;
+
+  @include mobile {
+    @apply p-2;
+  }
+}

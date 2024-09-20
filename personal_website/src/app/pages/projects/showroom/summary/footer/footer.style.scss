@@ -1,0 +1,17 @@
+@import '../../../../../../app/globals.scss';
+
+.project-showroom-summary-footer {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-end;
+  @apply items-center;
+  @apply gap-6;
+  @apply w-full;
+  @apply h-fit;
+  @apply mt-4;
+  @apply px-2;
+
+  @include mobile {
+    @apply justify-between;
+  }
+}

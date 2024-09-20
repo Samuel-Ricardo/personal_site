@@ -1,0 +1,70 @@
+@import '../../../../app/globals.scss';
+
+.project-showroom-container {
+  @apply min-h-screen;
+  @apply max-w-[100vw];
+  @apply pr-8;
+  @apply flex;
+  @apply flex-col;
+
+  .project-showroom-body-container {
+    @apply flex;
+    @apply flex-row;
+    @apply items-start;
+    @apply justify-between;
+    @apply w-full;
+    @apply h-full;
+    @apply p-4;
+    @apply mt-2;
+
+    @apply gap-4;
+
+    @apply z-50;
+
+    @include tablet {
+      @apply w-screen;
+      @apply flex-col;
+      @apply items-center;
+      @apply text-sm;
+    }
+  }
+
+  #techs-galaxy {
+    ul {
+      @apply grid-cols-1;
+
+      @include mobile {
+        @apply grid-cols-3;
+      }
+    }
+  }
+
+  h1 {
+    @apply w-full;
+    @apply text-center;
+    @apply mt-6;
+    @apply text-3xl;
+    @apply font-bold;
+
+    @include mobile {
+      @apply text-xl;
+      @apply mt-2;
+    }
+  }
+
+  .project-showroom-header-container {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
+
+    @apply w-screen;
+    @apply h-[60vh];
+
+    @apply mt-4;
+    //    @apply px-4;
+
+    @include mobile {
+      @apply flex-col;
+    }
+  }
+}

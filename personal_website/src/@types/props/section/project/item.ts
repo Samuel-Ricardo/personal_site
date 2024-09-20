@@ -13,6 +13,7 @@ export interface IProjectItemContentProps
 }
 
 export interface IProjectItemFooterProps {
+  title?: string;
   repo?: string;
   demo?: string;
   about?: string;

@@ -1,0 +1,109 @@
+@import '../../../../../app/globals.scss';
+
+.project-showroom-body {
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  @apply justify-self-center;
+  @apply w-full;
+  @apply h-fit;
+  @apply p-4;
+  @apply mt-2;
+
+  @apply capitalize;
+
+  @include mobile {
+    @apply p-2;
+  }
+
+  .body-content {
+    @apply justify-center;
+    @apply w-[50vw];
+    @apply frosted-glass-md;
+    @apply p-6;
+    @apply rounded-lg;
+
+    @include tablet {
+      @apply w-full;
+    }
+
+    .row {
+      @apply flex;
+      @apply flex-row;
+      @apply justify-between;
+      @apply items-center;
+      @apply w-full;
+      @apply h-fit;
+
+      @include mobile {
+        @apply flex-col;
+        @apply gap-4;
+        @apply py-4;
+      }
+    }
+
+    .center-text {
+      @apply text-center;
+    }
+
+    a {
+      @apply text-sky-500;
+    }
+
+    ul {
+      @apply text-slate-800;
+      @apply list-disc;
+      @apply list-inside;
+      //    list-style-type: dashed;
+    }
+
+    img {
+      @apply rounded-lg;
+      @apply frosted-glass-lg;
+      @apply w-fit;
+      @apply h-fit;
+    }
+
+    .icon-md {
+      @apply w-24;
+      @apply h-24;
+    }
+
+    p {
+      @apply frosted-glass-lg;
+      @apply rounded-lg;
+      @apply p-2;
+      @apply my-2;
+      @apply text-justify;
+    }
+
+    h1 {
+      @apply text-3xl;
+      @apply font-bold;
+
+      @apply mb-2;
+    }
+
+    h2 {
+      @apply text-2xl;
+      @apply font-bold;
+
+      @apply mb-2;
+    }
+
+    h3 {
+      @apply text-xl;
+      @apply font-bold;
+
+      @apply mb-2;
+    }
+
+    h4 {
+      @apply text-lg;
+      @apply font-bold;
+
+      @apply mb-4;
+    }
+  }
+}

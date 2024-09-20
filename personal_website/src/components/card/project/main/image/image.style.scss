@@ -1,0 +1,22 @@
+@import '../../../../../app/globals.scss';
+
+.main-project-card-image {
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+  @apply w-fit;
+  @apply h-full;
+
+  @apply p-5;
+
+  @include mobile {
+    @apply p-2;
+  }
+
+  img {
+    @apply w-fit;
+    @apply h-fit;
+    @apply rounded-lg;
+    box-shadow: 0 0 30px #00eaff20;
+  }
+}

@@ -1,5 +1,6 @@
 import { Tech } from '../../tech/entity/tech.entity';
 import { IProjectDTO } from '../DTO/project.dto';
+import { IProjectSyncDTO } from '../DTO/sync.dto';
 import { IProjectViewDTO } from '../DTO/view.dto';
 
 export class Project {
@@ -12,10 +13,29 @@ export class Project {
     private _demo?: string,
     private _link?: string,
     private _main?: boolean,
+    private _body?: string,
   ) {}
+
+  async sync(): Promise<IProjectSyncDTO> {
+    return {
+      body: this._body,
+      title: this._title,
+      preview: this._preview,
+      description: await this._description,
+      repository: this._repository,
+      demo: this._demo,
+      link: this._link,
+      techs: await Promise.all(this._techs),
+      image: this._preview,
+      main_techs: (await Promise.all(this._techs)).map(tech => tech.toView()),
+      main: this._main,
+      repos: this._repository,
+    };
+  }
 
   async toView(): Promise<IProjectViewDTO> {
     return {
+      body: this._body,
       title: this._title,
       image: this._preview,
       description: await this._description,
@@ -28,6 +48,7 @@ export class Project {
 
   toDTO(): IProjectDTO {
     return {
+      body: this._body,
       title: this._title,
       preview: this._preview,
       description: this._description as string,
@@ -49,6 +70,7 @@ export class Project {
       dto.demo,
       dto.link,
       dto.main,
+      dto.body,
     );
   }
 
@@ -62,6 +84,10 @@ export class Project {
 
   static fromAsyncDTOs(dtos: Promise<IProjectDTO>[]): Promise<Project>[] {
     return dtos.map(Project.fromAsyncDTO);
+  }
+
+  get body() {
+    return this._body;
   }
 
   get title() {

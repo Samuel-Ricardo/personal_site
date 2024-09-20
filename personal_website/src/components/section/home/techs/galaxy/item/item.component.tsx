@@ -5,6 +5,7 @@ import { ITechGalaxyItemProps } from '@/@types/props/section/techs/item';
 import './item.style.scss';
 import { MotionLI } from '@/components/motion/li.component';
 import { MODULES } from '@/modules/app.factory';
+import Link from 'next/link';
 
 export const TechsGalaxyItem = async ({
   icon,
@@ -22,11 +23,13 @@ export const TechsGalaxyItem = async ({
       {...animation.parent}
       {...slide}
     >
-      <div id="tech-item-img-container">
-        <Image src={icon} alt="tech icon" width={80} height={80} />
-      </div>
+      <Link href={`/portfolio?searchTerm=${preview?.name}`}>
+        <div id="tech-item-img-container">
+          <Image src={icon} alt="tech icon" width={80} height={80} />
+        </div>
 
-      <TechPreview preview={preview} {...animation.children} />
+        <TechPreview preview={preview} {...animation.children} />
+      </Link>
     </MotionLI>
   );
 };

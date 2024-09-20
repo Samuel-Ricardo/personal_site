@@ -17,7 +17,7 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem
           li={{ id: 'portfolio', ...animation({ transition: { delay: 1 } }) }}
-          href="/portfolio"
+          href="/portfolio?searchTerm="
         >
           Portfolio
         </NavbarItem>

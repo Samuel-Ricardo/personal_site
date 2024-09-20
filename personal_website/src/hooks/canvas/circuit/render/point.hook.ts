@@ -8,7 +8,7 @@ export const usePointRender = () => {
   const render = useCallback(
     ({
       points,
-      color = '#e7f8fb',
+      color = 'cyan',
       ghost = true,
       context,
       network = true,
@@ -25,6 +25,7 @@ export const usePointRender = () => {
           })
         : points.forEach(point => {
             context.fillStyle = color;
+            context.strokeStyle = color;
             context.beginPath();
             context.arc(
               point.position.x,

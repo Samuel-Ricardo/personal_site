@@ -1,0 +1,20 @@
+@import '../../../../../app/globals.scss';
+
+.main-project-card-content {
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+  @apply h-fit;
+  @apply frosted-glass-xl;
+  @apply rounded-lg;
+  @apply p-3;
+  @apply mt-4;
+  @apply text-ellipsis;
+  @apply overflow-clip;
+
+  @include mobile {
+    @apply mt-2;
+    @apply p-2;
+    @apply max-h-52;
+  }
+}

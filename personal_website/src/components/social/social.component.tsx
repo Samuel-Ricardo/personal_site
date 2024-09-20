@@ -13,6 +13,7 @@ import { LinkedInIcon } from '@/assets/icons/logo/linkedin/icon.component';
 import { FreelancerIcon } from '@/assets/icons/logo/freelancer/icon.component';
 import { HackerRankIcon } from '@/assets/icons/logo/hackerrank/icon.component';
 import { MotionProps } from 'framer-motion';
+import { YoutubeIcon } from '@/assets/icons/logo/youtube/icon.component';
 
 export const Social = () => {
   const [active, setActive] = useState(false);
@@ -64,11 +65,11 @@ export const Social = () => {
 
       <MotionDiv className={` social-item si-top`} {...ANIMATION.TOP}>
         <Link
-          href="https://www.freelancer.com/u/SamuelRiccardo"
+          href="https://www.youtube.com/@Just_Samuel.s"
           target="_blank"
-          aria-label="go to my freelancer profile"
+          aria-label="go to my youtube channel"
         >
-          <FreelancerIcon />
+          <YoutubeIcon />
         </Link>
       </MotionDiv>
 
