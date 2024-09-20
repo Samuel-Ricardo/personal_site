@@ -6,6 +6,7 @@ import { MotionDiv } from '@/components/motion/div.component';
 import { MODULES } from '@/modules/app.factory';
 
 export const ProjectItemFooter = async ({
+  title,
   repo,
   demo,
   about,
@@ -47,6 +48,17 @@ export const ProjectItemFooter = async ({
           <NavigateButton link={{ href: about }}>About</NavigateButton>
         </MotionDiv>
       )}
+
+      <MotionDiv
+        {...animation({
+          animate: 'inactive',
+          transition: { delay: 0.3 * 4 },
+        })}
+      >
+        <NavigateButton link={{ href: `/project/${title}`, target: '_blank' }}>
+          Details
+        </NavigateButton>
+      </MotionDiv>
     </div>
   );
 };

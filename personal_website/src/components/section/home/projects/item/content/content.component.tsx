@@ -28,7 +28,7 @@ export const ProjectItemContent = async ({
       </MotionP>
 
       <ProjectItemTechs main_techs={main_techs} />
-      <ProjectItemFooter repo={repo} demo={demo} about={about} />
+      <ProjectItemFooter title={title} repo={repo} demo={demo} about={about} />
     </div>
   );
 };
