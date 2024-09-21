@@ -1,0 +1,37 @@
+@import '../../../../../app/globals.scss';
+
+.article-fonts-contaier {
+  @apply flex;
+  @apply flex-row;
+  @apply flex-wrap;
+  @apply gap-4;
+  @apply w-fit;
+  @apply h-fit;
+  @apply p-2;
+  @apply frosted-glass-lg;
+  @apply rounded-lg;
+
+  @include mobile {
+    @apply flex-col;
+  }
+
+  .article-font {
+    @apply p-0.5;
+    @apply frosted-glass-lg;
+    @apply rounded-lg;
+
+    @apply ease-in-out;
+    @apply duration-300;
+
+    &:hover {
+      @apply shadow-lg;
+      @apply shadow-slate-900;
+      @apply scale-105;
+    }
+
+    img {
+      @apply w-fit;
+      @apply h-fit;
+    }
+  }
+}
