@@ -7,5 +7,5 @@ export interface ISelectedTestimonialState {
 
 interface ISelected {
   data: ITestimonialDTO;
-  ref: React.RefObject<HTMLElement>;
+  ref?: React.RefObject<HTMLElement>;
 }

@@ -1,6 +1,6 @@
 import './footer.style.scss';
 
-export const MainProjectCardFooter = async ({
+export const MainCardFooter = async ({
   children,
 }: {
   children: React.ReactNode;

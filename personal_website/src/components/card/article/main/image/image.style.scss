@@ -1,0 +1,23 @@
+@import '../../../../../app/globals.scss';
+
+.main-article-card-image {
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+  @apply w-fit;
+  @apply h-full;
+
+  @apply p-5;
+
+  @include mobile {
+    @apply p-2;
+  }
+
+  img {
+    @apply w-fit;
+    @apply h-fit;
+    @apply rounded-lg;
+    @apply shadow-lg;
+    @apply shadow-slate-900;
+  }
+}

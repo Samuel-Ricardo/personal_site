@@ -5,7 +5,7 @@ export const useSelectedTestimonial = create<ISelectedTestimonialState>(set => {
   return {
     selected: undefined,
     setSelected: selected => {
-      selected.ref.current?.scrollIntoView({
+      selected.ref?.current?.scrollIntoView({
         behavior: 'smooth',
       });
 

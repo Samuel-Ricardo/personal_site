@@ -7,7 +7,7 @@ export interface ITestimonyCardProps {
 }
 
 export interface ITestimonyCardHeaderProps {
-  data: IPersonDTO;
+  data?: IPersonDTO;
 }
 
 export interface ITestimonyCardFooterProps {

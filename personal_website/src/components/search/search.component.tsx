@@ -1,11 +1,10 @@
+import { ISearchBarProps } from '@/@types/props/search/search.props';
 import './search.style.scss';
 
-import { handleSearch } from '@/actions/search/handle.action';
-
-export default function SearchBar() {
+export default function SearchBar({ action }: ISearchBarProps) {
   return (
     <div className="search-container">
-      <form action={handleSearch}>
+      <form action={action}>
         <div className="input-container">
           <input type="text" name="searchTerm" placeholder="Search..." />
           <div className="neon-line" />

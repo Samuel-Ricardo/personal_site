@@ -1,9 +1,11 @@
 import { IPlatform } from '@/@types/platform';
 import { IArticlesDTO } from '../DTO/articles.dto';
 import { IArticlesViewDTO } from '../DTO/view.dto';
+import { IArticlesSyncDTO } from '../DTO/sync.dto';
 
 export class Article {
   constructor(
+    private readonly _identifier: string,
     private readonly _title: Promise<string>,
     private readonly _description: Promise<string>,
     private readonly _cover: string,
@@ -12,8 +14,23 @@ export class Article {
     private readonly _content?: Promise<string>,
   ) {}
 
+  async sync(): Promise<IArticlesSyncDTO> {
+    return {
+      identifier: this._identifier,
+      title: await this._title,
+      description: await this._description,
+      cover: this._cover,
+      platforms: await Promise.all(this._platforms),
+      main: this._main,
+      content: await this._content,
+      image: this._cover,
+      scientific: false,
+    };
+  }
+
   async toDTO(): Promise<IArticlesDTO> {
     return {
+      identifier: this._identifier,
       main: this._main,
       title: this._title,
       description: this._description,
@@ -25,6 +42,7 @@ export class Article {
 
   static fromDTO(dto: IArticlesDTO): Article {
     return new Article(
+      dto.identifier,
       dto.title,
       dto.description,
       dto.cover,
@@ -40,6 +58,7 @@ export class Article {
 
   async toView(): Promise<IArticlesViewDTO> {
     return {
+      identifier: this._identifier,
       title: await this.title,
       description: await this.description,
       platforms: await Promise.all(this.platforms),

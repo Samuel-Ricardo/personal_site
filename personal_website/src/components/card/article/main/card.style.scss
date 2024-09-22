@@ -1,0 +1,66 @@
+@import '../../../../app/globals.scss';
+@import '../../../line/horizontal/horizontal.style.scss';
+@import '../../../line/vertical/vertical.style.scss';
+
+.main-article-card-container {
+  .link-container {
+    @apply flex;
+    @apply flex-row;
+    @apply w-full;
+    @apply h-full;
+  }
+
+  @apply gap-1;
+
+  @apply flex;
+  @apply frosted-glass-lg;
+  @apply p-5;
+  @apply rounded-lg;
+  @apply w-[70vw];
+  @apply min-h-72;
+  @apply h-fit;
+
+  @apply mx-auto;
+  @apply my-auto;
+
+  @apply overflow-clip;
+
+  .bar {
+    @apply vertical-line;
+  }
+
+  @apply text-wrap;
+
+  @include mobile {
+    @apply w-[90vw];
+    @apply h-fit;
+    @apply flex-col;
+    @apply p-4;
+    @apply mx-1;
+    @apply -ml-4;
+
+    .bar {
+      @apply horizontal-line;
+    }
+  }
+
+  .content-container {
+    @apply pl-4;
+    @apply flex;
+    @apply flex-col;
+    @apply w-full;
+    @apply h-full;
+
+    @include mobile {
+      @apply pl-0;
+      @apply items-center;
+      @apply justify-center;
+    }
+
+    h1 {
+      @apply text-2xl;
+      @apply capitalize;
+      @apply font-bold;
+    }
+  }
+}
