@@ -12,6 +12,14 @@
   @apply h-[60vh];
   @apply p-5;
 
+  @apply text-ellipsis;
+  @apply overflow-hidden;
+  @apply break-words;
+
+  ul {
+    @apply gap-8;
+  }
+
   li {
     @apply gap-4;
   }
@@ -35,6 +43,9 @@
     @apply text-wrap;
     @apply break-all;
     @apply text-sm;
+    @apply text-ellipsis;
+    @apply overflow-hidden;
+    @apply break-words;
   }
 
   .platform-card {
@@ -49,7 +60,7 @@
 
   .article-cover {
     @apply w-auto;
-    @apply h-[60%];
+    @apply h-[50%];
     @apply max-h-fit;
     @apply rounded-md;
     @apply mb-4;
