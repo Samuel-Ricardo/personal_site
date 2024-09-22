@@ -17,6 +17,7 @@ export const SelectTestimonialWrapper = ({
 
   useEffect(() => {
     if (ref.current) ref.current.onclick = event => setSelected({ data, ref });
+    //    if (ref.current) ref.current.onclick = event => selectTestimonial(data);
   }, [ref, data, setSelected]);
 
   if (animation)
@@ -27,7 +28,11 @@ export const SelectTestimonialWrapper = ({
     );
 
   return (
-    <div ref={ref} className={className}>
+    <div
+      ref={ref}
+      className={className}
+      onClick={() => setSelected({ data, ref })}
+    >
       {children}
     </div>
   );
