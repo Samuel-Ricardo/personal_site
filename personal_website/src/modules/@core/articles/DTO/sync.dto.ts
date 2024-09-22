@@ -1,6 +1,7 @@
 import { IPlatform } from '@/@types/platform';
 
 export interface IArticlesSyncDTO {
+  identifier: string;
   title: string;
   main?: boolean;
   cover: string;

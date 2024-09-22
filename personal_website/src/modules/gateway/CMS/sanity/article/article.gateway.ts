@@ -16,6 +16,7 @@ export class SanityArticleGateway
       async article =>
         ({
           ...article,
+          identifier: article.title,
           cover: this.imageBuilder.image(article.cover).url(),
           title: this.client
             .fetch(
@@ -69,12 +70,10 @@ export class SanityArticleGateway
   }
 
   async findOneByTitle({ title }: { title: string }) {
-    const result = await this.client.fetch<ICMSArticleDTO[]>(
+    const result = await this.client.fetch<ICMSArticleDTO>(
       `*[_type == "article" && title == "${title}"]{title, cover, description, content, platforms}[0]`,
     );
 
-    console.log({ result });
-
-    return result ? Article.fromDTO(await this.build(result)[0]) : null;
+    return result ? Article.fromDTO(await this.build([result])[0]) : null;
   }
 }
