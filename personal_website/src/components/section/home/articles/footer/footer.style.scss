@@ -18,15 +18,19 @@
   }
 
   ul {
-    @apply grid;
-    @apply grid-cols-3;
-    @apply gap-28;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply justify-between;
+    @apply items-center;
+    @apply gap-4;
 
     @include tablet {
-      @apply gap-8;
+      //      @apply gap-8;
     }
 
     @include mobile {
+      @apply grid;
       @apply gap-4;
       @apply grid-cols-1;
     }
