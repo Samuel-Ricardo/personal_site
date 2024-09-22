@@ -9,14 +9,13 @@
   @apply m-4;
   @apply mx-auto;
   align-items: center;
-  @apply min-h-fit;
-  @apply h-[25rem];
+  @apply h-80;
   @apply w-[95%];
   @apply rounded-xl;
 
   @include mobile {
     @apply flex-col;
-
+    @apply min-h-fit;
     @apply h-auto;
   }
 
@@ -25,5 +24,6 @@
     @apply flex-col;
     @apply w-full;
     @apply h-full;
+    @apply max-h-64;
   }
 }

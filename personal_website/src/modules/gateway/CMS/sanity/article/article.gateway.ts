@@ -16,6 +16,7 @@ export class SanityArticleGateway
       async article =>
         ({
           ...article,
+          identifier: article.title,
           cover: this.imageBuilder.image(article.cover).url(),
           title: this.client
             .fetch(
@@ -41,6 +42,13 @@ export class SanityArticleGateway
               icon: platform.icon,
             };
           }),
+          content:
+            article.content &&
+            this.client
+              .fetch(
+                `*[_type == "tp_text"  && identifier == "${article.content}"]{content}[0]`,
+              )
+              .then(text => text?.content),
         }) as IArticlesDTO,
     );
   }
@@ -59,5 +67,13 @@ export class SanityArticleGateway
     );
 
     return Article.fromDTOs(await Promise.all(this.build(result)));
+  }
+
+  async findOneByTitle({ title }: { title: string }) {
+    const result = await this.client.fetch<ICMSArticleDTO>(
+      `*[_type == "article" && title == "${title}"]{title, cover, description, content, platforms}[0]`,
+    );
+
+    return result ? Article.fromDTO(await this.build([result])[0]) : null;
   }
 }

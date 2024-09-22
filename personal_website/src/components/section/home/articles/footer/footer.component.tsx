@@ -1,7 +1,7 @@
 import { IArticleSectionFooter } from '@/@types/props/section/articles/footer';
 import { Platform } from '@/components/platform/item/item.component';
 
-import './footer.srtyle.scss';
+import './footer.style.scss';
 import { MotionH2 } from '@/components/motion/h2.component';
 import { MODULES } from '@/modules/app.factory';
 import { MotionLI } from '@/components/motion/li.component';

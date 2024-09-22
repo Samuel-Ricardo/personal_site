@@ -6,22 +6,14 @@ import SearchBar from '@/components/search/search.component';
 import { Slider } from '@/components/slider/slider.component';
 import { MODULES } from '@/modules/app.factory';
 import { ProjectsBackground } from '@/assets/images/background/project/projects.background';
+import { handlePortfolioSearch } from '@/actions/search/portfolio.action';
+import { filterPortfolio } from '@/actions/filter/portfolio.action';
 
 export const ProjectsPage = async ({ search }: { search: string }) => {
   const projects = await MODULES.PROJECT.CONTROLLER.MAIN().findAllSync();
 
   const main = projects.filter(project => project.main);
-  const list =
-    !search || search.trim() === ''
-      ? projects
-      : projects.filter(
-          project =>
-            project.title.toLowerCase().includes(search.toLowerCase()) ||
-            project.description.toLowerCase().includes(search.toLowerCase()) ||
-            project.techs.filter(t =>
-              t.name.toLowerCase().includes(search.toLowerCase()),
-            ).length > 0,
-        );
+  const list = await filterPortfolio({ projects, search });
 
   return (
     <div className="projects-page-container">
@@ -32,7 +24,7 @@ export const ProjectsPage = async ({ search }: { search: string }) => {
         ))}
       </Slider>
       <div className="projects-page-search-container">
-        <SearchBar />
+        <SearchBar action={handlePortfolioSearch} />
         <SearchProjectResult items={list} />
       </div>
     </div>
