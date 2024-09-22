@@ -13,7 +13,7 @@ export const TestimonyHeader = ({ data }: ITestimonyCardHeaderProps) => {
 
   return (
     <header className="testimony-header">
-      <MotionH3 {...IN}>{data.name}</MotionH3>
+      <MotionH3 {...IN}>{data?.name || ''}</MotionH3>
       <MotionDiv
         initial={{ width: 0 }}
         animate={{ width: 0 }}
@@ -22,7 +22,7 @@ export const TestimonyHeader = ({ data }: ITestimonyCardHeaderProps) => {
         className="line"
       />
       <MotionP {...OUT}>
-        {data.title} • {data.company.name}
+        {data?.title || ''} • {data?.company.name || ''}
       </MotionP>
     </header>
   );

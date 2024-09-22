@@ -11,7 +11,7 @@ import { ArticleFonts } from './fonts/fonts.component';
 export const MainArticleCard = async ({ data }: { data: IArticlesSyncDTO }) => {
   return (
     <div className="main-article-card-container">
-      <Link className="link-container" href={`/article/${data?.title}`}>
+      <Link className="link-container" href={`/article/${data?.identifier}`}>
         <ArticleCardImage url={data?.image} />
         <div className="content-container">
           <h1>{data?.title}</h1>

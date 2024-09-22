@@ -9,7 +9,7 @@ import { ArticleFonts } from '../main/fonts/fonts.component';
 export const ArticleCard = ({ data }: { data: IArticlesSyncDTO }) => {
   return (
     <div className="article-card">
-      <Link className="link-container" href={`/article/${data?.title}`}>
+      <Link className="link-container" href={`/article/${data?.identifier}`}>
         <ArticleCardImage url={data?.image} />
         <HorizontalLine />
         <div className="content-container">

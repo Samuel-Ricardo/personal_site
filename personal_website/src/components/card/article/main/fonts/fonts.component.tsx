@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import './fonst.style.scss';
+import { MotionDiv } from '@/components/motion/div.component';
+import { MODULES } from '@/modules/app.factory';
 
 export const ArticleFonts = async ({ data }: { data: IPlatform[] }) => {
+  const ANIMATION = MODULES.ANIMATION.FRAMER_MOTION.SLIDE.UP()();
   return (
-    <div className="article-fonts-contaier">
+    <MotionDiv className="article-fonts-contaier" {...ANIMATION}>
       {data.map(font => (
         <Link className="article-font" key={font.name} href={font.link}>
           <Image
@@ -18,6 +21,6 @@ export const ArticleFonts = async ({ data }: { data: IPlatform[] }) => {
           />
         </Link>
       ))}
-    </div>
+    </MotionDiv>
   );
 };

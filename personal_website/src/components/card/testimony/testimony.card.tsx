@@ -8,21 +8,21 @@ import { TestimonyHeader } from './header/header.component';
 
 import './testimony.style.scss';
 import { useSelectedTestimonial } from '@/hooks/testimonial/select.hook';
+import { useMemo } from 'react';
 
 export const TestimonyCard = ({ data }: ITestimonyCardProps) => {
   const { selected } = useSelectedTestimonial();
-
-  data = selected?.data || data;
+  const testimony = useMemo(() => selected?.data || data, [selected, data]);
 
   return (
     <div className="testimony-card">
-      <TestimonyAvatar src={data.person.avatar} />
+      <TestimonyAvatar src={testimony.person.avatar} />
       <div className="content-block">
-        <TestimonyHeader data={data.person} />
-        <TestimonyContent>{data.content}</TestimonyContent>
+        <TestimonyHeader data={testimony.person} />
+        <TestimonyContent>{testimony.content}</TestimonyContent>
         <TestimonyFooter
-          contacts={data.person.contacts}
-          portfolio={data.portfolio}
+          contacts={testimony.person.contacts}
+          portfolio={testimony.portfolio}
         />
       </div>
     </div>
