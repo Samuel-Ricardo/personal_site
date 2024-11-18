@@ -17,7 +17,7 @@ export const HeroCardContentFooter = async ({
       <NavigateButton
         link={{
           className: 'btn-resume',
-          href: 'https://cdn.sanity.io/files/tk1o3drt/production/4e34d166901b269a7e848ca89cebbe35fb614e93.pdf',
+          href: 'https://cdn.sanity.io/files/tk1o3drt/production/b198f2b67da860ca0bc7eca9a7862e3fbdc0cdc0.pdf',
           target: '_blank',
         }}
       >
