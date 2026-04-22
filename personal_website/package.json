@@ -35,7 +35,7 @@
     "inversify-inject-decorators": "^3.1.0",
     "jsdom": "^25.0.0",
     "lucide-react": "^0.312.0",
-    "next": "^14.2.10",
+    "next": "14.2.35",
     "next-mdx-remote": "^4.4.1",
     "next-sanity": "^7.0.12",
     "react": "^18",
